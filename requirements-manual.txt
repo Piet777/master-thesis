@@ -1,0 +1,19 @@
+# JupyterLab
+jupyter==1.0.0
+ipython-autotime
+
+# Data Manipulation
+pandas==2.0.3
+pymongo==4.4.0
+
+# Development
+tqdm==4.65.0
+
+# Visualisation
+matplotlib==3.7.2
+matplotlib_venn==0.11.9
+
+### OLD ###
+# ipywidgets==7.7.1
+# Database & File IO
+json5==0.9.6
