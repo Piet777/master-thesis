@@ -1,4 +1,6 @@
 from openai import OpenAI
+from langchain.prompts import load_prompt
+
 client = OpenAI(
     api_key=open('api.txt', 'r').read()
 )
@@ -6,6 +8,7 @@ client = OpenAI(
 class ChatGPT:
     def __init__(self, role):
         self.dialog = [{"role":"system","content":role}]
+        self.dialog.append({"role":"user","content":load_prompt('prompts/initial_prompt.json').format(role=role)}) 
 
     def ask_question(self, question):
         self.dialog.append({"role":"user","content":question})
@@ -18,7 +21,7 @@ class ChatGPT:
         return answer
     
 if __name__ == '__main__':
-    chat_gpt = ChatGPT("Software Developer")
+    chat_gpt = ChatGPT("Systems Engineer")
     while (question := input('\n> ')) != 'X':
         answer = chat_gpt.ask_question(question)
         print(answer)
