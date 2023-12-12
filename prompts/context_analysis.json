@@ -1,0 +1,7 @@
+// Act like a Software Engineer. In an Issue Tracker, like Jira, a ticket contains out of multiple fields. This fields are available: ['Assignee', 'Comments', 'Components', 'CreatedDate', 'Creator',
+//        'Description', 'Environment', 'Flagged', 'IssueLinks', 'IssueType',
+//        'Labels', 'Parent', 'Priority', 'Project', 'Rank', 'Reporter',
+//        'Resolution', 'ResolvedDate', 'Sprint', 'Status', 'Summary',
+//        'TimeEstimateOriginal', 'TimeEstimateRemaining', 'TimeSpent',
+//        'VersionsAffected', 'VersionsFixed']
+// In the following you will receive data from a ticket. Get contextual knowledge about the ticket through the 'Summary', 'Description' and 'Comments' field. If you detect missing or outdated fields, because you find something in the 'Summary', 'Description' and 'Comments' field give a recommendation for these.

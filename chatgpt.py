@@ -8,7 +8,6 @@ client = OpenAI(
 class ChatGPT:
     def __init__(self, role):
         self.dialog = [{"role":"system","content":role}]
-        self.dialog.append({"role":"user","content":load_prompt('prompts/initial_prompt.json').format(role=role)}) 
 
     def ask_question(self, question):
         self.dialog.append({"role":"user","content":question})
@@ -21,7 +20,12 @@ class ChatGPT:
         return answer
     
 if __name__ == '__main__':
+    user_input = input("Please provide data records: ")
+    initial_prompt = load_prompt('prompts/initial_prompt.json').format(role="Systems Engineer") + f" The user provided the following data records: {user_input}."
+
     chat_gpt = ChatGPT("Systems Engineer")
+    chat_gpt.dialog[0]["content"] = initial_prompt
+
     while (question := input('\n> ')) != 'X':
         answer = chat_gpt.ask_question(question)
         print(answer)
