@@ -1,0 +1,12 @@
+{
+    "input_variables": [
+        "ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Check this ticket ({ticket}) to see if these best practices are violated, and if so, provide a recommendation that satisfies the best practices.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
