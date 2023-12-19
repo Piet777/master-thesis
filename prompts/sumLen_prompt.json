@@ -6,7 +6,7 @@
     "input_types": {},
     "output_parser": null,
     "partial_variables": {},
-    "template": "The length of the title of a ticket should be between {min} and {max} words. Return only the new title and nothing else: ",
+    "template": " ### Instruction ###\nThe length of the title of a ticket should be between {min} and {max} words.\nIf the word count is in this range return nothing.\nElse, return only a new title in this range.\n",
     "template_format": "f-string",
     "validate_template": false,
     "_type": "prompt"
