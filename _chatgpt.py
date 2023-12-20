@@ -21,7 +21,7 @@ class ChatGPT:
     
 if __name__ == '__main__':
     user_input = input("Please provide data records: ")
-    initial_prompt = load_prompt('prompts/initial_prompt.json').format(role="Systems Engineer") + f" The user provided the following data records: {user_input}."
+    initial_prompt = load_prompt('prompts/init/initial_prompt.json').format(role="Systems Engineer") + f" The user provided the following data records: {user_input}."
 
     chat_gpt = ChatGPT("Systems Engineer")
     chat_gpt.dialog[0]["content"] = initial_prompt

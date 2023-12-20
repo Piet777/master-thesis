@@ -1,0 +1,12 @@
+{
+    "input_variables": [
+        "role"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": " ### Instruction ###\nAct as a professional {role} working with issue trackers like Jira or Azure DevOps.\nWorking with these issue trackers, you have to consider multiple text-based best practices to increase understandability and reduce time.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

@@ -3,7 +3,7 @@
     "input_types": {},
     "output_parser": null,
     "partial_variables": {},
-    "template": " ### Instruction ###\nCheck a given ticket to see if these best practices are violated, and if so, provide a recommendation that satisfies the best practices.\n",
+    "template": " ### Instruction ###\nRevise a ticket for compliance with these best practices and offer recommendations if needed.\n",
     "template_format": "f-string",
     "validate_template": false,
     "_type": "prompt"
