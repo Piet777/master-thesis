@@ -1,0 +1,10 @@
+{
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nGet contextual knowledge about the ticket through the 'Summary', 'Description' and 'Comments' field.\nIf you detect missing or outdated fields, because you find something in the 'Summary', 'Description' and 'Comments' field update these fields.\nUpdate the field only if you find something in the 'Summary', 'Description' and 'Comments' field, otherwise leave the field as it is.\nReturn the new ticket in json format and nothing else.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
