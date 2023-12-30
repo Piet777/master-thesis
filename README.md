@@ -10,3 +10,6 @@ important basics:
 https://www.langchain.com/
 
 https://www.promptingguide.ai/
+
+Example Prompts:
+https://github.com/linexjlin/GPTs
