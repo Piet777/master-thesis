@@ -1,0 +1,14 @@
+{
+    "input_variables": [
+        "best_practice",
+        "role",
+        "ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": " ### Instruction ###\nAct as a professional {role} working with issue trackers like Jira or Azure DevOps.\nWorking with these issue trackers, you must consider multiple text-based best practices to increase understandability and reduce time.\nRevise a ticket for compliance with these best practices and offer recommendations if needed.\nThe best practice to check is: \n{best_practice}\n\n### Context ###\nA ticket consists of multiple fields. You are provided with the fields and a short description for each field.\nAssignee: The person responsible to resolve the issue.\nComments: Community discussion on the issue, including author, timestamp and content.\nComponents: Project components to which the issue belongs.\nCreatedDate: The time and date the issue was created.\nCreator: The person who created the issue.\nDescription: A detailed description of the issue.\nIssueLinks: A list of links to related issues.\nIssueType: The issue's purpose within the organization.\nLabels: Labels to which this issue relates.\nPriority: The issue importance in relation to other issues.\nProject: The parent project to which the issue belongs.\nReporter: The person who found/reported the issue.\nResolution: A record of the issue's resolution, once resolved or closed.\nResolvedDate: The time and date the issue was resolved.\nStatus: The stage the issue is currently at in its lifecycle.\nSummary: A brief one-line summary of the issue.\nTimeSpent: Amount of time spent working on the issue.\nVersionsAffected: The versions of the project affected by the issue.\nVersionsFixed: Project versions in which the issue was (or will be) fixed.\n\nYou will receive this ticket from an issue tracker in JSON format.\nTicket: {ticket}\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

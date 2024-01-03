@@ -1,0 +1,10 @@
+{
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "\nBest Practice: Toxic Speech Detection\nYour task is to check the comments section for toxic speech.\nIf you detect toxic speech, return the comment with the author.\nIf you don't detect toxic speech, return: 'No toxic speech was found. Your comment section is polite.'\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
