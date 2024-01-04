@@ -1,9 +1,0 @@
-{
-    "model": "gpt-4",
-    "creation_timestamp": "2024-01-03 16:28:48",
-    "prompts": {
-        "init_uri": "initPrompt_V1.1.1.json",
-        "best_practice_uri": "descriptionLengthPrompt_V1.0.0.json"
-    },
-    "output": "'Source tree crashes every time I open it. I have uninstalled and reinstalled the software multiple times but the issue persists. This issue is occurring on version 3.4.4. I have tried to update to the latest version but our software portal only has version 3.2.6 available. Any assistance in resolving this issue would be greatly appreciated.'"
-}

@@ -1,9 +1,0 @@
-{
-    "model": "gpt-4",
-    "creation_timestamp": "2024-01-03 16:21:44",
-    "prompts": {
-        "init_uri": "initPrompt_V1.1.1.json",
-        "best_practice_uri": "toxicSpeechPrompt_V1.0.0.json"
-    },
-    "output": "After reviewing the comments section of the ticket, I can confirm that there is no toxic speech present. All comments are professional and focused on resolving the issue at hand. \n\nReturn: 'No toxic speech was found. Your comment section is polite.'"
-}

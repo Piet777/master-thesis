@@ -1,9 +1,0 @@
-{
-    "model": "gpt-4",
-    "creation_timestamp": "2024-01-03 13:39:48",
-    "prompts": {
-        "init_uri": "initPrompt_V1.1.0.json",
-        "best_practice_uri": "descriptionLengthPrompt_V1.0.0.json"
-    },
-    "output": "'Source tree crashes every time I open it. I have uninstalled and reinstalled the software multiple times but the issue persists. This problem is affecting my work as I am unable to access my projects. I am currently using version 3.4.4 of Sourcetree for Windows. I have not been able to find a solution to this problem online or in the Sourcetree community forums. I would appreciate any assistance or suggestions on how to resolve this issue.'"
-}

@@ -1,9 +1,0 @@
-{
-    "model": "gpt-4",
-    "creation_timestamp": "2024-01-03 15:58:17",
-    "prompts": {
-        "init_uri": "initPrompt_V1.1.1.json",
-        "best_practice_uri": "summaryLengthPrompt_V1.0.2.json"
-    },
-    "output": "\"Sourcetree crashes upon opening\""
-}

@@ -1,9 +1,0 @@
-{
-    "model": "gpt-4",
-    "creation_timestamp": "2024-01-03 16:24:37",
-    "prompts": {
-        "init_uri": "initPrompt_V1.1.1.json",
-        "best_practice_uri": "toxicSpeechPrompt_V1.0.1.json"
-    },
-    "output": "After reviewing the comments in the ticket, it is clear that all the comments are professional and related to the issue at hand. There is no toxic speech detected in the comments. The authors of the comments are 'Vipin Yadav', 'Shefali Bhandary', and 'Oleksandr Naumenko'. All of them have maintained a professional tone while discussing the issue. \n\nReturn: 'No toxic speech detected.'"
-}
