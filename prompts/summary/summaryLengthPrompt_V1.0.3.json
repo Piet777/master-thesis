@@ -1,0 +1,13 @@
+{
+    "input_variables": [
+        "max",
+        "min"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "\nBest Practice: Summary Length\nYour Task is to check if the ticket summary is between {min} and {max} words.\nIf the word count is in this range, return the original summary.\nOtherwise, recommend a new summary for the ticket.\nPlease return only the summary and nothing else.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

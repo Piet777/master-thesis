@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "\nBest Practice: Update Missing/Outdated Fields\nGenerate a response in strict JSON format. \nThe response should only include the missing or outdated fields in a ticket from an issue tracker, along with recommendations for updating these fields. \nDo not include any additional explanations or text outside the JSON structure. \n\nThe JSON structure should include the following fields:\n\"field\": \"<name of the missing or outdated field>\",\n\"recommendation\": \"<recommendation on how to update the field and why>\"\n\nAnalyze the ticket based on the provided details.\nIdentify any missing or outdated fields and form recommendations for updates.\nRemember, only return the final analysis in the specified JSON format and nothing else.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
