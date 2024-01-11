@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "\nBest Practice: Toxic Speech Detection\nYour task is to check the comments section for toxic speech.\nIf you detect toxic speech, return a list with the comment, the author, and the datetime.\nEach list item should be an object in the following format:\n\"comment\": \"<content of the original comment>\"\n\"author\": \"<name of the original comment>\"\n\"datetime\": \"<datetime of the original comment>\"\n\"recommendation\": \"<recommendation on how to update the comment and why>\"\n\nIf you do not detect toxic speech, return \"result\": \"no toxic speech detected\".\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
