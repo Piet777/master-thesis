@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Update Missing/Outdated Fields\nGet contextual knowledge about the ticket through the 'Summary', 'Description', and 'Comments' fields.\nIdentify any missing or outdated fields and form recommendations for updates.\nReturn a list with the changes you made with the addition of recommendations and nothing else.\nEach list item should be an object in the following format:\n\"field\": \"<name of the missing or outdated field>\"\n\"recommendation\": \"<recommendation on how to update the field and why>\"\n\nIf you do not have to update fields, return \"Everything is up to date\".",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

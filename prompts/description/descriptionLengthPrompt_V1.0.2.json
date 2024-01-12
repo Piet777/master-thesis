@@ -1,0 +1,14 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Description Length\nYour Task is to check if the ticket description is between {min} and {max} words.\nIgnore source code snippets or images in the description.\nIf the word count is in this range, return the original description.\nOtherwise, recommend a new description for the ticket.\nPlease return only the description and nothing else.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

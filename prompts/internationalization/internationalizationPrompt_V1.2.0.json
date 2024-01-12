@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Internationalization\nBug reports not written in English are often closed immediately or ignored by developers.\nYour task is to check if the ticket is written in English.\nIf some fields of the ticket are not written in English, provide a translation.\nReturn only the translated fields in the following structure and nothing else.\n\"<field>\": \"<English translation of the original field>\"\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
