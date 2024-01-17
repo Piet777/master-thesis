@@ -1,0 +1,14 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Description Length\nYour Task is to check if the ticket description has approximately between {min} and {max} characters.\nIgnore source code snippets or images in the description.\nIf the number of characters is in this range, return the original description.\nOtherwise, recommend a new description.\nPlease return only the description string and nothing else.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

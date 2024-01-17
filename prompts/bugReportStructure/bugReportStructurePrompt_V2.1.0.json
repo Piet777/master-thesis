@@ -1,0 +1,40 @@
+{
+    "name": null,
+    "input_variables": [
+        "bug_report"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "examples": [
+        {
+            "input": "{{'Summary':'Sourcetree crashes',\n'Description':'Source tree crashes everytime i open , I have uninstalled and installed many times',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'Git',\n'CreatedDate':'2021-09-13T05:48:08.000+0000',\n'ResolvedDate':'2021-11-18T15:12:59.000+0000',\n'Status':'Closed',\n'Priority':'Low',\n'Creator':'John Doe',\n'Reporter':'John Doe',\n'Resolution':'Cannot Reproduce',\n'IssueLinks':null,\n'Labels':null,\n'VersionsFixed':null,\n'Assignee':null,\n'TimeSpent':null,\n'Comments':[\n{{\n'Author':'Max Mustermann',\n'Created':'2021-11-18 15:12:59.861000+00:00',\n'Comment':'Issue was fixed in latest Sourcetree versions. Please use Sourcetree 3.4.5 > '\n}}\n]\n}}",
+            "output": "\n1. Overview\nSource tree crashes everytime i open , I have uninstalled and installed many times\n2. Steps to reproduce\n!not provided\n3. Actual result\nSource tree crashes\n4. Expected result\nSource tree does not crash\n5. Stack Traces\n!not provided\n6. Build date and hardware\n!not provided\n7. Additional information\n!not provided\n"
+        },
+        {
+            "input": "\n{{\n'Summary':'Opening and closing Sourcetree causes Pageant to crash\\/close',\n'Description':'I have installed putty and pageant outside of Sourcetree, and I have Pageant startup during OS boot so my key-file is always ready.\r\n\r\nDidn't quite notice it at first, so not sure which version it started at, but Sourcetree now causes Pageant to crash\\/close when it opens or closes, causing e.g. git commands and such from command line to suddenly start to failing for no apparent reason.\r\n\r\nWhenever I open or close Sourcetree now, I have to reopen Pageant and reload my key, including entering a long passkey. Super annoying. Sourcetree shouldn't close or cause any other applications to crash when it opens or when it closes.\r\n\r\nIt happens on all 3 computers of mine. All running latest Windows, latest Pageant, and latest Sourcetree.',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'General',\n'CreatedDate':'2021-04-26T08:26:07.000+0000',\n'ResolvedDate':'2021-04-27T06:38:20.000+0000',\n'Status':'Closed',\n'Priority':'Low',\n'Creator':'Jane Doe',\n'Reporter':'Jane Doe',\n'Resolution':'Duplicate',\n'IssueLinks':null,\n'Labels':'verified',\n'VersionsFixed':null,\n'Assignee':null,\n'TimeSpent':null,\n'Comments':[\n{{\n'Author':'Jane Doe',\n'Created':'2021-04-26 08:41:02.391000+00:00',\n'Comment':'I have tried to disable the \"Automatically start SSH agent when Sourcetree opens\" option, as I thought maybe that was what was messing with things, but that didn't change anything. Pageant still disappears from my systray when Sourcetree opens or closes.'\n}},\n{{\n'Author':'Jane Doe',\n'Created':'2021-04-26 08:42:41.095000+00:00',\n'Comment':'Just noticed Sourcetree even causes Pageant to crash\\/close when I close the Options dialog... \ud83d\ude44'\n}},\n{{\n'Author':'Jonathan Smith',\n'Created':'2021-04-26 10:07:20.880000+00:00',\n'Comment':'Known issue, duplicate. Please use ticket\u00a0SRCTREEWIN-13475\u00a0for suggestions and tracking updates.'\n}}\n]\n}}",
+            "output": "\n1. Overview\nI have installed putty and pageant outside of Sourcetree, and I have Pageant startup during OS boot so my key-file is always ready. Didn't quite notice it at first, but Sourcetree now causes Pageant to crash/close when it opens or closes, causing e.g. git commands and such from command line to suddenly start to failing for no apparent reason. Whenever I open or close Sourcetree now, I have to reopen Pageant and reload my key, including entering a long passkey. Super annoying. It happens on all 3 computers of mine.             \n2. Steps to reproduce\n- Install putty and pageant outside of Sourcetree\n- Set Pageant to startup during OS boot\n- pen or close Sourcetree\n3. Actual result\nSourcetree causes Pageant to crash\\/close when it opens or closes.\n4. Expected result\nSourcetree should not close or cause any other applications to crash when it opens or when it closes.\n5. Stack Traces\n!not provided\n6. Build date and hardware\nAll running latest Windows, latest Pageant, and latest Sourcetree.\nNot sure which version it started.\n7. Additional information\n- I have tried to disable the \"Automatically start SSH agent when Sourcetree opens\" option, as I thought maybe that was what was messing with things, but that didn't change anything. Pageant still disappears from my systray when Sourcetree opens or closes.\n- Just noticed Sourcetree even causes Pageant to crash/close when I close the Options dialog.\n"
+        }
+    ],
+    "example_selector": null,
+    "validate_template": false,
+    "example_prompt": {
+        "name": null,
+        "input_variables": [
+            "input",
+            "output"
+        ],
+        "input_types": {},
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "### Context ###\nA bug report is a document that describes an issue with a product or service and why it needs fixing.\nThe description field is significant for the bug report, as it describes the issue in detail.\nThe description should contain the following structure:\n1. Overview: This is more detailed than the summary field of the bug report, with a description of the context when the error occurred.\n2. Steps to reproduce: A list of steps to reproduce the error.\n3. Actual result: The result that is currently produced.\n4. Expected result: The result that is expected.\n5. Stack Traces: A list of relevant stack traces for the bug report.\n6. Build date and hardware: The build date and hardware, when and where the bug occurred.\n7. Additional information: Additional information relevant to the bug report. That can be screenshots, videos, or other files.\n\n### Instruction ###\nAct as a professional Software Engineer working with issue trackers like Jira or Azure DevOps.\nRearrange the description field of the bug report to match the structure described above.\nIf some information is missing, give suggestions and add them to the description field, if possible.\nReturn the new description field and nothing else.\n\nThe bug report is provided in JSON format.\nBug Report: {input} \n {output}",
+        "template_format": "f-string",
+        "validate_template": false,
+        "_type": "prompt"
+    },
+    "suffix": "### Context ###\nA bug report is a document that describes an issue with a product or service and why it needs fixing.\nThe description field is significant for the bug report, as it describes the issue in detail.\nThe description should contain the following structure:\n1. Overview: This is more detailed than the summary field of the bug report, with a description of the context when the error occurred.\n2. Steps to reproduce: A list of steps to reproduce the error.\n3. Actual result: The result that is currently produced.\n4. Expected result: The result that is expected.\n5. Stack Traces: A list of relevant stack traces for the bug report.\n6. Build date and hardware: The build date and hardware, when and where the bug occurred.\n7. Additional information: Additional information relevant to the bug report. That can be screenshots, videos, or other files.\n\n### Instruction ###\nAct as a professional Software Engineer working with issue trackers like Jira or Azure DevOps.\nRearrange the description field of the bug report to match the structure described above.\nIf some information is missing, give suggestions and add them to the description field, if possible.\nReturn the new description field and nothing else.\n\nThe bug report is provided in JSON format.\nBug Report: {bug_report}",
+    "example_separator": "\n\n",
+    "prefix": "",
+    "template_format": "f-string",
+    "_type": "few_shot"
+}
