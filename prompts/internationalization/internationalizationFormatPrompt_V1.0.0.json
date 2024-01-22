@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "input"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nReturn the given Data in the following format:\n\"<field>\": \"<English translation of the original field>\"\n\n### Context ###\nfield: <name of the field of the received ticket>\n\nData: {input}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

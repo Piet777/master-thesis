@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "revised_ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nYou receive a list of comments from a revised ticket from an issue tracker.\nReturn the given Data for each entry in the following format in JSON:\n\"comment\": \"<content of the original comment>\",\n\"author\": \"<name of the original comment>\",\n\"datetime\": \"<datetime of the original comment>\",\n\"recommendation\": \"<revised content of the comment>\"\nIf the list is empty return \"no toxic speech detected\".\n\n### Context ###\nData: {revised_ticket} ",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

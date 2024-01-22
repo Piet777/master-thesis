@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "revised_ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nYou receive a revised ticket from an issue tracker in JSON format.\nReturn the given Data in the following format in JSON:\n\"<summary_old>\": \"<Old version of the content of the summary field>\"\n\"<summary_new>\": \"<New version of the content of the summary field>\"\n\n### Context ###\nData: {revised_ticket}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
