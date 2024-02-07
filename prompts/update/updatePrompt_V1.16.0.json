@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Update Missing/Outdated Fields\nDuring the evolution of a ticket, some fields may have become outdated or missing.\nThe needed information is sometimes written in the 'Summary', 'Description', or 'Comments' fields.\nGet contextual knowledge about the ticket through the 'Summary', 'Description', and 'Comments' fields.\nIf you detect missing or outdated fields because you find something in the 'Summary', 'Description' and 'Comments' fields, update these fields.\nReturn the changes you made with the addition of recommendations",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
