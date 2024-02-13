@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Description Completeness\nYour Task is to check if the \"Description\" field of the ticket is complete.\nWe define a description as complete if it contains the following pieces:\nRole: abstract behavior of actors in the system context; describes who uses the system.\nTask: specific things that must be done to achieve goals; solution or function of the problem.\nCapability: the ability of actors to achieve goals based on certain conditions and events.\nGoal: a condition or a circumstance desired by stakeholders or actors; describes the problem domain or the impact of solving the problem.\n\nThe general format of a user story can be expressed as follows: As a <Role>, I want <Task>, So that <Goal>.\n\nIf the description is complete, return the original description.\nOtherwise, recommend a new description for the ticket.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
