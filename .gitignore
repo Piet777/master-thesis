@@ -5,6 +5,7 @@ __pycache__/
 
 data/
 results/
+evaluation/
 api.txt
 
 # C extensions

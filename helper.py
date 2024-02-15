@@ -1,6 +1,7 @@
 ## Imports ##
 import pandas as pd
 
+
 ## Functions ##
 def createTicket(ticket, evolutionStep = None):
     #This function creates a ticket with all its evolutions or only the one specified by the evolutionStep parameter
@@ -75,27 +76,69 @@ def createCommentsHistory(data):
     return output
 
 
-def saveTicket(prompt, df, evolutionStep, jira, id):
+def saveTicket(folderName, ticket, evolutionStep, jira, id):
     try: 
-        df.to_csv("data/" + str(prompt) + "/csv/" + str(jira) + "_" + str(id) + "_" + str(evolutionStep) + ".csv", index=False)
-        df.to_json("data/" + str(prompt) + "/json/" + str(jira) + "_" + str(id) + "_" + str(evolutionStep) + ".json", orient='records', lines=True, indent=4)
-        print("The files were saved successfully!")
+        ticket.to_json("data/" + str(folderName) + "/" + str(jira) + "_" + str(id) + "_" + str(evolutionStep) + ".json", orient='records', lines=True, indent=4)
+        print("The JSON was successfully saved!")
+        
+        if folderName == "summary":
+            createSummaryAnnotation(ticket)
+        
+        insertIntoDataset(folderName, ticket)
     except:
         print("An error occurred while saving the files!")
 
 
-def addIssueTypeToField(df, field):
-    # reduces the dataframe to only the field you are looking for with the addition of a new column with the issue type
-    # needs the full dataframe and the field as string
+def insertIntoDataset(folderName, ticket):
+    try:
+        dataset = pd.read_csv("data/summary/summaryDataset.csv")
+
+        if ((dataset['Jira'] == ticket['Jira'][0]) & (dataset['IssueId'] == ticket['IssueId'][0])).any():
+            print("The ticket is already in the dataset.")
+        else:
+            ticket.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", mode='a', header=False, index=False)
+            print("The ticket was inserted into the dataset successfully!")
+    except:
+        print("An error occurred while inserting the file!")
+
+
+def createSummaryAnnotation(ticket):        
+    summary = ticket['Summary'][0]
+    summaryLength = len(str(summary))
+
+    if(summaryLength > 70):
+        ticket['violation_actual'] = "TRUE"
+        ticket['reason'] = str(summaryLength) + " characters is too long."
+    elif(summaryLength < 39):
+        ticket['violation_actual'] = "TRUE"
+        ticket['reason'] = str(summaryLength) + " characters is too short."
+    else:
+        ticket['violation_actual'] = "FALSE"
+        ticket['reason'] = str(summaryLength) + " characters is in range."
     
-    df_reduced = df.loc[(df["field"] == field) | (df["field"] == "IssueType")]
+    print("The annotation was created successfully!")
 
-    issue_type_df = df_reduced[df_reduced["field"] == "IssueType"]
 
-    issue_type_dict = dict(zip(issue_type_df['issue_id'], issue_type_df['data_to']))
+def annotateResult(result, ticket, prompt_type):
+    try:
+        if prompt_type == "summary":
+            createSummaryAnnotationForResult(result, ticket)
+    except:
+        print("An error occurred while annotating the result!")
 
-    df_reduced['issue_type'] = df_reduced['issue_id'].map(issue_type_dict)
 
-    output = df_reduced[df_reduced["field"] == field]
+def createSummaryAnnotationForResult(result, ticket):        
+    summary = ticket['Summary']
+    summaryLength = len(str(summary))
 
-    return output
+    if(summaryLength > 70):
+        result['violation_actual'] = "TRUE"
+        result['reason'] = str(summaryLength) + " characters is too long."
+    elif(summaryLength < 39):
+        result['violation_actual'] = "TRUE"
+        result['reason'] = str(summaryLength) + " characters is too short."
+    else:
+        result['violation_actual'] = "FALSE"
+        result['reason'] = str(summaryLength) + " characters is in range."
+    
+    print("The annotation was created successfully!")
