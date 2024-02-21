@@ -119,10 +119,13 @@ def createSummaryAnnotation(ticket):
     print("The annotation was created successfully!")
 
 
-def annotateResult(result, ticket, prompt_type):
+def annotateResult(result, ticket, prompt_type, evalMode):
     try:
         if prompt_type == "summary":
-            createSummaryAnnotationForResult(result, ticket)
+            createSummaryAnnotationForResult(result, ticket, evalMode)
+
+            # if evalMode:
+            #     updateSummaryDataset(result)
     except:
         print("An error occurred while annotating the result!")
 
@@ -142,3 +145,16 @@ def createSummaryAnnotationForResult(result, ticket):
         result['reason'] = str(summaryLength) + " characters is in range."
     
     print("The annotation was created successfully!")
+
+
+# def updateSummaryDataset(result):
+#         summaryDataset = pd.read_csv('./data/summary/summaryDataset.csv')
+
+#         jira = result['Jira']
+#         issueId = result['IssueId']
+#         evoId = result['EvoId']
+#         prediction = result['output']['violation_predicted']
+
+#         summaryDataset.loc[(summaryDataset['Jira'] == jira) & (summaryDataset['IssueId'] == issueId) & (summaryDataset['EvoId'] == evoId), 'violation_predicted'] = prediction
+
+#         summaryDataset.to_csv('./data/summary/summaryDataset.csv', index=False)
