@@ -8,11 +8,8 @@ from time import time
 ## Third-Party Imports (requires pip install) ##
 from tqdm import tqdm
 import pickle
-import bz2, gzip
-
-
-## Local Imports ##
-# None
+import bz2
+import gzip
 
 
 class StopExecution(Exception):
@@ -23,7 +20,7 @@ class StopExecution(Exception):
         pass
 
 
-def exit():
+def exit():  # pylint: disable=redefined-builtin (we explicitly WANT to redefine exit())
     raise StopExecution
 
 
@@ -161,9 +158,9 @@ class CustomLogger():
         duration_str = ''
         if ended_block.start_time:
             duration_seconds = time() - ended_block.start_time
-            M, S = divmod(duration_seconds, 60)
-            H, M = divmod(int(M), 60)
-            duration_str = f"Duration: {H:02d}:{M:02d}:{S:07.4f}"
+            m, s = divmod(duration_seconds, 60)
+            h, m = divmod(int(m), 60)
+            duration_str = f"Duration: {h:02d}:{m:02d}:{s:07.4f}"
 
         # Custom log message when ending a block
         if self.verbose_newlines:
@@ -220,7 +217,7 @@ class PickleLib:
 
     def _configure_open_and_full_file_path(self, compression, filepath):
         # Switch the open function depending on the compression chosen
-        if compression == None:
+        if compression is None:
             open_func = open
         elif compression == 'gzip':
             open_func = gzip.open
@@ -355,9 +352,3 @@ class PickleLib:
             self.logger.end()
 
         return data
-
-
-def defaultdict_to_dict(d):
-    if isinstance(d, defaultdict):
-        d = {k: defaultdict_to_dict(v) for k, v in d.items()}
-    return d

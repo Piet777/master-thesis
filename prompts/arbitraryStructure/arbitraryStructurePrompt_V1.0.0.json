@@ -1,0 +1,15 @@
+{
+    "name": null,
+    "input_variables": [
+        "issue_type",
+        "structure_desc",
+        "strucutre"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Arbitrary Structure\nThe received ticket is from the superior type \"{issue_type}\".\nYour Task is to check if the \"Description\" field of the ticket contains all components of a given structure.\nThe components of the desired structure are described as follows:\n{structure_desc}\n\nThe desired strucutre of a {issue_type} is as follows: \n{strucutre}\n\nIf the description is conatins all components, return the original description.\nIf the description contains nothing, return \"No description provided.\".\nOtherwise, recommend a new description, suitable to the desired structure for the ticket.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

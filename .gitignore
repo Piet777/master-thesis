@@ -6,6 +6,8 @@ __pycache__/
 data/
 results/
 evaluation/
+jiraEvolutions/
+issueDiscussionItems/
 api.txt
 
 # C extensions

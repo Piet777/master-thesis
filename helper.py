@@ -67,7 +67,7 @@ def createCommentsHistory(data):
     ind = 0
     for index, row in data.iterrows():
         comments['Author'] = row['history_author']
-        comments['Created'] = row['history_created_date']
+        comments['Created'] = row['history_created_date'].strftime('%Y-%m-%d %H:%M:%S')
         comments['Comment'] = row['data_to']
         comments_df = pd.DataFrame(comments, index=[ind])
         output = pd.concat([output, comments_df])
@@ -83,20 +83,22 @@ def saveTicket(folderName, ticket, evolutionStep, jira, id):
         
         if folderName == "summary":
             createSummaryAnnotation(ticket)
-        
-        insertIntoDataset(folderName, ticket)
+            insertIntoDataset(folderName, ticket)
+    
     except:
         print("An error occurred while saving the files!")
 
 
 def insertIntoDataset(folderName, ticket):
     try:
-        dataset = pd.read_csv("data/summary/summaryDataset.csv")
+        dataset = pd.read_csv("data/" + folderName + "/" + folderName + "Dataset.csv")
 
         if ((dataset['Jira'] == ticket['Jira'][0]) & (dataset['IssueId'] == ticket['IssueId'][0])).any():
             print("The ticket is already in the dataset.")
         else:
-            ticket.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", mode='a', header=False, index=False)
+            dataset = dataset.append(ticket, ignore_index=True)
+            dataset.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", index=False)
+            # ticket.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", mode='a', header=False, index=False)
             print("The ticket was inserted into the dataset successfully!")
     except:
         print("An error occurred while inserting the file!")
