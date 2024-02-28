@@ -1,0 +1,14 @@
+{
+    "name": null,
+    "input_variables": [
+        "\n        \"field\"",
+        "revised_ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nYou receive changes and recommendations made to fields of a ticket from an issue tracker.\nReturn the data  in the following format in JSON:\n\"<violation_predicted>\": \"<TRUE, if a violation was detectd, otherwise FALSE>\",\n\"fields\": [\n    {\n        \"field\": \"<name of the missing or outdated field>\",\n        \"recommendation\": \"<only the correction made to the field>\",\n        \"reason\": \"<reason for the recommendation>\"\n    }\n]\n\n### Context ###\nData: {revised_ticket}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
