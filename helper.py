@@ -96,9 +96,7 @@ def insertIntoDataset(folderName, ticket):
         if ((dataset['Jira'] == ticket['Jira'][0]) & (dataset['IssueId'] == ticket['IssueId'][0])).any():
             print("The ticket is already in the dataset.")
         else:
-            dataset = dataset.append(ticket, ignore_index=True)
-            dataset.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", index=False)
-            # ticket.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", mode='a', header=False, index=False)
+            ticket.to_csv("data/" + str(folderName) + "/" + str(folderName) + "Dataset.csv", mode='a', header=False, index=False)
             print("The ticket was inserted into the dataset successfully!")
     except:
         print("An error occurred while inserting the file!")
@@ -121,13 +119,13 @@ def createSummaryAnnotation(ticket):
     print("The annotation was created successfully!")
 
 
-def annotateResult(result, ticket, prompt_type, evalMode):
+def annotateResult(result, ticket, prompt_type):
     try:
         if prompt_type == "summary":
-            createSummaryAnnotationForResult(result, ticket, evalMode)
-
-            # if evalMode:
-            #     updateSummaryDataset(result)
+            createSummaryAnnotationForResult(result, ticket)
+        elif prompt_type == "update":
+            createUpdateAnnotationForResult(result, ticket)
+            
     except:
         print("An error occurred while annotating the result!")
 
@@ -149,14 +147,20 @@ def createSummaryAnnotationForResult(result, ticket):
     print("The annotation was created successfully!")
 
 
-# def updateSummaryDataset(result):
-#         summaryDataset = pd.read_csv('./data/summary/summaryDataset.csv')
+def createUpdateAnnotationForResult(result, ticket):
+    dataset = pd.read_csv("./data/update/updateDataset.csv")
+    jira = ticket['Jira']
+    issueId = ticket['IssueId']
+    evoId = ticket['EvoId']
 
-#         jira = result['Jira']
-#         issueId = result['IssueId']
-#         evoId = result['EvoId']
-#         prediction = result['output']['violation_predicted']
+    dataset_entry = dataset[(dataset['Jira'] == jira) & (dataset['IssueId'] == issueId) & (dataset['EvoId'] == evoId)]
 
-#         summaryDataset.loc[(summaryDataset['Jira'] == jira) & (summaryDataset['IssueId'] == issueId) & (summaryDataset['EvoId'] == evoId), 'violation_predicted'] = prediction
+    if dataset_entry['ViolationActual'].values[0]:
+        violation = "TRUE"
+    elif not dataset_entry['ViolationActual'].values[0]:
+        violation = "FALSE"
 
-#         summaryDataset.to_csv('./data/summary/summaryDataset.csv', index=False)
+    result['violation_actual'] = violation
+    result['reason'] = dataset_entry['ViolationReason'].values[0]
+
+    print("The annotation was created successfully!")
