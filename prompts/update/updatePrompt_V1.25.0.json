@@ -1,0 +1,11 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Update Missing/Outdated Fields\nDuring the evolution of a ticket, some fields may have become outdated or missing.\nYou could find the needed information in the \"Summary\", \"Description\", or \"Comments\" fields.\nGet contextual knowledge about the ticket through the \"Summary\", \"Description\", and \"Comments\" fields.\nIf someone specifically mentions or suggests a change for the ticket in the \"Comments\" field, update the ticket accordingly.\nThe change can be provided by a human or as a message from a programm.\nIgnore error messages, logs and quotes within the comment.\nPossible keywords for such a change are: \"edit\", \"change\", \"move\", \"mark\", \"fix\", \"set\", \"update\", \"modify\", \"correct\", \"adjust\", \"resolve\", \"should\"\n\nReturn only mentioned or suggested changes from the \"Comments\" field.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
