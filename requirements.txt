@@ -1,0 +1,15 @@
+
+# JupyterLab
+jupyter==1.0.0
+
+# Data Manipulation
+pandas==2.1.2
+pymongo==4.6.0
+
+# NLP Libraries
+nltk==3.8.1
+spacy==3.7.4
+spacytextblob==4.0.0
+
+# Development
+tqdm==4.66.1

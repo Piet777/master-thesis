@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "revised_ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nYou receive a revised ticket from an issue tracker in JSON format.\nReturn the given Data in the following format in JSON:\n\"<violation_predicted>\": \"<Set to TRUE, if a change was detected and made, otherwise FALSE>\"\n\"<summary_old>\": \"<Original and unchanged content of the summary field>\"\n\"<summary_new>\": \"<New and changed content of the summary field>\"\n\nIf the summary was not changed, return the original and unchanged summary in the \"<summary_new>\" field.\nDon't return any source code or code snippets.\n\n### Context ###\nData: {revised_ticket}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

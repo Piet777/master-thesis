@@ -1,0 +1,14 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Summary Length\nYour Task is to check if the ticket summary has exactly between {min} and {max} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
