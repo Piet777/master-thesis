@@ -1,0 +1,66 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min",
+        "ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "examples": [
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Sourcetree crashes',\n'Description':'Source tree crashes everytime i open , I have uninstalled and installed many times',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'Git'}}",
+            "output": "The current summary is \"Sourcetree crashes\", which consists of 18 characters. This is below the recommended range of 39 to 70 characters for a summary.\n\nRecommended Summary: \"Sourcetree crashes upon opening repeatedly\"\n\nThis revised summary is 42 characters long, fitting within the recommended range and succinctly conveying the essence of the ticket."
+        },
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Opening and closing Sourcetree causes Pageant to crash\\/close',\n'Description':'I have installed putty and pageant outside of Sourcetree, and I have Pageant startup during OS boot so my key-file is always ready.\r\n\r\nDidn't quite notice it at first, so not sure which version it started at, but Sourcetree now causes Pageant to crash\\/close when it opens or closes, causing e.g. git commands and such from command line to suddenly start to failing for no apparent reason.\r\n\r\nWhenever I open or close Sourcetree now, I have to reopen Pageant and reload my key, including entering a long passkey. Super annoying. Sourcetree shouldn't close or cause any other applications to crash when it opens or when it closes.\r\n\r\nIt happens on all 3 computers of mine. All running latest Windows, latest Pageant, and latest Sourcetree.',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'General'}}",
+            "output": "The current summary is \"Opening and closing Sourcetree causes Pageant to crash\\/close\" which consists of 61 characters. This is within the best practice range of 39 to 70 characters. Therefore, the original summary is compliant with the best practice for summary length and does not require any changes."
+        },
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Cannot change title of News tool',\n'Description':'After initially setting up the News tool during worksite setup, I tried to go to the option page (NEWS-2) and change the title of the tool. After I made the change, the title of the tool did not update, even after I logged out and logged back in. However, when I opened up options, the new title that I had entered was still specified.\n\nI tried to change the URL of the feed as well as the title at the same time, and even though the new feed was displayed properly, the title of the tool remained what I had initially set it to during worksite setup.',\n'VersionsAffected':'2.0',\n'IssueType':'Bug',\n'Project':'Sakai',\n'Components':'News (RSS)'}}",
+            "output": "The current summary is \"Cannot change title of News tool\", which consists of 32 characters. This is below the recommended range of 39 to 70 characters for a summary.\n\nRecommended Summary: \"Title of News tool remains unchanged after several update attempts\"\n\nThis revised summary is 66 characters long, fitting within the recommended range and succinctly conveying the essence of the ticket."
+        },
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Game Crashes When Player Opens Inventory While Respawning with 'Immediate Respawn' Enabled',\n'Description':'If the player opens their inventory quickly after respawning in a world with 'Immediate Respawn' enabled, the world will crash. This happened accidentally once in one of my worlds. I tried it a few more times after reloading, and it seemed to happen reliably as long as I opened my inventory at the right time.',\n'VersionsAffected':'PS4 1.89',\n'IssueType':'Bug',\n'Project':'Minecraft Console Edition',\n'Components':null}}",
+            "output": "The current summary is \"Game Crashes When Player Opens Inventory While Respawning with 'Immediate Respawn' Enabled\", which consists of 90 characters. This exceeds the recommended range of 39 to 70 characters for a summary.\n\nRecommended Summary: \"Crash on inventory access with active 'Immediate Respawn' on respawn\"\n\nThis revised summary is 68 characters long, fitting within the recommended range and succinctly conveying the essence of the ticket."
+        },
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Epic link gets removed when moving an epic from a non next gen project to a next project',\n'Description':'h3. Summary \r\n\r\n When an epic from a non next-Gen project is moved to a next-Gen project, the association is removed. All issues associated with the epics will  no longer be linked to the epic \r\n\r\n h3. Steps to reproduce \r\n\r\n # Have 2 projects (Next-gen and non next-gen) \r\n # Create an Epic from a non Next-gen project \r\n # Add a child issue to the epic \r\n # Move the epic to the next-gen project \r\n\r\n h3. Expected Result \r\n Epic link remains. The issues are still linked with the epic in the next-gen project even after the moved. \r\n\r\n h3. Actual Result \r\n Epic link is lost',\n'VersionsAffected':null,\n'IssueType':'Bug',\n'Project':'Jira Software Cloud',\n'Components':'next-gen'}}",
+            "output": "The current summary is \"Epic link gets removed when moving an epic from a non next gen project to a next project\", which consists of 88 characters. This exceeds the recommended range of 39 to 70 characters for a summary.\n\nRecommended Summary: \"Epic link loss on moving an epic to a 'next-gen' project\"\n\nThis revised summary is 56 characters long, fitting within the recommended range and succinctly conveying the essence of the ticket."
+        }
+    ],
+    "example_selector": null,
+    "validate_template": false,
+    "example_prompt": {
+        "name": null,
+        "input_variables": [
+            "input",
+            "maxChar",
+            "minChar",
+            "output"
+        ],
+        "input_types": {},
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Best Practice: Summary Length\nYour Task is to check if the ticket summary has exactly between {minChar} and {maxChar} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\n\nThe ticket is in JSON format.\nTicket: {input} \n {output}",
+        "template_format": "f-string",
+        "validate_template": false,
+        "_type": "prompt"
+    },
+    "suffix": "Best Practice: Summary Length\nYour Task is to check if the ticket summary has exactly between {min} and {max} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\n\nThe ticket is in JSON format.\nTicket: {ticket}",
+    "example_separator": "\n\n",
+    "prefix": "",
+    "template_format": "f-string",
+    "_type": "few_shot"
+}

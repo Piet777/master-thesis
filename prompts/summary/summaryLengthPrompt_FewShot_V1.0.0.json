@@ -1,0 +1,14 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "Best Practice: Summary Length\nYour Task is to check if the ticket summary has exactly between {min} and {max} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\n\nHere are some examples:\n### Example 1 ###\n\"input\": {{'Summary':'Sourcetree crashes',\n'Description':'Source tree crashes everytime i open , I have uninstalled and installed many times',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'Git'}},\n\"output\": \"The Summary is with 18 characters too short. In order to follow the best practices, the summary should be between 39 and 70 characters. The recommended summary is: 'Sourcetree crashes upon opening repeatedly.' \" \n\n### Example 2 ###\n\"input\": {{'Summary':'Opening and closing Sourcetree causes Pageant to crash\\/close',\n'Description':'I have installed putty and pageant outside of Sourcetree, and I have Pageant startup during OS boot so my key-file is always ready.\r\n\r\nDidn't quite notice it at first, so not sure which version it started at, but Sourcetree now causes Pageant to crash\\/close when it opens or closes, causing e.g. git commands and such from command line to suddenly start to failing for no apparent reason.\r\n\r\nWhenever I open or close Sourcetree now, I have to reopen Pageant and reload my key, including entering a long passkey. Super annoying. Sourcetree shouldn't close or cause any other applications to crash when it opens or when it closes.\r\n\r\nIt happens on all 3 computers of mine. All running latest Windows, latest Pageant, and latest Sourcetree.',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'General'}},\n\"output\": \"The summary has 61 characters, which is within the best practice range. No changes are needed.\" ",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
