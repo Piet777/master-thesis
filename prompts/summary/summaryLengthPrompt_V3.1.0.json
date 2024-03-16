@@ -1,0 +1,15 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min",
+        "ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "'Summary Length':\nYour Task is to check if the ticket summary has exactly between {min} and {max} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\nReturn the revised icket with the current summary and the recommended summary.\n\nThe ticket is in JSON format.\nTicket: {ticket}\nAnswer: ",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
