@@ -1,0 +1,54 @@
+{
+    "name": null,
+    "input_variables": [
+        "max",
+        "min",
+        "ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "examples": [
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Sourcetree crashes',\n'Description':'Source tree crashes everytime i open , I have uninstalled and installed many times',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'Git'}}",
+            "output": "The current summary is \"Sourcetree crashes\". Splitting the summary into it's individual characters, we get the following: ['S', 'o', 'u', 'r', 'c', 'e', 't', 'r', 'e', 'e', ' ', 'c', 'r', 'a', 's', 'h', 'e', 's'].\nCounting each character including all letters, spaces, and punctuation marks, we get a total of 18 characters. This is below the recommended range of 39 to 70 characters for a summary, so a new summary has to be recommended.\n\nRecommended Summary: \"Sourcetree crashes upon opening repeatedly\"\n\nThis revised summary is 42 characters long, fitting within the recommended range and succinctly conveying the essence of the ticket."
+        },
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Opening and closing Sourcetree causes Pageant to crash\\/close',\n'Description':'I have installed putty and pageant outside of Sourcetree, and I have Pageant startup during OS boot so my key-file is always ready. Didn't quite notice it at first, so not sure which version it started at, but Sourcetree now causes Pageant to crash\\/close when it opens or closes, causing e.g. git commands and such from command line to suddenly start to failing for no apparent reason. Whenever I open or close Sourcetree now, I have to reopen Pageant and reload my key, including entering a long passkey. Super annoying. Sourcetree shouldn't close or cause any other applications to crash when it opens or when it closes. It happens on all 3 computers of mine. All running latest Windows, latest Pageant, and latest Sourcetree.',\n'VersionsAffected':'3.4.4',\n'IssueType':'Bug',\n'Project':'Sourcetree for Windows',\n'Components':'General'}}",
+            "output": "The current summary is \"Opening and closing Sourcetree causes Pageant to crash\\/close\". Splitting the summary into it's individual characters, we get the following: ['O', 'p', 'e', 'n', 'i', 'n', 'g', ' ', 'a', 'n', 'd', ' ', 'c', 'l', 'o', 's', 'i', 'n', 'g', ' ', 'S', 'o', 'u', 'r', 'c', 'e', 't', 'r', 'e', 'e', ' ', 'c', 'a', 'u', 's', 'e', 's', ' ', 'P', 'a', 'g', 'e', 'a', 'n', 't', ' ', 't', 'o', ' ', 'c', 'r', 'a', 's', 'h', '', '/', 'c', 'l', 'o', 's', 'e'].\nCounting each character including all letters, spaces, and punctuation marks, we get a total of 61 characters. This is within the best practice range of 39 to 70 characters.    \n        \nNo summary has to be recommended. \n\nThe original summary is compliant with the best practice for summary length and does not require any changes."
+        },
+        {
+            "minChar": 39,
+            "maxChar": 70,
+            "input": "{{'Summary':'Game Crashes When Player Opens Inventory While Respawning with 'Immediate Respawn' Enabled',\n'Description':'If the player opens their inventory quickly after respawning in a world with 'Immediate Respawn' enabled, the world will crash. This happened accidentally once in one of my worlds. I tried it a few more times after reloading, and it seemed to happen reliably as long as I opened my inventory at the right time.',\n'VersionsAffected':'PS4 1.89',\n'IssueType':'Bug',\n'Project':'Minecraft Console Edition',\n'Components':null}}",
+            "output": "The current summary is \"Game Crashes When Player Opens Inventory While Respawning with 'Immediate Respawn' Enabled\". Splitting the summary into it's individual characters, we get the following: ['G', 'a', 'm', 'e', ' ', 'C', 'r', 'a', 's', 'h', 'e', 's', ' ', 'W', 'h', 'e', 'n', ' ', 'P', 'l', 'a', 'y', 'e', 'r', ' ', 'O', 'p', 'e', 'n', 's', ' ', 'I', 'n', 'v', 'e', 'n', 't', 'o', 'r', 'y', ' ', 'W', 'h', 'i', 'l', 'e', ' ', 'R', 'e', 's', 'p', 'a', 'w', 'n', 'i', 'n', 'g', ' ', 'w', 'i', 't', 'h', ' ', ''', 'I', 'm', 'm', 'e', 'd', 'i', 'a', 't', 'e', ' ', 'R', 'e', 's', 'p', 'a', 'w', 'n', ''', ' ', 'E', 'n', 'a', 'b', 'l', 'e', 'd'].\nCounting each character including all letters, spaces, and punctuation marks, we get a total of 90 characters. This exceeds the recommended range of 39 to 70 characters for a summary, so a new summary has to be recommended.\n\nRecommended Summary: \"Crash on inventory access with active 'Immediate Respawn' on respawn\"\n\nThis revised summary is 68 characters long, fitting within the recommended range and succinctly conveying the essence of the ticket."
+        }
+    ],
+    "example_selector": null,
+    "validate_template": false,
+    "example_prompt": {
+        "name": null,
+        "input_variables": [
+            "input",
+            "maxChar",
+            "minChar",
+            "output"
+        ],
+        "input_types": {},
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "'Summary Length':\nYour Task is to check if the ticket summary has exactly between {minChar} and {maxChar} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\n\nThe ticket is in JSON format.\nTicket: {input}\nAnswer: Let's think step by step. {output}",
+        "template_format": "f-string",
+        "validate_template": false,
+        "_type": "prompt"
+    },
+    "suffix": "'Summary Length':\nYour Task is to check if the ticket summary has exactly between {min} and {max} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\n\nThe ticket is in JSON format.\nTicket: {ticket}\nAnswer: Let's think step by step.",
+    "example_separator": "\n\n",
+    "prefix": "",
+    "template_format": "f-string",
+    "_type": "few_shot"
+}
