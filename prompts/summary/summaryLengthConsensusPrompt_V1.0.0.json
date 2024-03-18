@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "answers",
+        "max",
+        "min",
+        "role",
+        "ticket"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nAct as a professional {role} working with issue trackers like Jira or Azure DevOps.\nWorking with these issue trackers, you must consider multiple text-based best practices to increase understandability and reduce time.\nYour outputs should correspond to those a {role} would regarding the ticket.\n\nPreviously, several prompt algorithms were tested for the best practice 'Summary Length'. This best practice states:\nYour Task is to check if the ticket summary has exactly between {min} and {max} characters.\nIf the number of characters is exactly in this range, return the original summary.\nOtherwise, recommend a new summary that number of characters is exactly in this range based on the information of the description field for the ticket.\n\n### Context ###\nData: {ticket}\n\nGiven the following answers, which one is the best, or can you synthesize a better one?\nReturn the prompt type which provides the best answer with a short one sentence explanation.\n{answers}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
