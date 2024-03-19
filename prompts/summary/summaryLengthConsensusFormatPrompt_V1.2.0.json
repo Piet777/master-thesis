@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "answer"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nYou receive the prompt type, the answer, the new summary and an explanation, regarding the questions of which of a set of summarys is the best.\nReturn the given Data in the following format in JSON:\n\"<prompt_type>\": \"<The prompt type, or NEW if not provided>\"\n\"<summary>\": \"<The new and recommended summary>\"\n\"<explanation>\": \"<The short explanation>\"\n\n### Context ###\nData: {answer}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

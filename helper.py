@@ -125,6 +125,8 @@ def annotateResult(result, ticket, prompt_type):
             createSummaryAnnotationForResult(result, ticket)
         elif prompt_type == "update":
             createUpdateAnnotationForResult(result, ticket)
+        else:
+            print("no annotation method for the prompt type")
             
     except:
         print("An error occurred while annotating the result!")
