@@ -1,0 +1,14 @@
+{
+    "name": null,
+    "input_variables": [
+        "bug_report",
+        "role"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Context ###\nA bug report is a document that describes an issue with a product or service and why it needs fixing.\nThe description field is significant for the bug report, as it describes the issue in detail.\nThe description should contain the following structure:\nOverview: This is more detailed than the summary field of the bug report, with a description of the context when the error occurred.\nSteps to reproduce: A list of steps to reproduce the error.\nActual result: The result that is currently produced.\nExpected result: The result that is expected.\n\nAdditionally, the description could contain the following components:\nStack Traces: A list of relevant stack traces for the bug report.\nBuild date and hardware: The build date and hardware, when and where the bug occurred.\nAdditional information: Additional information relevant to the bug report. That can be screenshots, videos, or other files.\n\n### Instruction ###\nAct as a professional {role} working with issue trackers like Jira or Azure DevOps.\nIf the description deviates significantly from the above structure, we want to rearranged the description according to the above structure.\nYour outputs should correspond to those a Software Enginee would regarding the bug report.\nIf some information is missing, give suggestions and add them to the description field, if possible.\n\nThe bug report is provided in JSON format.\nBug Report: {bug_report}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
