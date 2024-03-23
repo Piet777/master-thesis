@@ -125,6 +125,8 @@ def annotateResult(result, ticket, prompt_type):
             createSummaryAnnotationForResult(result, ticket)
         elif prompt_type == "update":
             createUpdateAnnotationForResult(result, ticket)
+        elif prompt_type == "bugreportStructure":
+            createBugReportAnnotationForResult(result, ticket)
         else:
             print("no annotation method for the prompt type")
             
@@ -148,6 +150,22 @@ def createSummaryAnnotationForResult(result, ticket):
     
     print("The annotation was created successfully!")
 
+
+def createBugReportAnnotationForResult(result, ticket):
+    dataset = pd.read_csv("./data/bugreportStructure/bugreportStructureDataset.csv")
+    jira = ticket['Jira']
+    issueId = ticket['IssueId']
+    evoId = ticket['EvoId']
+
+    try:
+        dataset_entry = dataset[(dataset['Jira'] == jira) & (dataset['IssueId'] == issueId) & (dataset['EvoId'] == evoId)]
+        
+        result['smell_actual'] = dataset_entry['SmellActual'].values[0]
+        result['reason'] = dataset_entry['SmellReason'].values[0]
+        print("The annotation was created successfully!")
+    except:
+        print("The ticket is not in the dataset.")
+    
 
 def createUpdateAnnotationForResult(result, ticket):
     dataset = pd.read_csv("./data/update/updateDataset.csv")
