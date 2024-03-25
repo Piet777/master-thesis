@@ -160,8 +160,8 @@ def createBugReportAnnotationForResult(result, ticket):
     try:
         dataset_entry = dataset[(dataset['Jira'] == jira) & (dataset['IssueId'] == issueId) & (dataset['EvoId'] == evoId)]
         
-        result['smell_actual'] = dataset_entry['SmellActual'].values[0]
-        result['reason'] = dataset_entry['SmellReason'].values[0]
+        result['smell_actual'] = str(dataset_entry['SmellActual'].values[0])
+        result['reason'] = str(dataset_entry['SmellReason'].values[0])
         print("The annotation was created successfully!")
     except:
         print("The ticket is not in the dataset.")
