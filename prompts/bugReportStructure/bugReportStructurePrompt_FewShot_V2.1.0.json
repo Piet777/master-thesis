@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "examples"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "'Bug Report Structure':\nThe description field is important for the bug report, as it describes the issue in detail.\n\n### Description Components ###\nThe description of a bug report should contain the following important components:\nOverview: A more detailed description of the context, a summary, or a problem statement, when the error occurred. \nSteps to reproduce: A list of steps to reproduce, or the scenario to produce the error.\nActual result: The result that is currently produced, the actual behaviour, or what actual happens.\nExpected result: The result that was expected, the expected behaviour, or what should happen.\n\nAdditionally, the description could contain the following components:\nStack Traces: A list of relevant stack traces for the bug report.\nBuild date and hardware: The build date and hardware, as well as when and where the bug occurred.\nAdditional information: Additional information relevant to the bug report, including screenshots, videos, or other files.\n\n### Task ###\nWe want to determine the degree of completeness of the original/old description.\nThe important components of a description are an overview/summary, steps to reproduce, the actual result and the expected result.\nWe define a clear structure when we have appropriate headings for each important component in the description.\nIn some cases we don't have a topic/heading but it is still clear what the component is about.\nThe degree is between 1 and 3:\n1: The original/old description contains all important components or has only been slightly modified.\n2: The original/old description contains 2 or 3 components but is not complete.\n3: The original/old description is a plain text without a clear structure and contains at most 1 important component.\n\nIf the description field is missing some important parts, we want to rearrange the description field accordingly.\nReturn the degree of completeness, the revised description, and a short two-sentence explanation for the changes made.\n\nThe bug report is in JSON format.\n{examples}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

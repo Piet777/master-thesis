@@ -1,0 +1,52 @@
+{
+    "name": null,
+    "input_variables": [
+        "bug_report"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "examples": [
+        {
+            "input": "{{'Summary':'Text formatting does not work in the Visual mode of the Comment field in a Transition screen',\n'Description':'h3. Problem definition\r\nText formatting like bold, italic, underline and color do not work for the Comment added in the Visual mode of a transition screen.\r\n\r\nh3. Steps to reproduce the issue\r\n# Configure a screen for any transition for a workflow associated to a Service Desk project.\r\n# Ensure that the *Rich text editor* is enabled.\r\n# Transition a Service Desk issue and on the pop-up screen, use the *Visual mode*.\r\n# Type something and make it bold\\/italic\\/underlined\\/colored.\r\n\r\nh3. Expected result\r\nThe comment will be shown with the text formatting applied.\r\n\r\nh3. Actual result\r\nThe comment is highlighted without any text formatting applied.\r\n\r\nh3. Notes\r\n# This does not happen on issue view, only transition screen.\r\n# This does not happen to non-Service Desk projects.'}}",
+            "output": "Degree of Completeness: 1\n\nRevised Description:\n```\nOverview\nText formatting like bold, italic, underline and color do not work for the Comment added in the Visual mode of a transition screen.\n\nSteps to reproduce\n1. Configure a screen for any transition for a workflow associated to a Service Desk project.\n2. Ensure that the *Rich text editor* is enabled.\n3. Transition a Service Desk issue and on the pop-up screen, use the *Visual mode*.\n4. Type something and make it bold\\/italic\\/underlined\\/colored.\n\nActual result\nThe comment is highlighted without any text formatting applied.\n\nExpected result\nThe comment will be shown with the text formatting applied.\n\nAdditional information\na) This does not happen on issue view, only transition screen.\nb) This does not happen to non-Service Desk projects.\n```\n\nExplanation: The original description contains all the important components of a bug report, including the overview, steps to reproduce, the actual result, and the expected result. Other than a slight restructuring of the description no changes were made."
+        },
+        {
+            "input": "{{'Summary':'volumetric example crashed during resize',\n'Description':'Build volumetric example with default settings crashed during resize main window.\r\nCall stack is destroyed (probably buffer overflow).\r\n\r\nSteps to reproduce:\r\n- build sample\r\n- run\r\n- resize window\r\n\r\nscreen shot is attached'}}",
+            "output": "Degree of Completeness: 2\n\nRevised Description:\n```\nOverview\nThe volumetric example crashes during the resizing of the main window, when built with default settings. Probably this is caused by a buffer overflow, as indicated by the destruction of the call stack.\n\nSteps to reproduce\n1. build sample with default settings\n2. run\n3. resize window\n\nActual result\nThe volumetric example crashes during window resize\n\nExpected result\nThe application should allow resizing of the main window without crashing.\n\nAdditional information\na) A screenshot is attached.\n```\n\nExplanation: The original description contained steps to reproduce the issue and a brief overview but lacked clear actual and expected results. The revised description includes recommendations for the missing components, ensuring all important parts are present."
+        },
+        {
+            "input": "{{'Summary':'Cmake warning spam in build of maint-4952-v-t-u (coroutine)',\n'Description':'h1. Steps to Reproduce\nBuilding opensource maint-4952-v-t-u \n\nh1. Actual Behavior\nBuilt HTTPcoroutine on windows and it generated a lot of cmake warnings mostly boost in cef.\n\nh1. Expected Behavior\nNot have the warnings \n\nh1. Other information\nThis warning is for project developers.  Use -Wno-dev to suppress it.\r\nI could add -Wno-dev. But I think these warnings should be corrected.'}}",
+            "output": "Degree of Completeness: 2\n\nRevised Description:\n```\nOverview\nDuring the build of opensource maint-4952-v-t-u, a lot of CMake warnings are generated. \n\nSteps to reproduce\n1. Building opensource maint-4952-v-t-u\n\nActual result\nBuilt HTTPcoroutine on windows and it generated a lot of cmake warnings mostly boost in cef.\n\nExpected result\nNot have the warnings\n\nAdditional information\na) This warning is for project developers. \nb) Use -Wno-dev to suppress it. But I think these warnings should be corrected.\n```\n\nExplanation: The original description contained steps to reproduce, the actual result and the expected result but nothign that could be assumed as overview. The revised description includes a recommendation for the missing component, ensuring all important parts are present."
+        },
+        {
+            "input": "{{'Summary':'its still demo',\n'Description':'i just buy paceofcarde for 100 zl becose i want to buy minecraft but when i go to the webside and i dowlond the game it show that is demo i tried to dowlond one more time i chec i this the same username and password but its stil nothing pleas help'}}",
+            "output": "Degree of Completeness: 3\n        \nRevised Description:\n```\nOverview\nI want to buy minecraft, but after the download it shows that it is a demo version. I already checked the username and password and repeated the download but it still is the demo version.\n\nSteps to reproduce\n1. Go to the minecraft website\n2. Download the game\n\nActual result\nThe demo version of the game is downloaded\n\nExpected result\nThe full version of the game should be downloaded\n```\n\nExplanation: The original description lacks a clear structure and contains only an explanation of the problem. The revised description includes recommendations for the missing components, ensuring all important parts are present."
+        },
+        {
+            "input": "{{'Summary':'Exceptions raised during AM launch don't trigger exit code AM failures',\n'Description':'It looks like exceptions raised in AM launch failure, while being caught, don't have their exit code picked up. Any launch-time failure should result in an exit code being returned, which then tells the YARN to restart it.'}}",
+            "output": "Degree of Completeness: 3\n        \nRevised Description:\n```\nOverview\nThe exit code of exceptions raised in AM launch failure is not picked up. Even if the exception is caught correctly.\n\nSteps to reproduce\n1. Launch AM\n2. Observe the exceptions raised during the launch\n\nActual result\nExceptions raised in AM launch failure, don't have their exit code picked up, while being caught.\n\nExpected result\nAny launch-time failure should result in an exit code being returned, which then tells the YARN to restart it.\n```\n\nExplanation: Even if the description lets assume that it contains the expected behavior and an overview, no clear structure through topics is available. The revised description includes recommendations for the missing components, ensuring all important parts are present."
+        }
+    ],
+    "example_selector": null,
+    "validate_template": false,
+    "example_prompt": {
+        "name": null,
+        "input_variables": [
+            "input",
+            "output"
+        ],
+        "input_types": {},
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Bug Report: {input}\n\nAnswer: {output}",
+        "template_format": "f-string",
+        "validate_template": false,
+        "_type": "prompt"
+    },
+    "suffix": "Bug report: {bug_report}\n\nAnswer: ",
+    "example_separator": "\n\n",
+    "prefix": "",
+    "template_format": "f-string",
+    "_type": "few_shot"
+}
