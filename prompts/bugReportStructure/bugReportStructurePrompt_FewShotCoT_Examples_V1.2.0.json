@@ -1,0 +1,44 @@
+{
+    "name": null,
+    "input_variables": [
+        "bug_report"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "examples": [
+        {
+            "input": "{{'Summary':'Cmake warning spam in build of maint-4952-v-t-u (coroutine)',\n'Description':'Steps to Reproduce\nBuilding opensource maint-4952-v-t-u \n\nActual Behavior\nBuilt HTTPcoroutine on windows and it generated a lot of cmake warnings mostly boost in cef.\n\nExpected Behavior\nNot have the warnings \n\nOther information\nThis warning is for project developers.  Use -Wno-dev to suppress it.\r\nI could add -Wno-dev. But I think these warnings should be corrected.'}}",
+            "output": "We want to check if all important components are present in the description field of the ticket.\nFirst we want to check if an overview is present. There is no keyword or heading that indicates an overview. The description starts directly with the steps to reproduce. The overview component is missing.\nSecondly, we want to check if the steps to reproduce are present. The steps to reproduce are clearly defined under the heading \"Steps to Reproduce\". Corresponding steps are listed. The steps to reproduce component is present.\nThirdly, we want to check if the actual result is present. The actual result is clearly defined under the heading \"Actual Behavior\". The actual result component is present.\nLastly, we want to check if the expected result is present. The expected result is clearly defined under the heading \"Expected Behavior\". The expected result component is present.\nAdditionally, we have the component \"Additional information\" highlighted by the header \"Other information\". \n\nThree important components are available, but there is no overview, so the Degree of Completeness is: 2 \n\nRevised Description:\n```\nOverview\nDuring the build of opensource maint-4952-v-t-u, a lot of CMake warnings are generated. \n\nSteps to reproduce\n1. Building opensource maint-4952-v-t-u\n\nActual result\nBuilt HTTPcoroutine on windows and it generated a lot of cmake warnings mostly boost in cef.\n\nExpected result\nNot have the warnings\n\nAdditional information\na) This warning is for project developers. \nb) Use -Wno-dev to suppress it. But I think these warnings should be corrected.\n```\n\nExplanation: The original description starts directly with the steps to reproduce, followed by the actual result and the expected result, but there are no indications for the overview. The degree of completeness is therefore 2 as the missing overview component has to be generated."
+        },
+        {
+            "input": "{{'Summary':'Approvals history items with deleted status' are breaking the Bento view',\n'Description':'Approvals history items with deleted status' are breaking the Bento view\r\nh3. Steps to Reproduce\r\n# Create an approval status on your workflow.\r\n# Transition the ticket and approve it.\r\n# Now, delete the status created on the first step.\r\n\r\nh3. Expected Results\r\nYou should be able to access the ticket in the new issue view.\r\n\r\nh3. Actual Results\r\n\r\nThe ticket does not load as the ticket history points to the deleted status and an exception is thrown in the logs.\r\n\r\nh3. Workaround\r\nAccess the ticket via the new issue view or clone the ticket.'}}",
+            "output": "We want to check if all important components are present in the description field of the ticket.\nFirst, we want to check if an overview is present. No keyword or heading indicates an overview, but the first sentence of the description can be interpreted as an overview by the ticket context. The overview component is present.\nSecondly, we want to check if the steps to reproduce are present. The steps to reproduce are clearly defined under the heading \"Steps to Reproduce,\" which is also recognizable by its h1.-heading. Corresponding steps are listed. The steps to reproduce component is present.\nThirdly, we want to check if the actual result is present. The actual result is clearly defined under the heading \"Actual Results\" which is also recognizable by its h1.-heading. The actual result component is present.\nLastly, we want to check if the expected result is present. The expected result is clearly defined under the heading \"Expected Results\", which is also recognizable by its h1.-heading. The expected result component is present.\n        \nAll important components are available so the Degree of Completeness is: 1\n\nRevised Description:\n```\nOverview\nApprovals history items with deleted status' are breaking the Bento view.\n\nSteps to reproduce\n1. Create an approval status on your workflow.\n2. Transition the ticket and approve it.\n3. Now, delete the status created on the first step.\n\nActual result\nThe ticket does not load as the ticket history points to the deleted status and an exception is thrown in the logs.\n\nExpected result\nYou should be able to access the ticket in the new issue view.\n\nAdditional information\na) Workaround: Access the ticket via the new issue view or clone the ticket.\n```\n\nExplanation: The descriptions contains an overview, steps to reproduce, an actual result and an expected result so all important components are included. The degree of completeness is therefore 1 as the original description contains all the important parts and has only been slightly restructured."
+        },
+        {
+            "input": "{{'Summary':'Exceptions raised during AM launch don't trigger exit code AM failures',\n'Description':'It looks like exceptions raised in AM launch failure, while being caught, don't have their exit code picked up. Any launch-time failure should result in an exit code being returned, which then tells the YARN to restart it.'}}",
+            "output": "We want to check if all important components are present in the description field of the ticket.\nFirst, we want to check if an overview is available. There is no keyword or heading that indicates an overview. The whole description is plain text describing a problem, which could be interpreted as the overview component. The overview component is present.\nSecondly, we want to check if the steps to reproduce are present. There is no keyword or heading that indicates the steps to reproduce. The steps to reproduce component is missing.\nThirdly, we want to check if the actual result is present. No keyword or heading indicates the actual result, even if a potential result can be inferred from the overview text. The actual result component is missing.\nLastly, we want to check if the expected result is present. No keyword or heading indicates the expected result, even if a potential expected result can be inferred from the overview text. The expected result component is missing.\n\nBesides a plain text as the overview no structure was provided and important components are missing so the Degree of Completeness is: 3\n        \nRevised Description:\n```\nOverview\nThe exit code of exceptions raised in AM launch failure is not picked up. Even if the exception is caught correctly.\n\nSteps to reproduce\n1. Launch AM\n2. Observe the exceptions raised during the launch\n\nActual result\nExceptions raised in AM launch failure, don't have their exit code picked up, while being caught.\n\nExpected result\nAny launch-time failure should result in an exit code being returned, which then tells the YARN to restart it.\n```\n\nExplanation: Even if the original description assumes that it contains the expected behavior and an overview, there is no clear structure through topics. The degree of completeness is therefore 3 as the original description was a plain text without any headings or structure."
+        }
+    ],
+    "example_selector": null,
+    "validate_template": false,
+    "example_prompt": {
+        "name": null,
+        "input_variables": [
+            "input",
+            "output"
+        ],
+        "input_types": {},
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Bug Report: {input}\n\nAnswer: Let's think step by step.\n{output}",
+        "template_format": "f-string",
+        "validate_template": false,
+        "_type": "prompt"
+    },
+    "suffix": "Bug report: {bug_report}\n\nAnswer: Let's think step by step.",
+    "example_separator": "\n\n",
+    "prefix": "",
+    "template_format": "f-string",
+    "_type": "few_shot"
+}
