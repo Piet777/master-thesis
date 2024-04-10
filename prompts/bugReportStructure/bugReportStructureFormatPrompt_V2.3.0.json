@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [
+        "revised_bug_report"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "### Instruction ###\nYou receive a revised bug report from an issue tracker.\nReturn the given data in the following format in JSON:\n\"<smell_degree>\": \"<This is the degree of change, between 1 and 3>\"\n\"<description_new>\": \"<The received recommended and revised description>\"\n\"<reason>\": \"<The received two sentence explanation for the change and the degree of change within a maximum of two sentences.>\"\n\nIf the description was not changed, return the original and unchanged description in the \"<description_new>\" field.\nDon't return any source code or code snippets.\n\n### Context ###\nData: {revised_bug_report}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
