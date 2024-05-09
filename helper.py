@@ -107,14 +107,14 @@ def createSummaryAnnotation(ticket):
     summaryLength = len(str(summary))
 
     if(summaryLength > 70):
-        ticket['violation_actual'] = "TRUE"
-        ticket['reason'] = str(summaryLength) + " characters is too long."
+        ticket['SmellActual'] = "TRUE"
+        ticket['SmellReason'] = str(summaryLength) + " characters is too long."
     elif(summaryLength < 39):
-        ticket['violation_actual'] = "TRUE"
-        ticket['reason'] = str(summaryLength) + " characters is too short."
+        ticket['SmellActual'] = "TRUE"
+        ticket['SmellReason'] = str(summaryLength) + " characters is too short."
     else:
-        ticket['violation_actual'] = "FALSE"
-        ticket['reason'] = str(summaryLength) + " characters is in range."
+        ticket['SmellActual'] = "FALSE"
+        ticket['SmellReason'] = str(summaryLength) + " characters is in range."
     
     print("The annotation was created successfully!")
 
@@ -139,13 +139,13 @@ def createSummaryAnnotationForResult(result, ticket):
     summaryLength = len(str(summary))
 
     if(summaryLength > 70):
-        result['violation_actual'] = "TRUE"
+        result['smell_actual'] = "TRUE"
         result['reason'] = str(summaryLength) + " characters is too long."
     elif(summaryLength < 39):
-        result['violation_actual'] = "TRUE"
+        result['smell_actual'] = "TRUE"
         result['reason'] = str(summaryLength) + " characters is too short."
     else:
-        result['violation_actual'] = "FALSE"
+        result['smell_actual'] = "FALSE"
         result['reason'] = str(summaryLength) + " characters is in range."
     
     print("The annotation was created successfully!")
