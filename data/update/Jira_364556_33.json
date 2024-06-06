@@ -1,0 +1,62 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":364556,
+        "EvoId":33,
+        "Summary":"Can't Resolve Using Mine",
+        "Description":"I merged a branch into my current branch, and had a number of merge conflicts.  I want to resolve a heap of them by selecting them and right click and select Resolve Conflicts\/Resolve Using 'Mine' option.\r\nI get the normal confirmation prompt and when I press OK I get an error message saying: \r\n\"Could not update one or more files, please check that no other application is locking your files.\"\r\nRestarted my PC and opened on Source Tree and tried again, and still get the same error.  These are just html files, that are not being used by anything.\r\n\r\nHow can I resolved this and get on with my merge so I can use my working environment again?\r\n\r\nRegards,\r\n\r\nScott",
+        "VersionsAffected":"1.6.5",
+        "IssueType":"Bug",
+        "Project":"Sourcetree for Windows",
+        "Components":"General",
+        "CreatedDate":"2014-10-09 06:26:12",
+        "ResolvedDate":"2021-03-29 14:58:45",
+        "Status":"Verified",
+        "Priority":"Medium",
+        "Creator":"Tim Sargent Billing",
+        "Reporter":"Tim Sargent Billing",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"merge",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Tim Sargent Billing",
+                "Created":"2014-10-09 06:40:13",
+                "Comment":"Furthermore, I have done a test, and located the files I am trying to resolve on the file system, and I am able to rename them.  This proves that nothing else is using them.  Also I downloaded MS Process Explorer and it also tells me that nothing has locked the files.\r\n\r\nI really need this fixed so I can get on with my work... at the moment my source is in a big mess with 75 conflicts that I can't resolve!!\r\n\r\nRegards,\r\n\r\nScott"
+            },
+            {
+                "Author":"Patrick Johannessen",
+                "Created":"2014-10-14 01:43:13",
+                "Comment":"Same problem with 1.6.5, rolling back to 1.6.4 didn't fix it, rolling back to 1.5.2 didn't fix it, going back to 1.6.x and checking out a new fresh repository didn't fix it... I'm lost!"
+            },
+            {
+                "Author":"minnsey",
+                "Created":"2014-10-14 02:47:13",
+                "Comment":"Hi [~slaughton], [~patrick.johannessen1]\r\n\r\nCould you please attach the SourceTree log file from when you've had the rror.\r\n\r\nThanks"
+            },
+            {
+                "Author":"Pritesh Patel",
+                "Created":"2014-10-14 11:57:04",
+                "Comment":"Hi I've just had the same issue but have managed to successfully resolve it. If you look at the \/.git\/ folder is there a file called 'index.lock'? In my case there was a index.lock file which when deleted and SourceTree restarted everything went back to normal. Hope this helps. \r\n\r\nPritesh"
+            },
+            {
+                "Author":"minnsey",
+                "Created":"2014-10-16 23:29:18",
+                "Comment":"Hi [~ppatel2]\r\n\r\nThanks for the information [~slaughton] and [~patrick.johannessen1] are you able to see if this work around works for you?"
+            },
+            {
+                "Author":"Maciej Witwicki",
+                "Created":"2014-11-21 07:11:49",
+                "Comment":"I'm facing this issue as well and this workaround cannot be applied, because i have no index.lock file in .git folder.\r\nMaybe it will help if I tell that in the beginning I had conflict because I made change to that file in another branch and in current branch I have deleted it. \r\nSo I've right clicked the file and choose merge using external tool (i have TortoiseMerge installed), but it never opened. Then I just tried to use \"resolve using mine\" and it failed with error mentioned above.\r\n\r\nFortunately for me resolving conflict was about deleting conflicting files, so I've deleted them manually on disk then clicked checkboxes in SourceTree to mark them as staged in commit view. They then just disappeared from view and I can do my commit now."
+            },
+            {
+                "Author":"replaysMike",
+                "Created":"2016-10-19 18:14:01",
+                "Comment":"I too receive this occasionally, as recently as today in current release version. There are no files locking the file in question, confirmed with Process Explorer. This is a SourceTree state bug.\r\n\r\nI was able to make my edits outside of SourceTree, then mark it as resolved. This issue should be moved to High Priority.\r\n\r\nSteps that lead to this (I don't know the cause):\r\n* Right click conflicted file -> Resolve conflicts -> Launch external merge tool (p4merge)\r\n*  p4merge does not open.\r\nAny further attempts to open result in this error message. There is no file lock on the file (confirmed) and no p4merge or git procces are running. Restarting SourceTree does not fix the error.\r\n\r\nEnvironment: Windows 10\r\nVersion: SourceTree 1.9.6.1"
+            }
+        ]
+    }
+

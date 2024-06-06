@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":60102,
+        "EvoId":0,
+        "Summary":"LDAP UI fix from Group Name to Setting Name",
+        "Description":"Currently in the LDAP configuration page in Artifactory, under the \"LDAP Group Settings\" the UI says Group Name (see screenshot).\r\n\r\nInstead of \"Group Name\" this should be:\r\n\"Setting Name\" or \"Group Setting Name\"",
+        "VersionsAffected":null,
+        "IssueType":"Improvement",
+        "Project":"Artifactory Binary Repository",
+        "Components":null,
+        "CreatedDate":"2018-07-19 11:55:52",
+        "ResolvedDate":"2018-08-16 17:47:06",
+        "Status":"Open",
+        "Priority":"4 - Normal",
+        "Creator":"Ariel Kabov",
+        "Reporter":"Ariel Kabov",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

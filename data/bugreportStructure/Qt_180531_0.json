@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":180531,
+        "EvoId":0,
+        "Summary":"Calendar: In MAC OS 10.7, when changing month from Aug to Sep, the date info in the matrix box does not change accordingly.",
+        "Description":"Steps to reproduce:\n1. Start Calendar application (the displayed date at this point is the current date - 2011.8.31). \n2. Change the month to September.\n\nExpected result:\nThe date info in the matrix box does change accordingly from Aug to Sep.\n\nActual result:\nThe date info does not change, it keeps the dates of Aug.\n\nOther info:\nThis bug is only reproducible when app is just launched then month is changed from Aug to Sep for the first time. If one changes the month back to Aug from Sep, it does not reproduce. Also one cannot reproduce the bug by changing the month from Aug to other month than Sep.",
+        "VersionsAffected":"4.8.0",
+        "IssueType":"Bug",
+        "Project":"Qt",
+        "Components":"Examples and Demos",
+        "CreatedDate":"2011-08-31 10:12:07",
+        "ResolvedDate":"2015-08-14 14:30:03",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Zou weili",
+        "Reporter":"Zou weili",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Qt Documentation Team",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":66847,
+        "EvoId":0,
+        "Summary":"Teleport offer message is shown with scroll bar  in the IM history",
+        "Description":"\r\n1. Start, login in SL\r\n2. Send to the user B teleport offer with a long text\r\n3. Open B users viewer \r\n-------------------------\r\nToast with teleport offers is shown in the right bottom corner\r\n4. Click on the toast\r\n5. Resize IM chat floater\r\n\r\nActual Result: Teleport offer message is shown with scroll bar \r\nExpect Result: Teleport offer message is without scroll bar",
+        "VersionsAffected":null,
+        "IssueType":"Defect",
+        "Project":"Snowstorm",
+        "Components":null,
+        "CreatedDate":"2010-10-11 11:13:23",
+        "ResolvedDate":"2011-02-25 15:49:54",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Svishnyakov ProductEngine",
+        "Reporter":"Svishnyakov ProductEngine",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

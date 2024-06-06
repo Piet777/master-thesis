@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":431036,
+        "EvoId":0,
+        "Summary":"nexus-p2-repository-plugin 2.3.1 incompatible with Nexus 2.3",
+        "Description":"I had Nexus 2.3.0-04 with nexus-p2-repository 2.3 installed and working.\r\nI upgrading nexus-p2-repository to 2.3.1 and Nexus restarted ok but when a P2 artifact is retrieved, I get a 500 error. It seems to be caused by a method not found: see the capture as there is no error in the nexus log.",
+        "VersionsAffected":"2.3.1",
+        "IssueType":"Bug",
+        "Project":"Dev - Nexus Repo",
+        "Components":"P2",
+        "CreatedDate":"2013-04-24 07:32:59",
+        "ResolvedDate":"2013-04-25 19:39:01",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Jeff MAURY",
+        "Reporter":"Jeff MAURY",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

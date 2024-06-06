@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":1892730,
+        "EvoId":0,
+        "Summary":"Add compression to evergreen config.",
+        "Description":"Add compression to evergreen config.",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Rust Driver",
+        "Components":null,
+        "CreatedDate":"2021-10-07 16:02:26",
+        "ResolvedDate":"2021-10-13 16:50:08",
+        "Status":"Needs Triage",
+        "Priority":"Major - P3",
+        "Creator":"Andrew Witten",
+        "Reporter":"Andrew Witten",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

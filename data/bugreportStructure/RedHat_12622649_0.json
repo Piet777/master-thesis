@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12622649,
+        "EvoId":0,
+        "Summary":"Just created data object not appended to Superclass selector of the other opened DataObjects",
+        "Description":"Description of problem:\n\nWhen a new DataObject is created it's not added to the superclass selector of the other opened DataObjects.\n\nVersion-Release number of selected component (if applicable):\n\n\nHow reproducible:\n\n\nSteps to Reproduce:\n1. Open DataObject A\n2. Create DataObject B\n3. Go to the editor previously opened and open the superclass selector for \nDataObject A.\n\nActual results:\n\nThe just created DataObject B is not in the list.\n\nExpected results:\n\nThe just created DataObject B should be in the list of available superclasss for A.\n\nAdditional info:",
+        "VersionsAffected":"6.2.0",
+        "IssueType":"Bug",
+        "Project":"JBoss BPMS Platform",
+        "Components":"Data Modeler",
+        "CreatedDate":"2015-09-14 15:14:00",
+        "ResolvedDate":"2015-10-23 16:19:08",
+        "Status":"New",
+        "Priority":"Major",
+        "Creator":"Walter Medvedeo",
+        "Reporter":"Walter Medvedeo",
+        "Resolution":"Done",
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Walter Medvedeo",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

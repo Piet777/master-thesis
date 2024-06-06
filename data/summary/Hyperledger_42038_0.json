@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":42038,
+        "EvoId":0,
+        "Summary":"CLONE - Release fabric-chaincode-node",
+        "Description":"Releasing v1.4.2 of the node.js modules. The process is now partly scripted... see the scripts\/release.sh is the fabric-chaincode-node repo\r\n\r\n\u00a0",
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"Fabric",
+        "Components":"fabric-chaincode-node",
+        "CreatedDate":"2019-08-26 19:08:23",
+        "ResolvedDate":"2019-08-28 17:45:18",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"David Enyeart",
+        "Reporter":"Christopher Ferris",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Matthew White",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

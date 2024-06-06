@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":19115,
+        "EvoId":0,
+        "Summary":"allow \"refreshable\" list of items",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"Spring Rich Client Project",
+        "Components":null,
+        "CreatedDate":"2008-01-11 00:00:03",
+        "ResolvedDate":"2008-01-15 22:05:50",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Peter De Bruycker",
+        "Reporter":"Peter De Bruycker",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Peter De Bruycker",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

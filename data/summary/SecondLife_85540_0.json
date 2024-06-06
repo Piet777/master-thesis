@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":85540,
+        "EvoId":0,
+        "Summary":"crash in LLPanelGroupInvite after inviting someone to a group",
+        "Description":"I invited someone to a group and the viewer crashed.\r\nhttps:\/\/osiris.lindenlab.com\/viewer_crash_browser\/index.php?filter_id=26199\r\n\r\n[0] LLPanelGroupInvite::impl::onAvatarNameCache(LLUUID const &,LLAvatarName const &,void *) [secondlife-bin llpanelgroupinvite.cpp]\r\n[1] boost::detail::function::void_function_obj_invoker2<1=\"\">,boost::arg<2>,boost::_bi::value > >,void,LLUUID const &,LLAvatarName const &>::invoke(boost::detail::function::function_buffer &,LLUUID const &,LLAvatarName const &) [secondlife-bin function_template.hpp]\r\n[2] boost::signals2::detail::signal2_impl,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker::operator()(boost::shared_ptr >,boost::signals2::slot2 >,boost::signals2::mutex> > const &) [secondlife-bin signal_template.hpp]\r\n[3] boost::signals2::detail::slot_call_iterator_t,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> >::dereference() [secondlife-bin slot_call_iterator.hpp]\r\n[4] boost::signals2::optional_last_value::operator(),int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> > >(boost::signals2::detail::slot_call_iterator_t,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> >,boost::signals2::detail::slot_call_iterator_t,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> >) [secondlife-bin optional_last_value.hpp]\r\n[5] boost::signals2::detail::signal2_impl,int,std::less,boost::function,boost::function,boost::signals2::mutex>::operator()(LLUUID const &,LLAvatarName const &) [secondlife-bin signal_template.hpp]\r\n[6] LLAvatarNameCache::processName(LLUUID const &,LLAvatarName const &,bool) [secondlife-bin llavatarnamecache.cpp]\r\n[7] LLAvatarNameResponder::result(LLSD const &) [secondlife-bin llavatarnamecache.cpp]\r\n[8] LLCurl::Responder::completed(unsigned int,std::basic_string,std::allocator > const &,LLSD const &) [secondlife-bin llcurl.cpp]\r\n[9] LLCurl::Responder::completedRaw(unsigned int,std::basic_string,std::allocator > const &,LLChannelDescriptors const &,boost::shared_ptr const &) [secondlife-bin llcurl.cpp]\r\n[10] `anonymous namespace'::LLHTTPClientURLAdaptor::complete(LLChannelDescriptors const &,boost::shared_ptr const &) [secondlife-bin llhttpclient.cpp]\r\n[11] LLURLRequestComplete::process_impl(LLChannelDescriptors const &,boost::shared_ptr &,bool &,LLSD &,LLPumpIO *) [secondlife-bin llurlrequest.cpp]\r\n[12] LLPumpIO::processChain(LLPumpIO::LLChainInfo &) [secondlife-bin llpumpio.cpp]\r\n[13] LLPumpIO::callback() [secondlife-bin llpumpio.cpp]\r\n[14] LLAppViewer::mainLoop() [secondlife-bin llappviewer.cpp]\r\n[15] WinMain [secondlife-bin llappviewerwin32.cpp]\r\n[16] __tmainCRTStartup [secondlife-bin crtexe.c]",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"1. Second Life Viewer - VWR",
+        "Components":"Crashes",
+        "CreatedDate":"2011-06-30 17:01:10",
+        "ResolvedDate":"2011-10-21 09:07:17",
+        "Status":"Awaiting Review",
+        "Priority":"Unset",
+        "Creator":"Dan Linden",
+        "Reporter":"Dan Linden",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"crashhunters",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

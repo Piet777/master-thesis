@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":1363465,
+        "EvoId":0,
+        "Summary":"Getting \"Authentication failed because the remote party has closed the transport stream\" while connection mongodb V4.0 using C# driver.",
+        "Description":"We are trying to implement SSL authentication with the MongoDB 4.0 version using the below connection string and facing authentication issues.\r\n\r\n\u00a0*mongodb:\/\/username:password@hostname:27017\/?authSource=admin&readPreference=primary&ssl=true&sslPEMKeyFile=C:\/etc\/ssl\/client.pem\"*\r\n\r\nAt MongoDB log, we see the application connections are closing immediately with error message :\r\n\r\n*encountered a network error during SourceMessage: SocketE**xception: no shared cipher*\r\n\r\napplication log:\u00a0\r\n2020-02-20 12:39:53 [Debug] Failed to authenticate HTTPS connection.\r\n Properties: \\{ EventId: { Id: 1 }, SourceContext: \"Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware\", ConnectionId: \"0HLTM5FID0INL\", Application: \"DCDService\" }\r\n MachineName: NB1999-01924579\r\n System.IO.IOException: Authentication failed because the remote party has closed the transport stream.\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)\r\n \u00a0\u00a0\u00a0at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)\r\n \u00a0\u00a0\u00a0at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)\r\n \u00a0\u00a0\u00a0at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)\r\n \u00a0\u00a0\u00a0at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)\r\n \u00a0\u00a0\u00a0at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)\r\n\u00a0\r\n\u00a0\r\n\u00a0\r\n\u00a0",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"C# Driver",
+        "Components":"Connectivity",
+        "CreatedDate":"2020-05-27 10:09:04",
+        "ResolvedDate":"2020-06-22 14:43:23",
+        "Status":"Needs Triage",
+        "Priority":"Major - P3",
+        "Creator":"naresh kandala",
+        "Reporter":"naresh kandala",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

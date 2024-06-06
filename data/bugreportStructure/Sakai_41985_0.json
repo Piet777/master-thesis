@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":41985,
+        "EvoId":0,
+        "Summary":"Cannot change title of News tool",
+        "Description":"After initially setting up the News tool during worksite setup, I tried to go to the option page (NEWS-2) and change the title of the tool. After I made the change, the title of the tool did not update, even after I logged out and logged back in. However, when I opened up options, the new title that I had entered was still specified.\n\nI tried to change the URL of the feed as well as the title at the same time, and even though the new feed was displayed properly, the title of the tool remained what I had initially set it to during worksite setup.",
+        "VersionsAffected":"2.0",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"News (RSS)",
+        "CreatedDate":"2005-05-18 10:57:22",
+        "ResolvedDate":"2005-07-07 08:05:43",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Michael Beasley",
+        "Reporter":"Michael Beasley",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Peter A. Knoop",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

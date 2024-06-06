@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":29475,
+        "EvoId":0,
+        "Summary":"Use Citations Helper ConfigurationService to control Citations Helper UI",
+        "Description":"Depending on site-specific options, certain functionality of the Citations Helper can be turned on\/off.  These functions are searching library resources and using Google Scholar.  If configuration is missing for either of these functions, they should not be displayed.  The Citations Helper ConfigurationService handles turning these functions on\/off.",
+        "VersionsAffected":"2.4.0",
+        "IssueType":"Task",
+        "Project":"Sakai",
+        "Components":"Content",
+        "CreatedDate":"2007-03-17 10:31:10",
+        "ResolvedDate":"2007-03-24 06:25:01",
+        "Status":"Resolved",
+        "Priority":"Major",
+        "Creator":"Gaurav Cedric Bhatnagar",
+        "Reporter":"Gaurav Cedric Bhatnagar",
+        "Resolution":"Fixed",
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"2.4.0",
+        "Assignee":"Gaurav Cedric Bhatnagar",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

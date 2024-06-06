@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":262457,
+        "EvoId":0,
+        "Summary":"bad on slab blocks BUG",
+        "Description":"\nthe bug is . if click with a bad on the side of slab block (any slab) the bad will placed its mean \nif you wanna put the bad on the air you can by use slab at  the air\ni fined that on 1.14.4 ver.\nwill wait that fixed thanks\n",
+        "VersionsAffected":"1.14.4",
+        "IssueType":"Bug",
+        "Project":"Minecraft: Java Edition",
+        "Components":null,
+        "CreatedDate":"2019-09-29 19:40:08",
+        "ResolvedDate":"2019-09-29 19:44:42",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"andrey elevitch",
+        "Reporter":"andrey elevitch",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":30022,
+        "EvoId":0,
+        "Summary":"Matrix Cell 'Created By' column does not respect viewOwner permission",
+        "Description":"The \"Created By\" Column in the matrix cell (or wizard page) should respect the viewOwner permission (otherwise blind evaluations are a moot point). ",
+        "VersionsAffected":"2.5.x",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"OSP: Wizards - Matrix",
+        "CreatedDate":"2008-06-26 05:53:59",
+        "ResolvedDate":"2010-04-21 08:07:01",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Beth Kirschner",
+        "Reporter":"Beth Kirschner",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"OSP Jira Team",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

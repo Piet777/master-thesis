@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":56595,
+        "EvoId":0,
+        "Summary":"Allow bulk update of multiple rows with a single statement",
+        "Description":"If you need to update multiple entities at once, you need to do it like this at the moment:\n\n{code}\nQuery myQuery = Query.select().where(\"firstColumn = ?\", firstValue);\nMyEntity[] myEntities = ao.find(MyEntity.class, myQuery);\nfor (MyEntity myEntity : myEntities) {\n    myEntity.setSecondColumn(secondValue);\n    myEntity.save();\n}\n{code}\n\nThis results in lots of the following SQL statements:\n{code}\nUPDATE myEntity\nSET secondColumn = \"secondValue\"\nWHERE ID = x\n{code}\n\nFor every single entity that needs to be updated.\n\nThis could be improved with something like this (just my suggestion, not sure whether this is possible):\n\n{code}\nQuery myQuery = Query.select().where(\"firstColumn = ?\", firstValue);\nao.update(MyEntity.class, myQuery, \"secondColumn\", \"secondValue\");\n{code}\n\nAt the end, the following statement should be executed:\n\n{code}\nUPDATE myEntity\nSET secondColumn = \"secondValue\"\nWHERE firstColumn = \"firstValue\"\n{code}\n\nI know it's not as easy as it looks like, but it would be a huge improvement if you need to update multiple entities at once.",
+        "VersionsAffected":"ao-plugin 0.19.7",
+        "IssueType":"Improvement",
+        "Project":"ActiveObjects",
+        "Components":"ActiveObjects (lib)",
+        "CreatedDate":"2012-02-23 07:45:11",
+        "ResolvedDate":"2014-05-27 02:07:27",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Former user",
+        "Reporter":"Former user",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"roadmap-performance",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":13202675,
+        "EvoId":0,
+        "Summary":"As a user of Quay Operator, I want to be able to scale Mirroring beyond a single Pod.",
+        "Description":"Currently TNG Operator deploys a separate mirroring Pod when managed component mirroring is enabled.\u00a0 Operator should allow for more than one mirroring Pod (e.g. via HPA) in a way that does not require user to manually adjust the Mirror Pod deployment.",
+        "VersionsAffected":null,
+        "IssueType":"Feature Request",
+        "Project":"Project Quay",
+        "Components":null,
+        "CreatedDate":"2020-11-23T08:39:11.000+0000",
+        "ResolvedDate":"2021-05-19T17:08:21.000+0000",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Bill Dettelback",
+        "Reporter":"Bill Dettelback",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"triaged",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

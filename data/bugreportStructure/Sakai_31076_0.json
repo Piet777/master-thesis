@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":31076,
+        "EvoId":0,
+        "Summary":"Accessibility: Form control values are maintained after validation errors occur on Login Page New Account Tool",
+        "Description":"The form control values (except for the password fields) are maintained when an error occurs. However, the user isn't presented with the information for verification before the user account is created. The email address field is not entered twice and if the user enters it incorrectly, they don't have a way to change it.\n\nPOSSIBLE SOLUTION:\n\nConsider making the user present the email address twice for verification.\n\nConsider adding a summary screen that presents all the information and asks for conformation before the account is created. ",
+        "VersionsAffected":"2.9.0",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"Account",
+        "CreatedDate":"2012-02-13 03:56:16",
+        "ResolvedDate":"2012-11-05 11:43:00",
+        "Status":"Open",
+        "Priority":"Critical",
+        "Creator":"iupui1",
+        "Reporter":"iupui1",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Brian Richwine",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

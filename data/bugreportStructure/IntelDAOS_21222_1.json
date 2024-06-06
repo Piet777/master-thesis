@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":21222,
+        "EvoId":1,
+        "Summary":"Fix Coverity Issue in NVMe Recovery Test",
+        "Description":"To get additional information about the issue goto scan.coverity.com and login using your github id. If you do not already have access to the daos project goto https:\/\/scan.coverity.com\/projects\/daos-stack-daos?tab=overview and request access. Once that is done and your access is approved click on view defects. This will bring up all outstanding defects. Sort by the CID column on the left side of the defect pane and find your corresponding numbers. Once you found them click on the issue to get the decision tree that made coverity believe there is an issue. For help contact David Quigley\r\n\r\n329259 - When test is skipped char *log_file  is leaked.\r\n\r\nWhen you create your PR please add the ast-fixes label to the PR to make it easier to run through coverity.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"DAOS",
+        "Components":"Component Test",
+        "CreatedDate":"2021-04-21 07:41:03",
+        "ResolvedDate":"2021-04-22 09:04:39",
+        "Status":"Open",
+        "Priority":"P1-Urgent",
+        "Creator":"David Quigley",
+        "Reporter":"David Quigley",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"Coverity",
+        "VersionsFixed":null,
+        "Assignee":"DAOS Unassigned",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

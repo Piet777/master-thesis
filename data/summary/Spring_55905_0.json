@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":55905,
+        "EvoId":0,
+        "Summary":"Release 1.5.1",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Spring Data JPA",
+        "Components":"Infrastructure",
+        "CreatedDate":"2014-02-25 07:29:21",
+        "ResolvedDate":"2014-03-13 10:18:28",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Thomas Darimont",
+        "Reporter":"Thomas Darimont",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"1.5.1 (Codd SR1)",
+        "Assignee":"Oliver Gierke",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

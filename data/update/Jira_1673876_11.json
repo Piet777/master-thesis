@@ -1,0 +1,52 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1673876,
+        "EvoId":11,
+        "Summary":"Attachment panel in new issue view only shows the attachments added from Jira application or added during issue creation from the portal",
+        "Description":"h3. Summary\r\n\r\nAttachment panel in new issue view only shows the attachments added from Jira application or added during request creation from the portal\r\nh3. Steps to Reproduce\r\n # Try the tests mentioned under Actual results and see the results\r\n\r\nh3. Expected Results\r\n\r\nCan see all the attachments from Jira in the Attachment panel in both the new issue view as well as old issue view\r\nh3. Actual Results\r\n||Test||Visibility in Attachment panel - Old issue view||Visibility in Attachment panel - New issue view||\r\n|As an agent raise a request on behalf of the customer from the portal and attach files|(\/)|(\/)|\r\n|As a customer raise a request from the portal and attach files|(\/)|(\/)|\r\n|On a request raised from the portal, as a customer add another attachment with a comment from customer portal|(\/)|(x)|\r\n|\u00a0On a request raised from the portal, as an agent add another attachment with a comment from customer portal|\u00a0(\/)|\u00a0(x)|\r\n|On a request raised from the portal, as an agent add another attachment with a comment from Jira application|\u00a0(\/)|(\/)\u00a0|\r\nh3. Workaround\r\n # Use the old issue view to view all the attachments in one place and download them\r\n # Or Use direct links:\r\n ** Download All\r\n{code:java}\r\nhttps:\/\/<JIRA_Domain>\/secure\/attachmentzip\/<Issue_ID>.zip{code}\r\n\r\n * \r\n ** Manage\u00a0_(Download All is available on this page)_\r\n{code:java}\r\nhttps:\/\/<JIRA_Domain>\/secure\/ManageAttachments.jspa?id=<Issue_ID>{code}\r\n(+)\u00a0To get issue ID in the new view:\r\n\r\n * Click the\u00a0{{...}}\u00a0button on the top right side\r\n * Hover the mouse onto Clone or Delete\r\n * See issue ID from browser's status bar\r\n\r\nh3. Notes\r\n\r\nThe attachment panel was recently included in the new issue view: [https:\/\/confluence.atlassian.com\/cloud\/blog\/2020\/10\/atlassian-cloud-changes-oct-19-to-oct-26-2020]\r\n{quote}New issue view: View your attachments the way you want\r\nView all your attachments (including those from fields, comments, and work log entries) in either a strip or list, or switch between the two. It\u2019s up to you.\r\n{quote}",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Jira Service Management Cloud",
+        "Components":"Attachments",
+        "CreatedDate":"2020-11-06 08:56:52",
+        "ResolvedDate":"2021-05-11 02:01:18",
+        "Status":"Gathering Impact",
+        "Priority":"Low",
+        "Creator":"Swati Kahol",
+        "Reporter":"Swati Kahol",
+        "Resolution":null,
+        "IssueLinks":"This issue relates to JRACLOUD-73397",
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Jehan Gonsalkorale",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Elisabete Gouveia",
+                "Created":"2020-11-09 16:26:16",
+                "Comment":"I have this issue and it has a big impact. An efficient solution must be provided."
+            },
+            {
+                "Author":"Boris Berenberg - Atlas Authority",
+                "Created":"2020-11-27 20:19:18",
+                "Comment":"I believe that this is mis-prioritized according to https:\/\/confluence.atlassian.com\/support\/atlassian-cloud-bug-fixing-policy-206865884.html Ideally this should be \"High\" per the example of \"application is functional, but frequently used gadgets or macros don't work\""
+            },
+            {
+                "Author":"Dora",
+                "Created":"2021-03-15 09:51:56",
+                "Comment":"This has big impact on our business, please prioritize to fix the issue.\u00a0"
+            },
+            {
+                "Author":"Eshwar Palem",
+                "Created":"2021-03-19 19:45:39",
+                "Comment":"Hey Atlassian,\r\n\r\nAre you going to change the priority of this ticket?In few days you guys are going to remove the old view and we are not going to have the workaround also.\r\n\r\nIf you want to improve the Jira UI by adding a new issue view. Also, please try not to remove the old features which we had in the old issue view."
+            },
+            {
+                "Author":"Matthew Crocco",
+                "Created":"2021-04-16 14:56:04",
+                "Comment":"This should be a High Priority since the workaround was taken away as Eshwar points out"
+            }
+        ]
+    }
+

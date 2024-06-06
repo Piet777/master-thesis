@@ -1,0 +1,37 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":699235,
+        "EvoId":2,
+        "Summary":"Ability to link to media files using rtsp protocol",
+        "Description":"Currently Confluence doesn't recognize rtsp:\/\/filepath\/filename.rm as a valid link URL format.  My client needs to specify media files as links.",
+        "VersionsAffected":null,
+        "IssueType":"Suggestion",
+        "Project":"Confluence Cloud",
+        "Components":null,
+        "CreatedDate":"2009-08-05 18:53:34",
+        "ResolvedDate":"2014-06-23 05:03:17",
+        "Status":"RESOLVED",
+        "Priority":null,
+        "Creator":"Danielle Zhu",
+        "Reporter":"Danielle Zhu",
+        "Resolution":"Won't Fix",
+        "IssueLinks":"This issue is incorporated by CONFCLOUD-24665",
+        "Labels":"lt",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Danielle Zhu",
+                "Created":"2009-09-15 18:55:27",
+                "Comment":"Found out the issue has to do URL encoding.  Change Priority to Minor."
+            },
+            {
+                "Author":"BillA",
+                "Created":"2014-06-23 05:03:17",
+                "Comment":"Thank you for raising this issue. While we can see how this feature would be useful, we have no plans to implement it in the foreseeable future. In order to set expectations, we're closing this request now. Thanks again for your idea."
+            }
+        ]
+    }
+

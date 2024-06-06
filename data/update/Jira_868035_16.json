@@ -1,0 +1,52 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":868035,
+        "EvoId":16,
+        "Summary":"LdapHostnameVerificationSSLSocketFactory error when attempting to assign deployment permissions",
+        "Description":"When attempting to search for users to add in a Deployment Projects's permissions the following error show up on the UI:\r\n{code:none}\r\nUnexpected error paging through LDAP results: javax.naming.CommunicationException: Loading the socket factory [Root exception is java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory]\r\n{code}\r\n\r\nThe following stacktrace can be found in the logs:\r\n{code:none}\r\n2017-10-13 04:01:21,126 INFO [http-nio-8085-exec-8] [AccessLogFilter] <USER> GET https:\/\/<Bamboo_URL>\/rest\/api\/latest\/permissions\/project\/ACM\/available-users?name=lten&limit=25&start=0&_=1507867272494 5618463kb\r\n2017-10-13 04:01:21,139 ERROR [http-nio-8085-exec-8] [LDAPEntityPager] Error while paging through results\r\ncom.atlassian.user.impl.ldap.repository.LdapConnectionFailedException: javax.naming.CommunicationException: Loading the socket factory [Root exception is java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory]\r\n        at com.atlassian.user.impl.ldap.repository.DefaultLdapContextFactory.getLDAPContext(DefaultLdapContextFactory.java:116)\r\n        at com.atlassian.user.impl.ldap.search.page.AbstractLDAPPager.preload(AbstractLDAPPager.java:84)\r\n        at com.atlassian.user.search.page.AbstractPrefetchingPager.hasNext(AbstractPrefetchingPager.java:41)\r\n        at com.atlassian.user.search.page.MergedListPager$MergedListIterator.getCurrentIterator(MergedListPager.java:168)\r\n        at com.atlassian.user.search.page.MergedListPager$MergedListIterator.hasNext(MergedListPager.java:185)\r\n        at com.atlassian.user.search.page.MergedListPager$MergedListIterator.next(MergedListPager.java:193)\r\n        at java.util.Spliterators$IteratorSpliterator.tryAdvance(Spliterators.java:1812)\r\n        at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)\r\n        at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)\r\n        at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:161)\r\n        at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)\r\n        at java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)\r\n        ...\r\nCaused by: javax.naming.CommunicationException: Loading the socket factory [Root exception is java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory]\r\n        at com.sun.jndi.ldap.LdapPoolManager.isPoolingAllowed(LdapPoolManager.java:247)\r\n        at com.sun.jndi.ldap.LdapClient.getInstance(LdapClient.java:1604)\r\n        at com.sun.jndi.ldap.LdapCtx.connect(LdapCtx.java:2746)\r\n        ...\r\nCaused by: java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory\r\n        at com.atlassian.plugins.rest.module.ChainingClassLoader.loadClass(ChainingClassLoader.java:58)\r\n        at java.lang.Class.forName0(Native Method)\r\n        at java.lang.Class.forName(Class.java:348)\r\n        ...\r\n{code}",
+        "VersionsAffected":"6.2.1",
+        "IssueType":"Bug",
+        "Project":"Bamboo",
+        "Components":"User Management, Crowd & LDAP integration",
+        "CreatedDate":"2017-10-16 21:02:23",
+        "ResolvedDate":"2017-12-20 08:10:10",
+        "Status":"Open",
+        "Priority":"Low",
+        "Creator":"Daniel Santos",
+        "Reporter":"Daniel Santos",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"bamboo-bugfix-kanban",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Christian Pascher",
+                "Created":"2017-10-27 10:09:11",
+                "Comment":"Bamboo 6.2.2 is also\u00a0affected but we only get the stacktrace, no UI response expect for the infinity loading spinner..."
+            },
+            {
+                "Author":"Craig Solinski",
+                "Created":"2017-10-27 16:21:17",
+                "Comment":"concur 6.2.2 same problem: on Project Permissions page for a given project, in User lookup:\r\n\r\n{color:#000000} java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory{color}"
+            },
+            {
+                "Author":"Craig Solinski",
+                "Created":"2017-11-02 16:46:02",
+                "Comment":"I don't see why this major bug that also prevents adding User Permissions to a plan is marked LOW! It only occurs on 1 of my 3 bamboo environments. Appears to occur when the related LDAP group size is somewhat large. Ie over 200 members or so."
+            },
+            {
+                "Author":"L2 System Infrastructure",
+                "Created":"2017-11-21 09:01:00",
+                "Comment":"Essential for us.\r\n\r\nWithout a fix, we can not upgrade."
+            },
+            {
+                "Author":"Erik Lichtenstein",
+                "Created":"2017-11-22 01:14:08",
+                "Comment":"We are also experiencing this issue. This needs to get fixed. It should be marked as High Priority."
+            }
+        ]
+    }
+

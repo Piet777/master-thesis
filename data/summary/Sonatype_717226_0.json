@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":717226,
+        "EvoId":0,
+        "Summary":"Review and help on Conda Hosted PR",
+        "Description":"https:\/\/github.com\/sonatype-nexus-community\/nexus-repository-conda\/pull\/21",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Developer Experience",
+        "Components":null,
+        "CreatedDate":"2019-10-14 18:19:36",
+        "ResolvedDate":"2020-02-14 02:55:12",
+        "Status":"Backlog",
+        "Priority":"Minor",
+        "Creator":"Allen Hsieh [X]",
+        "Reporter":"Jeffry Hesse",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"okr-q3-2019-contributing",
+        "VersionsFixed":null,
+        "Assignee":"Dan Rollo",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

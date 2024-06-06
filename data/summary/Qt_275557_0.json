@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":275557,
+        "EvoId":0,
+        "Summary":"Toolbar missing if layout is reset",
+        "Description":"Test steps:\r\n # Open existing project or create new one\r\n # Reset layout settings by clicking View -> Reset layout\r\n # After restart toolbar is not visible (see picture)\r\n # Cannot drag guides from top or from bottom (dragging from sides works)\r\n # Drag editor window a bit by clicking it at the up most panel\r\n # Toolbar is visible again and dragging guides works",
+        "VersionsAffected":"Qt 3D Studio 2.3 BETA3",
+        "IssueType":"Bug",
+        "Project":"Qt 3D Studio",
+        "Components":"Editor Application",
+        "CreatedDate":"2019-03-18T07:45:15.000+0000",
+        "ResolvedDate":"2019-03-18T08:37:56.000+0000",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Tanja Remes",
+        "Reporter":"Tanja Remes",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"RTA",
+        "VersionsFixed":null,
+        "Assignee":"Tomi Korpip\u00e4\u00e4",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

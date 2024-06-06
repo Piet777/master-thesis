@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12551075,
+        "EvoId":0,
+        "Summary":"Sansa doesn't have Ant installed",
+        "Description":"Jenkins node Sansa does not have Ant installed.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"JBoss Transaction Manager",
+        "Components":"Testing",
+        "CreatedDate":"2014-09-04T06:01:25.000+0000",
+        "ResolvedDate":"2014-09-04T09:51:28.000+0000",
+        "Status":"Open",
+        "Priority":"Blocker",
+        "Creator":"Gytis Trikleris",
+        "Reporter":"Gytis Trikleris",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"5.0.4",
+        "Assignee":"Thomas Jenkinson",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

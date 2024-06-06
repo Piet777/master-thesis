@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":13259062,
+        "EvoId":0,
+        "Summary":"Remove dryRunOpts import from console package",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"OpenShift Dev Console",
+        "Components":"UI",
+        "CreatedDate":"2021-02-09T08:31:36.000+0000",
+        "ResolvedDate":"2021-02-12T07:30:56.000+0000",
+        "Status":"To Do",
+        "Priority":"Unprioritized",
+        "Creator":"Rohit Rai",
+        "Reporter":"Rohit Rai",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Rohit Rai",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

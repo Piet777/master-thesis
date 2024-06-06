@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":167207,
+        "EvoId":0,
+        "Summary":"Dashboard fails to load with error \"Uncaught TypeError: Cannot read property 'left' of null\" appears in the browser console",
+        "Description":"h3. Summary\r\n\r\nSometimes when a user tries to view their dashboards, the dashboard is empty without any configured gadgets displayed.\r\n\r\n\r\nh3. Environment\r\n* Happens more frequently in *Chrome* and *IE 11*\r\n\r\n\r\nh3. Steps to reproduce\r\n\r\n# Create a *long list of dashboards* with couple of gadgets on each dashboard.\r\n# Go to the Dashboard page, click on one of the dashboards from the list on the left panel.\r\n# *Scroll on the mouse* while the dashboard is loading.\r\n\r\n\r\nh3. Expected result\r\nThe selected dashboard and its gadgets will load properly.\r\n\r\n\r\nh3. Actual result\r\n* The selected dashboard is empty without any gadgets loaded, only the dashboard title and 3 functionality buttons (Add Gadget, Edit Layout, Tools) are displayed.\r\n* Error {{Uncaught TypeError: Cannot read property 'left' of null}} is observed in the Browser Console\r\n",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Atlassian Gadgets",
+        "Components":null,
+        "CreatedDate":"2016-09-16 01:35:06",
+        "ResolvedDate":"2016-09-29 09:08:44",
+        "Status":"Triage",
+        "Priority":"Major",
+        "Creator":"Pawel Bugalski",
+        "Reporter":"Pawel Bugalski",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Pawel Bugalski",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

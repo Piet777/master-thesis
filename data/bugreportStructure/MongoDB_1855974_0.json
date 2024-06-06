@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":1855974,
+        "EvoId":0,
+        "Summary":"The monogsh has the limitations and quirks of node console.log",
+        "Description":"h3. *Problem Statement\/Rationale*\r\nCursors are automatically transformed into arrays.\r\nConsole.log depth for objects and arrays is similar to nodejs \/ javascript console.log\r\n\r\n\u00a0\r\nh3. *Steps to Reproduce*\r\n\r\nrun mongosh,\r\nTry to display a high depth dataset\r\nh3. *Expected Results*\r\nto work like .pretty() or findOne from mongo client.\r\nh3. *Actual Results*\r\nDoesn't work like .pretty \/ findOne but like console.log",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"MongoDB Shell",
+        "Components":null,
+        "CreatedDate":"2021-08-20 07:31:10",
+        "ResolvedDate":"2021-08-25 13:46:35",
+        "Status":"Needs Triage",
+        "Priority":"Major - P3",
+        "Creator":"Valentin Popescu",
+        "Reporter":"Valentin Popescu",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

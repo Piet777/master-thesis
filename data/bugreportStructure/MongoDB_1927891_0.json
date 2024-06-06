@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":1927891,
+        "EvoId":0,
+        "Summary":"Current topology does not support sessions error in mongoDB 3.2 cluster",
+        "Description":"h3. *Problem Statement\/Rationale*\r\n\r\n{color:#505f79}After successfully connecting to a mongoDB 3.2 cluster, clicking a collection displays the following error message{color}\r\n{code:java}\r\nCurrent topology does not support sessions\r\n{code}\r\n{color:#505f79}instead of the expected document list. This happens with every collection in the database.{color}\r\nh3. *Steps to Reproduce*\r\n\r\n{color:#505f79}Trying to visualize a collection on a 3.2 mongoDB cluster{color}\r\nh3. *Expected Results*\r\n\r\n{color:#505f79}To visualize the document list.{color}\r\nh3. *Actual Results*\r\n\r\n\"Current topology does not support sessions\" error message instead of the expected document list.\r\nh3. *Additional Notes*\r\n\r\n{color:#505f79}This issue does not occur in compass 1.28.4{color}",
+        "VersionsAffected":"1.29.4",
+        "IssueType":"Bug",
+        "Project":"Compass ",
+        "Components":null,
+        "CreatedDate":"2021-11-17 22:57:57",
+        "ResolvedDate":"2021-12-03 16:02:21",
+        "Status":"Needs Triage",
+        "Priority":"Major - P3",
+        "Creator":"David Ricardo Vivas",
+        "Reporter":"David Ricardo Vivas",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

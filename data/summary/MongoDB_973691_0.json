@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":973691,
+        "EvoId":0,
+        "Summary":"Support excluding whole directories in archive.targz_pack",
+        "Description":"archive.targz_pack now supports excluding files but it doesn't support excluding whole directories. It would be useful to add that.",
+        "VersionsAffected":null,
+        "IssueType":"New Feature",
+        "Project":"Evergreen",
+        "Components":null,
+        "CreatedDate":"2019-10-20 22:09:13",
+        "ResolvedDate":"2019-10-21 14:39:04",
+        "Status":"Needs Triage",
+        "Priority":"Major - P3",
+        "Creator":"Chenhao Qu",
+        "Reporter":"Chenhao Qu",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Backlog - Evergreen Team",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

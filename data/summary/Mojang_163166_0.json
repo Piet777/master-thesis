@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":163166,
+        "EvoId":0,
+        "Summary":"When i try to open minecraft the game crashes",
+        "Description":"The game crashes when i try to open it.\n\nI was expecting to open the game\nIt never happend to me before the new launcher\n\n*Steps to Reproduce:*\n1. Try to open the game\n",
+        "VersionsAffected":"2.0.806 (Windows)",
+        "IssueType":"Bug",
+        "Project":"Minecraft Launcher",
+        "Components":null,
+        "CreatedDate":"2017-02-12 15:04:57",
+        "ResolvedDate":"2018-04-27 15:57:00",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Vinicius Paulo Novelli",
+        "Reporter":"Vinicius Paulo Novelli",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"crash",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

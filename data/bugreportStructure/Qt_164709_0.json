@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":164709,
+        "EvoId":0,
+        "Summary":"ui_mainwindow.h rebuilt  ",
+        "Description":"Hello, \n\nI have noticed the ui_mainwindow.h doesn't get automatically generated. I noticed this well working on a small program which I had check into mercurial. Initially, I checked in ui_mainwindow.h.  Since it is generated via uic.exe, I removed it from the repository. \n\nWhen I check the code out, the build failed because it didn't know how to regenerate the file. \n\nThe obvious workaround is: \n\nJohnK@US-JOHNK \/cygdrive\/c\/workspace\/qt\/QtExamples\/contactengine\n$ uic mainwindow.ui  -o ui_mainwindow.h\n",
+        "VersionsAffected":"Qt Creator 2.0.0",
+        "IssueType":"Bug",
+        "Project":"Qt Creator",
+        "Components":"All Other Issues",
+        "CreatedDate":"2010-08-16 19:16:27",
+        "ResolvedDate":"2010-08-17 17:59:20",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"John Kern",
+        "Reporter":"John Kern",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Daniel Teske",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

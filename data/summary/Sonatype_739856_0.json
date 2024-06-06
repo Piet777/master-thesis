@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":739856,
+        "EvoId":0,
+        "Summary":"When query docker repository api \/v2\/ on proxy get Authorization error even though anonymous access is available on original repo and proxy",
+        "Description":"When query API endpoint \/v2\/ on proxy of remote docker repository get 401 \"UNAUTHORIZED\" error even though anonymous access is set on proxy repo and on original repo I have no problem to call that API endpoint.\r\n\r\n\u00a0\r\n\r\nError message:\r\n{code:java}\r\n{\"errors\":[{\"code\":\"UNAUTHORIZED\",\"message\":\"access to the requested resource is not authorized\",\"detail\":null}]}\r\n{code}",
+        "VersionsAffected":"3.21.1",
+        "IssueType":"Bug",
+        "Project":"Dev - Nexus Repo",
+        "Components":null,
+        "CreatedDate":"2020-04-21 14:36:59",
+        "ResolvedDate":"2020-09-03 22:08:42",
+        "Status":"New",
+        "Priority":"Minor",
+        "Creator":"Marat Salakhutdinov",
+        "Reporter":"Marat Salakhutdinov",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

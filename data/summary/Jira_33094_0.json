@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":33094,
+        "EvoId":0,
+        "Summary":"Thumbnail problem",
+        "Description":"I get this error when trying to view the Thumbnail demo page: System does not support thumbnails: no JDK image support  and This installation can not generate thumbnails: no image support in Java runtime.\r\n\r\nI followed the instructions given and changed the JAVA_OPTS variable as said to: JAVA_OPTS=-Djava.awt.headless=true nevertheless it won't display either.\r\n\r\nI browsed many JIRA issue reports but found nothing else.\r\n\r\nAny advice on how to solve this?\r\n\r\nStandalone with Tomcat.\r\nJDK 1.4.2_10\r\nLinux cancana3 2.4.18-3 #1 Thu Apr 18 07:37:53 EDT 2002 i686 unknown\r\n",
+        "VersionsAffected":"2.1.1",
+        "IssueType":"Support Request",
+        "Project":"Confluence Server and Data Center",
+        "Components":null,
+        "CreatedDate":"2006-01-11T13:06:17.000+0000",
+        "ResolvedDate":"2016-05-26T06:55:43.000+0000",
+        "Status":"Open",
+        "Priority":"Medium",
+        "Creator":"Javier Gallego",
+        "Reporter":"Javier Gallego",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"affects-server",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

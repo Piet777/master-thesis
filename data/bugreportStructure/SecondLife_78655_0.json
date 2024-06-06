@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":78655,
+        "EvoId":0,
+        "Summary":"German: Text overlaying in 'About Land > General' floater",
+        "Description":"1. Login to Viewer with German localization.\r\n2. Open 'About Land' floater.\r\n3. Open and observe 'General' tab.\r\n\r\n-->\r\nActual: 'For Sale' text is overlaying UI elements\r\n",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"1. Second Life Viewer - VWR",
+        "Components":null,
+        "CreatedDate":"2011-03-09 11:04:21",
+        "ResolvedDate":"2011-06-21 17:37:26",
+        "Status":"Awaiting Review",
+        "Priority":"Minor",
+        "Creator":"Jbinkovskaya ProductEngine",
+        "Reporter":"Jbinkovskaya ProductEngine",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

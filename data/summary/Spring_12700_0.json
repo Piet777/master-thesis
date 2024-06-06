@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":12700,
+        "EvoId":0,
+        "Summary":"Maven 2 poms don't identify optional dependencies",
+        "Description":"The Spring poms for Maven 2 list all dependencies as required, and this causes a large number of unnecessary transitive dependencies in projects which make use of Spring.\n\nThis is especially true for spring-orm, but also applies to spring-hibernate and probably other modules.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Spring Modules",
+        "Components":null,
+        "CreatedDate":"2005-11-09 13:57:57",
+        "ResolvedDate":"2006-06-19 09:23:11",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Robert Egglestone",
+        "Reporter":"Robert Egglestone",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Steven Devijver",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

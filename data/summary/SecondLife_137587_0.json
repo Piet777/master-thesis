@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":137587,
+        "EvoId":0,
+        "Summary":"Right click menu is not enabled in Script Editor on STORM-1831 test viewer",
+        "Description":"Right click menu is disabled on script editors in STORM-1831 test viewer. It's my fault. I'll link to a repo with the fix.",
+        "VersionsAffected":null,
+        "IssueType":"Story",
+        "Project":"Snowstorm",
+        "Components":null,
+        "CreatedDate":"2014-04-29 17:34:57",
+        "ResolvedDate":"2014-10-14 10:26:00",
+        "Status":"Open",
+        "Priority":"Unset",
+        "Creator":"Cinder Roxley",
+        "Reporter":"Cinder Roxley",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Oz Linden",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

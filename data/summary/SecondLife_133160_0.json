@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":133160,
+        "EvoId":0,
+        "Summary":"Add ability to copy notification text to clipboard",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"1. BUG Project",
+        "Components":null,
+        "CreatedDate":"2014-01-31 16:15:22",
+        "ResolvedDate":"2014-02-10 09:20:40",
+        "Status":"Awaiting Review",
+        "Priority":"Unset",
+        "Creator":"Jonathan Yap",
+        "Reporter":"Jonathan Yap",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

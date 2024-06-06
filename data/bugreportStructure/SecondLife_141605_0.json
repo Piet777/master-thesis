@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":141605,
+        "EvoId":0,
+        "Summary":"Both buttons show as highlighted while in Snapshot floater on Send to Email option",
+        "Description":"+Steps to Reproduce+\r\n\r\n# Open Test Viewer\r\n# Open Shapshot floater\r\n# Select Send to Email option\r\n# Click the Gear icon to show the image size options\r\n# Observe when you click the gear icon, the image size options are shown in the panel, however both the email options and gear icons are shown as highlighted while the user has the snapshot floater in focus (see screenshot)\r\n\r\n+Expected Behavior+\r\n\r\n# After clicking the gear icon in the send to email panel, the email settings icon should no longer be highlighted even when the user has the snapshot floater in focus",
+        "VersionsAffected":null,
+        "IssueType":"Story Defect",
+        "Project":"Snowstorm",
+        "Components":null,
+        "CreatedDate":"2014-07-31 16:31:22",
+        "ResolvedDate":"2014-08-01 16:04:42",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Kurt Linden",
+        "Reporter":"Kurt Linden",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":246179,
+        "EvoId":0,
+        "Summary":"Cats tamed from villages keep going back to the village\/scoot around while sitting",
+        "Description":"[^Minecraft_2019-06-15-21-42-23_1.mp4]\n\nHopefully that link works, I'm doing all of this on my phone. Ever since 1.14 came out, I redownloaded minecraft on my Android S8 and have been playing it nonstop. Whenever I tame cats from another village and bring them home with me, they never want to stay. When I make them sit, they tend to scoot around literally everywhere until they can get out of my house and flee back to their village. If I go around the village, the cat will teleport to me, ignore me, and run back. My friend's that I play with on IOS have never had this problem on their worlds, and it is quite frustrating. I can never tame cats from villages, I can only spawn them in if I don't want to run into this problem.\u00a0",
+        "VersionsAffected":"1.11.4",
+        "IssueType":"Bug",
+        "Project":"Minecraft (Bedrock codebase)",
+        "Components":null,
+        "CreatedDate":"2019-06-16 05:03:36",
+        "ResolvedDate":"2020-07-01 12:32:16",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Sydney",
+        "Reporter":"Sydney",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

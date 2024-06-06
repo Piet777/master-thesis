@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1388024,
+        "EvoId":0,
+        "Summary":"Commit log bug",
+        "Description":"After several attempts, I was able to make only one successful commit, rest all attempts failed due to some \"non-fast forward\" error . However bitbucket commit log shows all commits by user (even the failed ones) which is very confusing. Someone care to fix this bug??",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Bitbucket Cloud",
+        "Components":"User - Legacy",
+        "CreatedDate":"2016-02-11 18:31:05",
+        "ResolvedDate":"2016-02-18 22:14:06",
+        "Status":"NEEDS TRIAGE",
+        "Priority":"Medium",
+        "Creator":"Geoff",
+        "Reporter":"jangdmanish",
+        "Resolution":"Invalid",
+        "IssueLinks":null,
+        "Labels":"migrated",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

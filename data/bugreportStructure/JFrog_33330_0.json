@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":33330,
+        "EvoId":0,
+        "Summary":"Storage summary REST API return the same results twice ",
+        "Description":"When running the Storage summary rest api you are getting the \"repositoriesSummaryList\" twice.",
+        "VersionsAffected":"4.6.1",
+        "IssueType":"Bug",
+        "Project":"Artifactory Binary Repository",
+        "Components":"REST API",
+        "CreatedDate":"2016-03-31 13:31:13",
+        "ResolvedDate":"2022-01-03 10:11:32",
+        "Status":"Open",
+        "Priority":"5 - Minor",
+        "Creator":"Ariel Seftel",
+        "Reporter":"Ariel Seftel",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

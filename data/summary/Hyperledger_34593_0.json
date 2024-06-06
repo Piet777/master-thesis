@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":34593,
+        "EvoId":0,
+        "Summary":"Update default branch in each of the github projects",
+        "Description":"Update default branch in each of the github projects to be the latest major release.",
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"Fabric",
+        "Components":null,
+        "CreatedDate":"2018-10-10 22:12:02",
+        "ResolvedDate":"2018-10-11 21:15:18",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"David Enyeart",
+        "Reporter":"David Enyeart",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Christopher Ferris",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

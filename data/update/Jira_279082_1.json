@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":279082,
+        "EvoId":1,
+        "Summary":"Tickets missing",
+        "Description":"I got an issue that I am not sure why it is happening. After I have created a new project to be accessible by an individual Client, some how I got some of the existing tickets missing. Nobody has removed the ticket ( at least I could not see anywhere the ticket was removed.). This is the message when I try to open the ticket:\r\nPermission Violation\r\n\r\nIf it helps, this is the direct URL of the ticket:\r\nhttps:\/\/infobahn.jira.com\/browse\/LDG-1753\r\n\r\nI got a few other tickets missing...\r\nCan you help me on finding the reason\/solution for the missing ticket?",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Confluence",
+        "Components":null,
+        "CreatedDate":"2013-06-03 00:13:25",
+        "ResolvedDate":"2013-06-03 22:37:56",
+        "Status":"New",
+        "Priority":"Low",
+        "Creator":"Rodrigo Rossi",
+        "Reporter":"Rodrigo Rossi",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Rodrigo Rossi",
+                "Created":"2013-06-03 01:48:53",
+                "Comment":"Please close this ticket, I have found the reason\/solution for my problem."
+            }
+        ]
+    }
+

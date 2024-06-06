@@ -1,0 +1,47 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":44070,
+        "EvoId":5,
+        "Summary":"Import from RIS (EndNote): Citation type=unknown loses most known other fields, including Title",
+        "Description":"There are many different Citation TYPES in Endnote, e.g. JOUR=Journal, PAT=Patent etc. Sakai only recognises about 6 types, BUT if the type is not recognised, then it loses a whole lot of other fields (e.g. Title, which DID exist in the imported file). \n\nAlso on Edit > Select citation type, in the dropdown list of possible types, 'other' would make more sense rather than 'unknown'. (But editing it is too late, if the citation has already been imported into WL and all the other data has been lost).\n\n\n",
+        "VersionsAffected":"2.7.1",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"Citations",
+        "CreatedDate":"2011-05-13 05:36:29",
+        "ResolvedDate":"2012-03-15 04:56:27",
+        "Status":"Resolved",
+        "Priority":"Major",
+        "Creator":"Adam Marshall",
+        "Reporter":"Adam Marshall",
+        "Resolution":"Fixed",
+        "IssueLinks":"This issue duplicates SAK-16091",
+        "Labels":null,
+        "VersionsFixed":"2.8.0",
+        "Assignee":"David Cliff",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"David Cliff",
+                "Created":"2012-03-14 07:22:32",
+                "Comment":"This issue has been tested with the patch supplied by SAK-16091 and it resolves this issue - marking as a duplicate as a result."
+            },
+            {
+                "Author":"Jean-Fran\u00e7ois L\u00e9v\u00eaque",
+                "Created":"2012-03-15 08:41:10",
+                "Comment":"Is this issue really affecting 2.8.1 and fixed in 2.8.0?"
+            },
+            {
+                "Author":"David Cliff",
+                "Created":"2012-03-15 08:43:48",
+                "Comment":"Jean - I think it may have been mislabeled at creation. This was fixed as per the linked issue in 2.7.2. I will try to amend its categorization shortly."
+            },
+            {
+                "Author":"Jean-Fran\u00e7ois L\u00e9v\u00eaque",
+                "Created":"2012-03-15 08:54:22",
+                "Comment":"AFAICT, duplicates do not need Fix Version information. In this case SAK-16091 already contains it. The Resolution should be duplicate instead of Fixed because the fix is not here."
+            }
+        ]
+    }
+

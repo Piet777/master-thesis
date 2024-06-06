@@ -13,3 +13,7 @@ https://www.promptingguide.ai/
 
 Example Prompts:
 https://github.com/linexjlin/GPTs
+
+
+
+api.txt datei alegen und den code einfügen

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":233711,
+        "EvoId":0,
+        "Summary":"The game will crash after significant changes when attempting to save and quit in the Nintendo Switch version of the game.",
+        "Description":"The game will crash after significant changes when attempting to save and quit in the Nintendo Switch version of the game. I've been on the\u00a0_Save and Quit_ screen for at least 15 minutes, unable to do anything in-game.",
+        "VersionsAffected":"1.10.0",
+        "IssueType":"Bug",
+        "Project":"Minecraft (Bedrock codebase)",
+        "Components":null,
+        "CreatedDate":"2019-04-03 03:46:39",
+        "ResolvedDate":"2019-05-08 10:42:58",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Evan Reardon",
+        "Reporter":"Evan Reardon",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"switch-crash",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

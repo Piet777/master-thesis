@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":33352,
+        "EvoId":0,
+        "Summary":"System health ping authentication failure should not add to failure count",
+        "Description":"System export with an admin user that has a changed password (not default 'password')\nMove DB to fresh Oracle from Derby.\nStart up server, starts up successfully\nTry to log in with admin you see the error message: \"Too many failed attempts, try again in 1 seconds\"\nThis is because there is a proxy server that is doing authenticated health pings using the admin credentials from the previous system\n\nWorkaround: Turn off the proxy server during migration, or do an artifactory.conig.import.xml security.import.xml procedure to get login credentials set.\n\nChange request: make it so system pings do not add to the authentication failure count",
+        "VersionsAffected":"4.7.0",
+        "IssueType":"Change Request",
+        "Project":"Artifactory Binary Repository",
+        "Components":"Security",
+        "CreatedDate":"2016-04-01 17:07:38",
+        "ResolvedDate":"2016-04-04 16:59:18",
+        "Status":"Open",
+        "Priority":"4 - Normal",
+        "Creator":"Aaron Rhodes",
+        "Reporter":"Aaron Rhodes",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

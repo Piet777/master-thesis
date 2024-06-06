@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1075133,
+        "EvoId":0,
+        "Summary":"Epic link gets removed when moving an epic from a non next gen project to a next project",
+        "Description":"h3. Summary\r\n\r\nWhen an epic from a non next-Gen project is moved to a next-Gen project, the association is removed. All issues associated with the epics will  no longer be linked to the epic\r\n\r\nh3. Steps to reproduce\r\n\r\n# Have 2 projects (Next-gen and non next-gen)\r\n# Create an Epic from a non Next-gen project\r\n# Add a child issue to the epic\r\n# Move the epic to the next-gen project\r\n\r\nh3. Expected Result\r\nEpic link remains. The issues are still linked with the epic in the next-gen project even after the moved.\r\n\r\nh3. Actual Result\r\nEpic link is lost \r\n\r\n\r\n",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Jira Software Cloud",
+        "Components":"next-gen",
+        "CreatedDate":"2018-10-23 00:55:35",
+        "ResolvedDate":"2018-11-23 05:31:12",
+        "Status":"Open",
+        "Priority":"Low",
+        "Creator":"Mohamed Hazwan Ariffin",
+        "Reporter":"Mohamed Hazwan Ariffin",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

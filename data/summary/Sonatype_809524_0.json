@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":809524,
+        "EvoId":0,
+        "Summary":"create a new repository for io.adtrace.libpubtest",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"New Project",
+        "Project":"Community Support - Open Source Project Repository Hosting",
+        "Components":null,
+        "CreatedDate":"2021-08-16 09:44:09",
+        "ResolvedDate":"2021-08-16 10:25:12",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"nasser amini",
+        "Reporter":"nasser amini",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Shane Stecker",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

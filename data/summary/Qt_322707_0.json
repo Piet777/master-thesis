@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":322707,
+        "EvoId":0,
+        "Summary":"Inequality sign in Photoshop text layer isn't exported correctly",
+        "Description":"In Photoshop text layer, \"<\" (UNICODE: E0E1) is exported to QML as \">\" (UNICODE: E0E0)\r\n\r\n\u00a0\r\n\r\nReported by Umemura-san",
+        "VersionsAffected":"QDS 2.1",
+        "IssueType":"Bug",
+        "Project":"Qt Design Studio",
+        "Components":"Qt-Bridge-Photoshop",
+        "CreatedDate":"2021-08-10T08:15:45.000+0000",
+        "ResolvedDate":"2021-09-08T14:12:28.000+0000",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Yasuhiko Uehara",
+        "Reporter":"Yasuhiko Uehara",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Yasuhiko Uehara",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

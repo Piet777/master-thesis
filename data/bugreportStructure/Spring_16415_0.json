@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":16415,
+        "EvoId":0,
+        "Summary":"JSF Problem : not filled in required fields cause fields to be emptied if page is whithin a flow",
+        "Description":"I have a page with several fields and some of them are required (required attribute is set to true). If this page is not invlolved in a flow, and if I don't fill in one of the required fields, after submitting, I get back to my page and all the fields I previously filled in are still there. I can correct the missing fields. So it's OK.\n\nSame sample within a flow (I mean a flow is already started when I get to this page): if I don't fill all of the required fields or if I fill in a field which doesn't meet its validator, all of the fields are emptied after getting back to the page (because of validation problem).",
+        "VersionsAffected":"1.0.1",
+        "IssueType":"Bug",
+        "Project":"Spring Web Flow",
+        "Components":null,
+        "CreatedDate":"2007-03-23 01:08:08",
+        "ResolvedDate":"2007-04-01 14:28:19",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Dominique Jean-Prost",
+        "Reporter":"Dominique Jean-Prost",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Keith Donald",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

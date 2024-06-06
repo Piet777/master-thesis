@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":33370,
+        "EvoId":0,
+        "Summary":"Remove spring-tx dependency from MessagingTemplate",
+        "Description":"We have several ways of starting the MessageFlow\n\n1. gateway\n2. channel.send(message)\n3. message-publisher\n4. inbound-adapter\n5. scheduler\n6. poller\n\n1, 2 and 3 involves 3rd party to initiate the flow. Such 3rd party can begin transaction before exercising any of the scenarios. So TX configuration could be easily done in Spring the conventional way (annotation Gateway interface with @Transactional) and the Thread would propagate the TX context until thread boundary breaks. The main thing is that all 3 of them expect TX to exist before they are initiated. \n\n4, 5 and 6 does not involve human to initiate the flow, so it make sense to expose TX configuration (e.g., the same way we do it in poller now).\n\n_MessagingTemplate_ is really a helper class used by all of the above scenarios and based on the scenario transactional context might or might not exist. But in any event _MessagingTemplate_ should not directly depend on spring-tx API.\n",
+        "VersionsAffected":"2.0 M7",
+        "IssueType":"Sub-task",
+        "Project":"Spring Integration",
+        "Components":"Core",
+        "CreatedDate":"2010-09-15 18:28:24",
+        "ResolvedDate":"2010-09-15 18:40:44",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Oleg Zhurakousky",
+        "Reporter":"Oleg Zhurakousky",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"2.0 RC1",
+        "Assignee":"Oleg Zhurakousky",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

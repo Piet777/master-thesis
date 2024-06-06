@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":37106,
+        "EvoId":2,
+        "Summary":"Not posible change \"Edit Quiz Settings\" on Lesson Builder tool",
+        "Description":"Some javascript error when\u00a0changing \"Edit Quiz Settings\" from Lessons. Date picker error\r\n\r\nSee testing plan",
+        "VersionsAffected":"21.0",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"Tests & Quizzes (Samigo)",
+        "CreatedDate":"2020-02-20 04:09:35",
+        "ResolvedDate":"2020-04-20 08:52:41",
+        "Status":"Awaiting Review",
+        "Priority":"Critical",
+        "Creator":"Jesus Maria Mendez Perez",
+        "Reporter":"Jesus Maria Mendez Perez",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Core Team",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Shawn Foster",
+                "Created":"2020-02-24 13:04:07",
+                "Comment":"[~accountid:557058:41fcbac4-a91a-45ed-b774-07f473189e6d], why was this \"Critical\"? According to our [Sakai Jira Guildelines|https:\/\/confluence.sakaiproject.org\/display\/MGT\/Sakai+Jira+Guidelines#SakaiJiraGuidelines-PriorityPriority], developer-facing bugs would be classified as \"Major\"."
+            }
+        ]
+    }
+

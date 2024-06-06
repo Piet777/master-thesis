@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":642978,
+        "EvoId":0,
+        "Summary":"Correct HipChat Integration to JIRA for Pre- Version 7 documentation",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Jira Server and Data Center",
+        "Components":"Documentation - All",
+        "CreatedDate":"2016-10-31T07:50:28.000+0000",
+        "ResolvedDate":"2017-06-05T07:33:53.000+0000",
+        "Status":"Open",
+        "Priority":"Low",
+        "Creator":"Ismael Olusula Jimoh",
+        "Reporter":"Ismael Olusula Jimoh",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Andrew Lui [Atlassian technical writer]",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

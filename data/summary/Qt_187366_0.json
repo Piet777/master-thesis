@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":187366,
+        "EvoId":0,
+        "Summary":"looks like a bug: can never load qt jpeg plugin on windows mobile 6 ",
+        "Description":"\nQDir(path).entryList(QDir::Files) always returns empty string list on windows mobile 6,\nwhich leads to failure of loading qt plugins .\n\nI fixed it by enclosing these lines in #ifndef Q_OS_WINCE preprocessor directives.\n\nqfilesystemiterator_win.cpp Ln#97 - Ln#100\n------------------------------------------------------\nif (QSysInfo::windowsVersion() >= QSysInfo::WV_WINDOWS7) {\n            dwAdditionalFlags = 2;  \/\/ FIND_FIRST_EX_LARGE_FETCH\n            infoLevel = 1 ;         \/\/ FindExInfoBasic;\n}\n------------------------------------------------------\nthese above lines will fail the following call on wince 6,\n\nfindFileHandle = FindFirstFileEx((const wchar_t *)nativePath.utf16(), FINDEX_INFO_LEVELS(infoLevel), &findData,\n                                         FINDEX_SEARCH_OPS(searchOps), 0, dwAdditionalFlags);\n\naccording to MSDN, dwAdditionalFlags=2 is not supported on wince6, and findFileHandle will always get a INVALID_FILE_HANDLE.\n",
+        "VersionsAffected":"4.8.0",
+        "IssueType":"Suggestion",
+        "Project":"Qt",
+        "Components":"Core: Containers and Algorithms",
+        "CreatedDate":"2012-04-07T22:27:40.000+0000",
+        "ResolvedDate":"2018-07-19T14:27:34.000+0000",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"zhanghanxi",
+        "Reporter":"zhanghanxi",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Jo\u00e3o Abecasis",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

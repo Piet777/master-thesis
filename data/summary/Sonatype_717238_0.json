@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":717238,
+        "EvoId":0,
+        "Summary":"Help NXRM team with bundling of NXRM community formats into the official NXRM release.",
+        "Description":"Work with Joe Stephens and team to make it possible to bundle community NXRM format plugins into the official NXRM distribution. This way, users will have access to the community formats \"out of the box\".\r\n\r\n*Follow up from Dan:*\r\n\r\n!image-2019-10-14-11-42-00-740.png!",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Developer Experience",
+        "Components":null,
+        "CreatedDate":"2019-10-14 18:42:33",
+        "ResolvedDate":"2020-02-13 22:28:56",
+        "Status":"Backlog",
+        "Priority":"Minor",
+        "Creator":"Allen Hsieh [X]",
+        "Reporter":"Dan Rollo",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"okr-q4-contributing",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

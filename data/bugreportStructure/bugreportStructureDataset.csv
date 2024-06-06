@@ -1,0 +1,556 @@
+Jira,IssueId,EvoId,Summary,Description,VersionsAffected,IssueType,Project,Components,CreatedDate,ResolvedDate,Status,Priority,Creator,Reporter,Resolution,IssueLinks,Labels,VersionsFixed,Assignee,TimeSpent,Comments,SmellActual,SmellReason
+Apache,12581156,0,compiler error when binding to content property of RichText,"Steps to reproduce:
+1. compile attached app
+ 
+ Actual Results:
+main.mxml(13):  Error: Access of possibly undefined property content through a reference with static type spark.primitives:RichText.
+
+                                <s:content>
+ 
+ Expected Results:
+ should compile and databinding should work",Adobe Flex SDK Previous,Bug,Apache Flex,MXML Compiler,2009-07-21 08:51:12,2009-07-21 09:09:20,Open,Major,Adobe JIRA,Adobe JIRA,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Apache,12582724,0,[TLF 2475286] Problem when you copy two paragraphs and then paste the end of any line,"Steps to reproduce:
+1. copy the text same in the picture
+2. paste at the end of any line
+ 
+ Actual Results:
+see picture
+
+ Expected Results:
+ the result should look like in the last box in picture
+ 
+ Workaround (if any):",Adobe Flex SDK Previous,Bug,Apache Flex,Spark: RichEditableText,2009-11-05 10:51:56,2010-02-25 22:29:00,Open,Major,Adobe JIRA,Adobe JIRA,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Apache,12921688,0,Exceptions raised during AM launch don't trigger exit code AM failures,"It looks like exceptions raised in AM launch failure, while being caught, don't have their exit code picked up. Any launch-time failure should result in an exit code being returned, which then tells the YARN to restart it.",Slider 0.81,Bug,Slider,appmaster,2015-12-14 15:27:16,2015-12-14 15:37:43,Open,Major,Steve Loughran,Steve Loughran,,,,Slider 0.90.2,Steve Loughran,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Hyperledger,34318,0,CLI command 'did rotate-key' doesn't work in some cases,"*Environment:*
+indy-node 1.6.619
+indy-plenum 1.6.553
+indy-cli 1.6.6~759
+
+*Steps to Reproduce:*
+1. Create Docker pool with 4 nodes
+2. Connect to pool and rotate default Trustee key many times
+3. run [traffic_shaper.sh|https://docs.google.com/document/d/1swLE5FwYY0tQXWpcge7KNQ5oosiz4P57Iz9843e7uHY/edit#] with default latencies
+4. try to rotate key few times
+5. try to send NYM
+
+*Expected results:*
+CLI guarantees consistency between keys in ledger and in local storage
+
+*Actual Results:*
+On step 2 keys successfully changed in ledger
+On step 4 keys successfully changed in CLI, but ledger response falls in timeout
+On step 5 error appears: _Transaction has been rejected: client request invalid: InsufficientCorrectSignatures(0, 1)_",,Bug,Indy SDK,,2018-10-03 14:11:12,2018-10-11 12:01:25,To Do,Medium,NIkita Zhigunenko,NIkita Zhigunenko,,This issue relates to INDY-1707,,,Artem Ivanov,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Hyperledger,42808,1,Chaincode Init function is executing even after instantiation via Invoke method,"I am using high level fabric-contract-api for writing chaincode. I defined Init method with some predefined key values to include in Ledger while instantiating. However this Init method is executing with invoke command 
+
+ 
+
+To instantiate the chaincode, I use the following command:
+ ``` 
+
+peer chaincode instantiate -o orderer.example.com:7050 -C mychannel -n blue-coin -l ""$CC_RUNTIME_LANGUAGE"" -v 1.0 -c '
+
+{""Args"":[""init""]}
+
+' -P ""OR ('Org1MSP.member','Org2MSP.member')""
+
+{{```}}
+ The {{Args}} property needs to specify the name of the method (i.e., which is {{init}}) so that it will be called during instantiation.
+
+I initially thought that the {{init}} method can be called only during instantiation since the {{init}} method may contain code that will initialize some values in the world state (e.g., set values to zero).
+
+However, I realized that the same {{init}} method can be called beyond initialization by calling the invoke command:
+ ```
+
+ {{peer chaincode invoke -o orderer.example.com:7050 -C mychannel -n blue-coin -c '\{""function"":""init"",""Args"":[]}'}}
+
+```
+ If a user can execute the {{init}} command beyond initialization, there is a risk that the values in the world state will be reinitialized to its initial value.",,Bug,Fabric,,2019-10-18 06:47:00,2019-12-20 12:28:36,Unverified,Medium,Tech Now,Tech Now,,,external,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Hyperledger,43412,3,PING/PONG frames handling in Websocket services is not implemented,"*Summary:*
+ Websocket RFC [https://tools.ietf.org/html/rfc6455#section-5.5.2] indicates that services have to support PING frame requests and answer a PONG.
+
+*What happens:*
+ When websocket client connected to Besu sends PING frames, Besu is not able to understand them and answers an invalid request message.
+
+*What should happen:*
+ When websocket client connected to Besu sends PING frames, Besu should answer with a PONG frame as indicated in the RFC.
+
+*How to reproduce:*
+ The easy way is to use Web3j with a websocket connection. Indeed Web3j uses [Java-websocket library|https://github.com/TooTallNate/Java-WebSocket] that automatically prevents  connection loss by sending a ping frame, by default every minute.
+ 1 - run a Besu node with websocket api enabled and reachable.
+ 2 - create a websocket connection and send a PING frame as indicated in the RFC. Here is attached [^ping_frame_bug_demo.zip]with a very simple project to demo this. Just adapt the url in the Main.java to your running node and run `./gradlew run` in the project root.",Besu 1.3,Bug,Besu,,2019-11-21 15:26:13,2019-11-22 00:31:44,To Do,Medium,Nicolas MASSART,Nicolas MASSART,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+IntelDAOS,18269,1,Large sized file copy to posix container throws error,"Steps:
+ # Start daos_server and daos_agent on a single node
+ # Create a pool 'dmg -i pool create -l wolf-xx -s 1G -n 0G --sys daos_server'
+ # Create a container 'daos cont create --pool=$POOL_UUID --svc=0 --type=POSIX'
+ # Mount it through dfuse 'dfuse --container=$DAOS_CONT --mountpoint=/tmp/daos_dfuse --pool=$POOL_UUID --svc=$DAOS_SVCL'
+ # Check the available space 'df -kh /tmp/daos_dfuse' 
+ ## Filesystem      Size  Used Avail Use% Mounted on
+ dfuse           954M  402K  954M   1% /tmp/daos_dfuse
+ # Create a tmp_file with approx. 750M under /tmp
+ #  Do 'cp /tmp/tmp_file /tmp/daos_dfuse/tmp_file'
+
+Expected:
+
+    The tmp_file to be copied over to /tmp/daos_dfuse/ without issues.
+
+Actual:
+
+    Getting error.
+
+   cp: error writing ‘/tmp/daos_dfuse/tmp_file’: No space left on device
+
+    cp: failed to extend ‘/tmp/daos_dfuse/tmp_file’: No space left on device
+
+    But, after step-7, running df -kh /tmp/daos_dfuse shows there's still space left.
+
+        Filesystem      Size  Used Avail Use% Mounted on
+
+        dfuse           954M  736M  219M  78% /tmp/daos_dfuse
+
+ ",,Bug,DAOS,Container,2020-03-05 12:16:44,2020-05-13 08:43:29,Open,P1-Urgent,Logan Sundaram,Logan Sundaram,,,triaged,,DAOS Unassigned,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+IntelDAOS,21222,1,Fix Coverity Issue in NVMe Recovery Test,"To get additional information about the issue goto scan.coverity.com and login using your github id. If you do not already have access to the daos project goto https://scan.coverity.com/projects/daos-stack-daos?tab=overview and request access. Once that is done and your access is approved click on view defects. This will bring up all outstanding defects. Sort by the CID column on the left side of the defect pane and find your corresponding numbers. Once you found them click on the issue to get the decision tree that made coverity believe there is an issue. For help contact David Quigley
+
+329259 - When test is skipped char *log_file  is leaked.
+
+When you create your PR please add the ast-fixes label to the PR to make it easier to run through coverity.",,Bug,DAOS,Component Test,2021-04-21 07:41:03,2021-04-22 09:04:39,Open,P1-Urgent,David Quigley,David Quigley,,,Coverity,,DAOS Unassigned,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+IntelDAOS,34753,2,engine segfault when deleting object without permission.,"I can reliably crash a server when attempting to remove a file via dfuse if the container/pool permissions are wrong.
+Steps to reproduce:
+
+# Run dfuse as a regular user
+# Give root rw access to pool
+# Give root rta but not access to container
+# Run dfuse as root
+# as root, attempt to delete a file.
+
+Reproducer is at [https://github.com/daos-stack/daos/pull/7318|https://github.com/daos-stack/daos/pull/7318|smart-link]  and it’s fairly easy to reproduce, simply create a container, create some objects, remove write permission then reopen container and delete an object.  I originally discovered this when testing with multiple users, however it also works when you just use the one user.",,Bug,DAOS,,2021-11-11 08:53:37,2021-11-17 06:25:45,Open,P2-High,Ashley Pittman,Ashley Pittman,,,triaged,,CORCI Triage,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+JFrog,33330,0,Storage summary REST API return the same results twice ,"When running the Storage summary rest api you are getting the ""repositoriesSummaryList"" twice.",4.6.1,Bug,Artifactory Binary Repository,REST API,2016-03-31 13:31:13,2022-01-03 10:11:32,Open,5 - Minor,Ariel Seftel,Ariel Seftel,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+JFrog,50425,0,Unable to download NLog newer than 4.4.6 from proxy repo,"*Steps to reproduce:*
+* Setup remote repository in Artifactory to nuget.org
+* Create empty C# project in Visual Studio 2017
+* Open window ""Package Manager Console"" ([see Microsoft docs|https://docs.microsoft.com/en-us/nuget/tools/package-manager-console])
+* Execute line ""Find Package -Id NLog -Source ""http://...."""", where http address should be from first item (e.g. to remote nuget repo)
+* Remember package list
+* Go to official nuget site to see available packages https://www.nuget.org/packages/NLog/4.4.12
+
+*Expected result:*
+MSVS shows the same last packages with nuget web site , both of them are 4.4.12
+
+*Actual result:*
+Local Artifactory has the last nuget package version - 4.4.6
+Nuget.org web side has the last nuget package version - 4.4.12
+
+*Possible issue:*
+Nuget Api v2 returns 100 packages per single request. So, NLog package with version 4.4.6 is the 100th version of this package. You can check url https://your-artifactory/api/nuget/nuget.org-proxy/FindPackagesById()?id=%27NLog%27&$skip=100 and https://your-artifactory/api/nuget/nuget.org-proxy/FindPackagesById()?id=%27NLog%27&$skip=1 (see the last number of this URL)
+
+Therefore, possible, Artifactory does not do deep lookup of the package and can return only 100 versions of package.
+",5.5.1,Bug,Artifactory Binary Repository,NuGet,2017-12-06 18:04:29,2022-01-03 10:05:16,Open,3 - High,Igor Manushin,Igor Manushin,,,remote,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+JFrog,67061,12,api/v1/users/ might be incorrectly called with a Docker token ,"*Summary:*
+
+Disabling and enabling Anonymous mode on Artifactory, seems to produce the erroneous (404) call to a non-existent ""user"" endpoint. 
+
+Unknown effects for users currently.
+
+{code}07T04:03:13.135+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http://localhost:8040/access/api/v1/groups/group|200|0|2|JFrog Access Java Client/4.1.32
+2019-01-07T04:03:13.138+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http://localhost:8040/access/api/v1/users/tester|200|0|3|JFrog Access Java Client/4.1.32
+2019-01-07T04:03:13.333+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|PATCH|http://localhost:8040/access/api/v1/users/tester|200|215|543|JFrog Access Java Client/4.1.32
+2019-01-07T04:03:13.343+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|PATCH|http://localhost:8040/access/api/v1/users/tester|500|215|205|JFrog Access Java Client/4.1.32
+2019-01-07T04:03:13.347+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http://localhost:8040/access/api/v1/users/AKCp5btVicj4975GLELesCXfZZrUVQu3g1tE5Sa3NHbum3smZ5grZmCuaLmFBoVxV2835dxYy|404|0|2|JFrog Access Java Client/4.1.32
+2019-01-07T04:03:13.348+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http://localhost:8040/access/api/v1/users/AKCp5btVicj4975GLELesCXfZZrUVQu3g1tE5Sa3NHbum3smZ5grZmCuaLmFBoVxV2835dxYy|404|0|1|JFrog Access Java Client/4.1.32{code}
+
+*Steps to reproduce:*
+
+1. Setup Artifactory (reproduces on latest - 6.6.5) and enable Repository Path for a fast docker setup
+2. Disable global anonymous. Then do several Docker pulls. Then re-enable anonymous.
+3. Ensure it's working, then do several Docker pull, cancelling them and retrying again - you should see this endpoint address in the Access request.log 
+",,Bug,Artifactory Binary Repository,,2019-01-21 19:56:44,2019-08-08 15:03:35,Open,Critical,Andrei Komarov,Andrei Komarov,,,QF-P3,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Jira,293028,0,stree from terminal with no parameters,"Running 'stree' without any parameters from the terminal does two things. Firstly it opens a new instance of SourceTree even if one's running. Secondly it assumes the current path is the repository to open.
+
+Take a look into making SourceTree just open if it isn't already and not opening any bookmarks etc.",,Bug,Sourcetree For Mac,,2013-08-20 17:05:37,2014-04-02 09:43:39,Open,Low,KieranA,KieranA,,,,1.7.0,Kieran Senior [Atlassian],,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Jira,1075133,0,Epic link gets removed when moving an epic from a non next gen project to a next project,"h3. Summary
+
+When an epic from a non next-Gen project is moved to a next-Gen project, the association is removed. All issues associated with the epics will  no longer be linked to the epic
+
+h3. Steps to reproduce
+
+# Have 2 projects (Next-gen and non next-gen)
+# Create an Epic from a non Next-gen project
+# Add a child issue to the epic
+# Move the epic to the next-gen project
+
+h3. Expected Result
+Epic link remains. The issues are still linked with the epic in the next-gen project even after the moved.
+
+h3. Actual Result
+Epic link is lost 
+
+
+",,Bug,Jira Software Cloud,next-gen,2018-10-23 00:55:35,2018-11-23 05:31:12,Open,Low,Mohamed Hazwan Ariffin,Mohamed Hazwan Ariffin,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+Jira,1388024,0,Commit log bug,"After several attempts, I was able to make only one successful commit, rest all attempts failed due to some ""non-fast forward"" error . However bitbucket commit log shows all commits by user (even the failed ones) which is very confusing. Someone care to fix this bug??",,Bug,Bitbucket Cloud,User - Legacy,2016-02-11 18:31:05,2016-02-18 22:14:06,NEEDS TRIAGE,Medium,Geoff,jangdmanish,Invalid,,migrated,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+JiraEcosystem,47609,0,"Carousel ""flashes"" when page first loads","The carousel ""flashes"" when first loading -- I haven't looked at how it works yet, but the initial carousel items should have some default styling (including width/height) on page load to avoid this.",,Bug,Atlassian Marketplace,,2012-03-17 12:25:30,2012-03-27 16:47:07,Triage,Major,Zachary Davis,Zachary Davis,,,,Iteration 14,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+JiraEcosystem,167207,0,"Dashboard fails to load with error ""Uncaught TypeError: Cannot read property 'left' of null"" appears in the browser console","h3. Summary
+
+Sometimes when a user tries to view their dashboards, the dashboard is empty without any configured gadgets displayed.
+
+
+h3. Environment
+* Happens more frequently in *Chrome* and *IE 11*
+
+
+h3. Steps to reproduce
+
+# Create a *long list of dashboards* with couple of gadgets on each dashboard.
+# Go to the Dashboard page, click on one of the dashboards from the list on the left panel.
+# *Scroll on the mouse* while the dashboard is loading.
+
+
+h3. Expected result
+The selected dashboard and its gadgets will load properly.
+
+
+h3. Actual result
+* The selected dashboard is empty without any gadgets loaded, only the dashboard title and 3 functionality buttons (Add Gadget, Edit Layout, Tools) are displayed.
+* Error {{Uncaught TypeError: Cannot read property 'left' of null}} is observed in the Browser Console
+",,Bug,Atlassian Gadgets,,2016-09-16 01:35:06,2016-09-29 09:08:44,Triage,Major,Pawel Bugalski,Pawel Bugalski,,,,,Pawel Bugalski,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+JiraEcosystem,180305,0,Uninstalling a theme add-on does not reset the color scheme,"As a customer I would like the color scheme selection to revert to the default color scheme if I uninstall the currently activated global theme add-on.
+
+Steps to reproduce:
+
+1. Install a theme add-on
+2. Select the theme globally
+3. Uninstall the add-on
+
+Expected results:
+All spaces are back to the look they had previously
+
+Actual results:
+Theme's default color scheme is still applied and color scheme settings page looks like this
+
+ !Screen Shot 2016-11-14 at 16.51.59.png|thumbnail! ",,Bug,Confluence Ecosystem (Moved: go.atlassian.com/ce-move),,2016-11-14 09:57:24,2017-03-19 23:51:05,Triage,Major,RichardS,RichardS,,,refinedwiki,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+Mojang,72145,0,MInecraft crash,"Put the summary of the bug you're having here
+
+*What I expected to happen was...:*
+I was wondering what texture will appear when i summon faling sand with tile id of new barrier block.
+
+*What actually happened was...:*
+I tried command to summon falling sand and then my minecraft just crashed.
+
+*Steps to Reproduce:*
+I just tried command /summon FallingSand ~ ~ ~ {Time:1,TileID:166}",Minecraft 14w05a,Bug,Minecraft: Java Edition,,2014-01-30 21:44:34,2014-01-30 21:47:27,Open,,Miroslav Popovic,Miroslav Popovic,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Mojang,232262,0,Game Crashes When Player Opens Inventory While Respawning with 'Immediate Respawn' Enabled,"If the player opens their inventory quickly after respawning in a world with 'Immediate Respawn' enabled, the world will crash. This happened accidentally once in one of my worlds. I tried it a few more times after reloading, and it seemed to happen reliably as long as I opened my inventory at the right time.",PS4 1.89,Bug,Minecraft Console Edition,,2019-03-22 22:50:04,2020-04-20 16:42:34,Open,,KyloRenmcgoo,KyloRenmcgoo,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Mojang,262457,0,bad on slab blocks BUG,"
+the bug is . if click with a bad on the side of slab block (any slab) the bad will placed its mean 
+if you wanna put the bad on the air you can by use slab at  the air
+i fined that on 1.14.4 ver.
+will wait that fixed thanks
+",1.14.4,Bug,Minecraft: Java Edition,,2019-09-29 19:40:08,2019-09-29 19:44:42,Open,,andrey elevitch,andrey elevitch,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+MongoDB,11140,0,"Windows shell crashes when typing ""show databases""","Made a typo for ""show dbs"" ... typed ""show databases"" and it crashed the client on windows.   Using the 1/17/10 nightly build.
+",1.3.x,Bug,Core Server,Shell,2010-01-17 22:27:31,2010-01-29 15:22:48,Open,Minor - P4,trimbo,trimbo,,,,,Eliot Horowitz,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+MongoDB,1855974,0,The monogsh has the limitations and quirks of node console.log,"h3. *Problem Statement/Rationale*
+
+{color:#505f79}1) Cursors are automatically transformed into arrays.{color}
+
+{color:#505f79}2) Console.log depth for objects and arrays is similar to nodejs / javascript console.log{color}
+
+ 
+h3. *Steps to Reproduce*
+
+{color:#505f79}run mongosh,{color}
+
+{color:#505f79}Try to display a high depth dataset{color}
+h3. *Expected Results*
+
+{color:#505f79}to work like .pretty() or findOne from mongo client.{color}
+h3. *Actual Results*
+
+{color:#505f79}Doesn't work like .pretty / findOne but like console.log{color}
+h3. *Additional Notes*
+
+ ",,Bug,MongoDB Shell,,2021-08-20 07:31:10,2021-08-25 13:46:35,Needs Triage,Major - P3,Valentin Popescu,Valentin Popescu,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+MongoDB,1927891,0,Current topology does not support sessions error in mongoDB 3.2 cluster,"h3. *Problem Statement/Rationale*
+
+{color:#505f79}After successfully connecting to a mongoDB 3.2 cluster, clicking a collection displays the following error message{color}
+{code:java}
+Current topology does not support sessions
+{code}
+{color:#505f79}instead of the expected document list. This happens with every collection in the database.{color}
+h3. *Steps to Reproduce*
+
+{color:#505f79}Trying to visualize a collection on a 3.2 mongoDB cluster{color}
+h3. *Expected Results*
+
+{color:#505f79}To visualize the document list.{color}
+h3. *Actual Results*
+
+""Current topology does not support sessions"" error message instead of the expected document list.
+h3. *Additional Notes*
+
+{color:#505f79}This issue does not occur in compass 1.28.4{color}",1.29.4,Bug,Compass ,,2021-11-17 22:57:57,2021-12-03 16:02:21,Needs Triage,Major - P3,David Ricardo Vivas,David Ricardo Vivas,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+Qt,164709,0,ui_mainwindow.h rebuilt  ,"Hello, 
+
+I have noticed the ui_mainwindow.h doesn't get automatically generated. I noticed this well working on a small program which I had check into mercurial. Initially, I checked in ui_mainwindow.h.  Since it is generated via uic.exe, I removed it from the repository. 
+
+When I check the code out, the build failed because it didn't know how to regenerate the file. 
+
+The obvious workaround is: 
+
+JohnK@US-JOHNK /cygdrive/c/workspace/qt/QtExamples/contactengine
+$ uic mainwindow.ui  -o ui_mainwindow.h
+",Qt Creator 2.0.0,Bug,Qt Creator,All Other Issues,2010-08-16 19:16:27,2010-08-17 17:59:20,Reported,Not Evaluated,John Kern,John Kern,,,,,Daniel Teske,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Qt,172449,0,Wrong text in title bar of crash handler widget,"When the creator crashed a bug report widget appears. In the title bar one can read the default text ""MainWidget"".",Qt Creator 2.1.0-rc1,Bug,Qt Creator,All Other Issues,2011-02-08 15:27:45,2011-02-08 19:07:11,Reported,Not Evaluated,Rainer Keller,Rainer Keller,,,final210,,con,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Qt,180531,0,"Calendar: In MAC OS 10.7, when changing month from Aug to Sep, the date info in the matrix box does not change accordingly.","Steps to reproduce:
+1. Start Calendar application (the displayed date at this point is the current date - 2011.8.31). 
+2. Change the month to September.
+
+Expected result:
+The date info in the matrix box does change accordingly from Aug to Sep.
+
+Actual result:
+The date info does not change, it keeps the dates of Aug.
+
+Other info:
+This bug is only reproducible when app is just launched then month is changed from Aug to Sep for the first time. If one changes the month back to Aug from Sep, it does not reproduce. Also one cannot reproduce the bug by changing the month from Aug to other month than Sep.",4.8.0,Bug,Qt,Examples and Demos,2011-08-31 10:12:07,2015-08-14 14:30:03,Reported,Not Evaluated,Zou weili,Zou weili,,,,,Qt Documentation Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+RedHat,12502428,0,Chrome redirects to https by default which ends up in failure to find a page,"I am using Chrome 30 and everytime I hit some page from jboss universe it seems to automatically redirect to https version if possible.
+
+When I hit e.g. forge.jboss.org, Chrome redirects it to https version and error is written to me (after ugly ""are you sure you want to proceed with invalid certificate"" message) so it is annoying two times. Not even I have to click on the invalid certificate button but after that the page is not even found. Not to convenient and time saving I would say ...
+
+The same issue is e.g. with http://transcripts.jboss.org/meeting/irc.freenode.org/aerogear/2013/aerogear.2013-09-30-13.57.log.html
+
+Even I put there HTTP version, chrome changes it to HTTPS every time and that resource is not found.
+
+When I open firefox, all is good since firefox does not try to change it to https automatically.",,Bug,jboss.org,,2013-10-08 05:51:16,2015-06-17 09:56:58,Open,Major,Stefan Miklosovic,Stefan Miklosovic,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+RedHat,12570539,1,"Parameters are not refreshed properly in ""Web Services Data Source (REST)"" connection profile in MacOS installs","When creating/editing connection profile to add a new parameter to a REST service, able to enter freeform text in the Type field of the ""Add New Parameter"" popup dialog.  However, the freeform value returns to the previously selected value (Query or URI) when OK is clicked.  Either the field should be unable to be modified, or the value entered should be preserved.",9.0,Bug,Teiid Designer,Web Services Support,2015-05-01 16:17:07,2015-05-01 16:41:20,Open,Major,Marc Shirley,Marc Shirley,,This issue cloned from TEIIDDES-2504,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+RedHat,12622649,0,Just created data object not appended to Superclass selector of the other opened DataObjects,"Description of problem:
+
+When a new DataObject is created it's not added to the superclass selector of the other opened DataObjects.
+
+Version-Release number of selected component (if applicable):
+
+
+How reproducible:
+
+
+Steps to Reproduce:
+1. Open DataObject A
+2. Create DataObject B
+3. Go to the editor previously opened and open the superclass selector for 
+DataObject A.
+
+Actual results:
+
+The just created DataObject B is not in the list.
+
+Expected results:
+
+The just created DataObject B should be in the list of available superclasss for A.
+
+Additional info:",6.2.0,Bug,JBoss BPMS Platform,Data Modeler,2015-09-14 15:14:00,2015-10-23 16:19:08,New,Major,Walter Medvedeo,Walter Medvedeo,Done,,,,Walter Medvedeo,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+Sakai,31076,0,Accessibility: Form control values are maintained after validation errors occur on Login Page New Account Tool,"The form control values (except for the password fields) are maintained when an error occurs. However, the user isn't presented with the information for verification before the user account is created. The email address field is not entered twice and if the user enters it incorrectly, they don't have a way to change it.
+
+POSSIBLE SOLUTION:
+
+Consider making the user present the email address twice for verification.
+
+Consider adding a summary screen that presents all the information and asks for conformation before the account is created. ",2.9.0,Bug,Sakai,Account,2012-02-13 03:56:16,2012-11-05 11:43:00,Open,Critical,iupui1,iupui1,,,,,Brian Richwine,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Sakai,41985,0,Cannot change title of News tool,"After initially setting up the News tool during worksite setup, I tried to go to the option page (NEWS-2) and change the title of the tool. After I made the change, the title of the tool did not update, even after I logged out and logged back in. However, when I opened up options, the new title that I had entered was still specified.
+
+I tried to change the URL of the feed as well as the title at the same time, and even though the new feed was displayed properly, the title of the tool remained what I had initially set it to during worksite setup.",2.0,Bug,Sakai,News (RSS),2005-05-18 10:57:22,2005-07-07 08:05:43,Open,Major,Michael Beasley,Michael Beasley,,,,,Peter A. Knoop,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Sakai,53927,0,Not able to view list of groups in Resources under folder details,"Issue preventing display of groups when trying to specify folder access. 
+
+Steps to reproduce: 
+1. Create a group or use a site with an existing group
+2. Create a folder in Resources, or use an existing folder 
+3. ""Edit details"" for the folder, and under Availability and Access, enable ""Display this folder and its contents to selected groups only."" 
+
+Expected result: List of groups should show 
+Actual result: No groups show (see screenshot). 
+
+Console log  returns: Uncaught resizeFrame did not get the frame (using name=) 
+resizeFrame @ c11528f3-f824-42dd-8c2e-d7e2bc494bde?panel=Main:3786
+showGroupsTable @ c11528f3-f824-42dd-8c2e-d7e2bc494bde?panel=Main:3850
+handleAccessIsGroup @ c11528f3-f824-42dd-8c2e-d7e2bc494bde?panel=Main:3828
+(IDs refer to a particular site)",11.3,Bug,Sakai,Content,2017-01-23 00:25:39,2017-01-30 06:27:13,Awaiting Review,Major,Sam Lee Pan,Sam Lee Pan,,,,,Core Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+SecondLife,66847,0,Teleport offer message is shown with scroll bar  in the IM history,"
+1. Start, login in SL
+2. Send to the user B teleport offer with a long text
+3. Open B users viewer 
+-------------------------
+Toast with teleport offers is shown in the right bottom corner
+4. Click on the toast
+5. Resize IM chat floater
+
+Actual Result: Teleport offer message is shown with scroll bar 
+Expect Result: Teleport offer message is without scroll bar",,Defect,Snowstorm,,2010-10-11 11:13:23,2011-02-25 15:49:54,Open,Minor,Svishnyakov ProductEngine,Svishnyakov ProductEngine,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+SecondLife,78655,0,German: Text overlaying in 'About Land > General' floater,"1. Login to Viewer with German localization.
+2. Open 'About Land' floater.
+3. Open and observe 'General' tab.
+
+-->
+Actual: 'For Sale' text is overlaying UI elements
+",,Bug,1. Second Life Viewer - VWR,,2011-03-09 11:04:21,2011-06-21 17:37:26,Awaiting Review,Minor,Jbinkovskaya ProductEngine,Jbinkovskaya ProductEngine,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+SecondLife,141605,0,Both buttons show as highlighted while in Snapshot floater on Send to Email option,"+Steps to Reproduce+
+
+# Open Test Viewer
+# Open Shapshot floater
+# Select Send to Email option
+# Click the Gear icon to show the image size options
+# Observe when you click the gear icon, the image size options are shown in the panel, however both the email options and gear icons are shown as highlighted while the user has the snapshot floater in focus (see screenshot)
+
++Expected Behavior+
+
+# After clicking the gear icon in the send to email panel, the email settings icon should no longer be highlighted even when the user has the snapshot floater in focus",,Story Defect,Snowstorm,,2014-07-31 16:31:22,2014-08-01 16:04:42,Open,Minor,Kurt Linden,Kurt Linden,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Sonatype,431036,0,nexus-p2-repository-plugin 2.3.1 incompatible with Nexus 2.3,"I had Nexus 2.3.0-04 with nexus-p2-repository 2.3 installed and working.
+I upgrading nexus-p2-repository to 2.3.1 and Nexus restarted ok but when a P2 artifact is retrieved, I get a 500 error. It seems to be caused by a method not found: see the capture as there is no error in the nexus log.",2.3.1,Bug,Dev - Nexus Repo,P2,2013-04-24 07:32:59,2013-04-25 19:39:01,Open,Major,Jeff MAURY,Jeff MAURY,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Sonatype,722927,2,Yum Metadata Not Fully Rebuilt After Running Cleanup Tags task,"The Yum metadata is not fully rebuilt after running the admin - cleanup tags task against a yum repo i.e. the repo's filelists, primary and other xml files are removed and not re-added.
+
+To reproduce:
+ # Upload two components to a hosted yum repo.
+ # Tag one of those components.
+ # Configure and run the cleanup tags task to run against this repo:
+ ** Ensure 'Deletes associated components' is checked.
+ ** Set the tag regex to the tag from step 2.
+ # Run this task and from the logs also confirm the yum metadata rebuild runs.
+
+*Expected:*
+
+The tag and tagged component is removed, the yum metadata rebuild runs and all metadata files are rebuilt.
+
+*Actual:*
+
+The tag and tagged component is removed, the yum metadata rebuild run but the filelists, primary and other xml files are missing.",,Bug,Dev - Nexus Repo,Yum,2019-12-02 17:37:01,2019-12-18 00:27:35,New,Major,Hardeep Nagra,Hardeep Nagra,,,supportant,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",1,The structure contains all important parts or was only been slightly modified.
+Sonatype,779079,3,Content selector All_Maven2 is in use and cannot be deleted error appears if migrate nuget from NXRM2 to NXRM3,"The current issue is reproducible for now only in the feature branch until merge to master.
+Check status of the ticket: https://issues.sonatype.org/browse/NEXUS-26490
+
+*Steps to reproduce:* 
+ # Prepare nexus 2 for migration
+ ## Create nuget-hosted repository
+ ## Add some _nupkg_ package to the repository. _chek in the attachment_.
+ ## Add upgrade capabilities
+ # Get nexus source from branch NEXUS-26490_nuget_nexus2-3_migration
+ # Start nexus3
+ # Add Upgrade Capabilities
+ # Start Upgrade process 
+ ## Specifu nexus2 url and token
+ ## On next page check  checkboxes: _Repository configuration and content,_
+ 
+_Server configuration_
+ ## On the next page leave everything as is.
+ ## On next page select _nuget-repository_ for migration
+ ## On next page click Begin button. 
+
+*Actual:*
+!image-2021-02-26-19-08-53-656.png!
+
+*Expected:* no errors",,Bug,Dev - Nexus Repo,Migration,2021-02-26 17:12:48,2021-08-27 04:12:40,New,Major,Anatoliy Ornatovskyy,Anatoliy Ornatovskyy,,,,,,,"                 Author              Created  \
+0  Anatoliy Ornatovskyy  2021-02-26 19:33:14   
+
+                                                                                                                                                                                            Comment  
+0  *Workaround:* If apply steps from the link below. The issue is not reproducible. [\r\nhttps://help.sonatype.com/display/NXRM3/Upgrade+Procedures#UpgradeProcedures-RestartinganUpgrade]\r\n\r\n   ",2,"The structure contains some parts, but is not ""complete""."
+Spring,16415,0,JSF Problem : not filled in required fields cause fields to be emptied if page is whithin a flow,"I have a page with several fields and some of them are required (required attribute is set to true). If this page is not invlolved in a flow, and if I don't fill in one of the required fields, after submitting, I get back to my page and all the fields I previously filled in are still there. I can correct the missing fields. So it's OK.
+
+Same sample within a flow (I mean a flow is already started when I get to this page): if I don't fill all of the required fields or if I fill in a field which doesn't meet its validator, all of the fields are emptied after getting back to the page (because of validation problem).",1.0.1,Bug,Spring Web Flow,,2007-03-23 01:08:08,2007-04-01 14:28:19,Open,Major,Dominique Jean-Prost,Dominique Jean-Prost,,,,,Keith Donald,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",3,No previous structure. The model has to generate a new structure from scratch.
+Spring,48981,2,RelationshipEntities between two nodes are dropped after one of the nodes is updated,"Hi there,
+
+I have some strange behaviour, please correct me if I am doing something wrong. I am using 1.8.2 enterprise version, embedded in java app. Also using spring 3.2.2.RELEASE and spring-data-neo4j 2.2.0.RELEASE
+
+Scenario:
+NodeA, NodeB are of type NodeEntity and Association is of type RelationshipEntity
+Create multiple Associations of the same type between NodeA and NodeB.
+Save NodeA in NodaARepository, save NodeB in NodeBRepository and all Associations in AssociationRepository
+NodeA has got a Set<Association> associations field
+Then get NodeA from NodeARepository and edit one of its fields and save. Inspect the saved NodeA object.
+
+Expected result:
+Field is updated and the Set contains the right number of associations
+
+Actual result:
+Field is updated but the Set does not contain all associations
+",2.1.RC2,Bug,Spring Data Neo4j,CORE,2013-06-06 06:43:40,2017-09-02 09:38:42,Open,Minor,George Agiasoglou,George Agiasoglou,,,spring-data-neo4j,,Michael Hunger,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."
+Spring,73274,0,Grails artifacts show up twice in Grails Explorer if refactored into default package,"Please see attached screenshot. Steps to reproduce:
+
+1. Create domain class in any package
+2. Use context menu on domain class to move into the default package
+3. See domain class to appear twice in the Grails Explorer
+
+Christian",2.5.2.RELEASE,Bug,Spring Tool Suite,GRAILS,2011-01-12 05:51:25,2011-01-12 10:43:16,Open,Minor,Christian Dupuis,Christian Dupuis,,,,2.6.0.M1,Andrew Clement,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",2,"The structure contains some parts, but is not ""complete""."

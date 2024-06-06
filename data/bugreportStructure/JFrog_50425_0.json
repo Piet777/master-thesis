@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":50425,
+        "EvoId":0,
+        "Summary":"Unable to download NLog newer than 4.4.6 from proxy repo",
+        "Description":"*Steps to reproduce:*\r\n* Setup remote repository in Artifactory to nuget.org\r\n* Create empty C# project in Visual Studio 2017\r\n* Open window \"Package Manager Console\" ([see Microsoft docs|https:\/\/docs.microsoft.com\/en-us\/nuget\/tools\/package-manager-console])\r\n* Execute line \"Find Package -Id NLog -Source \"http:\/\/....\"\", where http address should be from first item (e.g. to remote nuget repo)\r\n* Remember package list\r\n* Go to official nuget site to see available packages https:\/\/www.nuget.org\/packages\/NLog\/4.4.12\r\n\r\n*Expected result:*\r\nMSVS shows the same last packages with nuget web site , both of them are 4.4.12\r\n\r\n*Actual result:*\r\nLocal Artifactory has the last nuget package version - 4.4.6\r\nNuget.org web side has the last nuget package version - 4.4.12\r\n\r\n*Possible issue:*\r\nNuget Api v2 returns 100 packages per single request. So, NLog package with version 4.4.6 is the 100th version of this package. You can check url https:\/\/your-artifactory\/api\/nuget\/nuget.org-proxy\/FindPackagesById()?id=%27NLog%27&$skip=100 and https:\/\/your-artifactory\/api\/nuget\/nuget.org-proxy\/FindPackagesById()?id=%27NLog%27&$skip=1 (see the last number of this URL)\r\n\r\nTherefore, possible, Artifactory does not do deep lookup of the package and can return only 100 versions of package.\r\n",
+        "VersionsAffected":"5.5.1",
+        "IssueType":"Bug",
+        "Project":"Artifactory Binary Repository",
+        "Components":"NuGet",
+        "CreatedDate":"2017-12-06 18:04:29",
+        "ResolvedDate":"2022-01-03 10:05:16",
+        "Status":"Open",
+        "Priority":"3 - High",
+        "Creator":"Igor Manushin",
+        "Reporter":"Igor Manushin",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"remote",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

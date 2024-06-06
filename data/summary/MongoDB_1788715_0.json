@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":1788715,
+        "EvoId":0,
+        "Summary":"Make FileCopyBasedInitialSyncer the default on enterprise with a supported storage engine",
+        "Description":"Supported storage engine is WiredTiger, when not inMemory.",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Core Server",
+        "Components":null,
+        "CreatedDate":"2021-06-17 19:36:39",
+        "ResolvedDate":"2021-07-30 17:29:47",
+        "Status":"Needs Verification",
+        "Priority":"Major - P3",
+        "Creator":"Matthew Russotto",
+        "Reporter":"Matthew Russotto",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"pm-1897-M2",
+        "VersionsFixed":"5.3 Required",
+        "Assignee":"Backlog - Replication Team",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

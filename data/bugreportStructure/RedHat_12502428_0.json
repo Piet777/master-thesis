@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12502428,
+        "EvoId":0,
+        "Summary":"Chrome redirects to https by default which ends up in failure to find a page",
+        "Description":"I am using Chrome 30 and everytime I hit some page from jboss universe it seems to automatically redirect to https version if possible.\n\nWhen I hit e.g. forge.jboss.org, Chrome redirects it to https version and error is written to me (after ugly \"are you sure you want to proceed with invalid certificate\" message) so it is annoying two times. Not even I have to click on the invalid certificate button but after that the page is not even found. Not to convenient and time saving I would say ...\n\nThe same issue is e.g. with http:\/\/transcripts.jboss.org\/meeting\/irc.freenode.org\/aerogear\/2013\/aerogear.2013-09-30-13.57.log.html\n\nEven I put there HTTP version, chrome changes it to HTTPS every time and that resource is not found.\n\nWhen I open firefox, all is good since firefox does not try to change it to https automatically.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"jboss.org",
+        "Components":null,
+        "CreatedDate":"2013-10-08 05:51:16",
+        "ResolvedDate":"2015-06-17 09:56:58",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Stefan Miklosovic",
+        "Reporter":"Stefan Miklosovic",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

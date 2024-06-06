@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":18269,
+        "EvoId":1,
+        "Summary":"Large sized file copy to posix container throws error",
+        "Description":"Steps:\r\n # Start daos_server and daos_agent on a single node\r\n # Create a pool 'dmg -i pool create -l wolf-xx -s 1G -n 0G --sys daos_server'\r\n # Create a container 'daos cont create --pool=$POOL_UUID --svc=0 --type=POSIX'\r\n # Mount it through dfuse 'dfuse --container=$DAOS_CONT --mountpoint=\/tmp\/daos_dfuse --pool=$POOL_UUID --svc=$DAOS_SVCL'\r\n # Check the available space 'df -kh \/tmp\/daos_dfuse'\u00a0\r\n ## Filesystem\u00a0 \u00a0\u00a0\u00a0\u00a0Size\u00a0 Used Avail Use% Mounted on\r\n dfuse\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 954M\u00a0 402K\u00a0 954M\u00a0\u00a0 1% \/tmp\/daos_dfuse\r\n # Create a tmp_file with approx. 750M under \/tmp\r\n # \u00a0Do 'cp \/tmp\/tmp_file \/tmp\/daos_dfuse\/tmp_file'\r\n\r\nExpected:\r\n\r\n\u00a0 \u00a0 The tmp_file to be copied over to \/tmp\/daos_dfuse\/ without issues.\r\n\r\nActual:\r\n\r\n\u00a0 \u00a0 Getting error.\r\n\r\n\u00a0 \u00a0cp: error writing \u2018\/tmp\/daos_dfuse\/tmp_file\u2019: No space left on device\r\n\r\n\u00a0 \u00a0 cp: failed to extend \u2018\/tmp\/daos_dfuse\/tmp_file\u2019: No space left on device\r\n\r\n\u00a0 \u00a0 But, after step-7, running df -kh \/tmp\/daos_dfuse shows there's still space left.\r\n\r\n\u00a0 \u00a0 \u00a0 \u00a0 Filesystem\u00a0\u00a0\u00a0\u00a0\u00a0 Size\u00a0 Used Avail Use% Mounted on\r\n\r\n\u00a0 \u00a0 \u00a0 \u00a0 dfuse\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 954M\u00a0 736M\u00a0 219M\u00a0 78% \/tmp\/daos_dfuse\r\n\r\n\u00a0",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"DAOS",
+        "Components":"Container",
+        "CreatedDate":"2020-03-05 12:16:44",
+        "ResolvedDate":"2020-05-13 08:43:29",
+        "Status":"Open",
+        "Priority":"P1-Urgent",
+        "Creator":"Logan Sundaram",
+        "Reporter":"Logan Sundaram",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"triaged",
+        "VersionsFixed":null,
+        "Assignee":"DAOS Unassigned",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

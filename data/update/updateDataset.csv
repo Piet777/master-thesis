@@ -1,0 +1,725 @@
+Jira,IssueId,EvoId,Summary,Description,VersionsAffected,IssueType,Project,Components,CreatedDate,ResolvedDate,Status,Priority,Creator,Reporter,Resolution,IssueLinks,Labels,VersionsFixed,Assignee,TimeSpent,Comments,ViolationActual,ViolationReason,FieldCount,Fields 
+Sakai,37106,2,"Not posible change ""Edit Quiz Settings"" on Lesson Builder tool","Some javascript error when changing ""Edit Quiz Settings"" from Lessons. Date picker error
+
+See testing plan",21.0,Bug,Sakai,Tests & Quizzes (Samigo),2020-02-20T04:09:35.000-0500,2020-04-20T08:52:41.000-0400,Awaiting Review,Critical,Jesus Maria Mendez Perez,Jesus Maria Mendez Perez,,,,,Core Team,,"         Author                   Created  \
+0  Shawn Foster 2020-02-24 13:04:07+00:00   
+
+                                                                                                                                                                                                                                                                                          Comment  
+0  [~accountid:557058:41fcbac4-a91a-45ed-b774-07f473189e6d], why was this ""Critical""? According to our [Sakai Jira Guildelines|https://confluence.sakaiproject.org/display/MGT/Sakai+Jira+Guidelines#SakaiJiraGuidelines-PriorityPriority], developer-facing bugs would be classified as ""Major"".  ",True,Priority has to be set from 'Critical' to 'Major'.
+JFrog,78527,3,ECDSA and ED25519 keys not supported for SSH authentication,"ECDSA and ED25519 keys are not supported for SSH authentications but in the UI it shows these keys to be supported. RSA key works as expected but other keys fail. This behaviour was reproduced by using the JFrog CLI. 
+
+!artifactory_ssh.png!
+
+ 
+
+The steps to reproduce:
+ # Generate the keys using the ECDSA and ED25519 algorithm.
+ # Add public key under Profile --> SSH (adding ECDSA and ED25519 keys doesn't throw any error)
+ # Link these keys to the JFrog CLI
+ # Any operation using CLI fails with below error
+
+           {
+            ""status"": ""failure"",
+            ""totals"": {
+            ""success"": 0,
+            ""failure"": 0
+            }
+         }
+
+ ",6.12.1,Bug,Artifactory Binary Repository,,2019-09-11T11:10:47.000+0000,2021-12-26T15:52:33.000+0000,In Progress,4 - Normal,Muhammed Kashif,Muhammed Kashif,,,,,,,"       Author                   Created  \
+0     Jose Sa 2021-11-22 10:55:03+00:00   
+1  Prem kumar 2021-12-20 16:30:18+00:00   
+
+                                                                                                                                                                                                                                                                                                            Comment  
+0  With OpenSSH deprecation of SHA-1 algorithms and git-scm dropped support for RSA in version 2.33.1, people having more recent “git bash” installations started getting errors reaching git servers.\r\n\r\nWhen can we expect an upgrade on this topic ?\r\n\r\nShould we start looking for a different vendor ?  
+1                                                                                                                                                          Hey Guys,\r\n\r\nWe need to fix this issue ASAP. Other systems are getting out of the rsa-sha1 algorithm.\r\n\r\nPlease mark this issue as High Priority  ",True,Priority has to be set from '4 - Normal' to 'High'.
+Qt,282283,9,QRotationSensor reporting invalid values,"I found that the values from QRotationReading was changed when I switched from Qt 5.12.0 and NDK 18.0 to Qt 5.13.0 and android NDK 20 (SDK Version: 26.1.1, NDK Version: 20.0.5594570):
+* each x/y/z value now have values [-57.2958,57.2958]
+* that is equal to [-1.0, 1.0] converted from radians to degrees
+
+So the ASensorEvent.vector (used in qtsensors/src/plugins/sensors/android/androidrotation.cpp) values are not radians, but -1..1 values.
+
+Also the readings are become rough after the update (~2-3 readings per second), before they was much smoother (~20-30 readings per second). And dataRate doesn't help at all...",5.13.0,Bug,Qt,Sensors,2019-08-11T01:27:26.000+0000,2021-01-15T13:04:34.000+0000,Open,P2: Important,Rabit,Rabit,,This issue is duplicated by QTBUG-78303,Reported_by_support_premium,,Lorn Potter,,"          Author                   Created  \
+0          Tom H 2019-08-17 04:47:36+00:00   
+1    Lorn Potter 2019-08-17 09:12:12+00:00   
+2  DongRyeol Cha 2019-09-16 07:19:50+00:00   
+3  Josh Schrader 2019-09-17 20:02:03+00:00   
+4          Tom H 2019-09-30 16:21:54+00:00   
+
+                                                                                                                                                                                                 Comment  
+0                                                                                                                                                                   More info here: QTBUG-77628\r\n\r\n   
+1                                                                                                I just tested this, and can confirm that the values in 5.12.4 are way off from 5.12.3\r\n\r\n \r\n\r\n   
+2  More info here QTBUG-78303\r\n\r\n \r\n\r\nThis issue is very important for me because I cannot go back to 5.12.3 due to openssl 1.1 that introduced by 5.12.4.\r\n\r\n \r\n\r\nWhen can it be fixed?  
+3     This bug is affecting my product as well (similar to air-mouse functionality on android). We are stuck on 5.12.3 until fixed, which is a shame since 5.12.4 fixed a UI bug that was bothering us.   
+4                                                                                                                                                          Please promote this to Priority P1: Critical.  ",True,Priority has to be set from 'P2: Important' to 'P1: Critical'.
+Jira,732378,1,Tickets missing,"I got an issue that I am not sure why it is happening.
+
+After I have created a new project to be accessible by an individual Client, some how I got some of the existing tickets missing. Nobody has removed the ticket ( at least I could not see anywhere the ticket was removed.). This is the message when I try to open the ticket:
+Permission Violation
+
+If it helps, this is the direct URL of the ticket:
+https://infobahn.jira.com/browse/LDG-1753
+
+I got a few other tickets missing...
+Can you help me on finding the reason/solution for the missing ticket?
+",,Bug,Jira Cloud,,2013-06-03T00:13:25.000+0000,2013-06-03T22:37:56.000+0000,Resolved,Low,Rodrigo Rossi,Rodrigo Rossi,Obsolete,,,,,,"          Author                          Created  \
+0  Rodrigo Rossi 2013-06-03 01:48:53.598000+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Comment  
+0  Please close this ticket, I have found the reason/solution for my problem.\n\n \n\n \n\n \n\nFrom: Rodrigo Rossi (JIRA) [mailto:jira@atlassian.com] \nSent: 03 June, 2013 10:15 AM\nTo: Rodrigo Rossi\nSubject: [JIRA] (CONF-29508) Tickets missing\n\n \n\n \n\n Rodrigo Rossi <https://jira.atlassian.com/secure/ViewProfile.jspa?name=rodrigo.rossi1>  created  CONF-29508 <https://jira.atlassian.com/browse/CONF-29508>  \n\nTickets missing <https://jira.atlassian.com/browse/CONF-29508>  \n\n\tIssue Type: \n\nBug \n\nAssignee: \n\nUnassigned \n\nCreated: \n\n02/Jun/13 7:13 PM \n\nDescription: \n\nI got an issue that I am not sure why it is happening.\n\nAfter I have created a new project to be accessible by an individual Client, some how I got some of the existing tickets missing. Nobody has removed the ticket ( at least I could not see anywhere the ticket was removed.). This is the message when I try to open the ticket:\nPermission Violation\n\nIf it helps, this is the direct URL of the ticket:\nhttps://infobahn.jira.com/browse/LDG-1753\n\nI got a few other tickets missing...\nCan you help me on finding the reason/solution for the missing ticket?\n\nProject: \n\nConfluence <https://jira.atlassian.com/browse/CONF>  \n\nPriority: \n\nMinor \n\nReporter: \n\nRodrigo Rossi <https://jira.atlassian.com/secure/ViewProfile.jspa?name=rodrigo.rossi1>  \n\nThis message is automatically generated by JIRA.\nIf you think it was sent incorrectly, please contact your JIRA administrators\nFor more information on JIRA, see: http://www.atlassian.com/software/jira <http://www.atlassian.com/software/jira>  \n\n\n  ",True,Status has to be set from 'Resolved' to 'Closed'.
+Jira,868035,16,LdapHostnameVerificationSSLSocketFactory error when attempting to assign deployment permissions,"When attempting to search for users to add in a Deployment Projects's permissions the following error show up on the UI:
+{code:none}
+Unexpected error paging through LDAP results: javax.naming.CommunicationException: Loading the socket factory [Root exception is java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory]
+{code}
+
+The following stacktrace can be found in the logs:
+{code:none}
+2017-10-13 04:01:21,126 INFO [http-nio-8085-exec-8] [AccessLogFilter] <USER> GET https://<Bamboo_URL>/rest/api/latest/permissions/project/ACM/available-users?name=lten&limit=25&start=0&_=1507867272494 5618463kb
+2017-10-13 04:01:21,139 ERROR [http-nio-8085-exec-8] [LDAPEntityPager] Error while paging through results
+com.atlassian.user.impl.ldap.repository.LdapConnectionFailedException: javax.naming.CommunicationException: Loading the socket factory [Root exception is java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory]
+        at com.atlassian.user.impl.ldap.repository.DefaultLdapContextFactory.getLDAPContext(DefaultLdapContextFactory.java:116)
+        at com.atlassian.user.impl.ldap.search.page.AbstractLDAPPager.preload(AbstractLDAPPager.java:84)
+        at com.atlassian.user.search.page.AbstractPrefetchingPager.hasNext(AbstractPrefetchingPager.java:41)
+        at com.atlassian.user.search.page.MergedListPager$MergedListIterator.getCurrentIterator(MergedListPager.java:168)
+        at com.atlassian.user.search.page.MergedListPager$MergedListIterator.hasNext(MergedListPager.java:185)
+        at com.atlassian.user.search.page.MergedListPager$MergedListIterator.next(MergedListPager.java:193)
+        at java.util.Spliterators$IteratorSpliterator.tryAdvance(Spliterators.java:1812)
+        at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+        at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+        at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:161)
+        at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+        at java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+        ...
+Caused by: javax.naming.CommunicationException: Loading the socket factory [Root exception is java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory]
+        at com.sun.jndi.ldap.LdapPoolManager.isPoolingAllowed(LdapPoolManager.java:247)
+        at com.sun.jndi.ldap.LdapClient.getInstance(LdapClient.java:1604)
+        at com.sun.jndi.ldap.LdapCtx.connect(LdapCtx.java:2746)
+        ...
+Caused by: java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory
+        at com.atlassian.plugins.rest.module.ChainingClassLoader.loadClass(ChainingClassLoader.java:58)
+        at java.lang.Class.forName0(Native Method)
+        at java.lang.Class.forName(Class.java:348)
+        ...
+{code}",6.2.1,Bug,Bamboo,"User Management, Crowd & LDAP integration",2017-10-16T21:02:23.000+0000,2017-12-20T08:10:10.000+0000,Open,Low,Daniel Santos,Daniel Santos,,,bamboo-bugfix-kanban,,,,"                     Author                          Created  \
+0         Christian Pascher 2017-10-27 10:09:11.952000+00:00   
+1            Craig Solinski 2017-10-27 16:21:17.527000+00:00   
+2            Craig Solinski 2017-11-02 16:46:02.254000+00:00   
+3  L2 System Infrastructure 2017-11-21 09:01:00.742000+00:00   
+4         Erik Lichtenstein 2017-11-22 01:14:08.668000+00:00   
+
+                                                                                                                                                                                                                                               Comment  
+0                                                                                                                              Bamboo 6.2.2 is also affected but we only get the stacktrace, no UI response expect for the infinity loading spinner...  
+1                         concur 6.2.2 same problem: on Project Permissions page for a given project, in User lookup:\r\n\r\n{color:#000000} java.lang.ClassNotFoundException: com.atlassian.user.util.LdapHostnameVerificationSSLSocketFactory{color}  
+2  I don't see why this major bug that also prevents adding User Permissions to a plan is marked LOW! It only occurs on 1 of my 3 bamboo environments. Appears to occur when the related LDAP group size is somewhat large. Ie over 200 members or so.  
+3                                                                                                                                                                                          Essential for us.\r\n\r\nWithout a fix, we can not upgrade.  
+4                                                                                                                                                  We are also experiencing this issue. This needs to get fixed. It should be marked as High Priority.  ",True,Priority has to be set from 'Low' to 'High'.
+Jira,285297,3,Write a new Webservice for creating user profile,,,New Feature,Jira Server and Data Center,,2013-07-09T11:25:18.000+0000,2013-07-17T05:38:47.000+0000,Resolved,Minor,deblina karmakar,deblina karmakar,Answered,,,,,,"             Author                          Created  \
+0      Josh Devenny 2013-07-17 05:38:47.137000+00:00   
+1  deblina karmakar 2013-07-17 05:47:10.644000+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Comment  
+0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Hi Deblina,\r\n\r\nThere is not enough detail in this issue for us to consider it as an improvement.\r\n\r\nRegards\r\nJosh Devenny\r\nJIRA Product Management  
+1  Hi Josh,\r\n\r\nPlease close or remove this ticket. It wasn't intended for JIRA. I wanted to create a new project but that went wrong.\r\n\r\nRegards,\r\nDeblina Karmakar\r\nSr. Associate - Software\r\nCell  : +91- 9730178993\r\nSYNECHRON\r\n- 4,000+ professionals globally.\r\n- USA | Canada | UK | The Netherlands | UAE | India | Singapore | Hong Kong | Japan\r\n\r\nFrom: Josh Devenny [Atlassian] (JIRA) [mailto:jira@atlassian.com]\r\nSent: 17 July 2013 11:09\r\nTo: Deblina Karmakar\r\nSubject: [JIRA] (JRA-33780) Write a new Webservice for creating user profile\r\n\r\n[https://jira.atlassian.com/secure/useravatar?ownerId=jdevenny&avatarId=33391]\r\n\r\nJosh Devenny [Atlassian]<https://jira.atlassian.com/secure/ViewProfile.jspa?name=jdevenny> updated an issue\r\n\r\n\r\n\r\n\r\n\r\nHi Deblina,\r\n\r\nThere is not enough detail in this issue for us to consider it as an improvement.\r\n\r\nRegards\r\nJosh Devenny\r\nJIRA Product Management\r\n\r\n\r\nJIRA<https://jira.atlassian.com/browse/JRA> / [https://jira.atlassian.com/images/icons/issuetypes/newfeature.png] <https://jira.atlassian.com/browse/JRA-33780> JRA-33780<https://jira.atlassian.com/browse/JRA-33780>\r\n\r\nWrite a new Webservice for creating user profile<https://jira.atlassian.com/browse/JRA-33780>\r\n\r\n\r\nChange By:\r\n\r\nJosh Devenny [Atlassian]<https://jira.atlassian.com/secure/ViewProfile.jspa?name=jdevenny>\r\n\r\nResolution:\r\n\r\nAnswered\r\n\r\nStatus:\r\n\r\nNew Resolved\r\n\r\n\r\n[https://jira.atlassian.com/images/mail/comment-icon.png]<https://jira.atlassian.com/browse/JRA-33780#add-comment>\r\n\r\nAdd Comment<https://jira.atlassian.com/browse/JRA-33780#add-comment>\r\n\r\n\r\n\r\n\r\n\r\n\r\nThis message is automatically generated by JIRA.\r\nIf you think it was sent incorrectly, please contact your JIRA administrators\r\nFor more information on JIRA, see: http://www.atlassian.com/software/jira\r\n\r\n[https://jira.atlassian.com/images/mail/footer-desktop-logo.png]\r\n\r\n\r\n\r\n\r\n  ",True,Status has to be set from 'Resolved' to 'Closed'.
+Jira,699235,2,Ability to link to media files using rtsp protocol,Currently Confluence doesn't recognize rtsp://filepath/filename.rm as a valid link URL format.  My client needs to specify media files as links.,,Suggestion,Confluence Cloud,,2009-08-05T18:53:34.000+0000,2014-06-23T05:03:17.000+0000,RESOLVED,,Danielle Zhu,Danielle Zhu,Won't Fix,This issue is incorporated by CONFCLOUD-24665,lt,,,,"         Author                          Created  \
+0  Danielle Zhu 2009-09-15 18:55:27.954000+00:00   
+1         BillA 2014-06-23 05:03:17.452000+00:00   
+
+                                                                                                                                                                                                                                      Comment  
+0                                                                                                                                                                      Found out the issue has to do URL encoding.  Change Priority to Minor.  
+1  Thank you for raising this issue. While we can see how this feature would be useful, we have no plans to implement it in the foreseeable future. In order to set expectations, we're closing this request now. Thanks again for your idea.  ",True,"1. Priority has to be set from 'None' to 'Minor'.
+                           2. Status has to be set from 'RESOLVED' to 'Closed'."
+Jira,364556,33,Can't Resolve Using Mine,"I merged a branch into my current branch, and had a number of merge conflicts.  I want to resolve a heap of them by selecting them and right click and select Resolve Conflicts/Resolve Using 'Mine' option.
+I get the normal confirmation prompt and when I press OK I get an error message saying: 
+""Could not update one or more files, please check that no other application is locking your files.""
+Restarted my PC and opened on Source Tree and tried again, and still get the same error.  These are just html files, that are not being used by anything.
+
+How can I resolved this and get on with my merge so I can use my working environment again?
+
+Regards,
+
+Scott",1.6.5,Bug,Sourcetree for Windows,General,2014-10-09T06:26:12.000+0000,2021-03-29T14:58:45.000+0000,Verified,Medium,Tim Sargent Billing,Tim Sargent Billing,,,merge,,,,"                 Author                          Created  \
+0   Tim Sargent Billing 2014-10-09 06:40:13.131000+00:00   
+1   Patrick Johannessen 2014-10-14 01:43:13.961000+00:00   
+2               minnsey 2014-10-14 02:47:13.682000+00:00   
+3         Pritesh Patel 2014-10-14 11:57:04.617000+00:00   
+4               minnsey 2014-10-16 23:29:18.279000+00:00   
+5       Maciej Witwicki 2014-11-21 07:11:49.570000+00:00   
+6       Annette du Toit 2014-11-24 08:10:18.965000+00:00   
+7        Thomas Oftring 2014-11-28 06:27:30.370000+00:00   
+8         Justus Renton 2014-12-29 17:24:30.942000+00:00   
+9       Deleted Account 2015-02-25 06:49:39.873000+00:00   
+10             Ming Zhu 2015-03-20 05:53:08.341000+00:00   
+11             Ming Zhu 2015-03-20 06:15:23.756000+00:00   
+12           axel_gluth 2015-05-21 06:33:11.225000+00:00   
+13  Lucas Ventura Carro 2015-05-25 12:37:22.666000+00:00   
+14              minnsey 2015-06-01 05:19:14.552000+00:00   
+15          Kees Rijnen 2015-06-08 18:54:04.694000+00:00   
+16            azarnoush 2015-06-16 03:28:31.291000+00:00   
+17        xvision-admin 2015-11-26 23:00:50.569000+00:00   
+18         Ayman Atiyeh 2016-01-05 03:21:56.254000+00:00   
+19               spicko 2016-02-17 14:02:03.215000+00:00   
+20         Ivan Krechko 2016-07-01 18:02:34.707000+00:00   
+21         Daniel Platt 2016-07-21 16:05:00.313000+00:00   
+22           Jade White 2016-09-29 20:47:06.770000+00:00   
+23           James Zhuo 2016-10-10 04:58:45.006000+00:00   
+24          Martin Pyle 2016-10-10 15:34:51.041000+00:00   
+25          replaysMike 2016-10-19 18:14:01.454000+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Comment  
+0                                                                                                                                                                                                                                                                                                                                      Furthermore, I have done a test, and located the files I am trying to resolve on the file system, and I am able to rename them.  This proves that nothing else is using them.  Also I downloaded MS Process Explorer and it also tells me that nothing has locked the files.\r\n\r\nI really need this fixed so I can get on with my work... at the moment my source is in a big mess with 75 conflicts that I can't resolve!!\r\n\r\nRegards,\r\n\r\nScott  
+1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Same problem with 1.6.5, rolling back to 1.6.4 didn't fix it, rolling back to 1.5.2 didn't fix it, going back to 1.6.x and checking out a new fresh repository didn't fix it... I'm lost!  
+2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Hi [~slaughton], [~patrick.johannessen1]\r\n\r\nCould you please attach the SourceTree log file from when you've had the rror.\r\n\r\nThanks  
+3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Hi I've just had the same issue but have managed to successfully resolve it. If you look at the /.git/ folder is there a file called 'index.lock'? In my case there was a index.lock file which when deleted and SourceTree restarted everything went back to normal. Hope this helps. \r\n\r\nPritesh  
+4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Hi [~ppatel2]\r\n\r\nThanks for the information [~slaughton] and [~patrick.johannessen1] are you able to see if this work around works for you?  
+5          I'm facing this issue as well and this workaround cannot be applied, because i have no index.lock file in .git folder.\r\nMaybe it will help if I tell that in the beginning I had conflict because I made change to that file in another branch and in current branch I have deleted it. \r\nSo I've right clicked the file and choose merge using external tool (i have TortoiseMerge installed), but it never opened. Then I just tried to use ""resolve using mine"" and it failed with error mentioned above.\r\n\r\nFortunately for me resolving conflict was about deleting conflicting files, so I've deleted them manually on disk then clicked checkboxes in SourceTree to mark them as staged in commit view. They then just disappeared from view and I can do my commit now.  
+6                                                                                                                                                                                                                                                                                                                                                                                                                                                                      I have the exact same issue. I also made a merge from another branch and in the other branch the file with the issue had been deleted. \r\n\r\nSo to solve it I just deleted the file in my branch.\r\n\r\nIt does seem like a bug with version 1.6.11.0. though I upgraded this morning and I have never seen this before.  
+7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Same Problem here with SourceTree 1.6.11 on Windows 7 x64 and Windows 8.1 x64.\r\n\r\nDeleting the index.lock file does not help.\r\n\r\nWe found a workaround: \r\nIf we start the merge process in git and not in SourceTree all is ok and we can use Sourcetree to resolve the conflicts.  
+8                                  We have had several users have this problem with the newest version of SourceTree in windows (currently 1.6.12.0). Deleting the index.lock file does not help. At least one of these users saw the problem because the remote branch to be merged in had a deleted file which was edited in the current branch. It is like SourceTree does not understand how to resolve this type of merge. Merging via the command line gives you the options to remove the file, or keep the edits of the current branch.\r\n\r\nIn this situation, the resolution would be to allow the same options: To delete the file, or keep the current branch's edits. In many cases, it would be a manual hybrid of the two, but there needs to be some handling of this situation.  
+9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Got similar issue today - ""Could not update one or more files, please check that no other application is locking your files.""\r\nWas only able to commit after deleting index.lock files as well as conflicting files.\r\n\r\nSourceTree 1.6.14.0 on Windows 7 x64  
+10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Same issue on win7 x64.  
+11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       The only solution is really discard the conflict file, and re adding the change manually.  
+12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Same issue but without deleted file. I've had a textfile that was treated like a binary (probably broken file) in one branch. I've recreated this file in another branch. Got a conflict in SourceTree and can't ""Resolve using theirs"".\r\n\r\nSolution: Deleted index.lock  
+13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         I've reproduced this error, but I can't find {{index.lock}} file. Where it is located?\r\nWhere I can find the logs of SourceTree, to attach here? Folder {{%LOCALAPPDATA%\Atlassian\SourceTree}} only contains a {{sourcetree.log}} but it is too old.  
+14                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [~useyour.mind] \r\n\r\nThat is the location of the SourceTree log file.  
+15                                                                                                                                                                                                                                     Same issue for me. :(\r\n\r\nMerged latest code into a pretty old branch.\r\nA couple of conflicted files do not allow me to resolve.\r\n\r\nNo index.lock file.\r\n\r\nversion 1.6.14.0\r\n\r\nEdit:\r\n\r\nThis happens only on the conflicted .rb (ruby) files for this merge.\r\nThe .cpp files do allow to be resolved with ""theirs"" or ""mine""\r\nThe .rb files also do not show their changes/difference in the log window.\r\n\r\nAnd it only happens when I use ""theirs"".\r\nResolving the .rb files with ""mine"" works ok.\r\nStrange but true.\r\n  
+16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   In my case I am rebasing and there are a few conflicts. I was able to resolve pretty much half of the conflicts but I am getting the error for the rest. no index.lock file.   
+17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Hi,\r\n\r\nSame here. Merged a commit into my branch, got a bunch of conflicts, and got of all but two files which refuse to resolve with '""mine"". SourceTree 1.6.23.0. No index.lock file.\r\n\r\nAny ideas?\r\n\r\nCheers,\r\nMichael.  
+18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Hi All,\r\nI have the same case. I pulled the remote branch and I cannot resolve the conflects. Did you find a solution?  
+19                                Hi all,\r\n\r\nI had a same problem (""Could not update one or more files, please check that no other application is locking your files."") after pulling a branch from remote.\r\n\r\nI have opened task manager in windows just to check which process is using files in the same time. And I discovered it is Git. I have i5 procesor, 3 core were using 100% and they are just filing up RAM memory. It takes some time, but if you let it finish, you can resolve with ""mine"" or ""their"" with no problem (it takes more or less 1 min - if it moves, just give it more time :P ).\r\n\r\nApparently, it hapened because pull was a really big so git have a lot of files to check so it is kinda slow.\r\n\r\nCan anybody check this, and confirm my opinion?  
+20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Hi All,\r\n\r\n+1  
+21                                                                                                                                                                                                                 Same problem as everyone else, I can't merge due to the inability to resolve using ""mine"" because an error that says ""could not update one or more files, please check that no other application is locking your files."" waited a while like someone above suggested, but had no luck.\r\n\r\nJust updated to 1.9.5 yesterday, maybe the update is causing this issue?\r\n\r\nI tried deleting the files that were being locked, but after doing that and trying to merge, different files appeard with the same error that some other application might be locking your files.  
+22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Hi, I'm having this issue a lot, except I'm trying to resolve using ""Theirs"".\r\n  
+23                                                                                                                                                                                                                                                                                                                                                                                 Same, also resolving using ""Theirs"".\r\n\r\nI've had to deal with merge conflicts quite a bit and this has never happened before. What's special about this particular merge conflict is that the same file is deleted by one person and it's added back by another person through another branch, so I think maybe that's what's confused SourceTree. Hopefully this information helps with resolving the bug.  
+24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 me too. But in my case cant resolve with 'Theirs'\r\nI've run process-explorer (in admin-mode). And searched for the file name. No process has the file open at all .\r\nBother!\r\n\r\nI've tried re-starting source tree. No luck.\r\nBother.  
+25  I too receive this occasionally, as recently as today in current release version.\r\nThere are no files locking the file in question, confirmed with Process Explorer. This is a SourceTree state bug.\r\n\r\nI was able to make my edits outside of SourceTree, then mark it as resolved. This issue should be moved to High Priority.\r\n\r\nSteps that lead to this (I don't know the cause):\r\n* Right click conflicted file -> Resolve conflicts -> Launch external merge tool (p4merge)\r\n*  p4merge does not open.\r\nAny further attempts to open result in this error message. There is no file lock on the file (confirmed) and no p4merge or git procces are running. Restarting SourceTree does not fix the error.\r\n\r\nEnvironment: Windows 10\r\nVersion: SourceTree 1.9.6.1  ",True,Priority has to be set from 'Medium' to 'High'.
+Jira,279082,1,Tickets missing,"I got an issue that I am not sure why it is happening.
+
+After I have created a new project to be accessible by an individual Client, some how I got some of the existing tickets missing. Nobody has removed the ticket ( at least I could not see anywhere the ticket was removed.). This is the message when I try to open the ticket:
+Permission Violation
+
+If it helps, this is the direct URL of the ticket:
+https://infobahn.jira.com/browse/LDG-1753
+
+I got a few other tickets missing...
+Can you help me on finding the reason/solution for the missing ticket?
+",,Bug,Confluence,,2013-06-03T00:13:25.000+0000,2013-06-03T22:37:56.000+0000,New,Low,Rodrigo Rossi,Rodrigo Rossi,,,,,,,"          Author                          Created  \
+0  Rodrigo Rossi 2013-06-03 01:48:53.598000+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Comment  
+0  Please close this ticket, I have found the reason/solution for my problem.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: Rodrigo Rossi (JIRA) [mailto:jira@atlassian.com] \r\nSent: 03 June, 2013 10:15 AM\r\nTo: Rodrigo Rossi\r\nSubject: [JIRA] (CONF-29508) Tickets missing\r\n\r\n \r\n\r\n \r\n\r\n Rodrigo Rossi <https://jira.atlassian.com/secure/ViewProfile.jspa?name=rodrigo.rossi1>  created  CONF-29508 <https://jira.atlassian.com/browse/CONF-29508>  \r\n\r\nTickets missing <https://jira.atlassian.com/browse/CONF-29508>  \r\n\r\n\tIssue Type: \r\n\r\nBug \r\n\r\nAssignee: \r\n\r\nUnassigned \r\n\r\nCreated: \r\n\r\n02/Jun/13 7:13 PM \r\n\r\nDescription: \r\n\r\nI got an issue that I am not sure why it is happening.\r\n\r\nAfter I have created a new project to be accessible by an individual Client, some how I got some of the existing tickets missing. Nobody has removed the ticket ( at least I could not see anywhere the ticket was removed.). This is the message when I try to open the ticket:\r\nPermission Violation\r\n\r\nIf it helps, this is the direct URL of the ticket:\r\nhttps://infobahn.jira.com/browse/LDG-1753\r\n\r\nI got a few other tickets missing...\r\nCan you help me on finding the reason/solution for the missing ticket?\r\n\r\nProject: \r\n\r\nConfluence <https://jira.atlassian.com/browse/CONF>  \r\n\r\nPriority: \r\n\r\nMinor \r\n\r\nReporter: \r\n\r\nRodrigo Rossi <https://jira.atlassian.com/secure/ViewProfile.jspa?name=rodrigo.rossi1>  \r\n\r\nThis message is automatically generated by JIRA.\r\nIf you think it was sent incorrectly, please contact your JIRA administrators\r\nFor more information on JIRA, see: http://www.atlassian.com/software/jira <http://www.atlassian.com/software/jira>  \r\n\r\n\r\n  ",True,Status has to be set from 'New' to 'Closed'.
+Jira,1469273,3,UI Refresh Broken in 3.3.6,"When I do any of the following, operation is performed and completed but the UI does not reflect it.
+||Action||Result||UI View||Current Fix||Result of Fix||
+|Change Branch|New branch is selected|UI still shows old branch as selected, in bold.|Press F5 to Refresh UI|UI shows new branch selected in bold|
+|Click on Stage All or Stage Selected|Files are moved to Staged Files area|UI still shows empty Staged Files area|Press F5 to Refresh UI|Staged files area shows selected files|
+|Click on Pull Button|Branch is updated|UI does not show that pull was completed. Still shows bubble with number.|Press F5 to Refresh UI|UI shows pull was completed and bubble showing number goes away|
+
+These are just a few examples. I am using Windows 10 Pro version 1909. Sourcetree shows version 3.3.6 in Help -> About Sourcetree.",3.2.2,Bug,Sourcetree for Windows,UX,2020-01-17T13:12:14.000+0000,2020-11-10T15:14:53.000+0000,Needs Triage,Low,Abdullah Rizwan,Abdullah Rizwan,,,,,,,"          Author                          Created  \
+0           Mark 2020-01-17 13:33:44.140000+00:00   
+1  Chris Tietgen 2020-01-17 16:20:04.406000+00:00   
+2         jstirm 2020-01-17 16:59:54.806000+00:00   
+
+                                                                                                                                                                                                                                                                                                                    Comment  
+0  I am having the same issue. Staging, commiting, changing branches, etc. all occur, but the UI does not reflect the action. I am on Windows 10 Enterprise 10.0.17134, Sourcetree version 3.3.6. \r\n\r\nUpdate: SRCTREEWIN-12705 suggests several possible workarounds, one of which (rearranging the tabs) works for me.  
+1                                                                                                                                                                                                                                                        Same issues here. Have to close/reopen the app to reflect changes.  
+2                                                                                                                                                                                                                                                         This should be a high Priority, not Low.  Severely affects usage.  ",True,Priority has to be set from 'Low' to 'High'.
+Jira,1673876,11,Attachment panel in new issue view only shows the attachments added from Jira application or added during issue creation from the portal,"h3. Summary
+
+Attachment panel in new issue view only shows the attachments added from Jira application or added during request creation from the portal
+h3. Steps to Reproduce
+ # Try the tests mentioned under Actual results and see the results
+
+h3. Expected Results
+
+Can see all the attachments from Jira in the Attachment panel in both the new issue view as well as old issue view
+h3. Actual Results
+||Test||Visibility in Attachment panel - Old issue view||Visibility in Attachment panel - New issue view||
+|As an agent raise a request on behalf of the customer from the portal and attach files|(/)|(/)|
+|As a customer raise a request from the portal and attach files|(/)|(/)|
+|On a request raised from the portal, as a customer add another attachment with a comment from customer portal|(/)|(x)|
+| On a request raised from the portal, as an agent add another attachment with a comment from customer portal| (/)| (x)|
+|On a request raised from the portal, as an agent add another attachment with a comment from Jira application| (/)|(/) |
+h3. Workaround
+ # Use the old issue view to view all the attachments in one place and download them
+ # Or Use direct links:
+ ** Download All
+{code:java}
+https://<JIRA_Domain>/secure/attachmentzip/<Issue_ID>.zip{code}
+
+ * 
+ ** Manage _(Download All is available on this page)_
+{code:java}
+https://<JIRA_Domain>/secure/ManageAttachments.jspa?id=<Issue_ID>{code}
+(+) To get issue ID in the new view:
+
+ * Click the {{...}} button on the top right side
+ * Hover the mouse onto Clone or Delete
+ * See issue ID from browser's status bar
+
+h3. Notes
+
+The attachment panel was recently included in the new issue view: [https://confluence.atlassian.com/cloud/blog/2020/10/atlassian-cloud-changes-oct-19-to-oct-26-2020]
+{quote}New issue view: View your attachments the way you want
+View all your attachments (including those from fields, comments, and work log entries) in either a strip or list, or switch between the two. It’s up to you.
+{quote}",,Bug,Jira Service Management Cloud,Attachments,2020-11-06T08:56:52.000+0000,2021-05-11T02:01:18.000+0000,Gathering Impact,Low,Swati Kahol,Swati Kahol,,This issue relates to JRACLOUD-73397,,,Jehan Gonsalkorale,,"                              Author                          Created  \
+0                  Elisabete Gouveia 2020-11-09 16:26:16.603000+00:00   
+1  Boris Berenberg - Atlas Authority 2020-11-27 20:19:18.425000+00:00   
+2                               Dora 2021-03-15 09:51:56.917000+00:00   
+3                       Eshwar Palem 2021-03-19 19:45:39.484000+00:00   
+4                     Matthew Crocco 2021-04-16 14:56:04.966000+00:00   
+
+                                                                                                                                                                                                                                                                                                                                       Comment  
+0                                                                                                                                                                                                                                                           I have this issue and it has a big impact. An efficient solution must be provided.  
+1                                                                 I believe that this is mis-prioritized according to https://confluence.atlassian.com/support/atlassian-cloud-bug-fixing-policy-206865884.html Ideally this should be ""High"" per the example of ""application is functional, but frequently used gadgets or macros don't work""  
+2                                                                                                                                                                                                                                                                    This has big impact on our business, please prioritize to fix the issue.   
+3  Hey Atlassian,\r\n\r\nAre you going to change the priority of this ticket?In few days you guys are going to remove the old view and we are not going to have the workaround also.\r\n\r\nIf you want to improve the Jira UI by adding a new issue view. Also, please try not to remove the old features which we had in the old issue view.  
+4                                                                                                                                                                                                                                                      This should be a High Priority since the workaround was taken away as Eshwar points out  ",True,Priority has to be set from 'Low' to 'High'.
+Jira,1101228,8,Next-gen archive/hide projects,"In next-gen Jira project, there is no option for hiding or archiving projects. It would be great to be able to archive a project that's no longer in use and refer to them in the future.
+
+Also, as a next-gen user I want these archived projects available for viewing for the whole team but through a separate ""archived"" section.",,Sub-task,Jira Software Cloud,,2019-01-14T05:45:40.000+0000,2021-03-02T03:43:27.000+0000,Open,Low,Shakiru Ayanloye,Shakiru Ayanloye,,,p-low,,,,"           Author                          Created  \
+0     Ankit Goyal 2019-02-26 05:32:24.097000+00:00   
+1    Lizzie Modla 2019-05-07 14:32:49.544000+00:00   
+2  Christian Rahn 2019-06-04 21:39:42.248000+00:00   
+3   Melissa Brady 2019-06-05 20:22:58.722000+00:00   
+4   Lukasz Wiktor 2019-07-04 07:27:34.673000+00:00   
+5    Jason Eplawy 2019-08-07 14:57:57.120000+00:00   
+
+                                                                                                     Comment  
+0                                      Are there any updates on this issue. We need to archive old projects.  
+1  Is there any update on this? This would be really useful as our project is getting increasingly cluttered  
+2                                                                        Also looking for this functionality  
+3                                                                     We would also like this functionality.  
+4                                                                                                         +1  
+5                                                      This is so needed. Priority should be changed to High  ",True,Priority has to be set from 'Low' to 'High'.
+Jira,1645324,2,The recently Updated macro and Recently Updated dashboard are not working properly on Instances which its name starts with wiki,"h3. Issue Summary
+
+On Instances in which the base name starts with wiki (*wikitest.atlassian.net*, for example) the Recently Updated Macro and the Recently Updated dashboard are not working properly. The macros load the pages properly, however the link to the pages are broken, with the base URL duplicated, for example:
+{code:java}
+https://wikitest.atlassian.net/wikitest.atlassian.net/wiki/spaces/<SPACEKEY>/pages/<PAGEID>/<PAGETITLE>{code}
+h3. Steps to Reproduce
+ # Create an Instance which its name starts with wiki (i.e. *wikisomething*)
+ # Create a page.
+ # Add the Recently Updated Macro on it.
+ # Publish the page.
+ # Click on a link from the macro (make sure to have updated some pages recently).
+
+h3. Expected Results
+
+The links should work properly.
+h3. Actual Results
+
+The links don't work as expected, as the base URL will be duplicated on it.
+h3. Workaround
+
+Currently there is no known workaround for this behavior. A workaround will be added here when available",,Bug,Confluence Cloud,Macros - Search,2020-09-29T19:39:46.000+0000,2021-10-12T22:46:43.000+0000,Gathering Impact,Low,Vitor A,Vitor A,,,,,,,"      Author                          Created  \
+0  Alectrona 2020-10-11 22:41:06.120000+00:00   
+
+                                                                                                                                                               Comment  
+0  Please adjust to Priority 2 - High as:\r\n * application is functional, but frequently used gadgets or macros don't work\r\n\r\n * there is no workaround available  ",True,Priority has to be set from 'Low' to 'High'.
+Jira,1742812,1,Setting a landing product will not redirect customers to the portal,"h3. Issue Summary
+
+By default, when customers with an Atlassian account (with no product access, just active on the site) access the site's URL (https://example.atlassian.net), they will be redirected to the portal URL so they can authenticate and access the portal.
+
+However, when a [landing product is configured|https://support.atlassian.com/organization-administration/docs/set-your-sites-landing-product/], these customer accounts will face a message stating that they do not have access to the product on the site instead of being redirected to the portal.
+
+h3. Steps to Reproduce
+# Configure at least, a single customer account with site-access, but, no product access, like the example below:
+!no_access.png|thumbnail!
+# Make sure that this account has access to a Service Management project so the user should be able to access the portal and view it.
+# As a site-admin, go to the site's administration and access the *Product access* part.
+# There, under the *What you need to know* session, tap the *Change this setting* button and select a product.
+# Have the customer accessing the site via its URL (example.atlassian.net)
+
+(i) Although the default message states that the landing product is Jira, by tapping the option to change the default product, the dropdown will prompt you to select a product:
+
+!default.png|thumbnail!
+
+If you have already configured a product, after tapping this option, it will look like the following, already having the product selected:
+
+!changed.png|thumbnail!
+
+h3. Expected Results
+The user should be redirected to the portal.
+
+h3. Actual Results
+The user will face a message that they don't have access to the landing product:
+
+{quote}
+account@example.com doesn't have access to Jira/Confluence on example.atlassian.net
+{quote}
+
+h3. Workaround
+The customer can directly access one of the following URLs to land on the portal:
+
+* The portal URL.
+* https://example.atlassian.net/jira (with the /jira context path added to the site's URL)
+* The project URL (e.g. https://example.atlassian.net/jira/servicedesk/projects/KEY)",,Bug,Jira Service Management Cloud,Permissions & Roles - Customers,2021-03-30T15:22:36.000+0000,2021-04-29T22:55:23.000+0000,Needs Triage,Low,Giuliano C.,Giuliano C.,,,,,,,"            Author                          Created  \
+0  Shaun Neighbour 2021-04-01 14:55:00.257000+00:00   
+
+                                                                                                             Comment  
+0  Priority needs to be High - My customers can no longer access the helpdesk - That essentially means it's useless.  ",True,Priority has to be set from 'Low' to 'High'.
+Qt,186512,2,"Blackberry platform plugin: Implement support for more buttons on HID ""mouse"" devices (8 buttons)","A short inspection of relevant header files (in qnx 6.5.0) find definitions for 8 mouse buttons. Preceding this update, we support only 3 of the 8 possible buttons. A user with an advanced USB mouse, plugged into a Blackberry tablet, might find good uses for more buttons. One example is Qt::BackButton and Qt::ForwardButton within Webkit.
+
+Software is written, I am depending on the build system to compile and verify.",5.0.0,Bug,Qt,GUI: Complex Input methods,2012-03-08T01:38:13.000+0000,2012-07-19T10:52:16.000+0000,Reported,Not Evaluated,Richard Stockton,Richard Stockton,,,,,,,"             Author                   Created  \
+0  Richard Stockton 2012-04-25 19:18:41+00:00   
+
+                                                                                              Comment  
+0  Change-Id: I8c1d2b2a5d0deb3b857fb387c242c3792e21ff95\n\nBug Status should be 'Verified' for 5.0.0.  ",True,Status has to be set from 'Reported' to 'Verified'.
+Qt,195582,3,No Examples In Qt Creator,"PACKAGE VERSION:
+qt-windows-opensource-5.0.2-msvc2012_64-x64-offline-2013-03-25-464.exe
+
+STEPS:
+1. Install Qt SDK.
+2. Run Qt Creator.
+3. Go to Examples.
+
+ACTUAL RESULT:
+- There is no example.
+
+EXPECTED RESULT:
+- Examples should be visible there.
+
+",5.0.2,Bug,Qt,Packaging & Installer,2013-03-25T12:02:47.000+0000,2013-04-09T14:02:34.000+0000,Reported,P1: Critical,Rafal Motyka,Rafal Motyka,,,,,Qt Release Team,,"         Author                   Created  \
+0  Rafal Motyka 2013-03-25 12:04:27+00:00   
+1  Rafal Motyka 2013-03-27 10:19:14+00:00   
+
+                                              Comment  
+0          Valid for Windows 7 32 bit, VS 2010, ANGLE  
+1  Resolved. It needs to be moved to Resolved Status.  ",True,Status has to be set from 'Reported' to 'Resolved'.
+Qt,186360,3,"Generic/EvdevMouse plugin: Implement support for more buttons on ""mouse"" devices (16+4 buttons)",,,Task,Qt,GUI: Complex Input methods,2012-03-01T08:46:23.000+0000,2012-04-25T19:45:06.000+0000,Reported,P3: Somewhat important,Richard Stockton,Richard Stockton,,,,,,,"             Author                   Created  \
+0  Richard Stockton 2012-03-01 08:55:15+00:00   
+1  Richard Stockton 2012-04-25 19:29:25+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                   Comment  
+0  The patch which implements this change will be nearly identical to the change which I recently made in the Wayland plugin. See https://bugreports.qt-project.org/browse/QTBUG-22760 and http://codereview.qt-project.org/#change,16370 as references for Wayland.\n\nThe code builds and attempts to run properly, but my own X11/KWin environment keeps the mouse in a grabbed State (the device is thus not available to this plugin.  
+1                                                                                                                                                                                                                                                                                                                                          Bug Status should be 'Verified' for 5.0.0. Change-Id: Ib8cbb9500280c76f06a51ce95095e22ae84de1c6  ",True,Status has to be set from 'Reported' to 'Verified'.
+Sakai,56575,8,"""Internet Explorer cannot open the Internet site ... Operation aborted"" when choosing Multiple Choice question type IE6/IE7","When creating an assessment, on the edit assessment page (the ""Preview | Publish | Settings"" page), if you select ""Multiple Choice"" from the Add Question drop down menu, a pop up appears in Internet Explorer 7 on Vista or IE6 on XP. 
+
+I could not reproduce this in IE8 or in any other browsers.",2.7.0,Bug,Sakai,,2010-02-12T05:43:09.000-0500,2011-06-23T05:32:41.000-0400,Reopened,Major,"Michael ""Maka"" Gradin","Michael ""Maka"" Gradin",,,,2.7.0,"Michael ""Maka"" Gradin",,"                  Author                   Created  \
+0               Lydia Li 2010-04-01 15:11:49+00:00   
+1                amberg1 2010-04-05 02:02:53+00:00   
+2  Michael ""Maka"" Gradin 2010-04-12 15:42:39+00:00   
+3               Hui Tsao 2010-06-11 16:16:23+00:00   
+4          Sam Ottenhoff 2011-06-23 09:08:51+00:00   
+
+                                                                                                                                                                                                 Comment  
+0                                                                                                  Is this related to SAM-816?  Can you test in 2.7.0-b03 or later and see if this problem still exists?  
+1                                                                                                                                                                         Michael, can you please review  
+2  Hello.\n\nI re-tested this on two servers with 2.7.0-b06, both with XP/IE6 and Vista/IE7, and I no longer get the popup error reported above.\n\nLooks good.\n\n(sorry about the delay in responding)  
+3                                                                                                                                                                      Close this per Michael's comment.  
+4                                                          If there were no Subversion commits related to this JIRA, can you please close this as Resolution: Incorporated instead of Resolution: Fixed?  ",True,Resolution has to be set from 'None/Fixed' to 'Incorporated'.
+Sakai,44070,5,"Import from RIS (EndNote): Citation type=unknown loses most known other fields, including Title","There are many different Citation TYPES in Endnote, e.g. JOUR=Journal, PAT=Patent etc. Sakai only recognises about 6 types, BUT if the type is not recognised, then it loses a whole lot of other fields (e.g. Title, which DID exist in the imported file). 
+
+Also on Edit > Select citation type, in the dropdown list of possible types, 'other' would make more sense rather than 'unknown'. (But editing it is too late, if the citation has already been imported into WL and all the other data has been lost).
+
+
+",2.7.1,Bug,Sakai,Citations,2011-05-13T05:36:29.000-0400,2012-03-15T04:56:27.000-0400,Resolved,Major,Adam Marshall,Adam Marshall,Fixed,This issue duplicates SAK-16091,,2.8.0,David Cliff,,"                  Author                   Created  \
+0            David Cliff 2012-03-14 07:22:32+00:00   
+1  Jean-François Lévêque 2012-03-15 08:41:10+00:00   
+2            David Cliff 2012-03-15 08:43:48+00:00   
+3  Jean-François Lévêque 2012-03-15 08:54:22+00:00   
+
+                                                                                                                                                                                Comment  
+0                                                      This issue has been tested with the patch supplied by SAK-16091 and it resolves this issue - marking as a duplicate as a result.  
+1                                                                                                                              Is this issue really affecting 2.8.1 and fixed in 2.8.0?  
+2                              Jean - I think it may have been mislabeled at creation. This was fixed as per the linked issue in 2.7.2. I will try to amend its categorization shortly.  
+3  AFAICT, duplicates do not need Fix Version information. In this case SAK-16091 already contains it. The Resolution should be duplicate instead of Fixed because the fix is not here.  ",True,Resolution has to be set from 'Fixed' to 'Duplicate'.
+MongoDB,279399,1,unschedule build displays wrong message,"Choosing ""Unschedule Build"" on a build results in this message:
+
+× Build marked as scheduled.",,Bug,Evergreen,,2016-04-13T15:46:35.000+0000,2016-04-13T15:54:21.000+0000,Open,Major - P3,Eric Milkie,Eric Milkie,,,,,,,"        Author                   Created  \
+0  Eric Milkie 2016-04-13 15:47:54+00:00   
+
+                                                                                                                                                         Comment  
+0  Oddly, the EVG project in Jira prohibits me from changing the Priority field on any Issue.  If I could, I would be changing it to ""Minor - P2"" on this issue.  ",True,Priority has to be set from 'Major - P3' to 'Minor - P2'.
+MongoDB,714514,2,WiredTiger.wt corrupted,"Hi Support,
+
+It looks like wiredtiger.wt file has been corrupted. As per below error. It is possible to repair this file?
+
+2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] db version v3.2.1
+2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] git version: a14d55980c2cdc565d4704a7e3ad37e4e535c1b2
+2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] allocator: tcmalloc
+2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] modules: none
+2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] build environment:
+2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] distmod: 2008plus
+2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] distarch: x86_64
+2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] target_arch: x86_64
+2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] options: \{ config: ""C:\Program Files\test\APM_Mongo\etc\Mongo.yaml "", storage: { dbPath: ""D:\test\Data"", directoryPerDB: true, journal: { enabled: false } }, systemLog: \{ destination: ""file"", logAppend: true, path: ""C:\Program Files\test\APM_Mongo\logs\mongo.log"" } }
+2019-03-07T14:14:52.706+0000 I - [initandlisten] Detected data files in D:\test\Data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-03-07T14:14:52.706+0000 I STORAGE [initandlisten] wiredtiger_open config: create,cache_size=114G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),,log=(enabled=false),
+2019-03-07T14:14:52.731+0000 E STORAGE [initandlisten] WiredTiger (0) [1551968092:731984][16404:140720579154768], file:WiredTiger.wt, connection: read checksum error for 4096B block at offset 12288: block header checksum of 696200596 doesn't match expected checksum of 730211347
+2019-03-07T14:14:52.731+0000 E STORAGE [initandlisten] WiredTiger (0) [1551968092:731984][16404:140720579154768], file:WiredTiger.wt, connection: WiredTiger.wt: encountered an illegal file format or internal value
+2019-03-07T14:14:52.731+0000 E STORAGE [initandlisten] WiredTiger (-31804) [1551968092:731984][16404:140720579154768], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2019-03-07T14:14:52.732+0000 I - [initandlisten] Fatal Assertion 28558
+2019-03-07T14:14:52.732+0000 I - [initandlisten]
+
+***aborting after fassert() failure
+
+ 
+
+ ",,Bug,Core Server,,2019-03-11T11:05:12.000+0000,2019-03-20T21:58:49.000+0000,Open,Major - P3,Michael,Michael,,,,,Backlog - Storage Engines Team,,"         Author                   Created  \
+0  Keith Bostic 2019-03-11 12:00:34+00:00   
+
+                                                                     Comment  
+0  *Program Management Note*\n* Status set to Needs Verification after move.  ",True,Status has to be set from 'Open' to 'Needs Verification'.
+MongoDB,705683,3,Error Deleting Database,,,Bug,Core Server,,2019-02-27T13:56:26.000+0000,2019-02-28T23:14:50.000+0000,Open,Critical - P2,Angel Lopez,Angel Lopez,,,,,Backlog - Triage Team,,"              Author                   Created  \
+0  Kelsey T Schubert 2019-02-28 20:22:43+00:00   
+
+                                                                     Comment  
+0  *Program Management Note*\n* Status set to Needs Verification after move.  ",True,Status has to be set from 'Open' to 'Needs Verification'.
+Hyperledger,19338,14,Peer overwrites limit/skip fields in CouchDB query string,"If I pass in a CouchDB query string that specifies either `limit` or `skip`, then the query results are not as I would expect.
+
+It seems that the peer has some code in it that forcibly sets `limit` to a configuration value from `core.yaml`, and forcibly sets `skip` to 0. It does this without checking whether `limit` or `skip` are already specified by the user in the query string.
+
+This is the query string that we send in:
+{code:java}
+{""selector"":{""$class"":""systest.queries.SampleAsset"",""$registryType"":""Asset"",""$registryId"":""systest.queries.SampleAsset""},""limit"":2}{code}
+This is the output of the peer rewriting the query:
+{code:java}
+[statecouchdb] ApplyQueryWrapper -> DEBU 1f62 Rewritten query with data wrapper: {""limit"":10000,""selector"":{""$and"":[\{""chaincodeid"":""systest-queries""},\{""data.$class"":""systest.queries.SampleAsset"",""data.$registryId"":""systest.queries.SampleAsset"",""data.$registryType"":""Asset""}]},""skip"":0}{code}
+This is the offending code:
+
+[https://github.com/hyperledger/fabric/blob/d9c320297bd2a4eff2eb253ce84dc431ef860972/core/ledger/kvledger/txmgmt/statedb/statecouchdb/query_wrapper.go#L101]
+
+IMHO the code should check for existing `limit` or `skip` values before overwriting them ;)",v1.0.0,Improvement,Fabric,fabric-ledger,2017-07-18T21:10:33.000+0000,2018-03-11T14:13:58.000+0000,To Do,Highest,Simon Stone,Simon Stone,,This issue duplicates FAB-2809,Ledger,,,,"          Author                   Created  \
+0      chen xuan 2017-07-19 08:13:44+00:00   
+1   Sadok SADDEM 2017-07-19 14:00:12+00:00   
+2  David Enyeart 2017-07-19 15:03:54+00:00   
+3    Dave Kelsey 2017-08-03 13:47:50+00:00   
+4     Gari Singh 2017-09-04 13:00:27+00:00   
+5  David Enyeart 2017-09-05 11:59:03+00:00   
+6    Simon Stone 2017-10-03 19:16:31+00:00   
+7  David Enyeart 2018-03-11 14:13:53+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Comment  
+0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           i meet the same question.  
+1  I suggest to replace in [core/ledger/kvledger/txmgmt/statedb/statecouchdb/query_wrapper.go|https://github.com/hyperledger/fabric/blob/master/core/ledger/kvledger/txmgmt/statedb/statecouchdb/query_wrapper.go#L101]\r\n\r\n//Add limit\r\n jsonQueryMap[jsonQueryLimit] = queryLimit\r\n\r\n//Add skip\r\n jsonQueryMap[jsonQuerySkip] = querySkip\r\n\r\n \r\n\r\nwith \r\n\r\n \r\n\r\nif _, ok := jsonQueryMap[jsonQueryLimit]; !ok \{\r\n jsonQueryMap[jsonQueryLimit] = queryLimit\r\n }\r\n if _, ok := jsonQueryMap[jsonQueryLimit]; !ok \{\r\n jsonQueryMap[jsonQuerySkip] = querySkip\r\n }\r\n\r\nand in method signature wil be:\r\n func ApplyQueryWrapper(namespace, queryString string, *defaultLimit int*) (string, error)\r\n\r\n \r\n\r\nP.S : Must verify that jsonQueryMap[jsonQueryLimit] and  jsonQueryMap[jsonQueryLimit] contains int\r\n Regards\r\n\r\n   
+2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   W{color:#444444}e did intend to revisit how 'paging' works, balancing function, performance, and mitigation of malicious user requests. FAB-2809 is part of that. We'll also consider FAB-5369 during the assessment. \r\n{color}  
+3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    We are getting lots of people asking about this issue and when it will be fixed so I have changed it to highest.  
+4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [~denyeart] I'm changing this to improvement as this is working as designed I believe?  
+5                                                                                                                                                                                                                                                                                                                                                                                                                           [~mastersingh24] I agree this is an improvement rather than bug.\r\n\r\nI have added more description to FAB-2809 where CouchDB pagination support will be added, to include more context of the limitation and proposed solution.  In fact, I will mark this item as a duplicate of FAB-2809.  I'd encourage all the watchers of this item to review FAB-2809 description and provide their comments there. [~sstone1] [~davidkel] [~chenxuan].\r\n\r\n   
+6                                                                                                                                                                                                                                                                                                                                                                                             Just to back up what Dave said - this is a real pain for Composer users. It comes up without fail at least once a week, if not more. Composer users want to be able to build apps that page through large result sets (perhaps lists of assets matching a given query), and they can't do that at the moment. Their only option is to mirror the Blockchain data into an external database and build an app which queries that instead.\r\n\r\nWill leave the same comment in FAB-2809.  
+7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Closing this one - will track under FAB-2809 as High Priority.  ",True,Status has to be set from 'To Do' to 'Closed'.
+Hyperledger,19338,9,Peer overwrites limit/skip fields in CouchDB query string,"If I pass in a CouchDB query string that specifies either `limit` or `skip`, then the query results are not as I would expect.
+
+It seems that the peer has some code in it that forcibly sets `limit` to a configuration value from `core.yaml`, and forcibly sets `skip` to 0. It does this without checking whether `limit` or `skip` are already specified by the user in the query string.
+
+This is the query string that we send in:
+{code:java}
+{""selector"":{""$class"":""systest.queries.SampleAsset"",""$registryType"":""Asset"",""$registryId"":""systest.queries.SampleAsset""},""limit"":2}{code}
+This is the output of the peer rewriting the query:
+{code:java}
+[statecouchdb] ApplyQueryWrapper -> DEBU 1f62 Rewritten query with data wrapper: {""limit"":10000,""selector"":{""$and"":[\{""chaincodeid"":""systest-queries""},\{""data.$class"":""systest.queries.SampleAsset"",""data.$registryId"":""systest.queries.SampleAsset"",""data.$registryType"":""Asset""}]},""skip"":0}{code}
+This is the offending code:
+
+[https://github.com/hyperledger/fabric/blob/d9c320297bd2a4eff2eb253ce84dc431ef860972/core/ledger/kvledger/txmgmt/statedb/statecouchdb/query_wrapper.go#L101]
+
+IMHO the code should check for existing `limit` or `skip` values before overwriting them ;)",v1.0.0,Bug,Fabric,fabric-ledger,2017-07-18T21:10:33.000+0000,2018-03-11T14:13:58.000+0000,To Do,Highest,Simon Stone,Simon Stone,,This issue relates to FAB-2809,Ledger,,,,"          Author                   Created  \
+0      chen xuan 2017-07-19 08:13:44+00:00   
+1   Sadok SADDEM 2017-07-19 14:00:12+00:00   
+2  David Enyeart 2017-07-19 15:03:54+00:00   
+3    Dave Kelsey 2017-08-03 13:47:50+00:00   
+4     Gari Singh 2017-09-04 13:00:27+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Comment  
+0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           i meet the same question.  
+1  I suggest to replace in [core/ledger/kvledger/txmgmt/statedb/statecouchdb/query_wrapper.go|https://github.com/hyperledger/fabric/blob/master/core/ledger/kvledger/txmgmt/statedb/statecouchdb/query_wrapper.go#L101]\r\n\r\n//Add limit\r\n jsonQueryMap[jsonQueryLimit] = queryLimit\r\n\r\n//Add skip\r\n jsonQueryMap[jsonQuerySkip] = querySkip\r\n\r\n \r\n\r\nwith \r\n\r\n \r\n\r\nif _, ok := jsonQueryMap[jsonQueryLimit]; !ok \{\r\n jsonQueryMap[jsonQueryLimit] = queryLimit\r\n }\r\n if _, ok := jsonQueryMap[jsonQueryLimit]; !ok \{\r\n jsonQueryMap[jsonQuerySkip] = querySkip\r\n }\r\n\r\nand in method signature wil be:\r\n func ApplyQueryWrapper(namespace, queryString string, *defaultLimit int*) (string, error)\r\n\r\n \r\n\r\nP.S : Must verify that jsonQueryMap[jsonQueryLimit] and  jsonQueryMap[jsonQueryLimit] contains int\r\n Regards\r\n\r\n   
+2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   W{color:#444444}e did intend to revisit how 'paging' works, balancing function, performance, and mitigation of malicious user requests. FAB-2809 is part of that. We'll also consider FAB-5369 during the assessment. \r\n{color}  
+3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    We are getting lots of people asking about this issue and when it will be fixed so I have changed it to highest.  
+4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [~denyeart] I'm changing this to improvement as this is working as designed I believe?  ",True,IssueType has to be set from 'Bug' to 'Improvement'.
+Hyperledger,21232,4,Ansible playbooks to update software pre-requisties on Power,"Ansible playbooks to update software pre-requisties on power nodes. Right now, we are connecting to z build nodes through ssh to update/install softwares. This process taking time for every operation. Proposing below approach to deploy any software installation through ansible playbooks.
+
+1) Write ansible playbooks
+
+2) Trigger playbooks through from master node to update/install softwares on all nodes",,Task,Fabric,fabric-ci,2017-10-02T17:49:07.000+0000,2018-02-26T18:02:24.000+0000,To Do,Medium,Ramesh Babu Thoomu,Ramesh Babu Thoomu,,,fabric-ci,,Jason Clark,,"               Author                   Created  \
+0  Ramesh Babu Thoomu 2017-10-12 03:30:53+00:00   
+1         Jason Clark 2018-01-24 11:29:45+00:00   
+
+                                                                                                                                           Comment  
+0                                                                 [~jtclark] This work is in-progress.. [~sambhavdutt] and myself working on this.  
+1  Spoke w/ [~rameshthoomu] about this issue. Power is no longer required. This task is no longer needed. Moving this ticket to Unverified Status.  ",True,Status has to be set from 'To Do' to 'Unverified'.
+Hyperledger,14345,1,Move the proper SBFT config items into Genesis,Some of the SBFT config fields/items need to be moved to the Genesis part of the configuration (which written to the Genesis block).,,Sub-task,Fabric,,2017-01-25T15:57:25.000+0000,2017-02-03T17:08:40.000+0000,To Do,Medium,Gabor Hosszu,Gabor Hosszu,,,sbft,,,,"              Author                   Created  \
+0  Kostas Christidis 2017-01-25 18:21:55+00:00   
+
+                                                                                                                                                                 Comment  
+0  Gabor, can you please edit this as follows?\r\n\r\n- Component: fabric-consensus\r\n- Label: sbft\r\n- Status: In progress (or in review)\r\n- Assign it to yourself?  ",True,"1. Components has to be set from 'None' to 'fabric-consensus'.
+                           2. Labels has to be set from 'None' to 'sbft'.
+                           3. Status has to be set from 'To Do' to 'In Progress' or 'In Review'.
+                           4. Assignee has to be set from 'None' to 'Gabor Hosszu'."
+JiraEcosystem,59727,1,"""Email your favorite admin"" email needs to decide what country it is from",The email contains both american english (favorite) and australian english (organisation). Identity Crisis!,,Bug,Atlassian Marketplace,,2012-11-15T17:51:13.656-0600,2012-11-19T12:26:54.389-0600,Triage,Major,Ben Woskow,Ben Woskow,,,,,,,"  Author                          Created                        Comment
+0  JohnA 2012-11-19 18:26:54.402000+00:00  Resolution : Unresolved FTW. ",True,Resolution has to be set from 'None' to 'Unresolved'.
+IntelDAOS,16799,21,Unable to fill a pool with enough data to cause rebuild to fail,"In an attempt to get the pool/rebuild_no_cap.py test working (create a pool with enough data such that rebuild fails due to lack of space when one server is excluded) I am unable to write enough data to the pool in order to create the situation that the test is intended to verify.
+
+If I create one 16MB pool across 4 servers with 1 target each, I am able to write 16MB - 30MB (in 1MB increments) to the pool with IOR:
+
+{noformat}
+2019-07-12 20:54:16,057 rebuild_no_cap L0081 INFO | Wrote 16MB to the pool successfully; 134200512 bytes free; 15168 delta
+ 2019-07-12 20:54:17,065 rebuild_no_cap L0081 INFO | Wrote 17MB to the pool successfully; 134185216 bytes free; 30464 delta
+ 2019-07-12 20:54:18,150 rebuild_no_cap L0081 INFO | Wrote 18MB to the pool successfully; 134169792 bytes free; 45888 delta
+ 2019-07-12 20:54:19,192 rebuild_no_cap L0081 INFO | Wrote 19MB to the pool successfully; 134154240 bytes free; 61440 delta
+ 2019-07-12 20:54:20,487 rebuild_no_cap L0081 INFO | Wrote 20MB to the pool successfully; 134138560 bytes free; 77120 delta
+ 2019-07-12 20:54:21,768 rebuild_no_cap L0081 INFO | Wrote 21MB to the pool successfully; 134122752 bytes free; 92928 delta
+ 2019-07-12 20:54:22,978 rebuild_no_cap L0081 INFO | Wrote 22MB to the pool successfully; 134106816 bytes free; 108864 delta
+ 2019-07-12 20:54:24,181 rebuild_no_cap L0081 INFO | Wrote 23MB to the pool successfully; 134090752 bytes free; 124928 delta
+ 2019-07-12 20:54:25,283 rebuild_no_cap L0081 INFO | Wrote 24MB to the pool successfully; 134074560 bytes free; 141120 delta
+ 2019-07-12 20:54:26,563 rebuild_no_cap L0081 INFO | Wrote 25MB to the pool successfully; 134058240 bytes free; 157440 delta
+ 2019-07-12 20:54:27,863 rebuild_no_cap L0081 INFO | Wrote 26MB to the pool successfully; 134041728 bytes free; 173952 delta
+ 2019-07-12 20:54:29,585 rebuild_no_cap L0081 INFO | Wrote 27MB to the pool successfully; 134025088 bytes free; 190592 delta
+ 2019-07-12 20:54:31,014 rebuild_no_cap L0081 INFO | Wrote 28MB to the pool successfully; 134008320 bytes free; 207360 delta
+ 2019-07-12 20:54:32,611 rebuild_no_cap L0081 INFO | Wrote 29MB to the pool successfully; 133991360 bytes free; 224320 delta
+ 2019-07-12 20:54:34,230 rebuild_no_cap L0081 INFO | Wrote 30MB to the pool successfully; 133974272 bytes free; 241408 delta
+{noformat}
+
+(Note the amount of free space being reported after each IOR command is increasing less with each iteration. The delta is the difference between the reported free space before running IOR and after the current IOR run.)
+
+Writing 31MB fails with not enough space: ior ERROR (../../src/aiori-DAOS.c:431): 0: -1007: daos_array_write() failed (-1007).
+
+Using this data, I then create the same one 16MB pool across 4 servers with 1 target each and write 30MB to the pool with IOR. Given that 31MB was too much data to write to the pool (although I believe this should be closer to 60MB) I would expect that the exclusion of 1 server would prevent rebuild from succeeding due to lack of space, however the rebuild is reported as successful (errno is 0):
+
+{noformat}
+hostlist_servers: ['boro-41', 'boro-43', 'boro-52', 'boro-53'] 
+ hostlist_clients: ['boro-41'] 
+ <<1>> 
+ <<1>> 
+ <<1>> 
+ <<1>> 
+ <<1>> 
+ <AGENT> agent started on node boro-41 in 2.00193595886 seconds 
+ Start CMD>>>>/home/pahender/daos/opt/ompi/bin/orterun --np 4 --hostfile /var/tmp/avocado_9QIq6Q/1-._pool_rebuild_no_cap.py_RebuildNoCap.test_rebuild_no_capacity_test_machines-createmode-createset-createsize-server_config-datatowrite-ranks-915a/hostfile15114 --enable-recovery /home/pahender/daos/install/bin/daos_server -i -a /home/pahender/daos/install/tmp -o /home/pahender/daos/src/tests/ftest/data/daos_avocado_test.yaml 
+ <SERVER>: Starting Servers 
+ Starting SPDK v18.07-pre / DPDK 18.02.0 initialization... 
+ [ DPDK EAL parameters: spdk -c 0x1 --file-prefix=spdk133669835 --base-virtaddr=0x200000000000 --proc-type=auto ] 
+ Starting SPDK v18.07-pre / DPDK 18.02.0 initialization... 
+ [ DPDK EAL parameters: spdk -c 0x1 --file-prefix=spdk252149579 --base-virtaddr=0x200000000000 --proc-type=auto ] 
+ Starting SPDK v18.07-pre / DPDK 18.02.0 initialization... 
+ [ DPDK EAL parameters: spdk -c 0x1 --file-prefix=spdk287583378 --base-virtaddr=0x200000000000 --proc-type=auto ] 
+ Starting SPDK v18.07-pre / DPDK 18.02.0 initialization... 
+ [ DPDK EAL parameters: spdk -c 0x1 --file-prefix=spdk927213900 --base-virtaddr=0x200000000000 --proc-type=auto ] 
+ DAOS I/O server (v0.5.0) process 90606 started on rank 0 (out of 4) with 2 target xstream set(s), 2 helper XS per target, firstcore 0. 
+ DAOS I/O server (v0.5.0) process 107550 started on rank 2 (out of 4) with 2 target xstream set(s), 2 helper XS per target, firstcore 0. 
+ DAOS I/O server (v0.5.0) process 189668 started on rank 1 (out of 4) with 2 target xstream set(s), 2 helper XS per target, firstcore 0. 
+ DAOS I/O server (v0.5.0) process 117027 started on rank 3 (out of 4) with 2 target xstream set(s), 2 helper XS per target, firstcore 0.
+
+<SERVER> server started and took 2.82850003242 seconds to start
+ PARAMS (key=svcn, path=/run/pool/*, default=None) => None 
+ PARAMS (key=group, path=/run/pool/*, default=None) => None 
+ PARAMS (key=scm_size, path=/run/pool/*, default=None) => 16777216
+ PARAMS (key=name, path=/run/pool/*, default=None) => 'daos_server'
+ PARAMS (key=target_list, path=/run/pool/*, default=None) => None 
+ PARAMS (key=mode, path=/run/pool/*, default=None) => 511 
+ PARAMS (key=nvme_size, path=/run/pool/*, default=None) => None 
+ PARAMS (key=targets, path=/run/server_config/*, default=None) => 2
+ PARAMS (key=datasize, path=/run/testparams/*, default=None) => '30M'
+ PARAMS (key=rank_to_kill, path=/run/testparams/*, default=None) => 0
+ Creating a pool 
+ Pool created with uuid 905691F1-6CA3-421C-90F7-ACA75E3E2B1A and ranks [1]
+ Connecting to pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A with permission 1 (flag: 2)
+ Pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A space before write: 
+ s_free[0]=134215680 
+ s_free[1]=0 
+ s_total[0]=134217728 
+ s_total[1]=0 
+ ior_cmd: /home/pahender/daos/opt/ompi/bin/orterun -np 1 --hostfile /var/tmp/avocado_9QIq6Q/1-._pool_rebuild_no_cap.py_RebuildNoCap.test_rebuild_no_capacity_test_machines-createmode-createset-createsize-server_config-datatowrite-ranks-915a/hostfile25002 --map-by node -x DAOS_SINGLETON_CLI=1 -x CRT_ATTACH_INFO_PATH=/home/pahender/daos/install/tmp -x D_LOG_FILE -x OFI_INTERFACE -x CRT_PHY_ADDR_STR ior -w -W -v -k -s 1 -i 1 -a DAOS -b 30M -t 1M --daos.pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A --daos.svcl 1 --daos.cont `uuidgen` --daos.chunk_size 1048576 --daos.oclass SX 
+ [boro-41.boro.hpdd.intel.com:90621] Warning: could not find environment variable ""D_LOG_FILE"" 
+ [0] Connecting to pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A 
+ [0] Create/Open Container 7517ed82-5272-4e0c-838d-f06f874e146f 
+ IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O 
+ Began : Fri Jul 12 21:45:37 2019 
+ Command line : ior -w -W -v -k -s 1 -i 1 -a DAOS -b 30M -t 1M --daos.pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A --daos.svcl 1 --daos.cont 7517ed82-5272-4e0c-838d-f06f874e146f --daos.chunk_size 1048576 --daos.oclass SX 
+ Machine : Linux boro-41.boro.hpdd.intel.com 
+ Start time skew across all tasks: 0.00 sec 
+ TestID : 0 
+ StartTime : Fri Jul 12 21:45:37 2019 
+ Path : /home/pahender/daos/src/tests/ftest 
+ FS : 3.8 TiB Used FS: 40.1% Inodes: 250.0 Mi Used Inodes: 5.7% 
+ Participating tasks: 1
+
+Options:
+ api : DAOS
+ apiVersion : DAOS
+ test filename : testFile
+ access : single-shared-file
+ type : independent 
+ segments : 1 
+ ordering in a file : sequential 
+ ordering inter file : no tasks offsets 
+ tasks : 1 
+ clients per node : 1 
+ repetitions : 1 
+ xfersize : 1 MiB 
+ blocksize : 30 MiB 
+ aggregate filesize : 30 MiB
+
+Results:
+
+access bw(MiB/s) block(KiB) xfer(KiB) open(s) wr/rd(s) close(s) total(s) iter
+ ------ --------- ---------- --------- -------- -------- -------- -------- ----
+ Commencing write performance test: Fri Jul 12 21:45:37 2019 
+ write 87.41 30720 1024.00 0.023895 0.319183 0.000104 0.343198 0 
+ Verifying contents of the file(s) just written. 
+ Fri Jul 12 21:45:37 2019
+
+Max Write: 87.41 MiB/sec (91.66 MB/sec)
+
+Summary of all tests:
+ Operation Max(MiB) Min(MiB) Mean(MiB) StdDev Max(OPs) Min(OPs) Mean(OPs) StdDev Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt blksiz xsize aggs(MiB) API RefNum 
+ write 87.41 87.41 87.41 0.00 87.41 87.41 87.41 0.00 0.34320 0 1 1 1 0 0 1 0 0 1 31457280 1048576 30.0 DAOS 0 
+ Finished : Fri Jul 12 21:45:38 2019 
+ Pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A space after write: 
+ s_free[0]=101687744 
+ s_free[1]=0 
+ s_total[0]=134217728 
+ s_total[1]=0 
+ Verifying the pool pi_ndisabled: 0 ?= 0 
+ Verifying the pool pi_nnodes: 4 ?= 4 
+ Verifying the pool pi_ntargets: 8 ?= 8 
+ Verifying the pool rs_errno: 0 ?= 0 
+ Killing DAOS server daos_server (rank 0) 
+ Excluding server rank 0 from pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A 
+ Waiting for rebuild to start ... 
+ Rebuild start detected 
+ Waiting for rebuild to complete ... 
+ Rebuild in progress ... 
+ Rebuild in progress ... 
+ Rebuild in progress ... 
+ Rebuild in progress ... 
+ Rebuild completion detected
+ Pool 905691F1-6CA3-421C-90F7-ACA75E3E2B1A space after rebuild:
+ s_free[0]=75723840
+ s_free[1]=0
+ s_total[0]=100663296
+ s_total[1]=0
+ Verifying the pool pi_ndisabled: 2 ?= 2
+ Verifying the pool pi_nnodes: 4 ?= 4
+ Verifying the pool pi_ntargets: 8 ?= 8
+ Verifying the pool rs_errno: 0 ?= -1007
+ The rs_errno does not match: actual: 0, expected: -1007
+{noformat}
+
+I added reporting the Daos_Space.s_total and Daos_Space.s_free space usage information from the DaosPool.pool_query() and we are also wondering if these are accurate. These values are affected by the number of targets per server. Is this expected?
+
+Logs are available on boro:
+{noformat}
+ /home/pahender/tickets/DAOS-2845/job-2019-07-12T21.44-edf0dc6-pool-rebuild_no_cap/daos_logs/
+ total 6572
+ -rw-rw-r-- 1 pahender pahender 896 Jul 12 21:54 daos_agent.log-boro-41
+ -rw-rw-r-- 1 pahender pahender 1179 Jul 12 21:54 daos_control.log-boro-41
+ -rw-rw-r-- 1 pahender pahender 1179 Jul 12 21:54 daos_control.log-boro-43
+ -rw-rw-r-- 1 pahender pahender 1179 Jul 12 21:54 daos_control.log-boro-52
+ -rw-rw-r-- 1 pahender pahender 1179 Jul 12 21:54 daos_control.log-boro-53
+ -rw-rw-r-- 1 pahender pahender 1304801 Jul 12 21:54 daos.log-boro-41
+ -rw-rw-r-- 1 pahender pahender 509242 Jul 12 21:54 server.log-boro-41
+ -rw-rw-r-- 1 pahender pahender 3535315 Jul 12 21:54 server.log-boro-43
+ -rw-rw-r-- 1 pahender pahender 741851 Jul 12 21:54 server.log-boro-52
+ -rw-rw-r-- 1 pahender pahender 603853 Jul 12 21:54 server.log-boro-53
+{noformat}",0.8 Community Release,Bug,DAOS,Rebuild,2019-07-12T14:56:28.000-0700,2021-08-06T07:10:34.000-0700,Open,P4-Low,Phil Henderson,Phil Henderson,,This issue is related to  DAOS-7570,rel20,2.0 Community Release,Phil Henderson,,"           Author                   Created  \
+0       Ira Lewis 2019-07-25 15:12:26+00:00   
+1    Scott Kirvan 2020-01-22 19:07:14+00:00   
+2    Jeff Olivier 2020-12-03 16:39:32+00:00   
+3  Kelsey Prantis 2021-07-30 23:25:15+00:00   
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Comment  
+0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Phil, can you reproduce this with larger sizes?  -the Triage team  
+1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              If you get a chance while waiting for CI --could you do a quick retest and we can get this back over to development.  
+2  ""I added reporting the Daos_Space.s_total and Daos_Space.s_free space usage information from the DaosPool.pool_query() and we are also wondering if these are accurate. These values are affected by the number of targets per server. Is this expected?""\r\n\r\nThere would be some slight variance based on the number of targets because metadata is duplicated.   For instance, any target that has an object shard would have container and object trees so having more targets and more shards means more duplication of this top level tree metadata.  How much variance are you seeing?  The totals should have slightly less data.\r\n\r\nAs for your rebuild problem, are you generating all unique data or does your test case do any overwrites.   If the latter, the extra space used will only be temporary but freed by aggregation which could affect your inability to cause a rebuild problem?  
+3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      This is P4-Low and over 2 years old. Are we ever really going to fix it? Should we just call it and resolve as Low Priority?  ",TRUE,"1. Resolution has to be set from 'None' to 'Low Priority'.
+                           2. Status has to be set from 'Open' to 'Resolved'."

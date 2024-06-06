@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Apache",
+        "IssueId":12581156,
+        "EvoId":0,
+        "Summary":"compiler error when binding to content property of RichText",
+        "Description":"Steps to reproduce:\n1. compile attached app\n \n Actual Results:\nmain.mxml(13):  Error: Access of possibly undefined property content through a reference with static type spark.primitives:RichText.\n\n                                <s:content>\n \n Expected Results:\n should compile and databinding should work",
+        "VersionsAffected":"Adobe Flex SDK Previous",
+        "IssueType":"Bug",
+        "Project":"Apache Flex",
+        "Components":"MXML Compiler",
+        "CreatedDate":"2009-07-21 08:51:12",
+        "ResolvedDate":"2009-07-21 09:09:20",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Adobe JIRA",
+        "Reporter":"Adobe JIRA",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

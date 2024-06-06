@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":11140,
+        "EvoId":0,
+        "Summary":"Windows shell crashes when typing \"show databases\"",
+        "Description":"Made a typo for \"show dbs\" ... typed \"show databases\" and it crashed the client on windows.   Using the 1\/17\/10 nightly build.\n",
+        "VersionsAffected":"1.3.x",
+        "IssueType":"Bug",
+        "Project":"Core Server",
+        "Components":"Shell",
+        "CreatedDate":"2010-01-17 22:27:31",
+        "ResolvedDate":"2010-01-29 15:22:48",
+        "Status":"Open",
+        "Priority":"Minor - P4",
+        "Creator":"trimbo",
+        "Reporter":"trimbo",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Eliot Horowitz",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

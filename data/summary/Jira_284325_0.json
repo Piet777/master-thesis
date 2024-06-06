@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":284325,
+        "EvoId":0,
+        "Summary":"As an Android developer, I would like to be able to use Repo from Stash in order to syncronize all of my project's Android dependencies",
+        "Description":"Add support for \"Repo\" in order to ease Android development workflow",
+        "VersionsAffected":null,
+        "IssueType":"New Feature",
+        "Project":"Stash",
+        "Components":null,
+        "CreatedDate":"2013-07-03T18:19:06.000+0000",
+        "ResolvedDate":"2016-04-11T23:29:37.000+0000",
+        "Status":"Needs Triage",
+        "Priority":null,
+        "Creator":"David Vega",
+        "Reporter":"David Vega",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

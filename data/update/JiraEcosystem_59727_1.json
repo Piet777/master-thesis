@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":59727,
+        "EvoId":1,
+        "Summary":"\"Email your favorite admin\" email needs to decide what country it is from",
+        "Description":"The email contains both american english (favorite) and australian english (organisation). Identity Crisis!",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Atlassian Marketplace",
+        "Components":null,
+        "CreatedDate":"2012-11-15 17:51:13",
+        "ResolvedDate":"2012-11-19 12:26:54",
+        "Status":"Triage",
+        "Priority":"Major",
+        "Creator":"Ben Woskow",
+        "Reporter":"Ben Woskow",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"JohnA",
+                "Created":"2012-11-19 18:26:54",
+                "Comment":"Resolution : Unresolved FTW. "
+            }
+        ]
+    }
+

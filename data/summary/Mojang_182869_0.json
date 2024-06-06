@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":182869,
+        "EvoId":0,
+        "Summary":"The leaves on trees turned black",
+        "Description":"The leaves on the trees somehow turned black for some unknown reason ",
+        "VersionsAffected":"1.2.2.3",
+        "IssueType":"Bug",
+        "Project":"Minecraft (Bedrock codebase)",
+        "Components":null,
+        "CreatedDate":"2017-10-07 01:25:54",
+        "ResolvedDate":"2017-10-10 11:27:31",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Jake Bron",
+        "Reporter":"Jake Bron",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

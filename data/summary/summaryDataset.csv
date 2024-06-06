@@ -1,0 +1,617 @@
+Jira,IssueId,EvoId,Summary,Description,VersionsAffected,IssueType,Project,Components,CreatedDate,ResolvedDate,Status,Priority,Creator,Reporter,Resolution,IssueLinks,Labels,VersionsFixed,Assignee,TimeSpent,Comments,SmellActual,SmellReason
+Jira,642978,0,Correct HipChat Integration to JIRA for Pre- Version 7 documentation,,,Bug,Jira Server and Data Center,Documentation - All,2016-10-31T07:50:28.000+0000,2017-06-05T07:33:53.000+0000,Open,Low,Ismael Olusula Jimoh,Ismael Olusula Jimoh,,,,,Andrew Lui [Atlassian technical writer],,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,68 characters is in range.
+Jira,284325,0,"As an Android developer, I would like to be able to use Repo from Stash in order to syncronize all of my project's Android dependencies","Add support for ""Repo"" in order to ease Android development workflow",,New Feature,Stash,,2013-07-03T18:19:06.000+0000,2016-04-11T23:29:37.000+0000,Needs Triage,,David Vega,David Vega,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,135 characters is too long.
+Jira,78993,0,write ajax action ,,,Dev. Sub-task,Crucible,,2009-01-13T06:27:14.000+0000,2009-02-01T23:38:48.000+0000,Open,Medium,BrendanA,BrendanA,,,tetris,2.0-M2,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,18 characters is too short.
+Jira,68644,0,Documentation for importing a certificate,"Create a page with clear instructions on importing a certificate. The content of this page will be included in more than one Crowd document.
+
+Page for generic included content:
+http://confluence.atlassian.com/display/CROWD/Importing+a+Digital+Certificate+onto+a+Crowd+Server
+
+
+Once the page is ready, replace the existing content on the page below with an \{excerpt-include}:
+http://confluence.atlassian.com/display/CROWD/Configuring+an+SSL+Certificate+for+Microsoft+Active+Directory
+",,Task,Crowd,Documentation,2008-05-23T00:00:45.000+0000,2008-05-23T07:49:27.000+0000,Open,,SarahA,SarahA,,,,,David O'Flynn [Atlassian],,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,41 characters is in range.
+Jira,33094,0,Thumbnail problem,"I get this error when trying to view the Thumbnail demo page: System does not support thumbnails: no JDK image support  and This installation can not generate thumbnails: no image support in Java runtime.
+
+I followed the instructions given and changed the JAVA_OPTS variable as said to: JAVA_OPTS=-Djava.awt.headless=true nevertheless it won't display either.
+
+I browsed many JIRA issue reports but found nothing else.
+
+Any advice on how to solve this?
+
+Standalone with Tomcat.
+JDK 1.4.2_10
+Linux cancana3 2.4.18-3 #1 Thu Apr 18 07:37:53 EDT 2002 i686 unknown
+",2.1.1,Support Request,Confluence Server and Data Center,,2006-01-11T13:06:17.000+0000,2016-05-26T06:55:43.000+0000,Open,Medium,Javier Gallego,Javier Gallego,,,affects-server,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,17 characters is too short.
+Jira,151397,0,Show the login screen when user attempts to create an issue and is not logged in,"When a potential user clicks on a link to create an issue and is not logged in, they see the following message:
+
+Errors
+
+You are not logged in, and do not have the permissions required to create an issue in this project as a guest.Test
+
+To create an issue first log in
+
+And the `log in` text is a link (but not underlined as links usually are).
+
+Why doesn't this page just show a login required screen like /browse/[PROJECT] does? Or better yet, show the actual login with the os_destination set?
+
+We've had some folks who misinterpret the error notice and think they can't create an issue, which then leads to unusual emails and error reports and sometimes angry/baffled users. All because the message is telling them something they don't understand. Why not just do the login redirect for them?",,Improvement,Jira Server and Data Center,UI / Usability,2011-10-12T21:13:14.000+0000,2015-06-25T08:10:24.000+0000,New,,Jared Farrish,Jared Farrish,,,ui-specialist,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,80 characters is too long.
+Qt,322707,0,Inequality sign in Photoshop text layer isn't exported correctly,"In Photoshop text layer, ""<"" (UNICODE: E0E1) is exported to QML as "">"" (UNICODE: E0E0)
+
+ 
+
+Reported by Umemura-san",QDS 2.1,Bug,Qt Design Studio,Qt-Bridge-Photoshop,2021-08-10T08:15:45.000+0000,2021-09-08T14:12:28.000+0000,Reported,Not Evaluated,Yasuhiko Uehara,Yasuhiko Uehara,,,,,Yasuhiko Uehara,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,64 characters is in range.
+Qt,187366,0,looks like a bug: can never load qt jpeg plugin on windows mobile 6 ,"
+QDir(path).entryList(QDir::Files) always returns empty string list on windows mobile 6,
+which leads to failure of loading qt plugins .
+
+I fixed it by enclosing these lines in #ifndef Q_OS_WINCE preprocessor directives.
+
+qfilesystemiterator_win.cpp Ln#97 - Ln#100
+------------------------------------------------------
+if (QSysInfo::windowsVersion() >= QSysInfo::WV_WINDOWS7) {
+            dwAdditionalFlags = 2;  // FIND_FIRST_EX_LARGE_FETCH
+            infoLevel = 1 ;         // FindExInfoBasic;
+}
+------------------------------------------------------
+these above lines will fail the following call on wince 6,
+
+findFileHandle = FindFirstFileEx((const wchar_t *)nativePath.utf16(), FINDEX_INFO_LEVELS(infoLevel), &findData,
+                                         FINDEX_SEARCH_OPS(searchOps), 0, dwAdditionalFlags);
+
+according to MSDN, dwAdditionalFlags=2 is not supported on wince6, and findFileHandle will always get a INVALID_FILE_HANDLE.
+",4.8.0,Suggestion,Qt,Core: Containers and Algorithms,2012-04-07T22:27:40.000+0000,2018-07-19T14:27:34.000+0000,Reported,Not Evaluated,zhanghanxi,zhanghanxi,,,,,João Abecasis,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,68 characters is in range.
+Qt,283015,0,[REG 4.6.2=>4.9.2] Code completion in cmake project not working on Windows,"I cannot provide the whole project (it is big and not open source), but on Windows the code completion completely fails in a larger cmake project. 
+
+Nothing happens in any of the files even in basic classes. It also does not work if the code is plainly written in the top of a file.
+ !image-2019-08-22-10-55-08-353.png|thumbnail! 
+ !image-2019-08-22-10-57-37-067.png|thumbnail! 
+
+The code completes on Mac. It may be a settings issue, but removing the QtCreator ini-file didn't help. (I have not tried to remove settings on Mac).
+
+",Qt Creator 4.10.0-rc1,Bug,Qt Creator,Editors,2019-08-22T09:04:00.000+0000,2020-03-04T14:14:49.000+0000,Reported,Not Evaluated,Thorbjørn Lund Martsum,Thorbjørn Lund Martsum,,,,,David Schulz,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,74 characters is too long.
+Qt,206925,0,Different build configurations should remember different cmake arguments,"Currently the different build types share the same cmake argument setting in the project UI.
+
+I checked that inside CMakeLists.txt.user separate keys (CMakeProjectManager.CMakeBuildConfiguration.UserArguments) are indeed defined for each configuration. However they are always kept the same by the project management.",Qt Creator 3.0.1,Bug,Qt Creator,Project & Build Management,2014-03-15T09:46:51.000+0000,2014-03-17T12:35:00.000+0000,Reported,Not Evaluated,Peng Wang,Peng Wang,,,,,Daniel Teske,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,72 characters is too long.
+Qt,275557,0,Toolbar missing if layout is reset,"Test steps:
+ # Open existing project or create new one
+ # Reset layout settings by clicking View -> Reset layout
+ # After restart toolbar is not visible (see picture)
+ # Cannot drag guides from top or from bottom (dragging from sides works)
+ # Drag editor window a bit by clicking it at the up most panel
+ # Toolbar is visible again and dragging guides works",Qt 3D Studio 2.3 BETA3,Bug,Qt 3D Studio,Editor Application,2019-03-18T07:45:15.000+0000,2019-03-18T08:37:56.000+0000,Reported,Not Evaluated,Tanja Remes,Tanja Remes,,,RTA,,Tomi Korpipää,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,34 characters is too short.
+Qt,234192,0,Typo in documentation,"There is a typo on this page: https://doc.qt.io/qt-5/cmake-manual.html
+
+""Per-direcotry"" should be spelled ""Per-directory"".",5.6.0,Task,Qt,Documentation,2016-05-19T17:14:05.000+0000,2016-05-20T08:50:11.000+0000,Reported,P4: Low,Schneider,Schneider,,,,,Qt Documentation Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,21 characters is too short.
+RedHat,12819113,0,Update and test on Strimzi version 0.12.1 (AMQ Streams 1.2 ),,,Task,Drools,,2019-07-22T05:59:45.000+0000,2019-07-29T03:26:27.000+0000,Open,Major,Massimiliano Dessi,Massimiliano Dessi,,,HADrools,,Massimiliano Dessi,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,60 characters is in range.
+RedHat,13259062,0,Remove dryRunOpts import from console package,,,Sub-task,OpenShift Dev Console,UI,2021-02-09T08:31:36.000+0000,2021-02-12T07:30:56.000+0000,To Do,Unprioritized,Rohit Rai,Rohit Rai,,,,,Rohit Rai,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,45 characters is in range.
+RedHat,12826083,0,Allow the main testsuite/integration/clustering surefire execution to run for 75 mins,We are regularly seeing CI failures because the clustering testsuite has a surefire execution that runs over an hour. So bump the surefire.forked.process.timeout setting to 4500 from the current 3600.,,Task,WildFly,Test Suite,2019-09-03T15:56:39.000+0000,2019-09-03T16:31:52.000+0000,Open,Major,Brian Stansberry,Brian Stansberry,,,,,Brian Stansberry,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,85 characters is too long.
+RedHat,13202675,0,"As a user of Quay Operator, I want to be able to scale Mirroring beyond a single Pod.",Currently TNG Operator deploys a separate mirroring Pod when managed component mirroring is enabled.  Operator should allow for more than one mirroring Pod (e.g. via HPA) in a way that does not require user to manually adjust the Mirror Pod deployment.,,Feature Request,Project Quay,,2020-11-23T08:39:11.000+0000,2021-05-19T17:08:21.000+0000,Open,Minor,Bill Dettelback,Bill Dettelback,,,triaged,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,85 characters is too long.
+RedHat,12498010,0,Oracle Reauthentication plugin,Implement an Oracle Reauthentication plugin using Proxy Authentication.,1.1.0.CR2,Feature Request,IronJacamar,JDBC,2013-08-06T02:04:15.000+0000,2013-08-06T02:45:45.000+0000,Open,Minor,Ricardo Arguello,Ricardo Arguello,,,,,Jesper Pedersen,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,30 characters is too short.
+RedHat,12551075,0,Sansa doesn't have Ant installed,Jenkins node Sansa does not have Ant installed.,,Bug,JBoss Transaction Manager,Testing,2014-09-04T06:01:25.000+0000,2014-09-04T09:51:28.000+0000,Open,Blocker,Gytis Trikleris,Gytis Trikleris,,,,5.0.4,Thomas Jenkinson,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,32 characters is too short.
+Spring,19115,0,"allow ""refreshable"" list of items",,,Sub-task,Spring Rich Client Project,,2008-01-11 00:00:03,2008-01-15 22:05:50,Open,Major,Peter De Bruycker,Peter De Bruycker,,,,,Peter De Bruycker,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,33 characters is too short.
+Spring,55905,0,Release 1.5.1,,,Task,Spring Data JPA,Infrastructure,2014-02-25 07:29:21,2014-03-13 10:18:28,Open,Minor,Thomas Darimont,Thomas Darimont,,,,1.5.1 (Codd SR1),Oliver Gierke,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,13 characters is too short.
+Spring,10984,0,o.s.web.util.Log4jConfigListener - able to load log4j config file from file system,"My use case requries me to have my log4j.properties located on a AS/400 server and Tomcat running on a Win2003 box. 
+
+Tomcat must be able to use the log4j.properties located on the AS/400 file system.
+
+I am using Spring to setup log4j in web.xml such as:
+
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>60000</param-value> <!-- 1 min -->
+	</context-param>
+
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/log4j.properties</param-value>
+	</context-param>
+
+In Spring 1.1.3 it is not possible to specify the location of log4j.properties outside the web application archive. Okay yes it is possible if you do not have the defined log4jConfigLocation in the web.xml file then it would default to locate the log4j.properties in the classpath.
+
+I do not want to alter the CLASSPATH of TOMCAT or whatever web container we are using. I want to be able to specify the location of the log4j.properties file in the web.xml file. So I modified the Log4jWebConfigurer to be able to do this. Now I can set the location of the log4j.properties in web.xml such as:
+
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>file:/C:/mylog4j.properties</param-value>
+	</context-param>
+
+
+And it would get the file from the file system. I am using Springs own code to locate the file (PathMatchingResourcePatternResolver).
+
+I failed to make SF CVS work so I downloaded the nightly snapshot and modified the java file.
+
+I have attached my modified java file to this JIRA.
+
+
+/Claus",1.1.3,Improvement,Spring Framework,Web,2005-01-13 20:16:32,2005-01-28 03:00:16,Open,Minor,Claus Ibsen,Claus Ibsen,,,,,Juergen Hoeller,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,82 characters is too long.
+Spring,74059,0,Invalid grails install causes cryptic error messages when executing commands,"If a user deleted or moved  Grails install configure in the workspace without also changing the workspace configuration to point to the new location, then the install is 'invalid'. But we don't check for this and get a cryptic error message when executing commands instead.
+
+Before executing a command we should check whether the Grails install we are about to use actually exists in the location the configuration is pointing to. If not, we whould provide a nicer error message.
+
+{noformat}
+eclipse.buildId=2.6.0.201101261000-M1
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_CA
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+
+Error
+Wed Jan 26 11:13:38 PST 2011
+Command failed, see details for output.
+
+java.lang.Exception: Command failed with the following output:
+---- System.out ----
+
+---- System.err ----
+Exception in thread ""main"" java.lang.NoClassDefFoundError: org/codehaus/groovy/grails/cli/support/GrailsStarter
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.cli.support.GrailsStarter
+at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+Could not find the main class: org.codehaus.groovy.grails.cli.support.GrailsStarter.  Program will exit.
+
+at com.springsource.sts.grails.core.launch.SynchLaunch$LaunchResult.getException(SynchLaunch.java:133)
+at com.springsource.sts.grails.core.launch.SynchLaunch$ResultFromTerminatedLaunch.getStatus(SynchLaunch.java:247)
+at com.springsource.sts.grails.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:151)
+at com.springsource.sts.grails.core.launch.SynchLaunch.synchExec(SynchLaunch.java:52)
+at com.springsource.sts.grails.commands.GrailsExecutor.synchExec(GrailsExecutor.java:107)
+at com.springsource.sts.grails.commands.GrailsCommand.synchExec(GrailsCommand.java:129)
+at com.springsource.sts.grails.ui.internal.wizard.ANewGrailsProjectWizard$1.run(ANewGrailsProjectWizard.java:140)
+at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+{noformat}",2.6.0.M1,Bug,Spring Tool Suite,GRAILS,2011-01-26 11:23:09,2011-09-26 13:31:16,Open,Minor,Kris De Volder,Kris De Volder,,,,,Kris De Volder,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,76 characters is too long.
+Spring,12700,0,Maven 2 poms don't identify optional dependencies,"The Spring poms for Maven 2 list all dependencies as required, and this causes a large number of unnecessary transitive dependencies in projects which make use of Spring.
+
+This is especially true for spring-orm, but also applies to spring-hibernate and probably other modules.",,Bug,Spring Modules,,2005-11-09 13:57:57,2006-06-19 09:23:11,Open,Major,Robert Egglestone,Robert Egglestone,,,,,Steven Devijver,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,49 characters is in range.
+Spring,33370,0,Remove spring-tx dependency from MessagingTemplate,"We have several ways of starting the MessageFlow
+
+1. gateway
+2. channel.send(message)
+3. message-publisher
+4. inbound-adapter
+5. scheduler
+6. poller
+
+1, 2 and 3 involves 3rd party to initiate the flow. Such 3rd party can begin transaction before exercising any of the scenarios. So TX configuration could be easily done in Spring the conventional way (annotation Gateway interface with @Transactional) and the Thread would propagate the TX context until thread boundary breaks. The main thing is that all 3 of them expect TX to exist before they are initiated. 
+
+4, 5 and 6 does not involve human to initiate the flow, so it make sense to expose TX configuration (e.g., the same way we do it in poller now).
+
+_MessagingTemplate_ is really a helper class used by all of the above scenarios and based on the scenario transactional context might or might not exist. But in any event _MessagingTemplate_ should not directly depend on spring-tx API.
+",2.0 M7,Sub-task,Spring Integration,Core,2010-09-15 18:28:24,2010-09-15 18:40:44,Open,Minor,Oleg Zhurakousky,Oleg Zhurakousky,,,,2.0 RC1,Oleg Zhurakousky,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,50 characters is in range.
+Mojang,163166,0,When i try to open minecraft the game crashes,"The game crashes when i try to open it.
+
+I was expecting to open the game
+It never happend to me before the new launcher
+
+*Steps to Reproduce:*
+1. Try to open the game
+",2.0.806 (Windows),Bug,Minecraft Launcher,,2017-02-12 15:04:57,2018-04-27 15:57:00,Open,,Vinicius Paulo Novelli,Vinicius Paulo Novelli,,,crash,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,45 characters is in range.
+Mojang,329029,0,Sweet berry bushes dont damage the player,"There is not much to say for this bug. I was just playing a normal survival world and fell in a sweet berry Bush and walked out of it without taking damage. Might have been caused by the latest hotfix.
+
+This occurred on my xbox one, bedrock, version 1.14.60",1.14.60,Bug,Bedrock Dedicated Server,,2020-05-28 00:36:48,2020-05-28 09:45:50,Open,,Benjamin Case,Benjamin Case,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,41 characters is in range.
+Mojang,370049,0,Cant join friends world,"Hi mojang , firstly the game is superb but I have a issue I cant join my friends world and play together nor he can join my world its constantly showing UNABLE TO CONNECT TO THE WORLD we tried several times for atleast a month now please fix this we have tried every possible way but its not working . We are playing on wifi and our xbox settings is multiplayer . Sometimes we get into a game but it is very rare . Please fix this pr just make it like java where multiplayer his in the title screen and we just need the ip adress . Thank you ",1.16.20,Bug,Bedrock Dedicated Server,,2020-09-04 10:51:24,2020-09-04 11:32:33,Open,,Rudra Phadnis,Rudra Phadnis,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,23 characters is too short.
+Mojang,182869,0,The leaves on trees turned black,The leaves on the trees somehow turned black for some unknown reason ,1.2.2.3,Bug,Minecraft (Bedrock codebase),,2017-10-07 01:25:54,2017-10-10 11:27:31,Open,,Jake Bron,Jake Bron,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,32 characters is too short.
+Mojang,233711,0,The game will crash after significant changes when attempting to save and quit in the Nintendo Switch version of the game.,"The game will crash after significant changes when attempting to save and quit in the Nintendo Switch version of the game. I've been on the _Save and Quit_ screen for at least 15 minutes, unable to do anything in-game.",1.10.0,Bug,Minecraft (Bedrock codebase),,2019-04-03 03:46:39,2019-05-08 10:42:58,Open,,Evan Reardon,Evan Reardon,,,switch-crash,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,122 characters is too long.
+Mojang,246179,0,Cats tamed from villages keep going back to the village/scoot around while sitting,"[^Minecraft_2019-06-15-21-42-23_1.mp4]
+
+Hopefully that link works, I'm doing all of this on my phone. Ever since 1.14 came out, I redownloaded minecraft on my Android S8 and have been playing it nonstop. Whenever I tame cats from another village and bring them home with me, they never want to stay. When I make them sit, they tend to scoot around literally everywhere until they can get out of my house and flee back to their village. If I go around the village, the cat will teleport to me, ignore me, and run back. My friend's that I play with on IOS have never had this problem on their worlds, and it is quite frustrating. I can never tame cats from villages, I can only spawn them in if I don't want to run into this problem. ",1.11.4,Bug,Minecraft (Bedrock codebase),,2019-06-16 05:03:36,2020-07-01 12:32:16,Open,,Sydney,Sydney,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,82 characters is too long.
+SecondLife,85540,0,crash in LLPanelGroupInvite after inviting someone to a group,"I invited someone to a group and the viewer crashed.
+https://osiris.lindenlab.com/viewer_crash_browser/index.php?filter_id=26199
+
+[0] LLPanelGroupInvite::impl::onAvatarNameCache(LLUUID const &,LLAvatarName const &,void *) [secondlife-bin llpanelgroupinvite.cpp]
+[1] boost::detail::function::void_function_obj_invoker2<1="""">,boost::arg<2>,boost::_bi::value > >,void,LLUUID const &,LLAvatarName const &>::invoke(boost::detail::function::function_buffer &,LLUUID const &,LLAvatarName const &) [secondlife-bin function_template.hpp]
+[2] boost::signals2::detail::signal2_impl,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker::operator()(boost::shared_ptr >,boost::signals2::slot2 >,boost::signals2::mutex> > const &) [secondlife-bin signal_template.hpp]
+[3] boost::signals2::detail::slot_call_iterator_t,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> >::dereference() [secondlife-bin slot_call_iterator.hpp]
+[4] boost::signals2::optional_last_value::operator(),int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> > >(boost::signals2::detail::slot_call_iterator_t,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> >,boost::signals2::detail::slot_call_iterator_t,int,std::less,boost::function,boost::function,boost::signals2::mutex>::slot_invoker,std::_List_iterator >,boost::signals2::slot2 >,boost::signals2::mutex> >,std::allocator >,boost::signals2::slot2 >,boost::signals2::mutex> > > > >,boost::signals2::detail::connection_body >,boost::signals2::slot2 >,boost::signals2::mutex> >) [secondlife-bin optional_last_value.hpp]
+[5] boost::signals2::detail::signal2_impl,int,std::less,boost::function,boost::function,boost::signals2::mutex>::operator()(LLUUID const &,LLAvatarName const &) [secondlife-bin signal_template.hpp]
+[6] LLAvatarNameCache::processName(LLUUID const &,LLAvatarName const &,bool) [secondlife-bin llavatarnamecache.cpp]
+[7] LLAvatarNameResponder::result(LLSD const &) [secondlife-bin llavatarnamecache.cpp]
+[8] LLCurl::Responder::completed(unsigned int,std::basic_string,std::allocator > const &,LLSD const &) [secondlife-bin llcurl.cpp]
+[9] LLCurl::Responder::completedRaw(unsigned int,std::basic_string,std::allocator > const &,LLChannelDescriptors const &,boost::shared_ptr const &) [secondlife-bin llcurl.cpp]
+[10] `anonymous namespace'::LLHTTPClientURLAdaptor::complete(LLChannelDescriptors const &,boost::shared_ptr const &) [secondlife-bin llhttpclient.cpp]
+[11] LLURLRequestComplete::process_impl(LLChannelDescriptors const &,boost::shared_ptr &,bool &,LLSD &,LLPumpIO *) [secondlife-bin llurlrequest.cpp]
+[12] LLPumpIO::processChain(LLPumpIO::LLChainInfo &) [secondlife-bin llpumpio.cpp]
+[13] LLPumpIO::callback() [secondlife-bin llpumpio.cpp]
+[14] LLAppViewer::mainLoop() [secondlife-bin llappviewer.cpp]
+[15] WinMain [secondlife-bin llappviewerwin32.cpp]
+[16] __tmainCRTStartup [secondlife-bin crtexe.c]",,Bug,1. Second Life Viewer - VWR,Crashes,2011-06-30 17:01:10,2011-10-21 09:07:17,Awaiting Review,Unset,Dan Linden,Dan Linden,,,crashhunters,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,61 characters is in range.
+SecondLife,137587,0,Right click menu is not enabled in Script Editor on STORM-1831 test viewer,Right click menu is disabled on script editors in STORM-1831 test viewer. It's my fault. I'll link to a repo with the fix.,,Story,Snowstorm,,2014-04-29 17:34:57,2014-10-14 10:26:00,Open,Unset,Cinder Roxley,Cinder Roxley,,,,,Oz Linden,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,74 characters is too long.
+SecondLife,74419,0,Crash in LLKeyframeDataCache::clear,"Viewer crashed on exit with the following backtrace:
+{noformat}
+#0  malloc_consolidate (av=<value optimized out>) at malloc.c:5089
+#1  0xb663376f in _int_free (av=<value optimized out>, p=0xb99a9b8) at malloc.c:4968
+#2  0xb66368ad in *__GI___libc_free (mem=0xb99a9c0) at malloc.c:3716
+#3  0xb5626ac0 in ?? () from /usr/lib/tls/libnvidia-tls.so.1
+#4  0x091ff06a in DeletePointer::operator()<LLKeyframeMotion::JointMotion> (this=0xbf9210ec, ptr=0xb99a9c0) at viewer-development/indra/llcommon/llstl.h:85
+#5  0x091ff090 in std::for_each<__gnu_cxx::__normal_iterator<LLKeyframeMotion::JointMotion**, std::vector<LLKeyframeMotion::JointMotion*, std::allocator<LLKeyframeMotion::JointMotion*> > >, DeletePointer> (__first=..., __last=..., __f=...) at /usr/include/c++/4.1.3/bits/stl_algo.h:159
+#6  0x091ec5fa in ~JointMotionList (this=0xb1a9c00, __in_chrg=<value optimized out>) at viewer-development/indra/llcharacter/llkeyframemotion.cpp:84
+#7  0x091ff12e in DeletePairedPointer::operator()<std::pair<LLUUID const, LLKeyframeMotion::JointMotionList*> > (this=0xbf92115c, ptr=...)
+    at viewer-development/indra/llcommon/llstl.h:105
+#8  0x091ff168 in std::for_each<std::_Rb_tree_iterator<std::pair<LLUUID const, LLKeyframeMotion::JointMotionList*> >, DeletePairedPointer> (__first=..., __last=..., __f=...)
+    at /usr/include/c++/4.1.3/bits/stl_algo.h:159
+#9  0x091ec6f4 in LLKeyframeDataCache::clear () at viewer-development/indra/llcharacter/llkeyframemotion.cpp:2218
+#10 0x08135551 in LLAppViewer::cleanup (this=0xa4d8f28) at viewer-development/indra/newview/llappviewer.cpp:1430
+#11 0x09176c17 in main (argc=6, argv=0xbf921574) at viewer-development/indra/newview/llappviewerlinux.cpp:109
+{noformat}",,Defect,Snowstorm,,2010-12-27 10:24:03,2011-06-13 13:59:02,Open,Minor,Vadim ProductEngine,Vadim ProductEngine,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,35 characters is too short.
+SecondLife,99644,0,Snowstorm Team test build 2012-05-01,Please test linked issues,,QART,Snowstorm,,2012-05-01 16:56:08,2012-05-04 15:26:57,Open,Minor,Oz Linden,Oz Linden,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,36 characters is too short.
+SecondLife,80755,0,"As a developer, I want to be able to override the local platform for manipulating and testing the configuration","When merging the changes for OPEN-50, I found that I wanted to be able to use the --dry-run option to see what system commands would be executed for the configure and build sub-commands on each of the platforms.  At present, the platform used is always the real local platform, but I wanted to be able to override that so that I could see how a configuration change would affect the system commands used on a different platform.",,New Feature,Open Development,autobuild,2011-04-06 05:20:38,2011-04-11 10:30:23,Awaiting Review,Major,Oz Linden,Oz Linden,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,111 characters is too long.
+SecondLife,133160,0,Add ability to copy notification text to clipboard,,,Bug,1. BUG Project,,2014-01-31 16:15:22,2014-02-10 09:20:40,Awaiting Review,Unset,Jonathan Yap,Jonathan Yap,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,50 characters is in range.
+JiraEcosystem,96736,0,Upgrade placeholder polyfill to use skate,,,Improvement,Atlassian User Interface,,2014-07-13 23:45:27,2014-08-13 20:46:56,Triage,Major,Joshua Nelson,Joshua Nelson,Fixed,,,,Joshua Nelson,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,41 characters is in range.
+JiraEcosystem,56595,0,Allow bulk update of multiple rows with a single statement,"If you need to update multiple entities at once, you need to do it like this at the moment:
+
+{code}
+Query myQuery = Query.select().where(""firstColumn = ?"", firstValue);
+MyEntity[] myEntities = ao.find(MyEntity.class, myQuery);
+for (MyEntity myEntity : myEntities) {
+    myEntity.setSecondColumn(secondValue);
+    myEntity.save();
+}
+{code}
+
+This results in lots of the following SQL statements:
+{code}
+UPDATE myEntity
+SET secondColumn = ""secondValue""
+WHERE ID = x
+{code}
+
+For every single entity that needs to be updated.
+
+This could be improved with something like this (just my suggestion, not sure whether this is possible):
+
+{code}
+Query myQuery = Query.select().where(""firstColumn = ?"", firstValue);
+ao.update(MyEntity.class, myQuery, ""secondColumn"", ""secondValue"");
+{code}
+
+At the end, the following statement should be executed:
+
+{code}
+UPDATE myEntity
+SET secondColumn = ""secondValue""
+WHERE firstColumn = ""firstValue""
+{code}
+
+I know it's not as easy as it looks like, but it would be a huge improvement if you need to update multiple entities at once.",ao-plugin 0.19.7,Improvement,ActiveObjects,ActiveObjects (lib),2012-02-23 07:45:11,2014-05-27 02:07:27,Open,Major,Former user,Former user,,,roadmap-performance,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,58 characters is in range.
+JiraEcosystem,110215,0,"Left padding needs to be removed from page-panel-sidebar when ""responsive""","When you reduce the browser width to the 1023 breakpoint the aui-page-panel-sidebar still retains its left padding, so sits slightly indented.",5.8.0,Bug,Atlassian User Interface,5.8.0,2015-01-07 18:32:16,2015-01-07 21:34:44,Triage,Minor,Mike Sharp,Mike Sharp,,,,,Mike Sharp,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,74 characters is too long.
+JiraEcosystem,204867,0,Single Select control will flow up and off screen instead of just expanding the size and expanding below,"If the Single Select control is used near the top of a page and there isn't enough room at the bottom for it to expand, the control will expand above instead of below and can be unusable.
+
+After some digging I noticed that it may be an issue with the tether constraint to: 'window'. Using to: 'scrollParent' provides the desired functionality where the control will expand below and allow users to scroll down.",6.0.6,Bug,Atlassian User Interface,Single select,2017-05-03 10:59:52,2019-02-19 10:05:02,Open,Minor,Shane Knowles,Shane Knowles,,,popper,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,104 characters is too long.
+JiraEcosystem,91728,0,Refapp Single Tenant Arrives,"Provide an option to have atlassian refapp start in a warm state i.e. no tenant, and a means (via REST call) to have a tenant arrive.",,Sub-task,Atlassian Reference Application,,2014-04-21 21:23:03,2014-05-27 02:13:38,Triage,Major,Alex Courtis,Alex Courtis,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,28 characters is too short.
+JiraEcosystem,64048,0,Crucible line comments are unsorted,,M3 (Beta),Bug,Atlassian Connector for Eclipse (discontinued),Crucible,2009-04-03 13:02:29,2009-04-23 08:13:02,Open,Major,Wojtek Seliga,Wojtek Seliga,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,35 characters is too short.
+Sonatype,809524,0,create a new repository for io.adtrace.libpubtest,,,New Project,Community Support - Open Source Project Repository Hosting,,2021-08-16 09:44:09,2021-08-16 10:25:12,Open,Major,nasser amini,nasser amini,,,,,Shane Stecker,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,49 characters is in range.
+Sonatype,717238,0,Help NXRM team with bundling of NXRM community formats into the official NXRM release.,"Work with Joe Stephens and team to make it possible to bundle community NXRM format plugins into the official NXRM distribution. This way, users will have access to the community formats ""out of the box"".
+
+*Follow up from Dan:*
+
+!image-2019-10-14-11-42-00-740.png!",,Task,Developer Experience,,2019-10-14 18:42:33,2020-02-13 22:28:56,Backlog,Minor,Allen Hsieh [X],Dan Rollo,,,okr-q4-contributing,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,86 characters is too long.
+Sonatype,786172,0,A android hidden api by pass,,,New Project,Community Support - Open Source Project Repository Hosting,,2021-04-09 07:41:46,2021-04-09 07:53:30,Open,Major,Jincheng YU,Jincheng YU,,,,,Joel Orlina,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,28 characters is too short.
+Sonatype,717226,0,Review and help on Conda Hosted PR,https://github.com/sonatype-nexus-community/nexus-repository-conda/pull/21,,Task,Developer Experience,,2019-10-14 18:19:36,2020-02-14 02:55:12,Backlog,Minor,Allen Hsieh [X],Jeffry Hesse,,,okr-q3-2019-contributing,,Dan Rollo,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,34 characters is too short.
+Sonatype,717215,0,Create CircleCI ORB that uses maven-release-plugin to do releases,"The ORB we use now has a number of drawbacks, and is confusing about the development version is use after a release (no indication of dev SNAPSHOT, etc).
+
+Rather than trying to re-invent the maven release process, instead see if we can create an ORB that invokes the m-release-p to do releases. Doing so will provide standard ""maven style"" SNAPSHOT versions for development, while using ""release"" versions for releases.",,Task,Developer Experience,,2019-10-14 17:37:37,2019-12-16 21:02:27,Backlog,Minor,Allen Hsieh [X],Dan Rollo,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,65 characters is in range.
+Sonatype,739856,0,When query docker repository api /v2/ on proxy get Authorization error even though anonymous access is available on original repo and proxy,"When query API endpoint /v2/ on proxy of remote docker repository get 401 ""UNAUTHORIZED"" error even though anonymous access is set on proxy repo and on original repo I have no problem to call that API endpoint.
+
+ 
+
+Error message:
+{code:java}
+{""errors"":[{""code"":""UNAUTHORIZED"",""message"":""access to the requested resource is not authorized"",""detail"":null}]}
+{code}",3.21.1,Bug,Dev - Nexus Repo,,2020-04-21 14:36:59,2020-09-03 22:08:42,New,Minor,Marat Salakhutdinov,Marat Salakhutdinov,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,139 characters is too long.
+Sakai,32058,0,Lessons: images in multiple columns exceed the boundary of a block – see screenshot ,"* Log into Sakai 11 and click on a Lessons tool
+* Using ‘Add Colum break’ to create four blocks 
+* For each block, add an image using ‘Embed content on page’ option.  Make sure all four images are the same width, e.g. 300px
+* Once all images are added to the page, use the mouse to make the browser windows smaller.  You can see that the images will exceed the boundary of the blocks –see attached screenshot.  In another words, the images are not responsive.
+",11.0,Bug,Sakai,Lessons,2016-07-12 01:09:00,2016-07-12 04:34:51,Awaiting Review,Major,Fawei Geng,Fawei Geng,,,,12.0,Charles Hedrick,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,84 characters is too long.
+Sakai,29475,0,Use Citations Helper ConfigurationService to control Citations Helper UI,"Depending on site-specific options, certain functionality of the Citations Helper can be turned on/off.  These functions are searching library resources and using Google Scholar.  If configuration is missing for either of these functions, they should not be displayed.  The Citations Helper ConfigurationService handles turning these functions on/off.",2.4.0,Task,Sakai,Content,2007-03-17 10:31:10,2007-03-24 06:25:01,Resolved,Major,Gaurav Cedric Bhatnagar,Gaurav Cedric Bhatnagar,Fixed,,,2.4.0,Gaurav Cedric Bhatnagar,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,72 characters is too long.
+Sakai,16566,0,Delivery 5: SMS Batch Scheduler,"Scheduler logic, Identify messages to process, Concurrency tests, UCT REVIEW",,Task,Contrib: SMS,Project,2008-11-23 16:38:15,2009-06-02 03:04:40,Resolved,Major,Louis Botha,Louis Botha,Fixed,,,0.14,Stephen Marquard,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,31 characters is too short.
+Sakai,24378,0,Iframe resize not working all the time,"Rwiki IFRAME is not always sized correctly - it's possible to get 3 vertical scrollbars (e.g. in edit mode, 1024x768 but also on larger resolutions). The sizing seems not to take the right-hand column into account (View_right, etc.)",2.0,Bug,Sakai,Rwiki,2005-09-19 06:48:56,2005-11-02 11:46:05,Resolved,Major,Stephen Marquard,Stephen Marquard,Won't Fix,,,2.1.0,Ian Boston,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,38 characters is too short.
+Sakai,21038,0,show whether a reflect has been done in a matrix cell,"In the last OSP conference call I agreed to submit this request:
+
+When filling out a matrix, the user can see which cells have uploaded files and forms. However they can't see which have reflections. In some situations reflections are the primary content. The user shouldn't have to check every cell to see which ones have content. Include an icon for each reflection.
+
+",2.5.2,Task,Sakai,OSP: Wizards - Matrix,2008-06-10 09:35:21,2010-03-29 04:46:33,Open,Major,Charles Hedrick,Charles Hedrick,,,,2.8.0,Peter A. Knoop,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,53 characters is in range.
+Sakai,30022,0,Matrix Cell 'Created By' column does not respect viewOwner permission,"The ""Created By"" Column in the matrix cell (or wizard page) should respect the viewOwner permission (otherwise blind evaluations are a moot point). ",2.5.x,Bug,Sakai,OSP: Wizards - Matrix,2008-06-26 05:53:59,2010-04-21 08:07:01,Open,Major,Beth Kirschner,Beth Kirschner,,,,,OSP Jira Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,69 characters is in range.
+Hyperledger,33445,0,Kafka short total interval does not work,"In the fabric/sampleconfig/orderer.yaml, kafka setting:
+
+Kafka:
+  Retry:
+    ShortInterval: 5s
+    ShortTotal: 10m
+    LongInterval: 5m
+    LongTotal: 12h
+
+It is thought that every 5 seconds reconnection will continue for 10 minutes. But actually, about 30 seconds it will trigger long interval timeout, i.e. 5 minutes for 12 hours.
+
+Here is the logs of orderer.
+
+ 
+
+2018-09-04 10:04:24.454 CST [localconfig] completeInitialization -> INFO 001 Kafka.Version unset, setting to 0.10.2.0
+2018-09-04 10:04:24.455 CST [bccsp_sw] openKeyStore -> DEBU 002 KeyStore opened at [/var/hyperledger/orderer/msp/keystore]...done
+2018-09-04 10:04:24.464 CST [bccsp] initBCCSP -> DEBU 003 Initialize BCCSP [SW]
+
+...
+
+2018-09-04 10:04:56.270 CST [orderer/consensus/kafka/sarama] withRecover -> DEBU 200 Failed to connect to broker kafka3.energyx.com:9092: dial tcp 172.24.0.19:9092: connect: connection refused
+2018-09-04 10:04:56.277 CST [orderer/consensus/kafka] try -> DEBU 201 [channel: energyx-orderer-syschan] Initial attempt failed = error creating topic [energyx-orderer-syschan]; failed to retrieve metadata for the cluster
+2018-09-04 10:04:56.277 CST [orderer/consensus/kafka] try -> DEBU 202 [channel: energyx-orderer-syschan] Retrying every 5m0s for a total of 12h0m0s
+
+ ",,Bug,Fabric,,2018-09-04 02:18:57,2018-09-05 03:03:09,Unverified,Medium,Allen Chen,Allen Chen,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,40 characters is in range.
+Hyperledger,34593,0,Update default branch in each of the github projects,Update default branch in each of the github projects to be the latest major release.,,Sub-task,Fabric,,2018-10-10 22:12:02,2018-10-11 21:15:18,To Do,Medium,David Enyeart,David Enyeart,,,,,Christopher Ferris,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,52 characters is in range.
+Hyperledger,42038,0,CLONE - Release fabric-chaincode-node,"Releasing v1.4.2 of the node.js modules. The process is now partly scripted... see the scripts/release.sh is the fabric-chaincode-node repo
+
+ ",,Sub-task,Fabric,fabric-chaincode-node,2019-08-26 19:08:23,2019-08-28 17:45:18,To Do,Medium,David Enyeart,Christopher Ferris,,,,,Matthew White,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,37 characters is too short.
+Hyperledger,16597,0,TPS Scale Up Network 4 Couch DB,"{color:#333333}This story has tests we are going to run from <PlaceHolder> {color}
+ * {color:#333333}Component{color}{color:#333333}:  Performance test with LevelDB{color}
+
+ * {color:#333333}Description{color}{color:#333333}: Launch network, use PTE stress mode to send 100 invoke transactions
+ concurrently to all peers on all channels on all chaincodes,
+ query the ledger for each to ensure the last transaction was written,
+ calculate tps, remove network and cleanup{color}
+ * {color:#333333}Artifact Locations{color}{color:#333333}:  <PlaceHolder>{color}
+
+ * {color:#333333}Network Topology{color}{color:#333333}: 2 Ord, 5 KB, 3 ZK, 4 Org, 8 Peers, 40 Chan, 4 CC{color}
+
+ * {color:#333333}Client Driver{color}{color:#333333}: test_pte.py,PTE{color}",,Task,Fabric,fabric-quality,2017-05-10 20:16:11,2018-07-09 18:23:26,To Do,Medium,Dinesh Kumar,Dinesh Kumar,,This issue blocks FAB-2032,quality,v1.0.0,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,31 characters is too short.
+Hyperledger,12643,0,"as an operator, I should have a cli that I can easily install that lets me interact with the various components of the fabric","as an operator, I should have a cli that I can easily install that lets me interact with the various components of the fabric
+
+The current peer commands are entangled with the validating peer capability, which means that building and installing a peer for Mac and Windows is complicated by the need to have RocksDB etc installed.
+
+We can extract the peer commands into a separate component that is not dependent on the internals of the peer node, that can be simply installed as a platform-specific binary.",,Story,Fabric,,2016-09-10 20:09:01,2017-04-12 14:45:39,To Do,Medium,Christopher Ferris,Christopher Ferris,,,operations,,Christopher Ferris,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,125 characters is too long.
+Hyperledger,31303,0,Possible issue where another org is unable to instantiate a chaincode container easily when using node.js chaincode ,"The problem here is around the fact that different organisations could require slightly different chaincode packages when using node.js because they could have different network requirements in order to build the chaincode container image which is done running npm install --production.
+
+For example org1 may have no requirements so do not need to include a '.npmrc' file in the chaincode package. org2 however are a using a proxy so need to set the proxy information in the .npmrc and include it in the chaincode package.
+
+From experimentation, I found the following
+ - If both orgs have the chaincode installed then instantiation or upgrade will build the chaincode containers for both without issue
+ - If however, org2 did not have the chaincode installed at instantiation/upgrade time, and add the chaincode package later. The chaincode container image will not be built and the following error is received
+
+{noformat}
+Error: 2 UNKNOWN: error executing chaincode: could not get ChaincodeDeploymentSpec for basic-sample-network:0.2.4: get ChaincodeDeploymentSpec for basic-sample-network/mychannel from LSCC error: chaincode fingerprint mismatch data mismatch
+{noformat}
+
+Currently there is no way to ""pre-vendor"" the necessary node_modules that would make up a complete chaincode package client side due to 2 issues
+1. The node-sdk packager explicitly ignores the node_modules directory
+2. A solution to native modules would be required as the target platform may not match the client platform
+
+This implies that it should be possible to include or be able to provide npm configuration information that is either not part of the package or not included in the fingerprint of the package to allow for this situation.
+It looks like it might be possible to use the upgrade mechanism as a workaround
+
+I am not familiar with the fingerprint mechanism and based this Jira on some simple experiments so I may also be missing other scenarios where problems could occur.
+",v1.1.0,Bug,Fabric,fabric-sdk-node,2018-06-22 15:15:50,2018-09-08 10:33:51,To Do,Medium,Dave Kelsey,Dave Kelsey,,,chaincode,v1.3.0,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,116 characters is too long.
+IntelDAOS,17620,0,Combine NVMe health statistics and namespaces with controller in bindings,"This aggregation should be done as early as possible in the discovery flow to simplify things.
+
+Combine the structures by mapping using the PCI address identifier in the bindings so output to the go server code already contained constructed controllers with populated fields for health statistics and namespaces.
+
+Improve code coverage of processReturn() in the lib/ SPDK bindings.",0.7 Community Release,Story,DAOS,Control Plane,2019-11-04 05:32:23,2020-01-06 01:33:12,Open,P4-Low,Tom Nabarro,Tom Nabarro,,,,0.9 Community Release,Tom Nabarro,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,73 characters is too long.
+IntelDAOS,20741,0,Update nvme recovery test function to find the default server config path when run with systemd,"get_server_config() is used to get the server config file and now the test is starting the server with systems that have default server config file /etc/daos/daos_server.yml.
+
+The test needs to be fixed to have both ways so if user runs with systems or manually can find the server config file. ",,Bug,DAOS,System Test,2021-02-09 13:30:23,2021-02-25 08:59:56,Open,P3-Medium,Samir Raval,Samir Raval,,,Skipped_Test,,Samir Raval,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,95 characters is too long.
+IntelDAOS,11776,0,No PMIX Test Conversion - corpc,Convert all cart/test/corpc tests to use no pmix if applicable.,,Story,CaRT,,2019-07-16 08:09:42,2019-12-18 14:30:31,Open,P4-Low,Sylvia Oi Yee Chan,Sylvia Oi Yee Chan,,,,,Scott Peirce,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,31 characters is too short.
+IntelDAOS,21052,0,CLONE - Update Argobots to 1.1 RC2,"[Argobots 1.1 RC1|https://github.com/pmodels/argobots/releases/tag/v1.1rc1] was released on Mar. 15, 2021.
+
+We need to update our builds (RPMs and daos->`build.config`) to use this new release.
+
+Which branches need this update needs TBD.",1.1 Community Release,Story,DAOS,Build,2021-03-29 05:56:10,2021-04-05 09:57:32,Open,P2-High,Brian J. Murrell,Brian J. Murrell,,This issue Clones DAOS-7024,,2.0 Community Release,Brian J. Murrell,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,34 characters is too short.
+IntelDAOS,16112,0,Start initial email discussion about reintegration algorithm,,,Improvement,DAOS,,2019-02-06 13:19:35,2019-03-06 13:50:47,Open,P4-Low,Byron Marohn,Byron Marohn,,,,,Byron Marohn,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,60 characters is in range.
+IntelDAOS,16125,0,implement daos agent launch + cleanup in tests,Implement launch and cleanup of daos agent on nodes as appropriate before and after each test suite.,,Question/Request,DAOS,,2019-01-31 15:49:51,2019-04-05 09:57:56,Open,P4-Low,Stephen Willson,Stephen Willson,,,,,Stephen Willson,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,46 characters is in range.
+JFrog,26116,0,Support Artifactory to split filestore between multiple locations,Currently only one filestore location for a NFS can be defined.  Should be able to split up repositories to multiple locations to manage disk storage more flexibly.,,New Feature,Artifactory Binary Repository,Artifact Storage,2014-10-14 16:45:13,2015-10-26 17:56:45,Open,4 - Normal,Aaron Rhodes,Aaron Rhodes,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,65 characters is in range.
+JFrog,60102,0,LDAP UI fix from Group Name to Setting Name,"Currently in the LDAP configuration page in Artifactory, under the ""LDAP Group Settings"" the UI says Group Name (see screenshot).
+
+Instead of ""Group Name"" this should be:
+""Setting Name"" or ""Group Setting Name""",,Improvement,Artifactory Binary Repository,,2018-07-19 11:55:52,2018-08-16 17:47:06,Open,4 - Normal,Ariel Kabov,Ariel Kabov,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,43 characters is in range.
+JFrog,66530,0,Add pipeline integration tests,,3.0.0,Task,Jenkins Artifactory Plug-in,,2019-01-06 14:47:08,2019-02-07 10:58:06,Open,4 - Normal,Yahav Itzhak,Yahav Itzhak,,,,,Yahav Itzhak,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,30 characters is too short.
+JFrog,66408,0,use go-modules to build Replicator,,,Sub-task,Artifactory Binary Repository,,2019-01-01 11:34:48,2019-01-01 11:42:29,Open,4 - Normal,Yoaz Menda,Yoaz Menda,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,34 characters is too short.
+JFrog,33997,0,Improve tree performance by fetching related actions only for selected item,"Currently when a user navigates to tree / simple browser the available actions are fetched for all items instead of only the selected item.
+This can cause significant delay in time it takes to render the tree. ",,Bug,Artifactory Binary Repository,Web UI,2016-05-16 10:54:56,2016-06-08 12:19:54,Open,3 - High,Roy Zanbel,Roy Zanbel,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,75 characters is too long.
+JFrog,33352,0,System health ping authentication failure should not add to failure count,"System export with an admin user that has a changed password (not default 'password')
+Move DB to fresh Oracle from Derby.
+Start up server, starts up successfully
+Try to log in with admin you see the error message: ""Too many failed attempts, try again in 1 seconds""
+This is because there is a proxy server that is doing authenticated health pings using the admin credentials from the previous system
+
+Workaround: Turn off the proxy server during migration, or do an artifactory.conig.import.xml security.import.xml procedure to get login credentials set.
+
+Change request: make it so system pings do not add to the authentication failure count",4.7.0,Change Request,Artifactory Binary Repository,Security,2016-04-01 17:07:38,2016-04-04 16:59:18,Open,4 - Normal,Aaron Rhodes,Aaron Rhodes,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,73 characters is too long.
+MongoDB,1363465,0,"Getting ""Authentication failed because the remote party has closed the transport stream"" while connection mongodb V4.0 using C# driver.","We are trying to implement SSL authentication with the MongoDB 4.0 version using the below connection string and facing authentication issues.
+
+ *mongodb://username:password@hostname:27017/?authSource=admin&readPreference=primary&ssl=true&sslPEMKeyFile=C:/etc/ssl/client.pem""*
+
+At MongoDB log, we see the application connections are closing immediately with error message :
+
+*encountered a network error during SourceMessage: SocketE**xception: no shared cipher*
+
+application log: 
+2020-02-20 12:39:53 [Debug] Failed to authenticate HTTPS connection.
+ Properties: \{ EventId: { Id: 1 }, SourceContext: ""Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware"", ConnectionId: ""0HLTM5FID0INL"", Application: ""DCDService"" }
+ MachineName: NB1999-01924579
+ System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+    at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+    at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+    at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+    at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+    at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+    at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+    at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+    at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+    at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+    at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+    at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+ 
+ 
+ 
+ ",,Bug,C# Driver,Connectivity,2020-05-27 10:09:04,2020-06-22 14:43:23,Needs Triage,Major - P3,naresh kandala,naresh kandala,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,135 characters is too long.
+MongoDB,1788715,0,Make FileCopyBasedInitialSyncer the default on enterprise with a supported storage engine,"Supported storage engine is WiredTiger, when not inMemory.",,Task,Core Server,,2021-06-17 19:36:39,2021-07-30 17:29:47,Needs Verification,Major - P3,Matthew Russotto,Matthew Russotto,,,pm-1897-M2,5.3 Required,Backlog - Replication Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,89 characters is too long.
+MongoDB,881089,0,Complete TODO listed in SERVER-39797,,,Task,Core Server,,2019-07-31 18:50:51,2019-09-16 20:33:23,Needs Verification,Major - P3,PM Bot,PM Bot,,,todo,,Backlog - Replication Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,36 characters is too short.
+MongoDB,1892730,0,Add compression to evergreen config.,Add compression to evergreen config.,,Task,Rust Driver,,2021-10-07 16:02:26,2021-10-13 16:50:08,Needs Triage,Major - P3,Andrew Witten,Andrew Witten,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",TRUE,36 characters is too short.
+MongoDB,973691,0,Support excluding whole directories in archive.targz_pack,archive.targz_pack now supports excluding files but it doesn't support excluding whole directories. It would be useful to add that.,,New Feature,Evergreen,,2019-10-20 22:09:13,2019-10-21 14:39:04,Needs Triage,Major - P3,Chenhao Qu,Chenhao Qu,,,,,Backlog - Evergreen Team,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,57 characters is in range.
+MongoDB,1417364,0,Implement {{ChangeStreamGetMore}} operation,"As the next part of implementing change streams, we need to define a {{ChangeStreamGetMore}} struct that implements {{Operation}}. This operation should wrap the {{GetMore}} operation, calling {{Aggregate::build}} and {{Aggregate::handle_response}} in its own respective {{build}} and {{handle_response}} methods.
+
+Additionally, the {{poll_next}} methods on the {{ChangeStream}}'s {{Stream}} implementation should be updated to create and execute a {{ChangeStreamGetMore}} operation, following the pattern used in the {{Cursor}}'s {{poll_next}} implementation.",,New Feature,Rust Driver,,2020-07-22 19:15:15,2021-12-15 18:01:35,Needs Triage,Major - P3,Samuel Rossi,Samuel Rossi,,,,,,,"Empty DataFrame
+Columns: [Author, Created, Comment]
+Index: []",FALSE,43 characters is in range.

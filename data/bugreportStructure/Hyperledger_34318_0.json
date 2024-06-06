@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":34318,
+        "EvoId":0,
+        "Summary":"CLI command 'did rotate-key' doesn't work in some cases",
+        "Description":"*Environment:*\r\nindy-node 1.6.619\r\nindy-plenum 1.6.553\r\nindy-cli 1.6.6~759\r\n\r\n*Steps to Reproduce:*\r\n1. Create Docker pool with 4 nodes\r\n2. Connect to pool and rotate default Trustee key many times\r\n3. run [traffic_shaper.sh|https:\/\/docs.google.com\/document\/d\/1swLE5FwYY0tQXWpcge7KNQ5oosiz4P57Iz9843e7uHY\/edit#] with default latencies\r\n4. try to rotate key few times\r\n5. try to send NYM\r\n\r\n*Expected results:*\r\nCLI guarantees consistency between keys in ledger and in local storage\r\n\r\n*Actual Results:*\r\nOn step 2 keys successfully changed in ledger\r\nOn step 4 keys successfully changed in CLI, but ledger response falls in timeout\r\nOn step 5 error appears: _Transaction has been rejected: client request invalid: InsufficientCorrectSignatures(0, 1)_",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Indy SDK",
+        "Components":null,
+        "CreatedDate":"2018-10-03 14:11:12",
+        "ResolvedDate":"2018-10-11 12:01:25",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"NIkita Zhigunenko",
+        "Reporter":"NIkita Zhigunenko",
+        "Resolution":null,
+        "IssueLinks":"This issue relates to INDY-1707",
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Artem Ivanov",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

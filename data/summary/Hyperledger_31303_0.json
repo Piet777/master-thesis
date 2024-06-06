@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":31303,
+        "EvoId":0,
+        "Summary":"Possible issue where another org is unable to instantiate a chaincode container easily when using node.js chaincode ",
+        "Description":"The problem here is around the fact that different organisations could require slightly different chaincode packages when using node.js because they could have different network requirements in order to build the chaincode container image which is done running npm install --production.\r\n\r\nFor example org1 may have no requirements so do not need to include a '.npmrc' file in the chaincode package. org2 however are a using a proxy so need to set the proxy information in the .npmrc and include it in the chaincode package.\r\n\r\nFrom experimentation, I found the following\r\n - If both orgs have the chaincode installed then instantiation or upgrade will build the chaincode containers for both without issue\r\n - If however, org2 did not have the chaincode installed at instantiation\/upgrade time, and add the chaincode package later. The chaincode container image will not be built and the following error is received\r\n\r\n{noformat}\r\nError: 2 UNKNOWN: error executing chaincode: could not get ChaincodeDeploymentSpec for basic-sample-network:0.2.4: get ChaincodeDeploymentSpec for basic-sample-network\/mychannel from LSCC error: chaincode fingerprint mismatch data mismatch\r\n{noformat}\r\n\r\nCurrently there is no way to \"pre-vendor\" the necessary node_modules that would make up a complete chaincode package client side due to 2 issues\r\n1. The node-sdk packager explicitly ignores the node_modules directory\r\n2. A solution to native modules would be required as the target platform may not match the client platform\r\n\r\nThis implies that it should be possible to include or be able to provide npm configuration information that is either not part of the package or not included in the fingerprint of the package to allow for this situation.\r\nIt looks like it might be possible to use the upgrade mechanism as a workaround\r\n\r\nI am not familiar with the fingerprint mechanism and based this Jira on some simple experiments so I may also be missing other scenarios where problems could occur.\r\n",
+        "VersionsAffected":"v1.1.0",
+        "IssueType":"Bug",
+        "Project":"Fabric",
+        "Components":"fabric-sdk-node",
+        "CreatedDate":"2018-06-22 15:15:50",
+        "ResolvedDate":"2018-09-08 10:33:51",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"Dave Kelsey",
+        "Reporter":"Dave Kelsey",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"chaincode",
+        "VersionsFixed":"v1.3.0",
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

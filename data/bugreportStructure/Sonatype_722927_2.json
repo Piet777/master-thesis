@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":722927,
+        "EvoId":2,
+        "Summary":"Yum Metadata Not Fully Rebuilt After Running Cleanup Tags task",
+        "Description":"The Yum metadata is not fully rebuilt after running the admin - cleanup tags task against a yum repo i.e. the repo's filelists, primary and other xml files are removed and not re-added.\r\n\r\nTo reproduce:\r\n # Upload two components to a hosted yum repo.\r\n # Tag one of those components.\r\n # Configure and run the cleanup tags task to run against this repo:\r\n ** Ensure 'Deletes associated components' is checked.\r\n ** Set the tag regex to the tag from step 2.\r\n # Run this task and from the logs also confirm the yum metadata rebuild runs.\r\n\r\n*Expected:*\r\n\r\nThe tag and tagged component is removed, the yum metadata rebuild runs and all metadata files are rebuilt.\r\n\r\n*Actual:*\r\n\r\nThe tag and tagged component is removed, the yum metadata rebuild run but the\u00a0filelists, primary and other xml files are missing.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Dev - Nexus Repo",
+        "Components":"Yum",
+        "CreatedDate":"2019-12-02 17:37:01",
+        "ResolvedDate":"2019-12-18 00:27:35",
+        "Status":"New",
+        "Priority":"Major",
+        "Creator":"Hardeep Nagra",
+        "Reporter":"Hardeep Nagra",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"supportant",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

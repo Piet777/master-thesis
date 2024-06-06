@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":283015,
+        "EvoId":0,
+        "Summary":"[REG 4.6.2=>4.9.2] Code completion in cmake project not working on Windows",
+        "Description":"I cannot provide the whole project (it is big and not open source), but on Windows the code completion completely fails in a larger cmake project. \r\n\r\nNothing happens in any of the files even in basic classes. It also does not work if the code is plainly written in the top of a file.\r\n !image-2019-08-22-10-55-08-353.png|thumbnail! \r\n !image-2019-08-22-10-57-37-067.png|thumbnail! \r\n\r\nThe code completes on Mac. It may be a settings issue, but removing the QtCreator ini-file didn't help. (I have not tried to remove settings on Mac).\r\n\r\n",
+        "VersionsAffected":"Qt Creator 4.10.0-rc1",
+        "IssueType":"Bug",
+        "Project":"Qt Creator",
+        "Components":"Editors",
+        "CreatedDate":"2019-08-22T09:04:00.000+0000",
+        "ResolvedDate":"2020-03-04T14:14:49.000+0000",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Thorbj\u00f8rn Lund Martsum",
+        "Reporter":"Thorbj\u00f8rn Lund Martsum",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"David Schulz",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":786172,
+        "EvoId":0,
+        "Summary":"A android hidden api by pass",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"New Project",
+        "Project":"Community Support - Open Source Project Repository Hosting",
+        "Components":null,
+        "CreatedDate":"2021-04-09 07:41:46",
+        "ResolvedDate":"2021-04-09 07:53:30",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Jincheng YU",
+        "Reporter":"Jincheng YU",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Joel Orlina",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

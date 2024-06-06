@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":204867,
+        "EvoId":0,
+        "Summary":"Single Select control will flow up and off screen instead of just expanding the size and expanding below",
+        "Description":"If the Single Select control is used near the top of a page and there isn't enough room at the bottom for it to expand, the control will expand above instead of below and can be unusable.\r\n\r\nAfter some digging I noticed that it may be an issue with the tether constraint to: 'window'. Using to: 'scrollParent' provides the desired functionality where the control will expand below and allow users to scroll down.",
+        "VersionsAffected":"6.0.6",
+        "IssueType":"Bug",
+        "Project":"Atlassian User Interface",
+        "Components":"Single select",
+        "CreatedDate":"2017-05-03 10:59:52",
+        "ResolvedDate":"2019-02-19 10:05:02",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Shane Knowles",
+        "Reporter":"Shane Knowles",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"popper",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

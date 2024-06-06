@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":73274,
+        "EvoId":0,
+        "Summary":"Grails artifacts show up twice in Grails Explorer if refactored into default package",
+        "Description":"Please see attached screenshot. Steps to reproduce:\n\n1. Create domain class in any package\n2. Use context menu on domain class to move into the default package\n3. See domain class to appear twice in the Grails Explorer\n\nChristian",
+        "VersionsAffected":"2.5.2.RELEASE",
+        "IssueType":"Bug",
+        "Project":"Spring Tool Suite",
+        "Components":"GRAILS",
+        "CreatedDate":"2011-01-12 05:51:25",
+        "ResolvedDate":"2011-01-12 10:43:16",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Christian Dupuis",
+        "Reporter":"Christian Dupuis",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"2.6.0.M1",
+        "Assignee":"Andrew Clement",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

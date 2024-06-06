@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":72145,
+        "EvoId":0,
+        "Summary":"MInecraft crash",
+        "Description":"Put the summary of the bug you're having here\n\n*What I expected to happen was...:*\nI was wondering what texture will appear when i summon faling sand with tile id of new barrier block.\n\n*What actually happened was...:*\nI tried command to summon falling sand and then my minecraft just crashed.\n\n*Steps to Reproduce:*\nI just tried command \/summon FallingSand ~ ~ ~ {Time:1,TileID:166}",
+        "VersionsAffected":"Minecraft 14w05a",
+        "IssueType":"Bug",
+        "Project":"Minecraft: Java Edition",
+        "Components":null,
+        "CreatedDate":"2014-01-30 21:44:34",
+        "ResolvedDate":"2014-01-30 21:47:27",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Miroslav Popovic",
+        "Reporter":"Miroslav Popovic",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

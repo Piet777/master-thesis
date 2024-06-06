@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":68644,
+        "EvoId":0,
+        "Summary":"Documentation for importing a certificate",
+        "Description":"Create a page with clear instructions on importing a certificate. The content of this page will be included in more than one Crowd document.\r\n\r\nPage for generic included content:\r\nhttp:\/\/confluence.atlassian.com\/display\/CROWD\/Importing+a+Digital+Certificate+onto+a+Crowd+Server\r\n\r\n\r\nOnce the page is ready, replace the existing content on the page below with an \\{excerpt-include}:\r\nhttp:\/\/confluence.atlassian.com\/display\/CROWD\/Configuring+an+SSL+Certificate+for+Microsoft+Active+Directory\r\n",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Crowd",
+        "Components":"Documentation",
+        "CreatedDate":"2008-05-23T00:00:45.000+0000",
+        "ResolvedDate":"2008-05-23T07:49:27.000+0000",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"SarahA",
+        "Reporter":"SarahA",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"David O'Flynn [Atlassian]",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

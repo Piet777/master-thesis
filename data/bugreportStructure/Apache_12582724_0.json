@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Apache",
+        "IssueId":12582724,
+        "EvoId":0,
+        "Summary":"[TLF 2475286] Problem when you copy two paragraphs and then paste the end of any line",
+        "Description":"Steps to reproduce:\n1. copy the text same in the picture\n2. paste at the end of any line\n \n Actual Results:\nsee picture\n\n Expected Results:\n the result should look like in the last box in picture\n \n Workaround (if any):",
+        "VersionsAffected":"Adobe Flex SDK Previous",
+        "IssueType":"Bug",
+        "Project":"Apache Flex",
+        "Components":"Spark: RichEditableText",
+        "CreatedDate":"2009-11-05 10:51:56",
+        "ResolvedDate":"2010-02-25 22:29:00",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Adobe JIRA",
+        "Reporter":"Adobe JIRA",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

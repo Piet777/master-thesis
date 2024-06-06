@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":12643,
+        "EvoId":0,
+        "Summary":"as an operator, I should have a cli that I can easily install that lets me interact with the various components of the fabric",
+        "Description":"as an operator, I should have a cli that I can easily install that lets me interact with the various components of the fabric\r\n\r\nThe current peer commands are entangled with the validating peer capability, which means that building and installing a peer for Mac and Windows is complicated by the need to have RocksDB etc installed.\r\n\r\nWe can extract the peer commands into a separate component that is not dependent on the internals of the peer node, that can be simply installed as a platform-specific binary.",
+        "VersionsAffected":null,
+        "IssueType":"Story",
+        "Project":"Fabric",
+        "Components":null,
+        "CreatedDate":"2016-09-10 20:09:01",
+        "ResolvedDate":"2017-04-12 14:45:39",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"Christopher Ferris",
+        "Reporter":"Christopher Ferris",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"operations",
+        "VersionsFixed":null,
+        "Assignee":"Christopher Ferris",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

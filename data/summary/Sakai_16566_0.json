@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":16566,
+        "EvoId":0,
+        "Summary":"Delivery 5: SMS Batch Scheduler",
+        "Description":"Scheduler logic, Identify messages to process, Concurrency tests, UCT REVIEW",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Contrib: SMS",
+        "Components":"Project",
+        "CreatedDate":"2008-11-23 16:38:15",
+        "ResolvedDate":"2009-06-02 03:04:40",
+        "Status":"Resolved",
+        "Priority":"Major",
+        "Creator":"Louis Botha",
+        "Reporter":"Louis Botha",
+        "Resolution":"Fixed",
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"0.14",
+        "Assignee":"Stephen Marquard",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

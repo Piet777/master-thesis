@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":43412,
+        "EvoId":3,
+        "Summary":"PING\/PONG frames handling in Websocket services is not implemented",
+        "Description":"*Summary:*\r\n Websocket RFC [https:\/\/tools.ietf.org\/html\/rfc6455#section-5.5.2]\u00a0indicates that services have to support PING frame requests and answer a PONG.\r\n\r\n*What happens:*\r\n When websocket client connected to Besu sends PING frames, Besu is not able to understand them and answers an invalid request message.\r\n\r\n*What should happen:*\r\n When websocket client connected to Besu sends PING frames, Besu should answer with a PONG frame as indicated in the RFC.\r\n\r\n*How to reproduce:*\r\n The easy way is to use Web3j with a websocket connection. Indeed Web3j uses [Java-websocket library|https:\/\/github.com\/TooTallNate\/Java-WebSocket] that automatically prevents\u00a0 connection loss by sending a ping frame, by default every minute.\r\n 1 - run a Besu node with websocket api enabled and reachable.\r\n 2 - create a websocket connection and send a PING frame as indicated in the RFC. Here is attached [^ping_frame_bug_demo.zip]with\u00a0a very simple project to demo this. Just\u00a0adapt the url in the Main.java to your running node and\u00a0run `.\/gradlew run` in the project root.",
+        "VersionsAffected":"Besu 1.3",
+        "IssueType":"Bug",
+        "Project":"Besu",
+        "Components":null,
+        "CreatedDate":"2019-11-21 15:26:13",
+        "ResolvedDate":"2019-11-22 00:31:44",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"Nicolas MASSART",
+        "Reporter":"Nicolas MASSART",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

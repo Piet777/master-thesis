@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":99644,
+        "EvoId":0,
+        "Summary":"Snowstorm Team test build 2012-05-01",
+        "Description":"Please test linked issues",
+        "VersionsAffected":null,
+        "IssueType":"QART",
+        "Project":"Snowstorm",
+        "Components":null,
+        "CreatedDate":"2012-05-01 16:56:08",
+        "ResolvedDate":"2012-05-04 15:26:57",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Oz Linden",
+        "Reporter":"Oz Linden",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

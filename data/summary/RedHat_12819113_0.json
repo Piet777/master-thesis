@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12819113,
+        "EvoId":0,
+        "Summary":"Update and test on Strimzi version 0.12.1 (AMQ Streams 1.2 )",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Drools",
+        "Components":null,
+        "CreatedDate":"2019-07-22T05:59:45.000+0000",
+        "ResolvedDate":"2019-07-29T03:26:27.000+0000",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Massimiliano Dessi",
+        "Reporter":"Massimiliano Dessi",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"HADrools",
+        "VersionsFixed":null,
+        "Assignee":"Massimiliano Dessi",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

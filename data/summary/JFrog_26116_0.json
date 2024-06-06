@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":26116,
+        "EvoId":0,
+        "Summary":"Support Artifactory to split filestore between multiple locations",
+        "Description":"Currently only one filestore location for a NFS can be defined.  Should be able to split up repositories to multiple locations to manage disk storage more flexibly.",
+        "VersionsAffected":null,
+        "IssueType":"New Feature",
+        "Project":"Artifactory Binary Repository",
+        "Components":"Artifact Storage",
+        "CreatedDate":"2014-10-14 16:45:13",
+        "ResolvedDate":"2015-10-26 17:56:45",
+        "Status":"Open",
+        "Priority":"4 - Normal",
+        "Creator":"Aaron Rhodes",
+        "Reporter":"Aaron Rhodes",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

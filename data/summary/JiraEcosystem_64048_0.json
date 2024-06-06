@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":64048,
+        "EvoId":0,
+        "Summary":"Crucible line comments are unsorted",
+        "Description":null,
+        "VersionsAffected":"M3 (Beta)",
+        "IssueType":"Bug",
+        "Project":"Atlassian Connector for Eclipse (discontinued)",
+        "Components":"Crucible",
+        "CreatedDate":"2009-04-03 13:02:29",
+        "ResolvedDate":"2009-04-23 08:13:02",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Wojtek Seliga",
+        "Reporter":"Wojtek Seliga",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

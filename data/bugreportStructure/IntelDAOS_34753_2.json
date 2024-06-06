@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":34753,
+        "EvoId":2,
+        "Summary":"engine segfault when deleting object without permission.",
+        "Description":"I can reliably crash a server when attempting to remove a file via dfuse if the container\/pool permissions are wrong.\nSteps to reproduce:\n\n# Run dfuse as a regular user\n# Give root rw access to pool\n# Give root rta but not access to container\n# Run dfuse as root\n# as root, attempt to delete a file.\n\nReproducer is at [https:\/\/github.com\/daos-stack\/daos\/pull\/7318|https:\/\/github.com\/daos-stack\/daos\/pull\/7318|smart-link]  and it\u2019s fairly easy to reproduce, simply create a container, create some objects, remove write permission then reopen container and delete an object.  I originally discovered this when testing with multiple users, however it also works when you just use the one user.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"DAOS",
+        "Components":null,
+        "CreatedDate":"2021-11-11 08:53:37",
+        "ResolvedDate":"2021-11-17 06:25:45",
+        "Status":"Open",
+        "Priority":"P2-High",
+        "Creator":"Ashley Pittman",
+        "Reporter":"Ashley Pittman",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"triaged",
+        "VersionsFixed":null,
+        "Assignee":"CORCI Triage",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

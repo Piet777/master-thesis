@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":53927,
+        "EvoId":0,
+        "Summary":"Not able to view list of groups in Resources under folder details",
+        "Description":"Issue preventing display of groups when trying to specify folder access. \r\n\r\nSteps to reproduce: \r\n1. Create a group or use a site with an existing group\r\n2. Create a folder in Resources, or use an existing folder \r\n3. \"Edit details\" for the folder, and under Availability and Access, enable \"Display this folder and its contents to selected groups only.\" \r\n\r\nExpected result: List of groups should show \r\nActual result: No groups show (see screenshot). \r\n\r\nConsole log  returns: Uncaught resizeFrame did not get the frame (using name=) \r\nresizeFrame @ c11528f3-f824-42dd-8c2e-d7e2bc494bde?panel=Main:3786\r\nshowGroupsTable @ c11528f3-f824-42dd-8c2e-d7e2bc494bde?panel=Main:3850\r\nhandleAccessIsGroup @ c11528f3-f824-42dd-8c2e-d7e2bc494bde?panel=Main:3828\r\n(IDs refer to a particular site)",
+        "VersionsAffected":"11.3",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"Content",
+        "CreatedDate":"2017-01-23 00:25:39",
+        "ResolvedDate":"2017-01-30 06:27:13",
+        "Status":"Awaiting Review",
+        "Priority":"Major",
+        "Creator":"Sam Lee Pan",
+        "Reporter":"Sam Lee Pan",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Core Team",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

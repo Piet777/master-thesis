@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1742812,
+        "EvoId":1,
+        "Summary":"Setting a landing product will not redirect customers to the portal",
+        "Description":"h3. Issue Summary\r\n\r\nBy default, when customers with an Atlassian account (with no product access, just active on the site) access the site's URL (https:\/\/example.atlassian.net), they will be redirected to the portal URL so they can authenticate and access the portal.\r\n\r\nHowever, when a [landing product is configured|https:\/\/support.atlassian.com\/organization-administration\/docs\/set-your-sites-landing-product\/], these customer accounts will face a message stating that they do not have access to the product on the site instead of being redirected to the portal.\r\n\r\nh3. Steps to Reproduce\r\n# Configure at least, a single customer account with site-access, but, no product access, like the example below:\r\n!no_access.png|thumbnail!\r\n# Make sure that this account has access to a Service Management project so the user should be able to access the portal and view it.\r\n# As a site-admin, go to the site's administration and access the *Product access* part.\r\n# There, under the *What you need to know* session, tap the *Change this setting* button and select a product.\r\n# Have the customer accessing the site via its URL (example.atlassian.net)\r\n\r\n(i) Although the default message states that the landing product is Jira, by tapping the option to change the default product, the dropdown will prompt you to select a product:\r\n\r\n!default.png|thumbnail!\r\n\r\nIf you have already configured a product, after tapping this option, it will look like the following, already having the product selected:\r\n\r\n!changed.png|thumbnail!\r\n\r\nh3. Expected Results\r\nThe user should be redirected to the portal.\r\n\r\nh3. Actual Results\r\nThe user will face a message that they don't have access to the landing product:\r\n\r\n{quote}\r\naccount@example.com doesn't have access to Jira\/Confluence on example.atlassian.net\r\n{quote}\r\n\r\nh3. Workaround\r\nThe customer can directly access one of the following URLs to land on the portal:\r\n\r\n* The portal URL.\r\n* https:\/\/example.atlassian.net\/jira (with the \/jira context path added to the site's URL)\r\n* The project URL (e.g. https:\/\/example.atlassian.net\/jira\/servicedesk\/projects\/KEY)",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Jira Service Management Cloud",
+        "Components":"Permissions & Roles - Customers",
+        "CreatedDate":"2021-03-30 15:22:36",
+        "ResolvedDate":"2021-04-29 22:55:23",
+        "Status":"Needs Triage",
+        "Priority":"Low",
+        "Creator":"Giuliano C.",
+        "Reporter":"Giuliano C.",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Shaun Neighbour",
+                "Created":"2021-04-01 14:55:00",
+                "Comment":"Priority needs to be High - My customers can no longer access the helpdesk - That essentially means it's useless."
+            }
+        ]
+    }
+

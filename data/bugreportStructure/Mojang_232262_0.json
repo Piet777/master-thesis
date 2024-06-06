@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":232262,
+        "EvoId":0,
+        "Summary":"Game Crashes When Player Opens Inventory While Respawning with 'Immediate Respawn' Enabled",
+        "Description":"If the player opens their inventory quickly after respawning in a world with 'Immediate Respawn' enabled, the world will crash. This happened accidentally once in one of my worlds. I tried it a few more times after reloading, and it seemed to happen reliably as long as I opened my inventory at the right time.",
+        "VersionsAffected":"PS4 1.89",
+        "IssueType":"Bug",
+        "Project":"Minecraft Console Edition",
+        "Components":null,
+        "CreatedDate":"2019-03-22 22:50:04",
+        "ResolvedDate":"2020-04-20 16:42:34",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"KyloRenmcgoo",
+        "Reporter":"KyloRenmcgoo",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

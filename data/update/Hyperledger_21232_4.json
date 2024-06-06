@@ -1,0 +1,37 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":21232,
+        "EvoId":4,
+        "Summary":"Ansible playbooks to update software pre-requisties on Power",
+        "Description":"Ansible playbooks to update software pre-requisties on power nodes. Right now, we are connecting to z build nodes through ssh to update\/install softwares. This process taking time for every operation. Proposing below approach to deploy any software installation through ansible playbooks.\r\n\r\n1) Write ansible playbooks\r\n\r\n2) Trigger playbooks through from master node to update\/install softwares on all nodes",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Fabric",
+        "Components":"fabric-ci",
+        "CreatedDate":"2017-10-02 17:49:07",
+        "ResolvedDate":"2018-02-26 18:02:24",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"Ramesh Babu Thoomu",
+        "Reporter":"Ramesh Babu Thoomu",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"fabric-ci",
+        "VersionsFixed":null,
+        "Assignee":"Jason Clark",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Ramesh Babu Thoomu",
+                "Created":"2017-10-12 03:30:53",
+                "Comment":"[~jtclark] This work is in-progress.. [~sambhavdutt] and myself working on this."
+            },
+            {
+                "Author":"Jason Clark",
+                "Created":"2018-01-24 11:29:45",
+                "Comment":"Spoke w\/ [~rameshthoomu] about this issue. Power is no longer required. This task is no longer needed. Moving this ticket to Unverified Status."
+            }
+        ]
+    }
+

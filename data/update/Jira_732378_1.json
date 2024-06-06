@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":732378,
+        "EvoId":1,
+        "Summary":"Tickets missing",
+        "Description":"I got an issue that I am not sure why it is happening.\n\nAfter I have created a new project to be accessible by an individual Client, some how I got some of the existing tickets missing. Nobody has removed the ticket ( at least I could not see anywhere the ticket was removed.). This is the message when I try to open the ticket:\nPermission Violation\n\nIf it helps, this is the direct URL of the ticket:\nhttps:\/\/infobahn.jira.com\/browse\/LDG-1753\n\nI got a few other tickets missing...\nCan you help me on finding the reason\/solution for the missing ticket?\n",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Jira Cloud",
+        "Components":null,
+        "CreatedDate":"2013-06-03 00:13:25",
+        "ResolvedDate":"2013-06-03 22:37:56",
+        "Status":"Resolved",
+        "Priority":"Low",
+        "Creator":"Rodrigo Rossi",
+        "Reporter":"Rodrigo Rossi",
+        "Resolution":"Obsolete",
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Rodrigo Rossi",
+                "Created":"2013-06-03 01:48:53",
+                "Comment":"Please close this ticket, I have found the reason\/solution for my problem."
+            }
+        ]
+    }
+

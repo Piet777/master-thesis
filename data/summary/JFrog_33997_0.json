@@ -1,0 +1,30 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":33997,
+        "EvoId":0,
+        "Summary":"Improve tree performance by fetching related actions only for selected item",
+        "Description":"Currently when a user navigates to tree \/ simple browser the available actions are fetched for all items instead of only the selected item.\nThis can cause significant delay in time it takes to render the tree. ",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Artifactory Binary Repository",
+        "Components":"Web UI",
+        "CreatedDate":"2016-05-16 10:54:56",
+        "ResolvedDate":"2016-06-08 12:19:54",
+        "Status":"Open",
+        "Priority":"3 - High",
+        "Creator":"Roy Zanbel",
+        "Reporter":"Roy Zanbel",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ],
+        "violation_actual":"TRUE",
+        "reason":"75 characters is too long."
+    }
+

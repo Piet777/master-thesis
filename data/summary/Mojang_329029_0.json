@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":329029,
+        "EvoId":0,
+        "Summary":"Sweet berry bushes dont damage the player",
+        "Description":"There is not much to say for this bug. I was just playing a normal survival world and fell in a sweet berry Bush and walked out of it without taking damage. Might have been caused by the latest hotfix.\r\n\r\nThis occurred on my xbox one, bedrock, version 1.14.60",
+        "VersionsAffected":"1.14.60",
+        "IssueType":"Bug",
+        "Project":"Bedrock Dedicated Server",
+        "Components":null,
+        "CreatedDate":"2020-05-28 00:36:48",
+        "ResolvedDate":"2020-05-28 09:45:50",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Benjamin Case",
+        "Reporter":"Benjamin Case",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

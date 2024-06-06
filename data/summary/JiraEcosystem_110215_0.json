@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":110215,
+        "EvoId":0,
+        "Summary":"Left padding needs to be removed from page-panel-sidebar when \"responsive\"",
+        "Description":"When you reduce the browser width to the 1023 breakpoint the aui-page-panel-sidebar still retains its left padding, so sits slightly indented.",
+        "VersionsAffected":"5.8.0",
+        "IssueType":"Bug",
+        "Project":"Atlassian User Interface",
+        "Components":"5.8.0",
+        "CreatedDate":"2015-01-07 18:32:16",
+        "ResolvedDate":"2015-01-07 21:34:44",
+        "Status":"Triage",
+        "Priority":"Minor",
+        "Creator":"Mike Sharp",
+        "Reporter":"Mike Sharp",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Mike Sharp",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

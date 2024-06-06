@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":74059,
+        "EvoId":0,
+        "Summary":"Invalid grails install causes cryptic error messages when executing commands",
+        "Description":"If a user deleted or moved  Grails install configure in the workspace without also changing the workspace configuration to point to the new location, then the install is 'invalid'. But we don't check for this and get a cryptic error message when executing commands instead.\n\nBefore executing a command we should check whether the Grails install we are about to use actually exists in the location the configuration is pointing to. If not, we whould provide a nicer error message.\n\n{noformat}\neclipse.buildId=2.6.0.201101261000-M1\njava.version=1.6.0_22\njava.vendor=Sun Microsystems Inc.\nBootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_CA\nFramework arguments:  -product com.springsource.sts.ide\nCommand-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide\n\n\nError\nWed Jan 26 11:13:38 PST 2011\nCommand failed, see details for output.\n\njava.lang.Exception: Command failed with the following output:\n---- System.out ----\n\n---- System.err ----\nException in thread \"main\" java.lang.NoClassDefFoundError: org\/codehaus\/groovy\/grails\/cli\/support\/GrailsStarter\nCaused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.cli.support.GrailsStarter\nat java.net.URLClassLoader$1.run(URLClassLoader.java:202)\nat java.security.AccessController.doPrivileged(Native Method)\nat java.net.URLClassLoader.findClass(URLClassLoader.java:190)\nat java.lang.ClassLoader.loadClass(ClassLoader.java:307)\nat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)\nat java.lang.ClassLoader.loadClass(ClassLoader.java:248)\nCould not find the main class: org.codehaus.groovy.grails.cli.support.GrailsStarter.  Program will exit.\n\nat com.springsource.sts.grails.core.launch.SynchLaunch$LaunchResult.getException(SynchLaunch.java:133)\nat com.springsource.sts.grails.core.launch.SynchLaunch$ResultFromTerminatedLaunch.getStatus(SynchLaunch.java:247)\nat com.springsource.sts.grails.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:151)\nat com.springsource.sts.grails.core.launch.SynchLaunch.synchExec(SynchLaunch.java:52)\nat com.springsource.sts.grails.commands.GrailsExecutor.synchExec(GrailsExecutor.java:107)\nat com.springsource.sts.grails.commands.GrailsCommand.synchExec(GrailsCommand.java:129)\nat com.springsource.sts.grails.ui.internal.wizard.ANewGrailsProjectWizard$1.run(ANewGrailsProjectWizard.java:140)\nat org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)\n\n{noformat}",
+        "VersionsAffected":"2.6.0.M1",
+        "IssueType":"Bug",
+        "Project":"Spring Tool Suite",
+        "Components":"GRAILS",
+        "CreatedDate":"2011-01-26 11:23:09",
+        "ResolvedDate":"2011-09-26 13:31:16",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Kris De Volder",
+        "Reporter":"Kris De Volder",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Kris De Volder",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

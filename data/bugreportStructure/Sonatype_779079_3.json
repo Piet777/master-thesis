@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":779079,
+        "EvoId":3,
+        "Summary":"Content selector All_Maven2 is in use and cannot be deleted error appears if migrate nuget from NXRM2 to NXRM3",
+        "Description":"The current issue is reproducible for now only in the feature branch until merge to master.\r\nCheck status of the ticket: https:\/\/issues.sonatype.org\/browse\/NEXUS-26490\r\n\r\n*Steps to reproduce:*\u00a0\r\n # Prepare nexus 2 for migration\r\n ## Create nuget-hosted repository\r\n ## Add some _nupkg_ package to the repository. _chek in the attachment_.\r\n ## Add upgrade capabilities\r\n # Get nexus source from branch\u00a0NEXUS-26490_nuget_nexus2-3_migration\r\n # Start nexus3\r\n # Add Upgrade Capabilities\r\n # Start Upgrade process\u00a0\r\n ## Specifu nexus2 url and token\r\n ## On next page check\u00a0 checkboxes: _Repository configuration and content,_\r\n\u00a0\r\n_Server configuration_\r\n ## On the next page leave everything as is.\r\n ## On next page select _nuget-repository_\u00a0for migration\r\n ## On next page click Begin button.\u00a0\r\n\r\n*Actual:*\r\n!image-2021-02-26-19-08-53-656.png!\r\n\r\n*Expected:* no errors",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Dev - Nexus Repo",
+        "Components":"Migration",
+        "CreatedDate":"2021-02-26 17:12:48",
+        "ResolvedDate":"2021-08-27 04:12:40",
+        "Status":"New",
+        "Priority":"Major",
+        "Creator":"Anatoliy Ornatovskyy",
+        "Reporter":"Anatoliy Ornatovskyy",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            
+        ]
+    }
+

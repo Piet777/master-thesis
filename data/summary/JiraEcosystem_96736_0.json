@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":96736,
+        "EvoId":0,
+        "Summary":"Upgrade placeholder polyfill to use skate",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Improvement",
+        "Project":"Atlassian User Interface",
+        "Components":null,
+        "CreatedDate":"2014-07-13 23:45:27",
+        "ResolvedDate":"2014-08-13 20:46:56",
+        "Status":"Triage",
+        "Priority":"Major",
+        "Creator":"Joshua Nelson",
+        "Reporter":"Joshua Nelson",
+        "Resolution":"Fixed",
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Joshua Nelson",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

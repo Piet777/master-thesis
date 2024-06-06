@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":279399,
+        "EvoId":1,
+        "Summary":"unschedule build displays wrong message",
+        "Description":"Choosing \"Unschedule Build\" on a build results in this message:\r\n\r\n\u00d7 Build marked as scheduled.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Evergreen",
+        "Components":null,
+        "CreatedDate":"2016-04-13 15:46:35",
+        "ResolvedDate":"2016-04-13 15:54:21",
+        "Status":"Open",
+        "Priority":"Major - P3",
+        "Creator":"Eric Milkie",
+        "Reporter":"Eric Milkie",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Eric Milkie",
+                "Created":"2016-04-13 15:47:54",
+                "Comment":"Oddly, the EVG project in Jira prohibits me from changing the Priority field on any Issue.  If I could, I would be changing it to \"Minor - P2\" on this issue."
+            }
+        ]
+    }
+

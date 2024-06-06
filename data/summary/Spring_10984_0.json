@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":10984,
+        "EvoId":0,
+        "Summary":"o.s.web.util.Log4jConfigListener - able to load log4j config file from file system",
+        "Description":"My use case requries me to have my log4j.properties located on a AS\/400 server and Tomcat running on a Win2003 box. \n\nTomcat must be able to use the log4j.properties located on the AS\/400 file system.\n\nI am using Spring to setup log4j in web.xml such as:\n\n\t<listener>\n\t\t<listener-class>org.springframework.web.util.Log4jConfigListener<\/listener-class>\n\t<\/listener>\n\n\t<context-param>\n\t\t<param-name>log4jRefreshInterval<\/param-name>\n\t\t<param-value>60000<\/param-value> <!-- 1 min -->\n\t<\/context-param>\n\n\t<context-param>\n\t\t<param-name>log4jConfigLocation<\/param-name>\n\t\t<param-value>\/WEB-INF\/log4j.properties<\/param-value>\n\t<\/context-param>\n\nIn Spring 1.1.3 it is not possible to specify the location of log4j.properties outside the web application archive. Okay yes it is possible if you do not have the defined log4jConfigLocation in the web.xml file then it would default to locate the log4j.properties in the classpath.\n\nI do not want to alter the CLASSPATH of TOMCAT or whatever web container we are using. I want to be able to specify the location of the log4j.properties file in the web.xml file. So I modified the Log4jWebConfigurer to be able to do this. Now I can set the location of the log4j.properties in web.xml such as:\n\n\t<context-param>\n\t\t<param-name>log4jConfigLocation<\/param-name>\n\t\t<param-value>file:\/C:\/mylog4j.properties<\/param-value>\n\t<\/context-param>\n\n\nAnd it would get the file from the file system. I am using Springs own code to locate the file (PathMatchingResourcePatternResolver).\n\nI failed to make SF CVS work so I downloaded the nightly snapshot and modified the java file.\n\nI have attached my modified java file to this JIRA.\n\n\n\/Claus",
+        "VersionsAffected":"1.1.3",
+        "IssueType":"Improvement",
+        "Project":"Spring Framework",
+        "Components":"Web",
+        "CreatedDate":"2005-01-13 20:16:32",
+        "ResolvedDate":"2005-01-28 03:00:16",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Claus Ibsen",
+        "Reporter":"Claus Ibsen",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Juergen Hoeller",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

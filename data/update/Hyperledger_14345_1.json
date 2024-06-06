@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":14345,
+        "EvoId":1,
+        "Summary":"Move the proper SBFT config items into Genesis",
+        "Description":"Some of the SBFT config fields\/items need to be moved to the Genesis part of the configuration (which written to the Genesis block).",
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"Fabric",
+        "Components":null,
+        "CreatedDate":"2017-01-25 15:57:25",
+        "ResolvedDate":"2017-02-03 17:08:40",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"Gabor Hosszu",
+        "Reporter":"Gabor Hosszu",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"sbft",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Kostas Christidis",
+                "Created":"2017-01-25 18:21:55",
+                "Comment":"Gabor, can you please edit this as follows?\r\n\r\n- Component: fabric-consensus\r\n- Label: sbft\r\n- Status: In progress (or in review)\r\n- Assign it to yourself?"
+            }
+        ]
+    }
+

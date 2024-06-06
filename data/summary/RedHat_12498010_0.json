@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12498010,
+        "EvoId":0,
+        "Summary":"Oracle Reauthentication plugin",
+        "Description":"Implement an Oracle Reauthentication plugin using Proxy Authentication.",
+        "VersionsAffected":"1.1.0.CR2",
+        "IssueType":"Feature Request",
+        "Project":"IronJacamar",
+        "Components":"JDBC",
+        "CreatedDate":"2013-08-06T02:04:15.000+0000",
+        "ResolvedDate":"2013-08-06T02:45:45.000+0000",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Ricardo Arguello",
+        "Reporter":"Ricardo Arguello",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Jesper Pedersen",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

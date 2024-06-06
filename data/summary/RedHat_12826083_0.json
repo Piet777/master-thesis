@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12826083,
+        "EvoId":0,
+        "Summary":"Allow the main testsuite\/integration\/clustering surefire execution to run for 75 mins",
+        "Description":"We are regularly seeing CI failures because the clustering testsuite has a surefire execution that runs over an hour. So bump the surefire.forked.process.timeout setting to 4500 from the current 3600.",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"WildFly",
+        "Components":"Test Suite",
+        "CreatedDate":"2019-09-03T15:56:39.000+0000",
+        "ResolvedDate":"2019-09-03T16:31:52.000+0000",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Brian Stansberry",
+        "Reporter":"Brian Stansberry",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Brian Stansberry",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

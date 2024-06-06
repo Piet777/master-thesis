@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":91728,
+        "EvoId":0,
+        "Summary":"Refapp Single Tenant Arrives",
+        "Description":"Provide an option to have atlassian refapp start in a warm state i.e. no tenant, and a means (via REST call) to have a tenant arrive.",
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"Atlassian Reference Application",
+        "Components":null,
+        "CreatedDate":"2014-04-21 21:23:03",
+        "ResolvedDate":"2014-05-27 02:13:38",
+        "Status":"Triage",
+        "Priority":"Major",
+        "Creator":"Alex Courtis",
+        "Reporter":"Alex Courtis",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

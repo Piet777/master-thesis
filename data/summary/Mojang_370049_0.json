@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Mojang",
+        "IssueId":370049,
+        "EvoId":0,
+        "Summary":"Cant join friends world",
+        "Description":"Hi mojang , firstly the game is superb but I have a issue I cant join my friends world and play together nor he can join my world its constantly showing UNABLE TO CONNECT TO THE WORLD we tried several times for atleast a month now please fix this we have tried every possible way but its not working . We are playing on wifi and our xbox settings is multiplayer . Sometimes we get into a game but it is very rare . Please fix this pr just make it like java where multiplayer his in the title screen and we just need the ip adress . Thank you\u00a0",
+        "VersionsAffected":"1.16.20",
+        "IssueType":"Bug",
+        "Project":"Bedrock Dedicated Server",
+        "Components":null,
+        "CreatedDate":"2020-09-04 10:51:24",
+        "ResolvedDate":"2020-09-04 11:32:33",
+        "Status":"Open",
+        "Priority":null,
+        "Creator":"Rudra Phadnis",
+        "Reporter":"Rudra Phadnis",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

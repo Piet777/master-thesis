@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":206925,
+        "EvoId":0,
+        "Summary":"Different build configurations should remember different cmake arguments",
+        "Description":"Currently the different build types share the same cmake argument setting in the project UI.\n\nI checked that inside CMakeLists.txt.user separate keys (CMakeProjectManager.CMakeBuildConfiguration.UserArguments) are indeed defined for each configuration. However they are always kept the same by the project management.",
+        "VersionsAffected":"Qt Creator 3.0.1",
+        "IssueType":"Bug",
+        "Project":"Qt Creator",
+        "Components":"Project & Build Management",
+        "CreatedDate":"2014-03-15T09:46:51.000+0000",
+        "ResolvedDate":"2014-03-17T12:35:00.000+0000",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Peng Wang",
+        "Reporter":"Peng Wang",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Daniel Teske",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

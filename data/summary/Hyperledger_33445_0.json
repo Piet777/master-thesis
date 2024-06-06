@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":33445,
+        "EvoId":0,
+        "Summary":"Kafka short total interval does not work",
+        "Description":"In the fabric\/sampleconfig\/orderer.yaml, kafka setting:\r\n\r\nKafka:\r\n\u00a0 Retry:\r\n\u00a0 \u00a0 ShortInterval: 5s\r\n\u00a0 \u00a0 ShortTotal: 10m\r\n\u00a0 \u00a0 LongInterval: 5m\r\n\u00a0 \u00a0 LongTotal: 12h\r\n\r\nIt is thought that every 5 seconds reconnection will continue for 10 minutes. But actually, about 30 seconds it will trigger long interval timeout, i.e. 5 minutes for 12 hours.\r\n\r\nHere is the logs of orderer.\r\n\r\n\u00a0\r\n\r\n2018-09-04 10:04:24.454 CST [localconfig] completeInitialization -> INFO 001 Kafka.Version unset, setting to 0.10.2.0\r\n2018-09-04 10:04:24.455 CST [bccsp_sw] openKeyStore -> DEBU 002 KeyStore opened at [\/var\/hyperledger\/orderer\/msp\/keystore]...done\r\n2018-09-04 10:04:24.464 CST [bccsp] initBCCSP -> DEBU 003 Initialize BCCSP [SW]\r\n\r\n...\r\n\r\n2018-09-04 10:04:56.270 CST [orderer\/consensus\/kafka\/sarama] withRecover -> DEBU 200 Failed to connect to broker kafka3.energyx.com:9092: dial tcp 172.24.0.19:9092: connect: connection refused\r\n2018-09-04 10:04:56.277 CST [orderer\/consensus\/kafka] try -> DEBU 201 [channel: energyx-orderer-syschan] Initial attempt failed = error creating topic [energyx-orderer-syschan]; failed to retrieve metadata for the cluster\r\n2018-09-04 10:04:56.277 CST [orderer\/consensus\/kafka] try -> DEBU 202 [channel: energyx-orderer-syschan] Retrying every 5m0s for a total of 12h0m0s\r\n\r\n\u00a0",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Fabric",
+        "Components":null,
+        "CreatedDate":"2018-09-04 02:18:57",
+        "ResolvedDate":"2018-09-05 03:03:09",
+        "Status":"Unverified",
+        "Priority":"Medium",
+        "Creator":"Allen Chen",
+        "Reporter":"Allen Chen",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

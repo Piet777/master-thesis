@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":80755,
+        "EvoId":0,
+        "Summary":"As a developer, I want to be able to override the local platform for manipulating and testing the configuration",
+        "Description":"When merging the changes for OPEN-50, I found that I wanted to be able to use the --dry-run option to see what system commands would be executed for the configure and build sub-commands on each of the platforms.  At present, the platform used is always the real local platform, but I wanted to be able to override that so that I could see how a configuration change would affect the system commands used on a different platform.",
+        "VersionsAffected":null,
+        "IssueType":"New Feature",
+        "Project":"Open Development",
+        "Components":"autobuild",
+        "CreatedDate":"2011-04-06 05:20:38",
+        "ResolvedDate":"2011-04-11 10:30:23",
+        "Status":"Awaiting Review",
+        "Priority":"Major",
+        "Creator":"Oz Linden",
+        "Reporter":"Oz Linden",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

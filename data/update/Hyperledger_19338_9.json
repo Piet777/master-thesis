@@ -1,0 +1,52 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":19338,
+        "EvoId":9,
+        "Summary":"Peer overwrites limit\/skip fields in CouchDB query string",
+        "Description":"If I pass in a CouchDB query string that specifies either `limit` or `skip`, then\u00a0the query results are not as I would expect.\r\n\r\nIt seems that the peer has some code in it that forcibly sets `limit` to a configuration value from `core.yaml`, and forcibly sets `skip` to 0. It does this without checking whether `limit` or `skip` are already\u00a0specified by the user in the query string.\r\n\r\nThis is the query string that we send in:\r\n{code:java}\r\n{\"selector\":{\"$class\":\"systest.queries.SampleAsset\",\"$registryType\":\"Asset\",\"$registryId\":\"systest.queries.SampleAsset\"},\"limit\":2}{code}\r\nThis is the output of the peer rewriting the query:\r\n{code:java}\r\n[statecouchdb] ApplyQueryWrapper -> DEBU 1f62 Rewritten query with data wrapper: {\"limit\":10000,\"selector\":{\"$and\":[\\{\"chaincodeid\":\"systest-queries\"},\\{\"data.$class\":\"systest.queries.SampleAsset\",\"data.$registryId\":\"systest.queries.SampleAsset\",\"data.$registryType\":\"Asset\"}]},\"skip\":0}{code}\r\nThis is the offending code:\r\n\r\n[https:\/\/github.com\/hyperledger\/fabric\/blob\/d9c320297bd2a4eff2eb253ce84dc431ef860972\/core\/ledger\/kvledger\/txmgmt\/statedb\/statecouchdb\/query_wrapper.go#L101]\r\n\r\nIMHO the code should check for existing `limit` or `skip` values before overwriting them\u00a0;)",
+        "VersionsAffected":"v1.0.0",
+        "IssueType":"Bug",
+        "Project":"Fabric",
+        "Components":"fabric-ledger",
+        "CreatedDate":"2017-07-18 21:10:33",
+        "ResolvedDate":"2018-03-11 14:13:58",
+        "Status":"To Do",
+        "Priority":"Highest",
+        "Creator":"Simon Stone",
+        "Reporter":"Simon Stone",
+        "Resolution":null,
+        "IssueLinks":"This issue relates to FAB-2809",
+        "Labels":"Ledger",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"chen xuan",
+                "Created":"2017-07-19 08:13:44",
+                "Comment":"i meet the same question."
+            },
+            {
+                "Author":"Sadok SADDEM",
+                "Created":"2017-07-19 14:00:12",
+                "Comment":"I suggest\u00a0to replace in\u00a0[core\/ledger\/kvledger\/txmgmt\/statedb\/statecouchdb\/query_wrapper.go|https:\/\/github.com\/hyperledger\/fabric\/blob\/master\/core\/ledger\/kvledger\/txmgmt\/statedb\/statecouchdb\/query_wrapper.go#L101]\r\n\r\n\/\/Add limit\r\n jsonQueryMap[jsonQueryLimit] = queryLimit\r\n\r\n\/\/Add skip\r\n jsonQueryMap[jsonQuerySkip] = querySkip\r\n\r\n\u00a0\r\n\r\nwith\u00a0\r\n\r\n\u00a0\r\n\r\nif _, ok := jsonQueryMap[jsonQueryLimit]; !ok \\{\r\n jsonQueryMap[jsonQueryLimit] = queryLimit\r\n }\r\n if _, ok := jsonQueryMap[jsonQueryLimit]; !ok \\{\r\n jsonQueryMap[jsonQuerySkip] = querySkip\r\n }\r\n\r\nand in method signature wil be:\r\n func ApplyQueryWrapper(namespace, queryString string, *defaultLimit int*) (string, error)\r\n\r\n\u00a0\r\n\r\nP.S : Must verify that\u00a0jsonQueryMap[jsonQueryLimit]\u00a0and\u00a0 jsonQueryMap[jsonQueryLimit] contains int\r\n Regards\r\n\r\n\u00a0"
+            },
+            {
+                "Author":"David Enyeart",
+                "Created":"2017-07-19 15:03:54",
+                "Comment":"W{color:#444444}e did intend to revisit how 'paging' works, balancing function, performance, and mitigation of malicious user requests. FAB-2809 is part of that. We'll also consider FAB-5369 during the assessment. \r\n{color}"
+            },
+            {
+                "Author":"Dave Kelsey",
+                "Created":"2017-08-03 13:47:50",
+                "Comment":"We are getting lots of people asking about this issue and when it will be fixed so I have changed it to highest."
+            },
+            {
+                "Author":"Gari Singh",
+                "Created":"2017-09-04 13:00:27",
+                "Comment":"[~denyeart] I'm changing this to improvement as this is working as designed I believe?"
+            }
+        ]
+    }
+

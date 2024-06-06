@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":172449,
+        "EvoId":0,
+        "Summary":"Wrong text in title bar of crash handler widget",
+        "Description":"When the creator crashed a bug report widget appears. In the title bar one can read the default text \"MainWidget\".",
+        "VersionsAffected":"Qt Creator 2.1.0-rc1",
+        "IssueType":"Bug",
+        "Project":"Qt Creator",
+        "Components":"All Other Issues",
+        "CreatedDate":"2011-02-08 15:27:45",
+        "ResolvedDate":"2011-02-08 19:07:11",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Rainer Keller",
+        "Reporter":"Rainer Keller",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"final210",
+        "VersionsFixed":null,
+        "Assignee":"con",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

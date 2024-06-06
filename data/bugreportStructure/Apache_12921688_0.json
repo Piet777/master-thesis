@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Apache",
+        "IssueId":12921688,
+        "EvoId":0,
+        "Summary":"Exceptions raised during AM launch don't trigger exit code AM failures",
+        "Description":"It looks like exceptions raised in AM launch failure, while being caught, don't have their exit code picked up. Any launch-time failure should result in an exit code being returned, which then tells the YARN to restart it.",
+        "VersionsAffected":"Slider 0.81",
+        "IssueType":"Bug",
+        "Project":"Slider",
+        "Components":"appmaster",
+        "CreatedDate":"2015-12-14 15:27:16",
+        "ResolvedDate":"2015-12-14 15:37:43",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Steve Loughran",
+        "Reporter":"Steve Loughran",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"Slider 0.90.2",
+        "Assignee":"Steve Loughran",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

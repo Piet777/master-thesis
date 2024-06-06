@@ -1,0 +1,57 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1101228,
+        "EvoId":8,
+        "Summary":"Next-gen archive\/hide projects",
+        "Description":"In next-gen Jira project, there is no option for hiding or archiving projects. It would be great to be able to archive a project that's no longer in use and refer to them in the future.\r\n\r\nAlso, as a next-gen user I want these archived projects available for viewing for the whole team but through a separate \"archived\" section.",
+        "VersionsAffected":null,
+        "IssueType":"Sub-task",
+        "Project":"Jira Software Cloud",
+        "Components":null,
+        "CreatedDate":"2019-01-14 05:45:40",
+        "ResolvedDate":"2021-03-02 03:43:27",
+        "Status":"Open",
+        "Priority":"Low",
+        "Creator":"Shakiru Ayanloye",
+        "Reporter":"Shakiru Ayanloye",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"p-low",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Ankit Goyal",
+                "Created":"2019-02-26 05:32:24",
+                "Comment":"Are there any updates on this issue. We need to archive old projects."
+            },
+            {
+                "Author":"Lizzie Modla",
+                "Created":"2019-05-07 14:32:49",
+                "Comment":"Is there any update on this? This would be really useful as our project is getting increasingly cluttered"
+            },
+            {
+                "Author":"Christian Rahn",
+                "Created":"2019-06-04 21:39:42",
+                "Comment":"Also looking for this functionality"
+            },
+            {
+                "Author":"Melissa Brady",
+                "Created":"2019-06-05 20:22:58",
+                "Comment":"We would also like this functionality."
+            },
+            {
+                "Author":"Lukasz Wiktor",
+                "Created":"2019-07-04 07:27:34",
+                "Comment":"+1"
+            },
+            {
+                "Author":"Jason Eplawy",
+                "Created":"2019-08-07 14:57:57",
+                "Comment":"This is so needed. Priority should be changed to High"
+            }
+        ]
+    }
+

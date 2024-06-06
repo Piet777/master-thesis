@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":21052,
+        "EvoId":0,
+        "Summary":"CLONE - Update Argobots to 1.1 RC2",
+        "Description":"[Argobots 1.1 RC1|https:\/\/github.com\/pmodels\/argobots\/releases\/tag\/v1.1rc1] was released on Mar. 15, 2021.\r\n\r\nWe need to update our builds (RPMs and daos->`build.config`) to use this new release.\r\n\r\nWhich branches need this update needs TBD.",
+        "VersionsAffected":"1.1 Community Release",
+        "IssueType":"Story",
+        "Project":"DAOS",
+        "Components":"Build",
+        "CreatedDate":"2021-03-29 05:56:10",
+        "ResolvedDate":"2021-04-05 09:57:32",
+        "Status":"Open",
+        "Priority":"P2-High",
+        "Creator":"Brian J. Murrell",
+        "Reporter":"Brian J. Murrell",
+        "Resolution":null,
+        "IssueLinks":"This issue Clones DAOS-7024",
+        "Labels":null,
+        "VersionsFixed":"2.0 Community Release",
+        "Assignee":"Brian J. Murrell",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

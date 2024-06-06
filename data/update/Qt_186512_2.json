@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":186512,
+        "EvoId":2,
+        "Summary":"Blackberry platform plugin: Implement support for more buttons on HID \"mouse\" devices (8 buttons)",
+        "Description":"A short inspection of relevant header files (in qnx 6.5.0) find definitions for 8 mouse buttons. Preceding this update, we support only 3 of the 8 possible buttons. A user with an advanced USB mouse, plugged into a Blackberry tablet, might find good uses for more buttons. One example is Qt::BackButton and Qt::ForwardButton within Webkit.\n\nSoftware is written, I am depending on the build system to compile and verify.",
+        "VersionsAffected":"5.0.0",
+        "IssueType":"Bug",
+        "Project":"Qt",
+        "Components":"GUI: Complex Input methods",
+        "CreatedDate":"2012-03-08 01:38:13",
+        "ResolvedDate":"2012-07-19 10:52:16",
+        "Status":"Reported",
+        "Priority":"Not Evaluated",
+        "Creator":"Richard Stockton",
+        "Reporter":"Richard Stockton",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Richard Stockton",
+                "Created":"2012-04-25 19:18:41",
+                "Comment":"Change-Id: I8c1d2b2a5d0deb3b857fb387c242c3792e21ff95\n\nBug Status should be 'Verified' for 5.0.0."
+            }
+        ]
+    }
+

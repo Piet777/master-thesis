@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":24378,
+        "EvoId":0,
+        "Summary":"Iframe resize not working all the time",
+        "Description":"Rwiki IFRAME is not always sized correctly - it's possible to get 3 vertical scrollbars (e.g. in edit mode, 1024x768 but also on larger resolutions). The sizing seems not to take the right-hand column into account (View_right, etc.)",
+        "VersionsAffected":"2.0",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"Rwiki",
+        "CreatedDate":"2005-09-19 06:48:56",
+        "ResolvedDate":"2005-11-02 11:46:05",
+        "Status":"Resolved",
+        "Priority":"Major",
+        "Creator":"Stephen Marquard",
+        "Reporter":"Stephen Marquard",
+        "Resolution":"Won't Fix",
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"2.1.0",
+        "Assignee":"Ian Boston",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

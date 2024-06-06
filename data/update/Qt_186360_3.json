@@ -1,0 +1,37 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":186360,
+        "EvoId":3,
+        "Summary":"Generic\/EvdevMouse plugin: Implement support for more buttons on \"mouse\" devices (16+4 buttons)",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Qt",
+        "Components":"GUI: Complex Input methods",
+        "CreatedDate":"2012-03-01 08:46:23",
+        "ResolvedDate":"2012-04-25 19:45:06",
+        "Status":"Reported",
+        "Priority":"P3: Somewhat important",
+        "Creator":"Richard Stockton",
+        "Reporter":"Richard Stockton",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Richard Stockton",
+                "Created":"2012-03-01 08:55:15",
+                "Comment":"The patch which implements this change will be nearly identical to the change which I recently made in the Wayland plugin. See https:\/\/bugreports.qt-project.org\/browse\/QTBUG-22760 and http:\/\/codereview.qt-project.org\/#change,16370 as references for Wayland.\n\nThe code builds and attempts to run properly, but my own X11\/KWin environment keeps the mouse in a grabbed State (the device is thus not available to this plugin."
+            },
+            {
+                "Author":"Richard Stockton",
+                "Created":"2012-04-25 19:29:25",
+                "Comment":"Bug Status should be 'Verified' for 5.0.0. Change-Id: Ib8cbb9500280c76f06a51ce95095e22ae84de1c6"
+            }
+        ]
+    }
+

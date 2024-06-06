@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"RedHat",
+        "IssueId":12570539,
+        "EvoId":1,
+        "Summary":"Parameters are not refreshed properly in \"Web Services Data Source (REST)\" connection profile in MacOS installs",
+        "Description":"When creating\/editing connection profile to add a new parameter to a REST service, able to enter freeform text in the Type field of the \"Add New Parameter\" popup dialog.  However, the freeform value returns to the previously selected value (Query or URI) when OK is clicked.  Either the field should be unable to be modified, or the value entered should be preserved.",
+        "VersionsAffected":"9.0",
+        "IssueType":"Bug",
+        "Project":"Teiid Designer",
+        "Components":"Web Services Support",
+        "CreatedDate":"2015-05-01 16:17:07",
+        "ResolvedDate":"2015-05-01 16:41:20",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Marc Shirley",
+        "Reporter":"Marc Shirley",
+        "Resolution":null,
+        "IssueLinks":"This issue cloned from TEIIDDES-2504",
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

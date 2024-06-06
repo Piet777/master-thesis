@@ -1,0 +1,42 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1469273,
+        "EvoId":3,
+        "Summary":"UI Refresh Broken in 3.3.6",
+        "Description":"When I do any of the following, operation is performed and completed but the UI does not reflect it.\r\n||Action||Result||UI View||Current Fix||Result of Fix||\r\n|Change Branch|New branch is selected|UI still shows old branch as selected, in bold.|Press F5 to Refresh UI|UI shows new branch selected in bold|\r\n|Click on Stage All or Stage Selected|Files are moved to Staged Files area|UI still shows empty Staged Files area|Press F5 to Refresh UI|Staged files area shows selected files|\r\n|Click on Pull Button|Branch is updated|UI does not show that pull was completed. Still shows bubble with number.|Press F5 to Refresh UI|UI shows pull was completed and bubble showing number goes away|\r\n\r\nThese are just a few examples. I am using Windows 10 Pro version 1909. Sourcetree shows version 3.3.6 in Help -> About Sourcetree.",
+        "VersionsAffected":"3.2.2",
+        "IssueType":"Bug",
+        "Project":"Sourcetree for Windows",
+        "Components":"UX",
+        "CreatedDate":"2020-01-17 13:12:14",
+        "ResolvedDate":"2020-11-10 15:14:53",
+        "Status":"Needs Triage",
+        "Priority":"Low",
+        "Creator":"Abdullah Rizwan",
+        "Reporter":"Abdullah Rizwan",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Mark",
+                "Created":"2020-01-17 13:33:44",
+                "Comment":"I am having the same issue. Staging, commiting, changing branches, etc. all occur, but the UI does not reflect the action. I am on Windows 10 Enterprise 10.0.17134, Sourcetree version 3.3.6.\u00a0\r\n\r\nUpdate:\u00a0SRCTREEWIN-12705\u00a0suggests several possible workarounds, one of which (rearranging the tabs) works for me."
+            },
+            {
+                "Author":"Chris Tietgen",
+                "Created":"2020-01-17 16:20:04",
+                "Comment":"Same issues here. Have to close\/reopen the app to reflect changes."
+            },
+            {
+                "Author":"jstirm",
+                "Created":"2020-01-17 16:59:54",
+                "Comment":"This should be a high Priority, not Low. Severely affects usage."
+            }
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Spring",
+        "IssueId":48981,
+        "EvoId":2,
+        "Summary":"RelationshipEntities between two nodes are dropped after one of the nodes is updated",
+        "Description":"Hi there,\n\nI have some strange behaviour, please correct me if I am doing something wrong. I am using 1.8.2 enterprise version, embedded in java app. Also using spring 3.2.2.RELEASE and spring-data-neo4j 2.2.0.RELEASE\n\nScenario:\nNodeA, NodeB are of type NodeEntity and Association is of type RelationshipEntity\nCreate multiple Associations of the same type between NodeA and NodeB.\nSave NodeA in NodaARepository, save NodeB in NodeBRepository and all Associations in AssociationRepository\nNodeA has got a Set<Association> associations field\nThen get NodeA from NodeARepository and edit one of its fields and save. Inspect the saved NodeA object.\n\nExpected result:\nField is updated and the Set contains the right number of associations\n\nActual result:\nField is updated but the Set does not contain all associations\n",
+        "VersionsAffected":"2.1.RC2",
+        "IssueType":"Bug",
+        "Project":"Spring Data Neo4j",
+        "Components":"CORE",
+        "CreatedDate":"2013-06-06 06:43:40",
+        "ResolvedDate":"2017-09-02 09:38:42",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"George Agiasoglou",
+        "Reporter":"George Agiasoglou",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"spring-data-neo4j",
+        "VersionsFixed":null,
+        "Assignee":"Michael Hunger",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

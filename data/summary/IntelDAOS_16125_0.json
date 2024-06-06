@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":16125,
+        "EvoId":0,
+        "Summary":"implement daos agent launch + cleanup in tests",
+        "Description":"Implement launch and cleanup of daos agent on nodes as appropriate before and after each test suite.",
+        "VersionsAffected":null,
+        "IssueType":"Question\/Request",
+        "Project":"DAOS",
+        "Components":null,
+        "CreatedDate":"2019-01-31 15:49:51",
+        "ResolvedDate":"2019-04-05 09:57:56",
+        "Status":"Open",
+        "Priority":"P4-Low",
+        "Creator":"Stephen Willson",
+        "Reporter":"Stephen Willson",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Stephen Willson",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

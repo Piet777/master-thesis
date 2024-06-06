@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"SecondLife",
+        "IssueId":74419,
+        "EvoId":0,
+        "Summary":"Crash in LLKeyframeDataCache::clear",
+        "Description":"Viewer crashed on exit with the following backtrace:\r\n{noformat}\r\n#0  malloc_consolidate (av=<value optimized out>) at malloc.c:5089\r\n#1  0xb663376f in _int_free (av=<value optimized out>, p=0xb99a9b8) at malloc.c:4968\r\n#2  0xb66368ad in *__GI___libc_free (mem=0xb99a9c0) at malloc.c:3716\r\n#3  0xb5626ac0 in ?? () from \/usr\/lib\/tls\/libnvidia-tls.so.1\r\n#4  0x091ff06a in DeletePointer::operator()<LLKeyframeMotion::JointMotion> (this=0xbf9210ec, ptr=0xb99a9c0) at viewer-development\/indra\/llcommon\/llstl.h:85\r\n#5  0x091ff090 in std::for_each<__gnu_cxx::__normal_iterator<LLKeyframeMotion::JointMotion**, std::vector<LLKeyframeMotion::JointMotion*, std::allocator<LLKeyframeMotion::JointMotion*> > >, DeletePointer> (__first=..., __last=..., __f=...) at \/usr\/include\/c++\/4.1.3\/bits\/stl_algo.h:159\r\n#6  0x091ec5fa in ~JointMotionList (this=0xb1a9c00, __in_chrg=<value optimized out>) at viewer-development\/indra\/llcharacter\/llkeyframemotion.cpp:84\r\n#7  0x091ff12e in DeletePairedPointer::operator()<std::pair<LLUUID const, LLKeyframeMotion::JointMotionList*> > (this=0xbf92115c, ptr=...)\r\n    at viewer-development\/indra\/llcommon\/llstl.h:105\r\n#8  0x091ff168 in std::for_each<std::_Rb_tree_iterator<std::pair<LLUUID const, LLKeyframeMotion::JointMotionList*> >, DeletePairedPointer> (__first=..., __last=..., __f=...)\r\n    at \/usr\/include\/c++\/4.1.3\/bits\/stl_algo.h:159\r\n#9  0x091ec6f4 in LLKeyframeDataCache::clear () at viewer-development\/indra\/llcharacter\/llkeyframemotion.cpp:2218\r\n#10 0x08135551 in LLAppViewer::cleanup (this=0xa4d8f28) at viewer-development\/indra\/newview\/llappviewer.cpp:1430\r\n#11 0x09176c17 in main (argc=6, argv=0xbf921574) at viewer-development\/indra\/newview\/llappviewerlinux.cpp:109\r\n{noformat}",
+        "VersionsAffected":null,
+        "IssueType":"Defect",
+        "Project":"Snowstorm",
+        "Components":null,
+        "CreatedDate":"2010-12-27 10:24:03",
+        "ResolvedDate":"2011-06-13 13:59:02",
+        "Status":"Open",
+        "Priority":"Minor",
+        "Creator":"Vadim ProductEngine",
+        "Reporter":"Vadim ProductEngine",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

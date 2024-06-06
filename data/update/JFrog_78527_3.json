@@ -1,0 +1,37 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":78527,
+        "EvoId":3,
+        "Summary":"ECDSA and ED25519 keys not supported for SSH authentication",
+        "Description":"ECDSA and ED25519 keys are not supported for SSH authentications but in the UI it shows these keys to be supported. RSA key works as expected but other keys fail. This behaviour was reproduced by using the JFrog CLI. \r\n\r\n!artifactory_ssh.png!\r\n\r\n\u00a0\r\n\r\nThe steps to reproduce:\r\n # Generate the keys using the\u00a0ECDSA and ED25519 algorithm.\r\n # Add public key under Profile --> SSH (adding\u00a0ECDSA and ED25519 keys doesn't throw any error)\r\n # Link these keys to the JFrog CLI\r\n # Any operation using CLI fails with below error\r\n\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0{\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \"status\": \"failure\",\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \"totals\": {\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \"success\": 0,\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \"failure\": 0\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 }\r\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0}\r\n\r\n\u00a0",
+        "VersionsAffected":"6.12.1",
+        "IssueType":"Bug",
+        "Project":"Artifactory Binary Repository",
+        "Components":null,
+        "CreatedDate":"2019-09-11 11:10:47",
+        "ResolvedDate":"2021-12-26 15:52:33",
+        "Status":"In Progress",
+        "Priority":"4 - Normal",
+        "Creator":"Muhammed Kashif",
+        "Reporter":"Muhammed Kashif",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Jose Sa",
+                "Created":"2021-11-22 10:55:03",
+                "Comment":"With OpenSSH deprecation of SHA-1 algorithms and git-scm dropped support for RSA in version 2.33.1, people having more recent git bash installations started getting errors reaching git servers. When can we expect an upgrade on this topic ? Should we start looking for a different vendor ?"
+            },
+            {
+                "Author":"Prem kumar",
+                "Created":"2021-12-20 16:30:18",
+                "Comment":"Hey Guys, We need to fix this issue ASAP. Other systems are getting out of the rsa-sha1 algorithm. Please mark this issue as High Priority"
+            }
+        ]
+    }
+

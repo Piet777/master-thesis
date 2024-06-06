@@ -1,0 +1,52 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":282283,
+        "EvoId":9,
+        "Summary":"QRotationSensor reporting invalid values",
+        "Description":"I found that the values from QRotationReading was changed when I switched from Qt 5.12.0 and NDK 18.0 to Qt 5.13.0 and android NDK 20 (SDK Version: 26.1.1, NDK Version: 20.0.5594570):\r\n* each x\/y\/z value now have values [-57.2958,57.2958]\r\n* that is equal to [-1.0, 1.0] converted from radians to degrees\r\n\r\nSo the ASensorEvent.vector (used in qtsensors\/src\/plugins\/sensors\/android\/androidrotation.cpp) values are not radians, but -1..1 values.\r\n\r\nAlso the readings are become rough after the update (~2-3 readings per second), before they was much smoother (~20-30 readings per second). And dataRate doesn't help at all...",
+        "VersionsAffected":"5.13.0",
+        "IssueType":"Bug",
+        "Project":"Qt",
+        "Components":"Sensors",
+        "CreatedDate":"2019-08-11 01:27:26",
+        "ResolvedDate":"2021-01-15 13:04:34",
+        "Status":"Open",
+        "Priority":"P2: Important",
+        "Creator":"Rabit",
+        "Reporter":"Rabit",
+        "Resolution":null,
+        "IssueLinks":"This issue is duplicated by QTBUG-78303",
+        "Labels":"Reported_by_support_premium",
+        "VersionsFixed":null,
+        "Assignee":"Lorn Potter",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Tom H",
+                "Created":"2019-08-17 04:47:36",
+                "Comment":"More info here: QTBUG-77628\r\n\r\n\u00a0"
+            },
+            {
+                "Author":"Lorn Potter",
+                "Created":"2019-08-17 09:12:12",
+                "Comment":"I just tested this, and can confirm that the values in 5.12.4 are way off from 5.12.3\r\n\r\n\u00a0\r\n\r\n\u00a0"
+            },
+            {
+                "Author":"DongRyeol Cha",
+                "Created":"2019-09-16 07:19:50",
+                "Comment":"More info here QTBUG-78303\r\n\r\n\u00a0\r\n\r\nThis issue is very important for me because I cannot go back to 5.12.3 due to openssl 1.1 that introduced by 5.12.4.\r\n\r\n\u00a0\r\n\r\nWhen can it be fixed?"
+            },
+            {
+                "Author":"Josh Schrader",
+                "Created":"2019-09-17 20:02:03",
+                "Comment":"This bug is affecting my product as well (similar to air-mouse functionality on android). We are stuck on 5.12.3 until fixed, which is a shame since 5.12.4 fixed a UI bug that was bothering us.\u00a0"
+            },
+            {
+                "Author":"Tom H",
+                "Created":"2019-09-30 16:21:54",
+                "Comment":"Please promote this to Priority P1: Critical."
+            }
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":180305,
+        "EvoId":0,
+        "Summary":"Uninstalling a theme add-on does not reset the color scheme",
+        "Description":"As a customer I would like the color scheme selection to revert to the default color scheme if I uninstall the currently activated global theme add-on.\r\n\r\nSteps to reproduce:\r\n\r\n1. Install a theme add-on\r\n2. Select the theme globally\r\n3. Uninstall the add-on\r\n\r\nExpected results:\r\nAll spaces are back to the look they had previously\r\n\r\nActual results:\r\nTheme's default color scheme is still applied and color scheme settings page looks like this\r\n\r\n !Screen Shot 2016-11-14 at 16.51.59.png|thumbnail!",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Confluence Ecosystem (Moved: go.atlassian.com\/ce-move)",
+        "Components":null,
+        "CreatedDate":"2016-11-14 09:57:24",
+        "ResolvedDate":"2017-03-19 23:51:05",
+        "Status":"Triage",
+        "Priority":"Major",
+        "Creator":"RichardS",
+        "Reporter":"RichardS",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"refinedwiki",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

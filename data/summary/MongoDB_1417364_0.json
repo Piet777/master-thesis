@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":1417364,
+        "EvoId":0,
+        "Summary":"Implement {{ChangeStreamGetMore}} operation",
+        "Description":"As the next part of implementing change streams, we need to define a {{ChangeStreamGetMore}} struct that implements {{Operation}}. This operation should wrap the {{GetMore}} operation, calling {{Aggregate::build}} and {{Aggregate::handle_response}} in its own respective {{build}} and {{handle_response}} methods.\r\n\r\nAdditionally, the {{poll_next}} methods on the {{ChangeStream}}'s {{Stream}} implementation should be updated to create and execute a {{ChangeStreamGetMore}} operation, following the pattern used in the {{Cursor}}'s {{poll_next}} implementation.",
+        "VersionsAffected":null,
+        "IssueType":"New Feature",
+        "Project":"Rust Driver",
+        "Components":null,
+        "CreatedDate":"2020-07-22 19:15:15",
+        "ResolvedDate":"2021-12-15 18:01:35",
+        "Status":"Needs Triage",
+        "Priority":"Major - P3",
+        "Creator":"Samuel Rossi",
+        "Reporter":"Samuel Rossi",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

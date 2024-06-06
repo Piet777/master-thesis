@@ -3,12 +3,20 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-data/
+# personal files (for testing and understanding)
+data/arbitraryStructure/
+data/examples/
 results/
 evaluation/
 jiraEvolutions/
 issueDiscussionItems/
+
 api.txt
+_dataSearch.ipynb
+chatgpt.py
+csv_converter.ipynb
+database.py
+
 
 # C extensions
 *.so

@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"MongoDB",
+        "IssueId":714514,
+        "EvoId":2,
+        "Summary":"WiredTiger.wt corrupted",
+        "Description":"Hi Support, It looks like wiredtiger.wt file has been corrupted. As per below error. It is possible to repair this file?\r\n\r\n2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] targetMinOS: Windows 7\/Windows Server 2008 R2\r\n2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] db version v3.2.1\r\n2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] git version: a14d55980c2cdc565d4704a7e3ad37e4e535c1b2\r\n2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] allocator: tcmalloc\r\n2019-03-07T14:14:52.704+0000 I CONTROL [initandlisten] modules: none\r\n2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] build environment:\r\n2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] distmod: 2008plus\r\n2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] distarch: x86_64\r\n2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] target_arch: x86_64\r\n2019-03-07T14:14:52.705+0000 I CONTROL [initandlisten] options: \\{ config: \"C:\\Program Files\\test\\APM_Mongo\\etc\\Mongo.yaml \", storage: { dbPath: \"D:\\test\\Data\", directoryPerDB: true, journal: { enabled: false } }, systemLog: \\{ destination: \"file\", logAppend: true, path: \"C:\\Program Files\\test\\APM_Mongo\\logs\\mongo.log\" } }\r\n2019-03-07T14:14:52.706+0000 I - [initandlisten] Detected data files in D:\\test\\Data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.\r\n2019-03-07T14:14:52.706+0000 I STORAGE [initandlisten] wiredtiger_open config: create,cache_size=114G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),,log=(enabled=false),\r\n2019-03-07T14:14:52.731+0000 E STORAGE [initandlisten] WiredTiger (0) [1551968092:731984][16404:140720579154768], file:WiredTiger.wt, connection: read checksum error for 4096B block at offset 12288: block header checksum of 696200596 doesn't match expected checksum of 730211347\r\n2019-03-07T14:14:52.731+0000 E STORAGE [initandlisten] WiredTiger (0) [1551968092:731984][16404:140720579154768], file:WiredTiger.wt, connection: WiredTiger.wt: encountered an illegal file format or internal value\r\n2019-03-07T14:14:52.731+0000 E STORAGE [initandlisten] WiredTiger (-31804) [1551968092:731984][16404:140720579154768], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic\r\n2019-03-07T14:14:52.732+0000 I - [initandlisten] Fatal Assertion 28558\r\n2019-03-07T14:14:52.732+0000 I - [initandlisten]\r\n\r\n***aborting after fassert() failure\r\n\r\n\u00a0\r\n\r\n\u00a0",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Core Server",
+        "Components":null,
+        "CreatedDate":"2019-03-11 11:05:12",
+        "ResolvedDate":"2019-03-20 21:58:49",
+        "Status":"Open",
+        "Priority":"Major - P3",
+        "Creator":"Michael",
+        "Reporter":"Michael",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Backlog - Storage Engines Team",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Keith Bostic",
+                "Created":"2019-03-11 12:00:34",
+                "Comment":"*Program Management Note* Status set to Needs Verification after move."
+            }
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":234192,
+        "EvoId":0,
+        "Summary":"Typo in documentation",
+        "Description":"There is a typo on this page: https:\/\/doc.qt.io\/qt-5\/cmake-manual.html\r\n\r\n\"Per-direcotry\" should be spelled \"Per-directory\".",
+        "VersionsAffected":"5.6.0",
+        "IssueType":"Task",
+        "Project":"Qt",
+        "Components":"Documentation",
+        "CreatedDate":"2016-05-19T17:14:05.000+0000",
+        "ResolvedDate":"2016-05-20T08:50:11.000+0000",
+        "Status":"Reported",
+        "Priority":"P4: Low",
+        "Creator":"Schneider",
+        "Reporter":"Schneider",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Qt Documentation Team",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

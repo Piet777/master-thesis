@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":293028,
+        "EvoId":0,
+        "Summary":"stree from terminal with no parameters",
+        "Description":"Running 'stree' without any parameters from the terminal does two things. Firstly it opens a new instance of SourceTree even if one's running. Secondly it assumes the current path is the repository to open.\r\n\r\nTake a look into making SourceTree just open if it isn't already and not opening any bookmarks etc.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Sourcetree For Mac",
+        "Components":null,
+        "CreatedDate":"2013-08-20 17:05:37",
+        "ResolvedDate":"2014-04-02 09:43:39",
+        "Status":"Open",
+        "Priority":"Low",
+        "Creator":"KieranA",
+        "Reporter":"KieranA",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"1.7.0",
+        "Assignee":"Kieran Senior [Atlassian]",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

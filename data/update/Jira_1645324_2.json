@@ -1,0 +1,32 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":1645324,
+        "EvoId":2,
+        "Summary":"The recently Updated macro and Recently Updated dashboard are not working properly on Instances which its name starts with wiki",
+        "Description":"h3. Issue Summary\r\n\r\nOn Instances in which the base name starts with wiki (*wikitest.atlassian.net*, for example) the Recently Updated Macro and the Recently Updated dashboard are not working properly. The macros load the pages properly, however the link to the pages are broken, with the base URL duplicated, for example:\r\n{code:java}\r\nhttps:\/\/wikitest.atlassian.net\/wikitest.atlassian.net\/wiki\/spaces\/<SPACEKEY>\/pages\/<PAGEID>\/<PAGETITLE>{code}\r\nh3. Steps to Reproduce\r\n # Create an Instance which its name starts with wiki (i.e.\u00a0*wikisomething*)\r\n # Create a page.\r\n # Add the Recently Updated Macro on it.\r\n # Publish the page.\r\n # Click on a link from the macro (make sure to have updated some pages recently).\r\n\r\nh3. Expected Results\r\n\r\nThe links should work properly.\r\nh3. Actual Results\r\n\r\nThe links don't work as expected, as the base URL will be duplicated on it.\r\nh3. Workaround\r\n\r\nCurrently there is no known workaround for this behavior. A workaround will be added here when available",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Confluence Cloud",
+        "Components":"Macros - Search",
+        "CreatedDate":"2020-09-29 19:39:46",
+        "ResolvedDate":"2021-10-12 22:46:43",
+        "Status":"Gathering Impact",
+        "Priority":"Low",
+        "Creator":"Vitor A",
+        "Reporter":"Vitor A",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Alectrona",
+                "Created":"2020-10-11 22:41:06",
+                "Comment":"Please adjust to Priority 2 - High as:\r\n * application is functional, but frequently used gadgets or macros don't work\r\n\r\n * there is no workaround available"
+            }
+        ]
+    }
+

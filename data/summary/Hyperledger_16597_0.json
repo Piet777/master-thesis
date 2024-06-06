@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Hyperledger",
+        "IssueId":16597,
+        "EvoId":0,
+        "Summary":"TPS Scale Up Network 4 Couch DB",
+        "Description":"{color:#333333}This story has tests we are going to run from <PlaceHolder>\u00a0{color}\r\n * {color:#333333}Component{color}{color:#333333}: \u00a0Performance test with LevelDB{color}\r\n\r\n * {color:#333333}Description{color}{color:#333333}: Launch network, use PTE stress mode to send 100 invoke transactions\r\n concurrently to all peers on all channels on all chaincodes,\r\n query the ledger for each to ensure the last transaction was written,\r\n calculate tps, remove network and cleanup{color}\r\n * {color:#333333}Artifact Locations{color}{color:#333333}: \u00a0<PlaceHolder>{color}\r\n\r\n * {color:#333333}Network Topology{color}{color:#333333}: 2 Ord, 5 KB, 3 ZK, 4 Org, 8 Peers, 40 Chan, 4 CC{color}\r\n\r\n * {color:#333333}Client Driver{color}{color:#333333}: test_pte.py,PTE{color}",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Fabric",
+        "Components":"fabric-quality",
+        "CreatedDate":"2017-05-10 20:16:11",
+        "ResolvedDate":"2018-07-09 18:23:26",
+        "Status":"To Do",
+        "Priority":"Medium",
+        "Creator":"Dinesh Kumar",
+        "Reporter":"Dinesh Kumar",
+        "Resolution":null,
+        "IssueLinks":"This issue blocks FAB-2032",
+        "Labels":"quality",
+        "VersionsFixed":"v1.0.0",
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

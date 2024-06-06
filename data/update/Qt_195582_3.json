@@ -1,0 +1,37 @@
+
+    {
+        "Jira":"Qt",
+        "IssueId":195582,
+        "EvoId":3,
+        "Summary":"No Examples In Qt Creator",
+        "Description":"PACKAGE VERSION:\nqt-windows-opensource-5.0.2-msvc2012_64-x64-offline-2013-03-25-464.exe\n\nSTEPS:\n1. Install Qt SDK.\n2. Run Qt Creator.\n3. Go to Examples.\n\nACTUAL RESULT:\n- There is no example.\n\nEXPECTED RESULT:\n- Examples should be visible there.\n\n",
+        "VersionsAffected":"5.0.2",
+        "IssueType":"Bug",
+        "Project":"Qt",
+        "Components":"Packaging & Installer",
+        "CreatedDate":"2013-03-25 12:02:47",
+        "ResolvedDate":"2013-04-09 14:02:34",
+        "Status":"Reported",
+        "Priority":"P1: Critical",
+        "Creator":"Rafal Motyka",
+        "Reporter":"Rafal Motyka",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Qt Release Team",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Rafal Motyka",
+                "Created":"2013-03-25 12:04:27",
+                "Comment":"Valid for Windows 7 32 bit, VS 2010, ANGLE"
+            },
+            {
+                "Author":"Rafal Motyka",
+                "Created":"2013-03-27 10:19:14",
+                "Comment":"Resolved. It needs to be moved to Resolved Status."
+            }
+        ]
+    }
+

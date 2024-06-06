@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sonatype",
+        "IssueId":717215,
+        "EvoId":0,
+        "Summary":"Create CircleCI ORB that uses maven-release-plugin to do releases",
+        "Description":"The ORB we use now has a number of drawbacks, and is confusing about the development version is use after a release (no indication of dev SNAPSHOT, etc).\r\n\r\nRather than trying to re-invent the maven release process, instead see if we can create an ORB that invokes the m-release-p to do releases. Doing so will provide standard \"maven style\" SNAPSHOT versions for development, while using \"release\" versions for releases.",
+        "VersionsAffected":null,
+        "IssueType":"Task",
+        "Project":"Developer Experience",
+        "Components":null,
+        "CreatedDate":"2019-10-14 17:37:37",
+        "ResolvedDate":"2019-12-16 21:02:27",
+        "Status":"Backlog",
+        "Priority":"Minor",
+        "Creator":"Allen Hsieh [X]",
+        "Reporter":"Dan Rollo",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

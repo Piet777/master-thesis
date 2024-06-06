@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":21038,
+        "EvoId":0,
+        "Summary":"show whether a reflect has been done in a matrix cell",
+        "Description":"In the last OSP conference call I agreed to submit this request:\n\nWhen filling out a matrix, the user can see which cells have uploaded files and forms. However they can't see which have reflections. In some situations reflections are the primary content. The user shouldn't have to check every cell to see which ones have content. Include an icon for each reflection.\n\n",
+        "VersionsAffected":"2.5.2",
+        "IssueType":"Task",
+        "Project":"Sakai",
+        "Components":"OSP: Wizards - Matrix",
+        "CreatedDate":"2008-06-10 09:35:21",
+        "ResolvedDate":"2010-03-29 04:46:33",
+        "Status":"Open",
+        "Priority":"Major",
+        "Creator":"Charles Hedrick",
+        "Reporter":"Charles Hedrick",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"2.8.0",
+        "Assignee":"Peter A. Knoop",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

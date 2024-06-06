@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":16112,
+        "EvoId":0,
+        "Summary":"Start initial email discussion about reintegration algorithm",
+        "Description":null,
+        "VersionsAffected":null,
+        "IssueType":"Improvement",
+        "Project":"DAOS",
+        "Components":null,
+        "CreatedDate":"2019-02-06 13:19:35",
+        "ResolvedDate":"2019-03-06 13:50:47",
+        "Status":"Open",
+        "Priority":"P4-Low",
+        "Creator":"Byron Marohn",
+        "Reporter":"Byron Marohn",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Byron Marohn",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

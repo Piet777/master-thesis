@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":67061,
+        "EvoId":12,
+        "Summary":"api\/v1\/users\/ might be incorrectly called with a Docker token ",
+        "Description":"*Summary:*\r\n\r\nDisabling and enabling Anonymous mode on Artifactory, seems to produce the erroneous (404) call to a non-existent \"user\" endpoint. \r\n\r\nUnknown effects for users currently.\r\n\r\n{code}07T04:03:13.135+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http:\/\/localhost:8040\/access\/api\/v1\/groups\/group|200|0|2|JFrog Access Java Client\/4.1.32\r\n2019-01-07T04:03:13.138+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http:\/\/localhost:8040\/access\/api\/v1\/users\/tester|200|0|3|JFrog Access Java Client\/4.1.32\r\n2019-01-07T04:03:13.333+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|PATCH|http:\/\/localhost:8040\/access\/api\/v1\/users\/tester|200|215|543|JFrog Access Java Client\/4.1.32\r\n2019-01-07T04:03:13.343+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|PATCH|http:\/\/localhost:8040\/access\/api\/v1\/users\/tester|500|215|205|JFrog Access Java Client\/4.1.32\r\n2019-01-07T04:03:13.347+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http:\/\/localhost:8040\/access\/api\/v1\/users\/AKCp5btVicj4975GLELesCXfZZrUVQu3g1tE5Sa3NHbum3smZ5grZmCuaLmFBoVxV2835dxYy|404|0|2|JFrog Access Java Client\/4.1.32\r\n2019-01-07T04:03:13.348+0000|127.0.0.1|jfrt@01c0h45fq53nzb0t5cfgcp0h2y|GET|http:\/\/localhost:8040\/access\/api\/v1\/users\/AKCp5btVicj4975GLELesCXfZZrUVQu3g1tE5Sa3NHbum3smZ5grZmCuaLmFBoVxV2835dxYy|404|0|1|JFrog Access Java Client\/4.1.32{code}\r\n\r\n*Steps to reproduce:*\r\n\r\n1. Setup Artifactory (reproduces on latest - 6.6.5) and enable Repository Path for a fast docker setup\r\n2. Disable global anonymous. Then do several Docker pulls. Then re-enable anonymous.\r\n3. Ensure it's working, then do several Docker pull, cancelling them and retrying again - you should see this endpoint address in the Access request.log \r\n",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Artifactory Binary Repository",
+        "Components":null,
+        "CreatedDate":"2019-01-21 19:56:44",
+        "ResolvedDate":"2019-08-08 15:03:35",
+        "Status":"Open",
+        "Priority":"Critical",
+        "Creator":"Andrei Komarov",
+        "Reporter":"Andrei Komarov",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"QF-P3",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

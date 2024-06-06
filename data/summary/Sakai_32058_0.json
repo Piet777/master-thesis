@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Sakai",
+        "IssueId":32058,
+        "EvoId":0,
+        "Summary":"Lessons: images in multiple columns exceed the boundary of a block \u2013 see screenshot ",
+        "Description":"* Log into Sakai 11 and click on a Lessons tool\r\n* Using \u2018Add Colum break\u2019 to create four blocks \r\n* For each block, add an image using \u2018Embed content on page\u2019 option.  Make sure all four images are the same width, e.g. 300px\r\n* Once all images are added to the page, use the mouse to make the browser windows smaller.  You can see that the images will exceed the boundary of the blocks \u2013see attached screenshot.  In another words, the images are not responsive.\r\n",
+        "VersionsAffected":"11.0",
+        "IssueType":"Bug",
+        "Project":"Sakai",
+        "Components":"Lessons",
+        "CreatedDate":"2016-07-12 01:09:00",
+        "ResolvedDate":"2016-07-12 04:34:51",
+        "Status":"Awaiting Review",
+        "Priority":"Major",
+        "Creator":"Fawei Geng",
+        "Reporter":"Fawei Geng",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"12.0",
+        "Assignee":"Charles Hedrick",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

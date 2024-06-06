@@ -1,0 +1,47 @@
+
+    {
+        "Jira":"IntelDAOS",
+        "IssueId":16799,
+        "EvoId":21,
+        "Summary":"Unable to fill a pool with enough data to cause rebuild to fail",
+        "Description":"In an attempt to get the pool\/rebuild_no_cap.py test working (create a pool with enough data such that rebuild fails due to lack of space when one server is excluded) I am unable to write enough data to the pool in order to create the situation that the test is intended to verify.\r\n\r\nIf I create one 16MB pool across 4 servers with 1 target each, I am able to write 16MB - 30MB (in 1MB increments) to the pool with IOR",
+        "VersionsAffected":"0.8 Community Release",
+        "IssueType":"Bug",
+        "Project":"DAOS",
+        "Components":"Rebuild",
+        "CreatedDate":"2019-07-12 14:56:28",
+        "ResolvedDate":"2021-08-06 07:10:34",
+        "Status":"Open",
+        "Priority":"P4-Low",
+        "Creator":"Phil Henderson",
+        "Reporter":"Phil Henderson",
+        "Resolution":null,
+        "IssueLinks":"This issue is related to  DAOS-7570",
+        "Labels":"rel20",
+        "VersionsFixed":"2.0 Community Release",
+        "Assignee":"Phil Henderson",
+        "TimeSpent":null,
+        "Comments":[
+            {
+                "Author":"Ira Lewis",
+                "Created":"2019-07-25 15:12:26",
+                "Comment":"Phil, can you reproduce this with larger sizes?\u00a0 -the Triage team"
+            },
+            {
+                "Author":"Scott Kirvan",
+                "Created":"2020-01-22 19:07:14",
+                "Comment":"If you get a chance while waiting for CI --could you do a quick retest and we can get this back over to development."
+            },
+            {
+                "Author":"Jeff Olivier",
+                "Created":"2020-12-03 16:39:32",
+                "Comment":"\"I added reporting the Daos_Space.s_total and Daos_Space.s_free space usage information from the DaosPool.pool_query() and we are also wondering if these are accurate. These values are affected by the number of targets per server. Is this expected?\"\r\n\r\nThere would be some slight variance based on the number of targets because metadata is duplicated.   For instance, any target that has an object shard would have container and object trees so having more targets and more shards means more duplication of this top level tree metadata.  How much variance are you seeing?  The totals should have slightly less data.\r\n\r\nAs for your rebuild problem, are you generating all unique data or does your test case do any overwrites.   If the latter, the extra space used will only be temporary but freed by aggregation which could affect your inability to cause a rebuild problem?"
+            },
+            {
+                "Author":"Kelsey Prantis",
+                "Created":"2021-07-30 23:25:15",
+                "Comment":"This is P4-Low and over 2 years old. Are we ever really going to fix it? Should we just call it and resolve as Low Priority?"
+            }
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JiraEcosystem",
+        "IssueId":47609,
+        "EvoId":0,
+        "Summary":"Carousel \"flashes\" when page first loads",
+        "Description":"The carousel \"flashes\" when first loading -- I haven't looked at how it works yet, but the initial carousel items should have some default styling (including width\/height) on page load to avoid this.",
+        "VersionsAffected":null,
+        "IssueType":"Bug",
+        "Project":"Atlassian Marketplace",
+        "Components":null,
+        "CreatedDate":"2012-03-17 12:25:30",
+        "ResolvedDate":"2012-03-27 16:47:07",
+        "Status":"Triage",
+        "Priority":"Major",
+        "Creator":"Zachary Davis",
+        "Reporter":"Zachary Davis",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":"Iteration 14",
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"Jira",
+        "IssueId":151397,
+        "EvoId":0,
+        "Summary":"Show the login screen when user attempts to create an issue and is not logged in",
+        "Description":"When a potential user clicks on a link to create an issue and is not logged in, they see the following message:\r\n\r\nErrors\r\n\r\nYou are not logged in, and do not have the permissions required to create an issue in this project as a guest.Test\r\n\r\nTo create an issue first log in\r\n\r\nAnd the `log in` text is a link (but not underlined as links usually are).\r\n\r\nWhy doesn't this page just show a login required screen like \/browse\/[PROJECT] does? Or better yet, show the actual login with the os_destination set?\r\n\r\nWe've had some folks who misinterpret the error notice and think they can't create an issue, which then leads to unusual emails and error reports and sometimes angry\/baffled users. All because the message is telling them something they don't understand. Why not just do the login redirect for them?",
+        "VersionsAffected":null,
+        "IssueType":"Improvement",
+        "Project":"Jira Server and Data Center",
+        "Components":"UI \/ Usability",
+        "CreatedDate":"2011-10-12T21:13:14.000+0000",
+        "ResolvedDate":"2015-06-25T08:10:24.000+0000",
+        "Status":"New",
+        "Priority":null,
+        "Creator":"Jared Farrish",
+        "Reporter":"Jared Farrish",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":"ui-specialist",
+        "VersionsFixed":null,
+        "Assignee":null,
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+

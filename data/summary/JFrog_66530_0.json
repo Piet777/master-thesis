@@ -1,0 +1,28 @@
+
+    {
+        "Jira":"JFrog",
+        "IssueId":66530,
+        "EvoId":0,
+        "Summary":"Add pipeline integration tests",
+        "Description":null,
+        "VersionsAffected":"3.0.0",
+        "IssueType":"Task",
+        "Project":"Jenkins Artifactory Plug-in",
+        "Components":null,
+        "CreatedDate":"2019-01-06 14:47:08",
+        "ResolvedDate":"2019-02-07 10:58:06",
+        "Status":"Open",
+        "Priority":"4 - Normal",
+        "Creator":"Yahav Itzhak",
+        "Reporter":"Yahav Itzhak",
+        "Resolution":null,
+        "IssueLinks":null,
+        "Labels":null,
+        "VersionsFixed":null,
+        "Assignee":"Yahav Itzhak",
+        "TimeSpent":null,
+        "Comments":[
+
+        ]
+    }
+
