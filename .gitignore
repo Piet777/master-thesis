@@ -6,8 +6,10 @@ __pycache__/
 # personal files (for testing and understanding)
 data/arbitraryStructure/
 data/examples/
+data/dataAnalysis/
 results/
 evaluation/
+
 jiraEvolutions/
 issueDiscussionItems/
 
